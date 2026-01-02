@@ -269,6 +269,14 @@
   @apply text-sm text-gray-600 mb-6 flex-grow;
 }
 
+.subscriptions__quote-cta {
+  @apply mt-auto space-y-3;
+}
+
+.subscriptions__quote-badge {
+  @apply text-center text-lg font-semibold text-[#331553] bg-gray-100 py-3 px-4 rounded-lg border-2 border-dashed border-[#331553]/20;
+}
+
 .subscriptions__price {
   @apply text-2xl font-bold mb-6;
 }

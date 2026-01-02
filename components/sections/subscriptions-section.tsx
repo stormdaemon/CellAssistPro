@@ -14,8 +14,8 @@ export function SubscriptionsSection({ subs }: SubscriptionsSectionProps) {
   return (
     <section className="subscriptions">
       <div className="subscriptions__header">
-        <h2 className="subscriptions__title">Co-pilotage Mensuel</h2>
-        <p className="subscriptions__subtitle">Pérennisez votre croissance sans charge mentale supplémentaire.</p>
+        <h2 className="subscriptions__title">Accompagnement Personnalisé</h2>
+        <p className="subscriptions__subtitle">Une solution sur mesure adaptée à vos besoins spécifiques.</p>
       </div>
 
       <div className="subscriptions__grid">
@@ -32,18 +32,17 @@ export function SubscriptionsSection({ subs }: SubscriptionsSectionProps) {
             </div>
             <p className="subscriptions__type">{sub.type}</p>
             <p className="subscriptions__desc">{sub.desc}</p>
-            <p className="subscriptions__price">
-              {sub.price}
-              <span className="subscriptions__price-period">/mois</span>
-            </p>
-            <a
-              href="https://calendly.com/celassistpro/15min"
-              target="_blank"
-              rel="noreferrer"
-              className="subscriptions__cta"
-            >
-              Choisir
-            </a>
+            <div className="subscriptions__quote-cta">
+              <p className="subscriptions__quote-badge">Tarif personnalisé</p>
+              <a
+                href="https://calendly.com/celassistpro/15min"
+                target="_blank"
+                rel="noreferrer"
+                className="subscriptions__cta"
+              >
+                Obtenir un Devis
+              </a>
+            </div>
           </div>
         ))}
       </div>
