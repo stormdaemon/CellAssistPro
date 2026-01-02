@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__web-reader__webReader",
+      "mcp__web-search-prime__webSearchPrime",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(bun:*)",
+      "Bash(powershell -c \"irm bun.sh/install.ps1 | iex\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

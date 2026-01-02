@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CelAssistPro - Votre Co-pilote Administrative & Digitale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .accordion-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .modal-overlay {
+            display: none;
+        }
+        .modal-overlay.open {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-[#414140]">
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-[#331553] text-white pt-8 pb-32 overflow-hidden">
+        <!-- Navigation -->
+        <nav class="container mx-auto px-4 md:px-6 mb-6 md:mb-12 relative z-20">
+            <!-- Mobile: 3 lignes centrées -->
+            <div class="flex flex-col md:hidden items-center gap-4">
+                <img src="https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767366698/logo_pour_Abby-removebg-preview_qqcfi4.png"
+                     alt="CelAssistPro Logo" class="h-24 w-auto object-contain" />
+                <h1 class="text-2xl font-bold tracking-wide">
+                    <span class="text-[#EBB541]">Cel</span> <span class="text-white/90">Assist</span> <span class="text-[#EBB541]">Pro</span>
+                </h1>
+                <a href="https://calendly.com/celassistpro/15min" target="_blank" rel="noreferrer"
+                   class="px-8 py-3 border-2 border-[#EBB541] text-[#EBB541] font-bold rounded-full hover:bg-[#EBB541] hover:text-[#331553] transition-all text-base whitespace-nowrap">
+                    Réserver un appel
+                </a>
+            </div>
+
+            <!-- Desktop: Layout horizontal -->
+            <div class="hidden md:flex justify-between items-center">
+                <div class="flex items-center gap-6">
+                    <img src="https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767366698/logo_pour_Abby-removebg-preview_qqcfi4.png"
+                         alt="CelAssistPro Logo" class="h-20 w-auto object-contain" />
+                    <h1 class="text-2xl font-bold tracking-wide">
+                        <span class="text-[#EBB541]">Cel</span> <span class="text-white/90">Assist</span> <span class="text-[#EBB541]">Pro</span>
+                    </h1>
+                </div>
+                <a href="https://calendly.com/celassistpro/15min" target="_blank" rel="noreferrer"
+                   class="px-8 py-3 border-2 border-[#EBB541] text-[#EBB541] font-bold rounded-full hover:bg-[#EBB541] hover:text-[#331553] transition-all text-base whitespace-nowrap">
+                    Réserver un appel
+                </a>
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10 pb-12 md:pb-20">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-8 md:gap-12">
+                <div class="w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8 px-2">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 bg-[#EBB541]/10 border border-[#EBB541]/30 rounded-full mb-4 md:mb-6">
+                            <svg class="w-3 h-3 md:w-4 md:h-4 text-[#EBB541]" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span class="text-[#EBB541] text-[10px] md:text-xs font-bold uppercase tracking-wider">Dirigeants & Entrepreneurs</span>
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight mb-2 md:mb-4">
+                            Votre Co-pilote <br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#EBB541] to-[#f3d085]">Administrative & Digitale</span>
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-gray-300 font-medium">Bras droit stratégique</h2>
+                    </div>
+                    <p class="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-4 border-[#EBB541] pl-4 md:pl-6 italic">
+                        "Je ne suis pas une simple assistante, je suis l'architecte de votre système administratif."
+                    </p>
+                    <div class="pt-2 md:pt-4">
+                        <a href="https://calendly.com/celassistpro/15min" target="_blank" rel="noreferrer"
+                           class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-[#EBB541] text-[#331553] font-bold rounded-full shadow-lg hover:bg-white transition-all transform hover:-translate-y-1 text-sm md:text-base">
+                            Réserver mon diagnostic offert
+                            <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
+                    <div class="relative w-[280px] sm:w-[320px] md:w-[450px] h-[280px] sm:h-[350px] md:h-[500px]">
+                        <div class="absolute top-6 md:top-10 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#EBB541] rounded-full opacity-60 filter blur-2xl"></div>
+                        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full flex items-end justify-center z-20">
+                            <img src="https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767366432/profile_pic_y4tjp5.png"
+                                 alt="Céline" class="max-h-[110%] w-auto object-contain drop-shadow-2xl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transition fluide -->
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-50 pointer-events-none"></div>
+    </header>
+
+    <!-- SECTOR SELECTOR -->
+    <div class="sticky top-4 z-50 px-2 md:px-4 -mt-8">
+        <div class="bg-white shadow-xl border border-gray-100 rounded-2xl md:rounded-full max-w-4xl mx-auto p-2 md:p-1.5 flex flex-col md:flex-row justify-center gap-1 md:gap-2">
+            <button onclick="setSector('artisans')" id="btn-artisans"
+                    class="sector-btn flex items-center justify-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-xl md:rounded-full transition-all font-bold text-xs md:text-sm bg-[#331553] text-white">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <span>Artisans</span>
+            </button>
+            <button onclick="setSector('bien-etre')" id="btn-bien-etre"
+                    class="sector-btn flex items-center justify-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-xl md:rounded-full transition-all font-bold text-xs md:text-sm text-gray-500 hover:bg-gray-100">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                <span>Bien-être</span>
+            </button>
+            <button onclick="setSector('tech')" id="btn-tech"
+                    class="sector-btn flex items-center justify-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-xl md:rounded-full transition-all font-bold text-xs md:text-sm text-gray-500 hover:bg-gray-100">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+                <span>Tech</span>
+            </button>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-6 py-20 space-y-32">
+        <!-- ONE-SHOTS -->
+        <section>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-[#331553]">Solutions "Clés en Main"</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Interventions ciblées pour structurer et automatiser votre activité.</p>
+            </div>
+            <div id="oneshots-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+
+        <!-- SUBSCRIPTIONS -->
+        <section class="bg-white rounded-3xl p-12 shadow-sm border border-gray-100">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-[#331553]">Co-pilotage Mensuel</h2>
+                <p class="text-gray-500 mt-4">Pérennisez votre croissance sans charge mentale supplémentaire.</p>
+            </div>
+            <div id="subscriptions-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Dynamically populated -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center text-[#331553] mb-12">Questions Fréquentes</h2>
+            <div class="space-y-2">
+                <div class="border-b border-gray-100">
+                    <button onclick="toggleFaq(0)" class="faq-btn w-full py-5 text-left flex justify-between items-center group bg-white hover:bg-gray-50 px-4 transition-colors rounded-lg">
+                        <span class="text-lg font-bold text-[#331553] group-hover:text-[#EBB541] transition-colors">Quelle est la différence entre une assistante classique et un Co-pilote ?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-content" id="faq-0">
+                        <div class="p-4 text-gray-600 bg-gray-50 rounded-b-lg border-t border-gray-100">
+                            Une assistante exécute des tâches. En tant que Co-pilote, j'apporte une vision stratégique : j'analyse vos processus, je les automatise et je crée des systèmes qui tournent même quand je ne suis pas là. Je suis là pour libérer votre charge mentale, pas seulement pour trier vos mails.
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b border-gray-100">
+                    <button onclick="toggleFaq(1)" class="faq-btn w-full py-5 text-left flex justify-between items-center group bg-white hover:bg-gray-50 px-4 transition-colors rounded-lg">
+                        <span class="text-lg font-bold text-[#331553] group-hover:text-[#EBB541] transition-colors">Comment garantissez-vous la sécurité de mes données ?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-content" id="faq-1">
+                        <div class="p-4 text-gray-600 bg-gray-50 rounded-b-lg border-t border-gray-100">
+                            C'est ma priorité absolue. Nous signons un accord de confidentialité (NDA) dès le début. J'utilise des outils sécurisés et je préconise le partage d'accès via des gestionnaires de mots de passe sans jamais connaître vos codes personnels.
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b border-gray-100 last:border-0">
+                    <button onclick="toggleFaq(2)" class="faq-btn w-full py-5 text-left flex justify-between items-center group bg-white hover:bg-gray-50 px-4 transition-colors rounded-lg">
+                        <span class="text-lg font-bold text-[#331553] group-hover:text-[#EBB541] transition-colors">Je suis déjà débordé, combien de temps le 'Setup' va-t-il me prendre ?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-content" id="faq-2">
+                        <div class="p-4 text-gray-600 bg-gray-50 rounded-b-lg border-t border-gray-100">
+                            Moins d'une heure. Après notre premier diagnostic, je prends le relais. Vous n'avez qu'à me donner les accès nécessaires, et je m'occupe de la restructuration. Mon objectif est de vous faire gagner du temps dès la première semaine, pas de vous en faire perdre.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#331553] text-white py-16 text-center">
+        <img src="https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767366698/logo_pour_Abby-removebg-preview_qqcfi4.png"
+             alt="Logo" class="h-20 w-auto mx-auto mb-8 brightness-0 invert opacity-80" />
+        <h2 class="text-3xl font-bold mb-10">Prêt à libérer votre potentiel ?</h2>
+        <a href="https://calendly.com/celassistpro/15min" target="_blank" rel="noreferrer"
+           class="inline-block px-10 py-4 bg-[#EBB541] text-[#331553] font-bold rounded-full hover:bg-white transition-all shadow-xl">
+            Réserver mon diagnostic offert
+        </a>
+        <div class="mt-20 pt-8 border-t border-white/10 text-xs text-gray-500">
+            © 2025 CelAssistPro. Tous droits réservés.
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal-overlay" class="modal-overlay fixed inset-0 z-[100] items-center justify-center bg-[#331553]/80 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 p-2 bg-gray-100 rounded-full text-gray-500 hover:text-[#331553]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <h3 id="modal-title" class="text-2xl font-bold text-[#331553] mb-4">Détails de l'offre</h3>
+            <div id="modal-content" class="text-gray-600 mb-8">Information complémentaire sur la prestation sélectionnée.</div>
+            <button onclick="closeModal()" class="w-full py-3 bg-[#EBB541] text-[#331553] font-bold rounded-lg hover:bg-[#d4a032]">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        // Data
+        const OFFERS_DATA = {
+            artisans: {
+                label: "Artisans",
+                oneShots: [
+                    {
+                        title: "Système Drive Sécurisé",
+                        price: "350 €",
+                        features: ["Organisation complète des dossiers", "Accès mobile chantier", "Sécurisation des données"]
+                    },
+                    {
+                        title: "Conversion Devis Automatisée",
+                        price: "350 €",
+                        features: ["Relances automatiques", "Signature électronique", "Suivi commercial"]
+                    },
+                    {
+                        title: "Organisation Boîte Mail",
+                        price: "275 €",
+                        features: ["Tri et nettoyage", "Création de règles automatiques", "Zéro email non lu"]
+                    }
+                ],
+                pack: {
+                    title: "Pack Intégral \"Métier Libéré\"",
+                    price: "895 €",
+                    economy: "Économie 80 €",
+                    features: ["Tous les modules One-Shot inclus", "Formation prise en main (1h)", "Support 1 mois"]
+                },
+                subs: [
+                    { level: "Bronze", type: "Assurance", price: "180 €", desc: "Maintenance des systèmes et petits ajustements.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/bronze-removebg-preview_frs2el.png" },
+                    { level: "Argent", type: "Adaptation", price: "350 €", desc: "Ajustement des outils selon l'évolution de votre activité.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/argent-removebg-preview_pxb5qh.png" },
+                    { level: "Or", type: "Création", price: "500 €", desc: "Création de nouveaux processus automatisés.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/or-removebg-preview_ij2kde.png" },
+                    { level: "Platine", type: "Délégation Totale", price: "750 €", desc: "Gestion complète de l'administratif.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367652/platine-removebg-preview_gmmq8i.png" }
+                ]
+            },
+            'bien-etre': {
+                label: "Bien-être",
+                oneShots: [
+                    {
+                        title: "Gestion RDV Zéro Oubli",
+                        price: "300 €",
+                        features: ["Synchronisation agenda", "Rappels SMS/Email automatiques", "Réduction des No-Shows"]
+                    },
+                    {
+                        title: "Séquenceur Fidélisation",
+                        price: "400 €",
+                        features: ["Emails après séance", "Offres de renouvellement", "Newsletter automatisée"]
+                    },
+                    {
+                        title: "Bibliothèque de Contenu",
+                        price: "250 €",
+                        features: ["Organisation des ressources", "Modèles de posts réseaux sociaux", "Accès rapide"]
+                    }
+                ],
+                pack: {
+                    title: "Pack \"Flux Clientèle Sérénité\"",
+                    price: "850 €",
+                    economy: "Économie 100 €",
+                    features: ["Gestion RDV + Fidélisation + Contenu", "Sérénité totale", "Focus sur vos séances"]
+                },
+                subs: [
+                    { level: "Bronze", type: "Assurance", price: "150 €", desc: "Garantie agenda sécurisé et zéro bug.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/bronze-removebg-preview_frs2el.png" },
+                    { level: "Argent", type: "Adaptation", price: "300 €", desc: "Mise à jour des offres et séquences emails.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/argent-removebg-preview_pxb5qh.png" },
+                    { level: "Or", type: "Création", price: "450 €", desc: "Croissance clientèle et nouveaux tunnels.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/or-removebg-preview_ij2kde.png" },
+                    { level: "Platine", type: "Délégation Totale", price: "650 €", desc: "Gestion du flux total et pilotage.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367652/platine-removebg-preview_gmmq8i.png" }
+                ]
+            },
+            tech: {
+                label: "Tech & Consulting",
+                oneShots: [
+                    {
+                        title: "Pipeline Facturation Sécurisé",
+                        price: "450 €",
+                        features: ["Déclenchement auto des factures", "Suivi des paiements", "Tableau de bord tréso"]
+                    },
+                    {
+                        title: "Gestion de Projet Simplifiée",
+                        price: "450 €",
+                        features: ["Interconnexion (Jira/Trello/Notion)", "Notifications intelligentes", "Suivi client auto"]
+                    },
+                    {
+                        title: "Inbox Zéro Tech",
+                        price: "300 €",
+                        features: ["Tri des notifs (Slack/Jira)", "Filtres intelligents", "Focus Deep Work"]
+                    }
+                ],
+                pack: {
+                    title: "Pack \"Flow de Projet Maîtrisé\"",
+                    price: "1 100 €",
+                    economy: "Économie 100 €",
+                    features: ["Facturation + Gestion Projet + Inbox Zéro", "Maîtrise totale du flux", "Elimination du bruit"]
+                },
+                subs: [
+                    { level: "Bronze", type: "Assurance", price: "220 €", desc: "Surveillance proactive du pipeline et API.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/bronze-removebg-preview_frs2el.png" },
+                    { level: "Argent", type: "Adaptation", price: "400 €", desc: "Adaptabilité de la stack technique.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/argent-removebg-preview_pxb5qh.png" },
+                    { level: "Or", type: "Création", price: "650 €", desc: "Intégrations complexes et nouveaux outils.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/or-removebg-preview_ij2kde.png" },
+                    { level: "Platine", type: "Délégation Totale", price: "950 €", desc: "Gestion déléguée et pilotage quotidien.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367652/platine-removebg-preview_gmmq8i.png" }
+                ]
+            }
+        };
+
+        let currentSector = 'artisans';
+
+        function setSector(sector) {
+            currentSector = sector;
+            updateButtons();
+            renderContent();
+        }
+
+        function updateButtons() {
+            document.querySelectorAll('.sector-btn').forEach(btn => {
+                btn.classList.remove('bg-[#331553]', 'text-white');
+                btn.classList.add('text-gray-500', 'hover:bg-gray-100');
+            });
+            const activeBtn = document.getElementById(`btn-${currentSector}`);
+            activeBtn.classList.add('bg-[#331553]', 'text-white');
+            activeBtn.classList.remove('text-gray-500', 'hover:bg-gray-100');
+        }
+
+        function renderContent() {
+            const data = OFFERS_DATA[currentSector];
+
+            // Render one-shots
+            let oneshotsHtml = '';
+            data.oneShots.forEach((mission, idx) => {
+                oneshotsHtml += `
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all flex flex-col">
+                        <h3 class="text-xl font-bold text-[#331553] mb-2 min-h-[3rem]">${mission.title}</h3>
+                        <p class="text-3xl font-extrabold mb-6">${mission.price}</p>
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            ${mission.features.map(feat => `
+                                <li class="flex items-start gap-2 text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    <span>${feat}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <button onclick="openModal()" class="w-full py-2 border-2 border-gray-100 rounded-lg font-bold hover:border-[#331553]">Détails</button>
+                    </div>
+                `;
+            });
+
+            // Add pack
+            oneshotsHtml += `
+                <div class="bg-[#331553] rounded-xl p-8 shadow-xl text-white flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">${data.pack.title}</h3>
+                    <p class="text-4xl font-extrabold mb-2">${data.pack.price}</p>
+                    <p class="text-[#EBB541] font-bold mb-6">${data.pack.economy}</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        ${data.pack.features.map(f => `
+                            <li class="flex items-start gap-2 text-sm">
+                                <svg class="w-4 h-4 text-[#EBB541] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                ${f}
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <button class="w-full py-4 bg-[#EBB541] text-[#331553] font-bold rounded-lg hover:bg-white transition-colors">Commander le pack</button>
+                </div>
+            `;
+
+            document.getElementById('oneshots-grid').innerHTML = oneshotsHtml;
+
+            // Render subscriptions with badges
+            let subsHtml = '';
+            data.subs.forEach(sub => {
+                subsHtml += `
+                    <div class="p-8 rounded-2xl border border-gray-100 bg-gray-50 flex flex-col">
+                        <img src="${sub.badge}" alt="${sub.level}" class="h-12 w-auto object-contain mb-2" style="margin-left: -0.5rem;" />
+                        <p class="text-xl font-bold text-[#331553] mb-4">${sub.type}</p>
+                        <p class="text-sm text-gray-600 mb-6 flex-grow">${sub.desc}</p>
+                        <p class="text-2xl font-bold mb-6">${sub.price} <span class="text-sm font-normal text-gray-400">/mois</span></p>
+                        <a href="https://calendly.com/celassistpro/15min" target="_blank" rel="noreferrer" class="w-full py-3 bg-[#331553] text-white rounded-lg font-bold hover:bg-[#EBB541] hover:text-[#331553] transition-all text-center block">Choisir</a>
+                    </div>
+                `;
+            });
+
+            document.getElementById('subscriptions-grid').innerHTML = subsHtml;
+        }
+
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-${index}`);
+            const allContent = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.faq-icon');
+
+            // Close all
+            allContent.forEach(c => c.classList.remove('open'));
+            allIcons.forEach(i => i.style.transform = 'rotate(0deg)');
+
+            // Open clicked if not already open
+            if (!content.classList.contains('open')) {
+                content.classList.add('open');
+                allIcons[index].style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function openModal() {
+            document.getElementById('modal-overlay').classList.add('open');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('open');
+        }
+
+        // Close modal on outside click
+        document.getElementById('modal-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initialize
+        renderContent();
+    </script>
+</body>
+</html>

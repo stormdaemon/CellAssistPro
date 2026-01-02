@@ -1,0 +1,87 @@
+"use client";
+
+/**
+ * Home Page - CelAssistPro Landing Page
+ *
+ * Main page assembling all sections with client-side state management
+ * for sector selection and modal interactions.
+ */
+import { useState } from "react";
+import { HeroSection } from "@/components/sections/hero-section";
+import { SectorSelector } from "@/components/sections/sector-selector";
+import { OneShotsSection } from "@/components/sections/oneshots-section";
+import { SubscriptionsSection } from "@/components/sections/subscriptions-section";
+import { FAQSection } from "@/components/sections/faq-section";
+import { FooterSection } from "@/components/sections/footer-section";
+import { Modal } from "@/components/ui/modal";
+import { OFFERS_DATA } from "@/lib/data/offers";
+import type { Sector } from "@/lib/types/offers";
+
+const FAQ_DATA = [
+  {
+    question: "Quelle est la différence entre une assistante classique et un Co-pilote ?",
+    answer: "Une assistante exécute des tâches. En tant que Co-pilote, j'apporte une vision stratégique : j'analyse vos processus, je les automatise et je crée des systèmes qui tournent même quand je ne suis pas là. Je suis là pour libérer votre charge mentale, pas seulement pour trier vos mails."
+  },
+  {
+    question: "Comment garantissez-vous la sécurité de mes données ?",
+    answer: "C'est ma priorité absolue. Nous signons un accord de confidentialité (NDA) dès le début. J'utilise des outils sécurisés et je préconise le partage d'accès via des gestionnaires de mots de passe sans jamais connaître vos codes personnels."
+  },
+  {
+    question: "Je suis déjà débordé, combien de temps le 'Setup' va-t-il me prendre ?",
+    answer: "Moins d'une heure. Après notre premier diagnostic, je prends le relais. Vous n'avez qu'à me donner les accès nécessaires, et je m'occupe de la restructuration. Mon objectif est de vous faire gagner du temps dès la première semaine, pas de vous en faire perdre."
+  }
+];
+
+export default function HomePage() {
+  const [currentSector, setCurrentSector] = useState<Sector>('artisans');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSectorChange = (sector: Sector) => {
+    setCurrentSector(sector);
+  };
+
+  const sectorData = OFFERS_DATA[currentSector];
+
+  return (
+    <main className="min-h-screen bg-gray-50 text-[#414140]">
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Sector Selector */}
+      <SectorSelector
+        onSectorChange={handleSectorChange}
+        currentSector={currentSector}
+      />
+
+      {/* Main Content */}
+      <div className="container mx-auto px-6 py-20 space-y-32">
+        {/* One-Shots Section */}
+        <OneShotsSection
+          oneShots={sectorData.oneShots}
+          pack={sectorData.pack}
+        />
+
+        {/* Subscriptions Section */}
+        <SubscriptionsSection subs={sectorData.subs} />
+      </div>
+
+      {/* FAQ Section */}
+      <FAQSection faqs={FAQ_DATA} />
+
+      {/* Footer */}
+      <FooterSection />
+
+      {/* Modal */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
+        <p>Information complémentaire sur la prestation sélectionnée.</p>
+        <p className="mt-4">
+          Cette prestation comprend une analyse complète de vos besoins,
+          une mise en place personnalisée et un suivi dédié.
+        </p>
+      </Modal>
+    </main>
+  );
+}

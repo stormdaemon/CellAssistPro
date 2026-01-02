@@ -1,0 +1,393 @@
+@import "tailwindcss";
+
+/* Hero Section - BEM Styles */
+.hero {
+  @apply relative bg-[#331553] text-white pt-8 pb-32 overflow-hidden;
+}
+
+.hero__nav {
+  @apply container mx-auto px-4 md:px-6 mb-6 md:mb-12 relative z-20;
+}
+
+.hero__nav-mobile {
+  @apply flex flex-col md:hidden items-center gap-4;
+}
+
+.hero__nav-desktop {
+  @apply hidden md:flex justify-between items-center;
+}
+
+.hero__brand {
+  @apply flex items-center gap-6;
+}
+
+.hero__logo {
+  @apply flex flex-col items-center gap-4;
+}
+
+.hero__logo-img {
+  @apply h-24 md:h-40 w-auto object-contain;
+}
+
+.hero__logo-title {
+  @apply text-2xl font-bold tracking-wide;
+}
+
+.hero__logo-title--accent {
+  @apply text-[#EBB541];
+}
+
+.hero__logo-title--base {
+  @apply text-white/90;
+}
+
+.hero__cta {
+  @apply px-8 py-3 border-2 border-[#EBB541] text-[#EBB541] font-bold rounded-full transition-all text-base whitespace-nowrap inline-flex items-center gap-2;
+}
+
+.hero__cta--outline {
+  @apply hover:bg-[#EBB541] hover:text-[#331553];
+}
+
+.hero__cta--primary {
+  @apply px-6 md:px-8 py-3 md:py-4 bg-[#EBB541] text-[#331553] shadow-lg hover:bg-white transition-all transform hover:-translate-y-1 text-sm md:text-base;
+}
+
+.hero__cta-icon {
+  @apply w-4 h-4 md:w-5 md:h-5;
+}
+
+.hero__content {
+  @apply container mx-auto px-4 md:px-6 relative z-10 pb-12 md:pb-20;
+}
+
+.hero__text {
+  @apply w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8 px-2 mb-8 lg:mb-0;
+}
+
+.hero__badge {
+  @apply inline-flex items-center gap-2 px-3 md:px-4 py-1.5 bg-[#EBB541]/10 border border-[#EBB541]/30 rounded-full mb-4 md:mb-6;
+}
+
+.hero__badge-icon {
+  @apply w-3 h-3 md:w-4 md:h-4 text-[#EBB541];
+}
+
+.hero__badge-text {
+  @apply text-[#EBB541] text-[10px] md:text-xs font-bold uppercase tracking-wider;
+}
+
+.hero__title {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight mb-2 md:mb-4;
+}
+
+.hero__title--gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#EBB541] to-[#f3d085];
+}
+
+.hero__subtitle {
+  @apply text-xl md:text-2xl text-gray-300 font-medium;
+}
+
+.hero__quote {
+  @apply text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-4 border-[#EBB541] pl-4 md:pl-6 italic;
+}
+
+.hero__actions {
+  @apply pt-2 md:pt-4;
+}
+
+.hero__visual {
+  @apply w-full lg:w-1/2 relative flex justify-center lg:justify-end;
+}
+
+.hero__visual-wrapper {
+  @apply relative w-[280px] sm:w-[320px] md:w-[450px] h-[280px] sm:h-[350px] md:h-[500px];
+}
+
+.hero__visual-glow {
+  @apply absolute top-6 md:top-10 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#EBB541] rounded-full opacity-60 filter blur-2xl;
+}
+
+.hero__visual-image-wrapper {
+  @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full flex items-end justify-center z-20;
+}
+
+.hero__visual-image {
+  @apply max-h-[110%] w-auto object-contain drop-shadow-2xl;
+}
+
+.hero__transition {
+  @apply absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-50 pointer-events-none;
+}
+
+/* Sector Selector - BEM Styles */
+.sector-selector {
+  @apply sticky top-4 z-50 px-2 md:px-4 -mt-8;
+}
+
+.sector-selector__container {
+  @apply bg-white shadow-xl border border-gray-100 rounded-2xl md:rounded-full max-w-4xl mx-auto p-2 md:p-1.5 flex flex-col md:flex-row justify-center gap-1 md:gap-2;
+}
+
+.sector-selector__button {
+  @apply flex items-center justify-center gap-1 md:gap-2 px-3 py-2 md:px-6 md:py-3 rounded-xl md:rounded-full transition-all font-bold text-xs md:text-sm text-gray-500 hover:bg-gray-100;
+}
+
+.sector-selector__button--active {
+  @apply bg-[#331553] text-white;
+}
+
+.sector-selector__icon {
+  @apply w-4 h-4 md:w-5 md:h-5;
+}
+
+.sector-selector__label {
+  @apply text-xs md:text-sm;
+}
+
+/* One-Shots Section - BEM Styles */
+.oneshots {
+  @apply py-20;
+}
+
+.oneshots__header {
+  @apply text-center mb-16;
+}
+
+.oneshots__title {
+  @apply text-3xl md:text-5xl font-bold text-[#331553];
+}
+
+.oneshots__subtitle {
+  @apply text-gray-500 mt-4 max-w-2xl mx-auto;
+}
+
+.oneshots__grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.oneshots__card {
+  @apply bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all flex flex-col;
+}
+
+.oneshots__card-title {
+  @apply text-xl font-bold text-[#331553] mb-2 min-h-[3rem];
+}
+
+.oneshots__card-price {
+  @apply text-3xl font-extrabold mb-6;
+}
+
+.oneshots__card-features {
+  @apply space-y-3 mb-8 flex-grow;
+}
+
+.oneshots__feature {
+  @apply flex items-start gap-2 text-sm text-gray-600;
+}
+
+.oneshots__feature-icon {
+  @apply w-4 h-4 text-green-500 mt-0.5 flex-shrink-0;
+}
+
+.oneshots__card-cta {
+  @apply w-full py-2 border-2 border-gray-100 rounded-lg font-bold hover:border-[#331553];
+}
+
+.oneshots__pack {
+  @apply bg-[#331553] rounded-xl p-8 shadow-xl text-white flex flex-col;
+}
+
+.oneshots__pack-title {
+  @apply text-2xl font-bold mb-4;
+}
+
+.oneshots__pack-price {
+  @apply text-4xl font-extrabold mb-2;
+}
+
+.oneshots__pack-economy {
+  @apply text-[#EBB541] font-bold mb-6;
+}
+
+.oneshots__pack-features {
+  @apply space-y-3 mb-8 flex-grow;
+}
+
+.oneshots__pack-feature {
+  @apply flex items-start gap-2 text-sm;
+}
+
+.oneshots__pack-feature-icon {
+  @apply w-4 h-4 text-[#EBB541] flex-shrink-0;
+}
+
+.oneshots__pack-cta {
+  @apply w-full py-4 bg-[#EBB541] text-[#331553] font-bold rounded-lg hover:bg-white transition-colors;
+}
+
+/* Subscriptions Section - BEM Styles */
+.subscriptions {
+  @apply bg-white rounded-3xl p-12 shadow-sm border border-gray-100;
+}
+
+.subscriptions__header {
+  @apply text-center mb-16;
+}
+
+.subscriptions__title {
+  @apply text-3xl md:text-5xl font-bold text-[#331553];
+}
+
+.subscriptions__subtitle {
+  @apply text-gray-500 mt-4;
+}
+
+.subscriptions__grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.subscriptions__card {
+  @apply p-8 rounded-2xl border border-gray-100 bg-gray-50 flex flex-col;
+}
+
+.subscriptions__badge-wrapper {
+  @apply mb-2;
+  margin-left: -0.5rem;
+}
+
+.subscriptions__badge {
+  @apply h-12 w-auto object-contain;
+}
+
+.subscriptions__type {
+  @apply text-xl font-bold text-[#331553] mb-4;
+}
+
+.subscriptions__desc {
+  @apply text-sm text-gray-600 mb-6 flex-grow;
+}
+
+.subscriptions__price {
+  @apply text-2xl font-bold mb-6;
+}
+
+.subscriptions__price-period {
+  @apply text-sm font-normal text-gray-400;
+}
+
+.subscriptions__cta {
+  @apply w-full py-3 bg-[#331553] text-white rounded-lg font-bold hover:bg-[#EBB541] hover:text-[#331553] transition-all text-center block;
+}
+
+/* FAQ Section - BEM Styles */
+.faq {
+  @apply py-20 bg-white;
+}
+
+.faq__container {
+  @apply container mx-auto px-6 max-w-3xl;
+}
+
+.faq__title {
+  @apply text-3xl font-bold text-center text-[#331553] mb-12;
+}
+
+.faq__list {
+  @apply space-y-2;
+}
+
+.faq__item {
+  @apply border-b border-gray-100;
+}
+
+.faq__question {
+  @apply w-full py-5 text-left flex justify-between items-center bg-white hover:bg-gray-50 px-4 transition-colors rounded-lg cursor-pointer;
+}
+
+.faq__question:hover .faq__question-text {
+  @apply text-[#EBB541];
+}
+
+.faq__question-text {
+  @apply text-lg font-bold text-[#331553] transition-colors;
+}
+
+.faq__icon {
+  @apply w-5 h-5 text-gray-400 transition-transform duration-300;
+}
+
+.faq__icon--rotated {
+  @apply rotate-180;
+}
+
+.faq__answer {
+  @apply max-h-0 opacity-0 overflow-hidden transition-all duration-300;
+}
+
+.faq__answer--open {
+  @apply max-h-96 opacity-100;
+}
+
+.faq__answer-content {
+  @apply p-4 text-gray-600 bg-gray-50 rounded-b-lg border-t border-gray-100;
+}
+
+/* Footer Section - BEM Styles */
+.footer {
+  @apply bg-[#331553] text-white py-16 text-center;
+}
+
+.footer__container {
+  @apply container mx-auto px-6;
+}
+
+.footer__logo {
+  @apply h-20 w-auto mx-auto mb-8 brightness-0 invert opacity-80;
+}
+
+.footer__title {
+  @apply text-3xl font-bold mb-10;
+}
+
+.footer__cta {
+  @apply inline-block px-10 py-4 bg-[#EBB541] text-[#331553] font-bold rounded-full hover:bg-white transition-all shadow-xl;
+}
+
+.footer__copyright {
+  @apply mt-20 pt-8 border-t border-white/10 text-xs text-gray-500;
+}
+
+/* Modal - BEM Styles */
+.modal__overlay {
+  @apply fixed inset-0 z-[100] items-center justify-center bg-[#331553]/80 backdrop-blur-sm p-4 hidden;
+}
+
+.modal__overlay--open {
+  @apply flex;
+}
+
+.modal__content {
+  @apply bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8 relative;
+}
+
+.modal__close {
+  @apply absolute top-4 right-4 p-2 bg-gray-100 rounded-full text-gray-500 hover:text-[#331553];
+}
+
+.modal__close-icon {
+  @apply w-5 h-5;
+}
+
+.modal__title {
+  @apply text-2xl font-bold text-[#331553] mb-4;
+}
+
+.modal__body {
+  @apply text-gray-600 mb-8;
+}
+
+.modal__cta {
+  @apply w-full py-3 bg-[#EBB541] text-[#331553] font-bold rounded-lg hover:bg-[#d4a032];
+}
