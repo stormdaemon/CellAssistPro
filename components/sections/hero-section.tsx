@@ -16,8 +16,8 @@ export function HeroSection() {
             <Image
               src="https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767366698/logo_pour_Abby-removebg-preview_qqcfi4.png"
               alt="CelAssistPro Logo"
-              width={80}
-              height={80}
+              width={136}
+              height={136}
               className="hero__logo-img"
             />
             <h1 className="hero__logo-title">
@@ -29,7 +29,7 @@ export function HeroSection() {
 
           {/* Center: Title */}
           <div className="hero__header-title">
-            Votre Co-Pilote Administratif & Digital
+            Gagnez jusqu'à 30 heures par mois sur votre organisation, sans recruter
           </div>
 
           {/* Right: CTA */}
@@ -39,7 +39,7 @@ export function HeroSection() {
             rel="noreferrer"
             className="hero__cta hero__cta--header"
           >
-            Recevoir mon diagnostic gratuit
+            Prendre Rendez-vous
           </a>
         </div>
       </div>
@@ -57,7 +57,7 @@ export function HeroSection() {
             </div>
 
             <h2 className="hero__title">
-              Bras droit stratégique
+              Votre co-pilote administratif & digital, bras droit stratégique des dirigeants
             </h2>
 
             <h3 className="hero__subtitle">
@@ -66,6 +66,10 @@ export function HeroSection() {
 
             <p className="hero__quote">
               "Je ne suis pas une simple assistante, je suis l'architecte de votre système administratif."
+            </p>
+
+            <p className="hero__slogan">
+              Libérez jusqu'à 30 heures par mois grâce à des systèmes administratifs qui tournent sans vous.
             </p>
 
             <div className="hero__actions">

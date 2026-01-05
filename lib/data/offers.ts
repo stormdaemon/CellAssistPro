@@ -11,17 +11,14 @@ export const OFFERS_DATA: OffersData = {
       {
         title: "Système Drive Sécurisé",
         price: "350 €",
+        description: "Organisation complète des dossiers avec accès mobile depuis le chantier et sécurisation de toutes vos données sensibles.",
         features: ["Organisation complète des dossiers", "Accès mobile chantier", "Sécurisation des données"]
       },
       {
         title: "Conversion Devis Automatisée",
         price: "350 €",
+        description: "Un système de relances automatiques et signature électronique pour maximiser votre taux de conversion et sécuriser votre commercial.",
         features: ["Relances automatiques", "Signature électronique", "Suivi commercial"]
-      },
-      {
-        title: "Organisation Boîte Mail",
-        price: "275 €",
-        features: ["Tri et nettoyage", "Création de règles automatiques", "Zéro email non lu"]
       }
     ],
     subs: [
@@ -37,17 +34,14 @@ export const OFFERS_DATA: OffersData = {
       {
         title: "Gestion RDV Zéro Oubli",
         price: "300 €",
+        description: "Un système de prise de rendez-vous fiable qui élimine les oublis, réduit les annulations et sécurise votre planning.",
         features: ["Synchronisation agenda", "Rappels SMS/Email automatiques", "Réduction des No-Shows"]
       },
       {
         title: "Séquenceur Fidélisation",
         price: "400 €",
+        description: "Une communication automatisée et humaine pour rester présent(e) dans l'esprit de vos clients, sans y penser au quotidien.",
         features: ["Emails après séance", "Offres de renouvellement", "Newsletter automatisée"]
-      },
-      {
-        title: "Bibliothèque de Contenu",
-        price: "250 €",
-        features: ["Organisation des ressources", "Modèles de posts réseaux sociaux", "Accès rapide"]
       }
     ],
     subs: [
@@ -63,17 +57,14 @@ export const OFFERS_DATA: OffersData = {
       {
         title: "Pipeline Facturation Sécurisé",
         price: "450 €",
+        description: "Un circuit de facturation clair et automatisé pour éviter les oublis, sécuriser votre trésorerie et garder une vision précise de vos encaissements.",
         features: ["Déclenchement auto des factures", "Suivi des paiements", "Tableau de bord tréso"]
       },
       {
         title: "Gestion de Projet Simplifiée",
         price: "450 €",
+        description: "Une organisation de projet centralisée pour suivre vos missions, vos priorités et vos livrables sans dispersion ni surcharge mentale.",
         features: ["Interconnexion (Jira/Trello/Notion)", "Notifications intelligentes", "Suivi client auto"]
-      },
-      {
-        title: "Inbox Zéro Tech",
-        price: "300 €",
-        features: ["Tri des notifs (Slack/Jira)", "Filtres intelligents", "Focus Deep Work"]
       }
     ],
     subs: [

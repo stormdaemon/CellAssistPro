@@ -7,6 +7,7 @@ export type Sector = 'artisans' | 'bien-etre' | 'tech';
 export interface OneShotOffer {
   title: string;
   price: string;
+  description: string;
   features: string[];
 }
 

@@ -43,7 +43,7 @@ export function SubscriptionsSection({ subs }: SubscriptionsSectionProps) {
                 rel="noreferrer"
                 className="subscriptions__cta"
               >
-                Obtenir un Devis
+                Obtenir mon devis personnalisé
               </a>
             </div>
           </div>
