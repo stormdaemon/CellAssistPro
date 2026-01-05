@@ -24,12 +24,6 @@ export const OFFERS_DATA: OffersData = {
         features: ["Tri et nettoyage", "Création de règles automatiques", "Zéro email non lu"]
       }
     ],
-    pack: {
-      title: "Pack Intégral \"Métier Libéré\"",
-      price: "895 €",
-      economy: "Économie 80 €",
-      features: ["Tous les modules One-Shot inclus", "Formation prise en main (1h)", "Support 1 mois"]
-    },
     subs: [
       { level: "Bronze", type: "Assurance", price: "180 €", desc: "Maintenance des systèmes et petits ajustements.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/bronze-removebg-preview_frs2el.png" },
       { level: "Argent", type: "Adaptation", price: "350 €", desc: "Ajustement des outils selon l'évolution de votre activité.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/argent-removebg-preview_pxb5qh.png" },
@@ -56,12 +50,6 @@ export const OFFERS_DATA: OffersData = {
         features: ["Organisation des ressources", "Modèles de posts réseaux sociaux", "Accès rapide"]
       }
     ],
-    pack: {
-      title: "Pack \"Flux Clientèle Sérénité\"",
-      price: "850 €",
-      economy: "Économie 100 €",
-      features: ["Gestion RDV + Fidélisation + Contenu", "Sérénité totale", "Focus sur vos séances"]
-    },
     subs: [
       { level: "Bronze", type: "Assurance", price: "150 €", desc: "Garantie agenda sécurisé et zéro bug.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/bronze-removebg-preview_frs2el.png" },
       { level: "Argent", type: "Adaptation", price: "300 €", desc: "Mise à jour des offres et séquences emails.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/argent-removebg-preview_pxb5qh.png" },
@@ -88,12 +76,6 @@ export const OFFERS_DATA: OffersData = {
         features: ["Tri des notifs (Slack/Jira)", "Filtres intelligents", "Focus Deep Work"]
       }
     ],
-    pack: {
-      title: "Pack \"Flow de Projet Maîtrisé\"",
-      price: "1 100 €",
-      economy: "Économie 100 €",
-      features: ["Facturation + Gestion Projet + Inbox Zéro", "Maîtrise totale du flux", "Elimination du bruit"]
-    },
     subs: [
       { level: "Bronze", type: "Assurance", price: "220 €", desc: "Surveillance proactive du pipeline et API.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/bronze-removebg-preview_frs2el.png" },
       { level: "Argent", type: "Adaptation", price: "400 €", desc: "Adaptabilité de la stack technique.", badge: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1767367653/argent-removebg-preview_pxb5qh.png" },

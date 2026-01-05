@@ -58,7 +58,6 @@ export default function HomePage() {
         {/* One-Shots Section */}
         <OneShotsSection
           oneShots={sectorData.oneShots}
-          pack={sectorData.pack}
         />
 
         {/* Subscriptions Section */}

@@ -14,7 +14,10 @@ export function SubscriptionsSection({ subs }: SubscriptionsSectionProps) {
   return (
     <section className="subscriptions">
       <div className="subscriptions__header">
-        <h2 className="subscriptions__title">Accompagnement Personnalisé</h2>
+        <h2 className="subscriptions__title">
+          <span className="whitespace-nowrap">Accompagnement</span>{" "}
+          <span className="whitespace-nowrap">Personnalisé</span>
+        </h2>
         <p className="subscriptions__subtitle">Une solution sur mesure adaptée à vos besoins spécifiques.</p>
       </div>
 

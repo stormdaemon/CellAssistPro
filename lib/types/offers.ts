@@ -28,7 +28,6 @@ export interface SubscriptionOffer {
 export interface SectorData {
   label: string;
   oneShots: OneShotOffer[];
-  pack: PackOffer;
   subs: SubscriptionOffer[];
 }
 

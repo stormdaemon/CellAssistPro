@@ -1,36 +1,33 @@
 @import "tailwindcss";
 
-/* Hero Section - BEM Styles */
+/* Hero Section - Main Container */
 .hero {
-  @apply relative bg-[#331553] text-white pt-8 pb-32 overflow-hidden;
+  @apply min-h-screen flex flex-col relative;
 }
 
-.hero__nav {
-  @apply container mx-auto px-4 md:px-6 mb-6 md:mb-12 relative z-20;
+/* Hero Header - Top Bar */
+.hero__header {
+  @apply bg-[#331553] text-white py-4 px-6 md:px-8 border-b border-white/10;
 }
 
-.hero__nav-mobile {
-  @apply flex flex-col md:hidden items-center gap-4;
+.hero__header-container {
+  @apply container mx-auto flex flex-col md:flex-row items-center justify-between gap-4;
 }
 
-.hero__nav-desktop {
-  @apply hidden md:flex justify-between items-center;
-}
-
-.hero__brand {
-  @apply flex items-center gap-6;
+.hero__header-title {
+  @apply text-white text-base md:text-lg font-semibold text-center md:text-left flex-1 px-4;
 }
 
 .hero__logo {
-  @apply flex flex-col items-center gap-4;
+  @apply flex items-center gap-3;
 }
 
 .hero__logo-img {
-  @apply h-24 md:h-40 w-auto object-contain;
+  @apply h-14 md:h-16 w-auto object-contain;
 }
 
 .hero__logo-title {
-  @apply text-2xl font-bold tracking-wide;
+  @apply text-xl md:text-2xl font-bold tracking-wide;
 }
 
 .hero__logo-title--accent {
@@ -42,83 +39,87 @@
 }
 
 .hero__cta {
-  @apply px-8 py-3 border-2 border-[#EBB541] text-[#EBB541] font-bold rounded-full transition-all text-base whitespace-nowrap inline-flex items-center gap-2;
+  @apply px-6 py-3 bg-[#EBB541] text-[#331553] font-bold rounded-full transition-all text-base hover:bg-white;
 }
 
-.hero__cta--outline {
-  @apply hover:bg-[#EBB541] hover:text-[#331553];
+.hero__cta--header {
+  @apply shadow-lg;
 }
 
 .hero__cta--primary {
-  @apply px-6 md:px-8 py-3 md:py-4 bg-[#EBB541] text-[#331553] shadow-lg hover:bg-white transition-all transform hover:-translate-y-1 text-sm md:text-base;
+  @apply inline-flex items-center gap-2 text-lg;
 }
 
 .hero__cta-icon {
-  @apply w-4 h-4 md:w-5 md:h-5;
+  @apply w-5 h-5;
 }
 
-.hero__content {
-  @apply container mx-auto px-4 md:px-6 relative z-10 pb-12 md:pb-20;
+/* Hero Split - 50/50 Layout */
+.hero__split {
+  @apply flex flex-col md:flex-row flex-1 min-h-[calc(100vh-88px)];
+  @apply bg-gradient-to-r from-[#F2ECEA] via-[#F2ECEA] to-[#f5f5f5];
 }
 
-.hero__text {
-  @apply w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8 px-2 mb-8 lg:mb-0;
+.hero__left {
+  @apply w-full md:w-1/2 relative;
+  @apply flex items-center justify-center;
+}
+
+.hero__left-content {
+  @apply p-8 md:p-16 lg:p-20 max-w-2xl;
+  @apply space-y-6 md:space-y-8;
 }
 
 .hero__badge {
-  @apply inline-flex items-center gap-2 px-3 md:px-4 py-1.5 bg-[#EBB541]/10 border border-[#EBB541]/30 rounded-full mb-4 md:mb-6;
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-[#331553]/10 border border-[#331553]/30 rounded-full;
 }
 
 .hero__badge-icon {
-  @apply w-3 h-3 md:w-4 md:h-4 text-[#EBB541];
+  @apply w-4 h-4 !text-[#331553];
 }
 
 .hero__badge-text {
-  @apply text-[#EBB541] text-[10px] md:text-xs font-bold uppercase tracking-wider;
+  @apply !text-[#331553] text-xs font-bold uppercase tracking-wider;
 }
 
 .hero__title {
-  @apply text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight mb-2 md:mb-4;
-}
-
-.hero__title--gradient {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#EBB541] to-[#f3d085];
+  @apply text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight !text-[#331553];
 }
 
 .hero__subtitle {
-  @apply text-xl md:text-2xl text-gray-300 font-medium;
+  @apply text-xl md:text-2xl font-medium !text-[#331553];
+}
+
+.hero__title--gradient {
+  @apply text-[#331553];
 }
 
 .hero__quote {
-  @apply text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0 border-l-4 border-[#EBB541] pl-4 md:pl-6 italic;
+  @apply text-base md:text-lg text-gray-700 leading-relaxed border-l-4 border-[#331553] pl-6 italic;
 }
 
 .hero__actions {
-  @apply pt-2 md:pt-4;
+  @apply pt-4;
 }
 
-.hero__visual {
-  @apply w-full lg:w-1/2 relative flex justify-center lg:justify-end;
+.hero__right {
+  @apply w-full md:w-1/2 relative;
 }
 
-.hero__visual-wrapper {
-  @apply relative w-[280px] sm:w-[320px] md:w-[450px] h-[280px] sm:h-[350px] md:h-[500px];
+.hero__right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(242, 236, 228, 0.5) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.hero__visual-glow {
-  @apply absolute top-6 md:top-10 right-0 w-48 md:w-64 h-48 md:h-64 bg-[#EBB541] rounded-full opacity-60 filter blur-2xl;
-}
-
-.hero__visual-image-wrapper {
-  @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full flex items-end justify-center z-20;
-}
-
-.hero__visual-image {
-  @apply max-h-[110%] w-auto object-contain drop-shadow-2xl;
-}
-
-.hero__transition {
-  @apply absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-gray-50 pointer-events-none;
+.hero__image {
+  @apply w-full h-full object-cover object-center;
 }
 
 /* Sector Selector - BEM Styles */
@@ -164,11 +165,12 @@
 }
 
 .oneshots__grid {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+  @apply flex flex-wrap justify-center gap-8 max-w-6xl mx-auto;
 }
 
 .oneshots__card {
   @apply bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all flex flex-col;
+  @apply w-full md:w-[calc(33.333%-1rem)];
 }
 
 .oneshots__card-title {
@@ -233,15 +235,15 @@
 }
 
 .subscriptions__header {
-  @apply text-center mb-16;
+  @apply text-center mb-16 px-4;
 }
 
 .subscriptions__title {
-  @apply text-3xl md:text-5xl font-bold text-[#331553];
+  @apply text-2xl sm:text-3xl md:text-5xl font-bold text-[#331553] break-words;
 }
 
 .subscriptions__subtitle {
-  @apply text-gray-500 mt-4;
+  @apply text-gray-500 mt-4 px-4;
 }
 
 .subscriptions__grid {
