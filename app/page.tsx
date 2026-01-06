@@ -9,9 +9,11 @@
 import { useState } from "react";
 import { HeroSection } from "@/components/sections/hero-section";
 import { SectorSelector } from "@/components/sections/sector-selector";
+import { StatsCounterSection } from "@/components/sections/stats-counter-section";
 import { OneShotsSection } from "@/components/sections/oneshots-section";
 import { SubscriptionsSection } from "@/components/sections/subscriptions-section";
 import { FAQSection } from "@/components/sections/faq-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { Modal } from "@/components/ui/modal";
 import { OFFERS_DATA } from "@/lib/data/offers";
@@ -47,6 +49,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Stats Counter Section */}
+      <StatsCounterSection />
+
       {/* Sector Selector */}
       <SectorSelector
         onSectorChange={handleSectorChange}
@@ -66,6 +71,9 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <FAQSection faqs={FAQ_DATA} />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Footer */}
       <FooterSection />
