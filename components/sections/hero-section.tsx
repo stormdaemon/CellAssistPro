@@ -57,7 +57,7 @@ export function HeroSection() {
             </div>
 
             <h2 className="hero__title">
-              Votre co-pilote administratif & digital, bras droit stratégique des dirigeants
+              Votre co-pilote administratif & digital, pour libérer l'esprit sans rigidifier votre activité
             </h2>
 
             <h3 className="hero__subtitle">
