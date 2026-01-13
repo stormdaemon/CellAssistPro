@@ -49,6 +49,12 @@ export function SectorSelector({ onSectorChange, currentSector }: SectorSelector
 
   return (
     <div className="sector-selector">
+      <div className="sector-selector__hint">
+        <span className="sector-selector__hint-text">Cliquez sur votre activité</span>
+        <svg className="sector-selector__hint-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
       <div className="sector-selector__container">
         {sectors.map((sector) => (
           <button

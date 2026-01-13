@@ -89,7 +89,7 @@ export function MissionDetailModal({ isOpen, onClose, mission }: MissionDetailMo
           </p>
 
           <p className="mission-modal__note">
-            Cette mission constitue souvent la première étape d'une structuration plus globale.
+            On commence par régler ce qui gêne le plus, et on avance ensuite à votre rythme.
           </p>
         </div>
 

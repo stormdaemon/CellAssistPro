@@ -22,14 +22,14 @@ import type { Sector } from "@/lib/types/offers";
 const FAQ_DATA = [
   {
     question: "Quelle est la différence entre une assistante classique et un Co-pilote ?",
-    answer: "Une assistante exécute des tâches. En tant que Co-pilote, j'apporte une vision stratégique : j'analyse vos processus, je les automatise et je crée des systèmes qui tournent même quand je ne suis pas là. Je suis là pour libérer votre charge mentale, pas seulement pour trier vos mails."
+    answer: "Une assistante classique exécute les tâches qu'on lui demande. Moi, je vous aide à organiser, simplifier et structurer votre quotidien pour que votre activité soit plus claire, même sans intervention constante de ma part."
   },
   {
     question: "Comment garantissez-vous la sécurité de mes données ?",
-    answer: "C'est ma priorité absolue. Nous signons un accord de confidentialité (NDA) dès le début. J'utilise des outils sécurisés et je préconise le partage d'accès via des gestionnaires de mots de passe sans jamais connaître vos codes personnels."
+    answer: "C'est ma priorité absolue. Accord de confidentialité signé, outils sécurisés, accès partagés sans divulgation de mots de passe."
   },
   {
-    question: "Je suis déjà débordé, combien de temps le 'Setup' va-t-il me prendre ?",
+    question: "Je suis déjà débordé, combien de temps l'installation va-t-il me prendre ?",
     answer: "Moins d'une heure. Après notre premier diagnostic, je prends le relais. Vous n'avez qu'à me donner les accès nécessaires, et je m'occupe de la restructuration. Mon objectif est de vous faire gagner du temps dès la première semaine, pas de vous en faire perdre."
   }
 ];
