@@ -6,13 +6,14 @@
  */
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export function StatsCounterSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -22,13 +23,13 @@ export function StatsCounterSection() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -95,57 +96,67 @@ function AnimatedCounter({
   isVisible,
   duration
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const countRef = useRef<HTMLSpanElement>(null);
+  const count2Ref = useRef<HTMLSpanElement>(null);
+  const containerRef = useRef<HTMLParagraphElement>(null);
+  const animationRef = useRef<number | null>(null);
+  const hasAnimated = useRef(false);
+
+  const easeOutCubic = useCallback((t: number): number => {
+    return 1 - Math.pow(1 - t, 3);
+  }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || hasAnimated.current) return;
+    hasAnimated.current = true;
 
-    setIsAnimating(true);
     const startTime = performance.now();
-    const frameDuration = 1000 / 60; // 60 FPS
+
+    if (containerRef.current) {
+      containerRef.current.classList.add('stats__value--animating');
+    }
 
     const animate = (currentTime: number) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutCubic(progress);
 
-      // Easing function for smooth animation with speed effect
-      const easeOut = (t: number) => {
-        // Exponential easing for speed effect
-        return 1 - Math.pow(1 - t, 3);
-      };
+      // Update DOM directly - no React re-render
+      if (countRef.current) {
+        countRef.current.textContent = String(Math.floor(easedProgress * end));
+      }
 
-      const easedProgress = easeOut(progress);
-
-      // First counter
-      const currentCount = Math.floor(easedProgress * end);
-      setCount(currentCount);
-
-      // Second counter (if exists)
-      if (endSecond !== undefined) {
-        const currentCount2 = Math.floor(easedProgress * endSecond);
-        setCount2(currentCount2);
+      if (endSecond !== undefined && count2Ref.current) {
+        count2Ref.current.textContent = String(Math.floor(easedProgress * endSecond));
       }
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationRef.current = requestAnimationFrame(animate);
       } else {
-        setIsAnimating(false);
+        if (containerRef.current) {
+          containerRef.current.classList.remove('stats__value--animating');
+        }
+        if (count2Ref.current) {
+          count2Ref.current.classList.remove('stats__value--blur');
+        }
       }
     };
 
-    requestAnimationFrame(animate);
-  }, [isVisible, duration, end, endSecond]);
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isVisible, duration, end, endSecond, easeOutCubic]);
 
   return (
-    <p className={`stats__value ${isAnimating ? 'stats__value--animating' : ''}`}>
-      +{count}
+    <p ref={containerRef} className="stats__value">
+      +<span ref={countRef}>0</span>
       {suffix}
       {endSecond !== undefined && (
-        <span className={isAnimating ? 'stats__value--blur' : ''}>
-          {count2}
-        </span>
+        <span ref={count2Ref} className="stats__value--blur">0</span>
       )}
       {suffixFinal}
     </p>
