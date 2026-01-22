@@ -44,9 +44,9 @@ export function StatsCounterSection() {
             </div>
             <div className="stats__content">
               <AnimatedCounter
-                end={20}
+                end={15}
                 suffix=" à "
-                endSecond={30}
+                endSecond={20}
                 suffixFinal="h/mois"
                 isVisible={isVisible}
                 duration={2000}

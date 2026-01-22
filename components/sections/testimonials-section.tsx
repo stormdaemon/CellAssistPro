@@ -8,12 +8,12 @@
 export function TestimonialsSection() {
   const testimonials = [
     {
-      quote: "Avant de travailler avec Céline, je passais +15h/semaine sur des tâches administratives. En 2 mois, j'ai gagné +25h et j'ai enfin pu me concentrer sur la stratégie.",
+      quote: "Avant de travailler avec Céline, je passais +15h/semaine sur des tâches administratives. En 2 mois, j'ai gagné +16h et j'ai enfin pu me concentrer sur la stratégie.",
       author: "Raphaël Brodut",
       company: "Brodut Elec"
     },
     {
-      quote: "J'ai gagné 25h par mois et enfin pu structurer mon business.",
+      quote: "J'ai gagné 20h par mois et enfin pu structurer mon business.",
       author: "Claire G.",
       company: "Fondatrice"
     }

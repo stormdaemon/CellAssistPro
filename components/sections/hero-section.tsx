@@ -29,7 +29,7 @@ export function HeroSection() {
 
           {/* Center: Title */}
           <div className="hero__header-title">
-            Gagnez jusqu'à 30 heures par mois sur votre organisation, sans recruter
+            Gagnez jusqu'à 20 heures par mois sur votre organisation, sans recruter
           </div>
 
           {/* Right: CTA */}
@@ -69,7 +69,7 @@ export function HeroSection() {
             </p>
 
             <p className="hero__slogan">
-              Libérez jusqu'à 30 heures par mois grâce à des systèmes administratifs qui tournent sans vous.
+              Libérez jusqu'à 20 heures par mois grâce à des systèmes administratifs qui tournent sans vous.
             </p>
 
             <div className="hero__actions">
