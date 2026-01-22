@@ -613,8 +613,9 @@
 }
 
 .stats__value {
-  @apply text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#331553];
-  @apply mb-2;
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#331553];
+  @apply mb-2 whitespace-nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .stats__value--animating {
