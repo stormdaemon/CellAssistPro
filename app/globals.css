@@ -613,33 +613,15 @@
 }
 
 .stats__value {
-  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#331553];
+  @apply text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#331553];
   @apply mb-2 whitespace-nowrap;
   font-variant-numeric: tabular-nums;
 }
 
-.stats__value--animating {
-  @apply relative;
-}
-
-.stats__value--blur {
-  @apply inline-block transition-all duration-150;
-  animation: blurSpeed 0.15s ease-in-out;
-}
-
-@keyframes blurSpeed {
-  0% {
-    filter: blur(0px);
-    transform: scale(1);
-  }
-  50% {
-    filter: blur(2px);
-    transform: scale(1.05);
-  }
-  100% {
-    filter: blur(0px);
-    transform: scale(1);
-  }
+.stats__number {
+  @apply inline-block;
+  transition: filter 0.05s ease-out;
+  will-change: filter;
 }
 
 .stats__label {
