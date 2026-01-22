@@ -104,8 +104,9 @@ function AnimatedCounter({
   const lastCount = useRef(0);
   const lastCount2 = useRef(0);
 
-  const easeOutCubic = useCallback((t: number): number => {
-    return 1 - Math.pow(1 - t, 3);
+  const easeOutQuad = useCallback((t: number): number => {
+    // Easing plus doux - ralentit moins brutalement à la fin
+    return t * (2 - t);
   }, []);
 
   useEffect(() => {
@@ -117,7 +118,7 @@ function AnimatedCounter({
     const animate = (currentTime: number) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const easedProgress = easeOutCubic(progress);
+      const easedProgress = easeOutQuad(progress);
 
       // Calculate blur based on speed (more change = more blur)
       const blurIntensity = (1 - progress) * 3; // Max 3px blur at start, fades to 0
@@ -159,7 +160,7 @@ function AnimatedCounter({
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isVisible, duration, end, endSecond, easeOutCubic]);
+  }, [isVisible, duration, end, endSecond, easeOutQuad]);
 
   return (
     <p ref={containerRef} className="stats__value">
