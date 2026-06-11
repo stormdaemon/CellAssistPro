@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ArrowRight, Building2, ChartNoAxesColumnIncreasing, Clock3, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { CaseStudyExplorer } from "@/components/site/case-study-explorer";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { PageHero } from "@/components/site/page-hero";
@@ -8,8 +9,6 @@ import { caseStudies, SITE, testimonials } from "@/lib/site-data";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("cases");
-
-const caseIcons = [Building2, ChartNoAxesColumnIncreasing, Clock3];
 
 export default function CasesPage() {
   return (
@@ -28,30 +27,8 @@ export default function CasesPage() {
       </PageHero>
 
       <section className="section section--white">
-        <div className="container case-grid">
-          {caseStudies.map((item, index) => {
-            const Icon = caseIcons[index];
-            return (
-              <article className="case-card" key={item.title}>
-                <div className="case-card__metric">{item.metric}</div>
-                <Icon aria-hidden="true" />
-                <h2>{item.title}</h2>
-                <div>
-                  <h3>La situation</h3>
-                  <p>{item.context}</p>
-                </div>
-                <ArrowRight aria-hidden="true" className="case-card__arrow" />
-                <div>
-                  <h3>Ce qui a été mis en place</h3>
-                  <p>{item.work}</p>
-                </div>
-                <div>
-                  <h3>Le résultat</h3>
-                  <p>{item.result}</p>
-                </div>
-              </article>
-            );
-          })}
+        <div className="container">
+          <CaseStudyExplorer caseStudies={caseStudies} />
         </div>
       </section>
 

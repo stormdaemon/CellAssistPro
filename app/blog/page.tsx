@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen, SearchCheck } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { blogArticles, blogCategories } from "@/lib/blog-data";
@@ -22,19 +22,30 @@ export default function BlogPage() {
       </PageHero>
 
       <section className="section section--white">
-        <div className="container blog-hub">
-          <aside className="blog-sidebar" aria-label="Thèmes du blog">
-            <SearchCheck aria-hidden="true" />
-            <h2>Thèmes</h2>
-            <div>
-              {blogCategories.map((category) => (
-                <a href={`#${category.toLowerCase().replaceAll(" ", "-")}`} key={category}>
-                  {category}
-                </a>
-              ))}
-            </div>
-          </aside>
+        <div className="container blog-flow">
+          <nav className="blog-topic-nav" aria-label="Catégories du blog">
+            {blogCategories.map((category) => (
+              <a href={`#${category.toLowerCase().replaceAll(" ", "-")}`} key={category}>
+                {category}
+              </a>
+            ))}
+          </nav>
 
+          <div className="blog-featured">
+            {blogArticles.slice(0, 3).map((article) => (
+              <article className="blog-card blog-card--featured" key={article.slug}>
+                <BookOpen aria-hidden="true" />
+                <p className="eyebrow">{article.keyword}</p>
+                <h2>{article.title}</h2>
+                <p>{article.description}</p>
+                <Link href={`/blog/${article.slug}`}>
+                  Lire l'article <ArrowRight aria-hidden="true" />
+                </Link>
+              </article>
+            ))}
+          </div>
+
+          <div className="blog-layout">
           <div className="blog-list">
             {blogCategories.map((category) => (
               <section id={category.toLowerCase().replaceAll(" ", "-")} key={category}>
@@ -56,6 +67,7 @@ export default function BlogPage() {
                 </div>
               </section>
             ))}
+          </div>
           </div>
         </div>
       </section>

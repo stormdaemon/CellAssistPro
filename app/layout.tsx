@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/site/json-ld";
+import { RevealOnScroll } from "@/components/site/reveal-on-scroll";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { professionalServiceJsonLd, siteNavigationJsonLd } from "@/lib/structured-data";
@@ -13,7 +14,7 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
@@ -61,10 +62,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${manrope.variable} ${cormorant.variable}`}>
+      <body className={`${manrope.variable} ${playfair.variable}`}>
         <JsonLd data={professionalServiceJsonLd()} />
         <JsonLd data={siteNavigationJsonLd()} />
         <SiteHeader />
+        <RevealOnScroll />
         {children}
         <SiteFooter />
       </body>

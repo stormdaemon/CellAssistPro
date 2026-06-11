@@ -30,7 +30,7 @@ export default function OffersPage() {
         title="Des offres construites autour d'une seule question : de combien de temps avez-vous besoin ?"
       >
         <p>
-          Pas de catalogue de tâches imposé, pas de minimum d'heures. Trois formules claires, du
+          Pas de catalogue de tâche imposées, pas de minimum d'heures. Trois formules claires, du
           coup de main ponctuel à la délégation complète. Toutes commencent par un diagnostic
           gratuit, toutes font l'objet d'un devis personnalisé.
         </p>
@@ -73,20 +73,48 @@ export default function OffersPage() {
                   {offer.badge ? <span className="badge">{offer.badge}</span> : null}
                   <Icon aria-hidden="true" />
                   <h2>{offer.name}</h2>
-                  <div>
-                    <h3>Pour qui</h3>
-                    <p>{offer.audience}</p>
+                  <p>{offer.short}</p>
+                  <p className="offer-card__result">{offer.result}</p>
+                  <a className="button button--purple" href={`#offre-${index + 1}`}>
+                    Voir le détail
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="offer-detail-list" aria-label="Détail des offres">
+            {offers.map((offer, index) => {
+              const Icon = icons[index];
+              return (
+                <article className="offer-detail-panel" id={`offre-${index + 1}`} key={offer.name}>
+                  <div className="offer-detail-panel__intro">
+                    <Icon aria-hidden="true" />
+                    <div>
+                      {offer.badge ? <span className="badge">{offer.badge}</span> : null}
+                      <h2>{offer.name}</h2>
+                      <p>{offer.short}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3>Ce que c'est</h3>
-                    <p>{offer.what}</p>
+
+                  <div className="offer-detail-panel__grid">
+                    <div>
+                      <h3>Pour qui</h3>
+                      <p>{offer.audience}</p>
+                    </div>
+                    <div>
+                      <h3>Ce que c'est</h3>
+                      <p>{offer.what}</p>
+                    </div>
+                    <div>
+                      <h3>Le résultat</h3>
+                      <p>{offer.result}</p>
+                    </div>
                   </div>
+
                   {offer.promise ? <p className="gold-note">{offer.promise}</p> : null}
-                  <div>
-                    <h3>Le résultat</h3>
-                    <p>{offer.result}</p>
-                  </div>
-                  <a className="button button--purple" href={SITE.calendlyUrl}>
+
+                  <a className="button button--gold" href={SITE.calendlyUrl}>
                     Demander mon devis
                   </a>
                 </article>
