@@ -12,6 +12,13 @@ export function professionalServiceJsonLd() {
       name: SITE.founder,
       jobTitle: "Directrice des opérations externalisée",
     },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3 Les Vignes de Chez Rullier",
+      postalCode: "16250",
+      addressLocality: "Champagne-Vigny",
+      addressCountry: "FR",
+    },
     areaServed: ["Charente", "Angoulême", "France"],
     description:
       "Gestion administrative, organisationnelle et pré-comptable pour dirigeants de TPE, sur place en Charente et à distance partout en France.",

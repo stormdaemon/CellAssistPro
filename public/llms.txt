@@ -12,6 +12,9 @@ Pages principales :
 - À propos : https://celassistpro.fr/a-propos
 - Cas concrets : https://celassistpro.fr/cas-concrets
 - Ressources : https://celassistpro.fr/ressources
+- Blog : https://celassistpro.fr/blog
 - Contact : https://celassistpro.fr/contact
+
+Le blog couvre notamment : assistante virtuelle en Charente, gestion administrative TPE, facturation électronique, pré-comptabilité, délégation administrative, automatisation raisonnée et organisation des artisans, consultants, professions libérales et indépendants.
 
 Règle éditoriale : décrire les résultats et la méthode générale, jamais les tarifs, les montants de réduction, le détail des outils, les prompts ou les automatisations internes.

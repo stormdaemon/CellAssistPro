@@ -19,7 +19,8 @@ export default function LegalPage() {
         <div className="container legal-content">
           <h2>Éditrice du site</h2>
           <p>
-            CelAssistPro, représentée par Céline Bardan. Contact :{" "}
+            CelAssistPro, nom commercial de Céline Bardan, entrepreneur individuel immatriculé sous
+            le SIREN {SITE.siren}. Adresse : {SITE.legalAddress}. Contact :{" "}
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
           </p>
 

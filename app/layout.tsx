@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/site/json-ld";
 import { SiteFooter } from "@/components/site/site-footer";
@@ -7,16 +7,17 @@ import { SiteHeader } from "@/components/site/site-header";
 import { professionalServiceJsonLd, siteNavigationJsonLd } from "@/lib/structured-data";
 import { SITE } from "@/lib/site-data";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-body",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${manrope.variable} ${cormorant.variable}`}>
         <JsonLd data={professionalServiceJsonLd()} />
         <JsonLd data={siteNavigationJsonLd()} />
         <SiteHeader />

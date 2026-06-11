@@ -2,6 +2,8 @@ export const SITE = {
   name: "CelAssistPro",
   tagline: "Votre bras droit stratégique",
   founder: "Céline Bardan",
+  siren: "999 130 982",
+  legalAddress: "3 Les Vignes de Chez Rullier, 16250 Champagne-Vigny",
   baseUrl: "https://celassistpro.fr",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@celassistpro.fr",
   calendlyUrl: "https://calendly.com/celassistpro/15min",
@@ -25,6 +27,7 @@ export const NAVIGATION = [
   { href: "/a-propos", label: "À propos" },
   { href: "/cas-concrets", label: "Cas concrets" },
   { href: "/ressources", label: "Ressources" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -58,6 +61,12 @@ export const SEO = {
     title: "Auto-diagnostic gratuit : combien d'heures perd votre TPE chaque semaine ?",
     description:
       "10 questions, 5 minutes : mesurez le temps que votre administratif vous vole et recevez vos 3 premières actions pour le récupérer. Gratuit.",
+  },
+  blog: {
+    path: "/blog",
+    title: "Blog gestion administrative TPE | CelAssistPro",
+    description:
+      "Conseils concrets pour alléger l'administratif, organiser une TPE, préparer la facturation électronique et déléguer sans recruter.",
   },
   contact: {
     path: "/contact",

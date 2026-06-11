@@ -3,11 +3,11 @@ import Image from "next/image";
 import {
   Bot,
   CalendarCheck,
-  CheckCircle2,
   Handshake,
   Layers3,
   ShieldCheck,
 } from "lucide-react";
+import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { PageHero } from "@/components/site/page-hero";
@@ -119,17 +119,7 @@ export default function OffersPage() {
             <p className="eyebrow">FAQ</p>
             <h2>Les questions que l'on me pose souvent</h2>
           </div>
-          <div className="faq-list">
-            {offerFaqs.map((faq) => (
-              <details key={faq.question}>
-                <summary>
-                  <CheckCircle2 aria-hidden="true" />
-                  {faq.question}
-                </summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
-          </div>
+          <FaqAccordion faqs={offerFaqs} />
         </div>
       </section>
 
