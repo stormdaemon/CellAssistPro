@@ -1,25 +1,44 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import SocialFloatMenu from "@/components/ui/social-float-menu";
+import { JsonLd } from "@/components/site/json-ld";
+import { SiteFooter } from "@/components/site/site-footer";
+import { SiteHeader } from "@/components/site/site-header";
+import { professionalServiceJsonLd, siteNavigationJsonLd } from "@/lib/structured-data";
+import { SITE } from "@/lib/site-data";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "CelAssistPro - Votre Co-pilote Administrative & Digitale",
-  description: "Bras droit stratégique pour dirigeants et entrepreneurs",
-  metadataBase: new URL("https://celassistpro.fr"),
+  title: "Assistante virtuelle Charente | CelAssistPro",
+  description:
+    "Gestion administrative, organisation et pré-comptable pour TPE et indépendants. IA & automatisation. Sur place en Charente, à distance partout en France.",
+  metadataBase: new URL(SITE.baseUrl),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "CelAssistPro - Votre Co-pilote Administrative & Digitale",
-    description: "Bras droit stratégique pour dirigeants et entrepreneurs",
-    url: "https://celassistpro.fr",
+    title: "CelAssistPro — Votre bras droit stratégique",
+    description:
+      "Récupérez 10 heures par semaine. Votre gestion tourne — sans vous.",
+    url: SITE.baseUrl,
     siteName: "CelAssistPro",
     images: [
       {
-        url: "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1769108874/logo_cellassistpro_lqxix4.jpg",
-        width: 1200,
-        height: 630,
-        alt: "CelAssistPro Logo",
+        url: "/images/celine/01-celine-hero-accueil-sourire.jpg",
+        width: 1024,
+        height: 1024,
+        alt: "Céline Bardan, fondatrice de CelAssistPro",
       },
     ],
     locale: "fr_FR",
@@ -27,13 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CelAssistPro - Votre Co-pilote Administrative & Digitale",
-    description: "Bras droit stratégique pour dirigeants et entrepreneurs",
-    images: ["https://res.cloudinary.com/dgjsq5fnl/image/upload/v1769108874/logo_cellassistpro_lqxix4.jpg"],
-  },
-  other: {
-    "og:image:type": "image/jpeg",
-    "og:image:secure_url": "https://res.cloudinary.com/dgjsq5fnl/image/upload/v1769108874/logo_cellassistpro_lqxix4.jpg",
+    title: "CelAssistPro — Votre bras droit stratégique",
+    description:
+      "Récupérez 10 heures par semaine. Votre gestion tourne — sans vous.",
+    images: ["/images/celine/01-celine-hero-accueil-sourire.jpg"],
   },
 };
 
@@ -44,9 +60,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${playfair.variable}`}>
+        <JsonLd data={professionalServiceJsonLd()} />
+        <JsonLd data={siteNavigationJsonLd()} />
+        <SiteHeader />
         {children}
-        <SocialFloatMenu />
+        <SiteFooter />
       </body>
     </html>
   );

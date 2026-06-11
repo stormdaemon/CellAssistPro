@@ -3,8 +3,18 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20"
-  BUN_VERSION = "1.3.5"
+  NODE_VERSION = "22"
+  BUN_VERSION = "1.3.13"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; frame-src https://calendly.com https://docs.google.com; img-src 'self' data: https://*.calendly.com; connect-src 'self' https://calendly.com ws:; font-src 'self'; base-uri 'self'; form-action 'self' https://docs.google.com mailto:; frame-ancestors 'none'; upgrade-insecure-requests;"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
