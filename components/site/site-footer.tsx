@@ -30,7 +30,7 @@ export function SiteFooter() {
 
         <nav aria-label="Ressources">
           <h2>Ressources</h2>
-          <Link href="/ressources">Auto-diagnostic gratuit</Link>
+          <Link href="/diagnostic">Auto-diagnostic gratuit</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/mes-offres#faq">FAQ</Link>
           <Link href="/cas-concrets">Résultats clients</Link>

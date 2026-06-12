@@ -114,19 +114,27 @@ export default function HomePage() {
           <div className="section-heading section-heading--center">
             <h2>Je ne vends pas des heures. Je construis votre système.</h2>
           </div>
-          <div className="method-grid">
+          <ol className="method-timeline">
             {methodSteps.map((step, index) => {
               const Icon = methodIcons[index];
               return (
-                <article className="method-card" key={step.title}>
-                  <div className="method-card__number">{index + 1}</div>
-                  <Icon aria-hidden="true" />
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
-                </article>
+                <li className="method-step" key={step.title}>
+                  <div className="method-step__marker" aria-hidden="true">
+                    <span>{index + 1}</span>
+                  </div>
+                  <article className="method-step__card">
+                    <header>
+                      <Icon aria-hidden="true" />
+                      <h3>{step.title}</h3>
+                    </header>
+                    {step.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </article>
+                </li>
               );
             })}
-          </div>
+          </ol>
           <div className="center-action">
             <a className="button button--gold" href={SITE.calendlyUrl}>
               Commencer par le diagnostic gratuit

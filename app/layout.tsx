@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/site/json-ld";
 import { RevealOnScroll } from "@/components/site/reveal-on-scroll";
@@ -8,17 +8,17 @@ import { SiteHeader } from "@/components/site/site-header";
 import { professionalServiceJsonLd, siteNavigationJsonLd } from "@/lib/structured-data";
 import { SITE } from "@/lib/site-data";
 
-const manrope = Manrope({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["500", "600", "700"],
+  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${manrope.variable} ${playfair.variable}`}>
+      <body className={`${jakarta.variable} ${fraunces.variable}`}>
         <JsonLd data={professionalServiceJsonLd()} />
         <JsonLd data={siteNavigationJsonLd()} />
         <SiteHeader />

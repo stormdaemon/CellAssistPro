@@ -62,38 +62,32 @@ export default function OffersPage() {
 
       <section className="section section--cream">
         <div className="container">
-          <div className="offers-grid">
-            {offers.map((offer, index) => {
-              const Icon = icons[index];
-              return (
-                <article
-                  className={offer.badge ? "offer-card offer-card--featured" : "offer-card"}
-                  key={offer.name}
-                >
-                  {offer.badge ? <span className="badge">{offer.badge}</span> : null}
-                  <Icon aria-hidden="true" />
-                  <h2>{offer.name}</h2>
-                  <p>{offer.short}</p>
-                  <p className="offer-card__result">{offer.result}</p>
-                  <a className="button button--purple" href={`#offre-${index + 1}`}>
-                    Voir le détail
-                  </a>
-                </article>
-              );
-            })}
-          </div>
+          <nav className="offer-anchor-nav" aria-label="Aller à une offre">
+            {offers.map((offer, index) => (
+              <a href={`#offre-${index + 1}`} key={offer.name}>
+                <span aria-hidden="true">{index + 1}</span>
+                {offer.name}
+              </a>
+            ))}
+          </nav>
 
           <div className="offer-detail-list" aria-label="Détail des offres">
             {offers.map((offer, index) => {
               const Icon = icons[index];
               return (
-                <article className="offer-detail-panel" id={`offre-${index + 1}`} key={offer.name}>
+                <article
+                  className={
+                    offer.badge ? "offer-detail-panel offer-detail-panel--featured" : "offer-detail-panel"
+                  }
+                  id={`offre-${index + 1}`}
+                  key={offer.name}
+                >
                   <div className="offer-detail-panel__intro">
                     <Icon aria-hidden="true" />
                     <div>
                       {offer.badge ? <span className="badge">{offer.badge}</span> : null}
                       <h2>{offer.name}</h2>
-                      <p>{offer.short}</p>
+                      <p className="offer-detail-panel__lede">{offer.short}</p>
                     </div>
                   </div>
 
@@ -106,7 +100,7 @@ export default function OffersPage() {
                       <h3>Ce que c'est</h3>
                       <p>{offer.what}</p>
                     </div>
-                    <div>
+                    <div className="offer-detail-panel__result">
                       <h3>Le résultat</h3>
                       <p>{offer.result}</p>
                     </div>

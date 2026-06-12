@@ -22,6 +22,12 @@ export default function AboutPage() {
           <div>
             <p className="eyebrow">Céline Bardan</p>
             <h1>30 ans dans les coulisses des entreprises. Et une conviction : votre temps vaut mieux que ça.</h1>
+            <ul className="about-hero__chips" aria-label="En bref">
+              <li>30 ans d'expertise</li>
+              <li>BTS Assistant de gestion PME-PMI</li>
+              <li>Formée à l'IA et à l'automatisation</li>
+              <li>CPME · BNI Charente Grand Sud</li>
+            </ul>
           </div>
           <Image
             src="/images/celine/03-celine-a-propos-tasse.jpg"

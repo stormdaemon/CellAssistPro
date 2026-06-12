@@ -7,7 +7,6 @@ export const SITE = {
   baseUrl: "https://celassistpro.fr",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@celassistpro.fr",
   calendlyUrl: "https://calendly.com/celassistpro/15min",
-  quizFormUrl: process.env.NEXT_PUBLIC_QUIZ_FORM_URL ?? "/ressources#auto-diagnostic",
   contactFormUrl:
     process.env.NEXT_PUBLIC_CONTACT_FORM_URL ??
     "mailto:contact@celassistpro.fr?subject=Demande%20depuis%20le%20site%20CelAssistPro",
@@ -26,7 +25,7 @@ export const NAVIGATION = [
   { href: "/mes-offres", label: "Mes offres" },
   { href: "/a-propos", label: "À propos" },
   { href: "/cas-concrets", label: "Cas concrets" },
-  { href: "/ressources", label: "Ressources" },
+  { href: "/diagnostic", label: "Diagnostic" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -42,7 +41,7 @@ export const SEO = {
     path: "/mes-offres",
     title: "Gestion administrative TPE Angoulême & Charente — Offres CelAssistPro",
     description:
-      "Structuration, restructuration et automatisation du workflow métier : des offres souples pour libérer les dirigeants de TPE. Devis gratuit sous 48 h.",
+      "Structuration, restructuration et pilotage automatisé : des offres souples pour libérer les dirigeants de TPE. Devis gratuit sous 48 h.",
   },
   about: {
     path: "/a-propos",
@@ -57,7 +56,7 @@ export const SEO = {
       "Devis envoyés sous 24 h, présentations divisées par 5, facturation électronique en 1 h : des cas réels d'automatisation et d'organisation en TPE.",
   },
   resources: {
-    path: "/ressources",
+    path: "/diagnostic",
     title: "Auto-diagnostic gratuit : combien d'heures perd votre TPE chaque semaine ?",
     description:
       "10 questions, 5 minutes : mesurez le temps que votre administratif vous vole et recevez vos 3 premières actions pour le récupérer. Gratuit.",
@@ -106,15 +105,24 @@ export const painPoints = [
 export const methodSteps = [
   {
     title: "Le diagnostic",
-    text: "En 15 minutes, nous identifions ensemble les 3 points de friction qui vous coûtent le plus de temps. C'est gratuit et sans engagement.",
+    paragraphs: [
+      "En 15 minutes, nous identifions ensemble les 3 points de friction qui vous coûtent le plus de temps. C'est gratuit et sans engagement.",
+    ],
   },
   {
     title: "Le système",
-    text: "D'abord les fondations, ensuite la vitesse. Votre entreprise se crée ? Je structure votre gestion dès le départ — circuits de devis, facturation, classement, suivi — pour qu'elle naisse organisée. Votre entreprise a plus de 2 ans ? Je restructure l'existant : on garde ce qui fonctionne, on répare ce qui fuit, on simplifie ce qui s'est empilé. Et seulement ensuite, j'automatise : assistants IA personnalisés, relances et circuits qui tournent seuls. Automatiser le désordre ne fait qu'accélérer le désordre — c'est pour ça que l'ordre vient d'abord.",
+    paragraphs: [
+      "D'abord les fondations, ensuite la vitesse.",
+      "Votre entreprise se crée ? Je structure votre gestion dès le départ — circuits de devis, facturation, classement, suivi — pour qu'elle naisse organisée.",
+      "Votre entreprise a plus de 2 ans ? Je restructure l'existant : on garde ce qui fonctionne, on répare ce qui fuit, on simplifie ce qui s'est empilé.",
+      "Et seulement ensuite, j'automatise : assistants IA personnalisés, relances et circuits qui tournent seuls. Automatiser le désordre ne fait qu'accélérer le désordre — c'est pour ça que l'ordre vient d'abord.",
+    ],
   },
   {
     title: "Le pilotage",
-    text: "Je veille, j'ajuste, je vous rends compte. Vous gardez la vision, je tiens la barre administrative. Votre structure est pilotée avec rigueur — vous le savez, vous dormez tranquille.",
+    paragraphs: [
+      "Je veille, j'ajuste, je vous rends compte. Vous gardez la vision, je tiens la barre administrative. Votre structure est pilotée avec rigueur — vous le savez, vous dormez tranquille.",
+    ],
   },
 ];
 
@@ -135,10 +143,10 @@ export const offers = [
     result: "Une gestion remise au cordeau, des heures retrouvées chaque semaine, et la visibilité sur votre trésorerie.",
   },
   {
-    name: "Le Workflow métier automatisé",
+    name: "Le Pilotage automatisé",
     short: "Votre système est posé ? On le fait tourner tout seul.",
     audience: "Votre gestion est structurée — par moi ou par vous — et vous voulez maintenant qu'elle tourne toute seule : que les tâches répétitives disparaissent de votre semaine.",
-    what: "J'automatise l'ensemble de votre workflow métier, brique par brique : tri et réponses de boîte mail, relances de factures, devis récurrents, pré-comptabilité, prise de rendez-vous, reporting, assistants IA personnalisés à votre activité. Chaque automatisation est testée, documentée, et maintenue.",
+    what: "J'automatise l'ensemble de votre gestion, brique par brique : tri et réponses de boîte mail, relances de factures, devis récurrents, pré-comptabilité, prise de rendez-vous, reporting, assistants IA personnalisés à votre activité. Chaque automatisation est testée, documentée, et maintenue.",
     result: "Jusqu'à 10 heures récupérées par semaine, et une gestion qui tourne pendant que vous êtes sur votre cœur de métier.",
     promise:
       "Et voici ma promesse à contre-courant : chaque automatisation installée réduit le coût de votre pilotage mensuel. Plus votre système travaille, moins vous payez. Mon objectif n'est pas de vous facturer des heures — c'est de les faire disparaître.",
@@ -245,21 +253,52 @@ export const quizQuestions = [
   "Pensez-vous à votre paperasse pendant vos moments en famille ?",
 ];
 
+export const quizAnswerOptions = [
+  { label: "Jamais", points: 0 },
+  { label: "Parfois", points: 1 },
+  { label: "Souvent", points: 2 },
+  { label: "En permanence", points: 3 },
+];
+
 export const quizProfiles = [
   {
+    min: 0,
+    max: 8,
     score: "0 à 8 points",
     title: "Vous tenez la barre",
-    text: "Votre gestion est globalement maîtrisée. Estimation : 2 à 4 h perdues par semaine. Les 3 actions : automatiser vos relances, centraliser vos documents, bloquer un créneau administratif fixe hebdomadaire.",
+    estimate: "2 à 4 h perdues par semaine",
+    text: "Votre gestion est globalement maîtrisée. Estimation : 2 à 4 h perdues par semaine.",
+    actions: [
+      "Automatiser vos relances",
+      "Centraliser vos documents",
+      "Bloquer un créneau administratif fixe hebdomadaire",
+    ],
   },
   {
+    min: 9,
+    max: 18,
     score: "9 à 18 points",
     title: "Ça déborde par moments",
-    text: "Votre administratif vous coûte environ 5 à 9 h par semaine — plus d'une journée par mois. Les 3 actions : mettre en place un circuit devis-facture-relance, préparer vos pièces comptables au fil de l'eau, automatiser ce qui se répète.",
+    estimate: "5 à 9 h perdues par semaine",
+    text: "Votre administratif vous coûte environ 5 à 9 h par semaine — plus d'une journée par mois.",
+    actions: [
+      "Mettre en place un circuit devis-facture-relance",
+      "Préparer vos pièces comptables au fil de l'eau",
+      "Automatiser ce qui se répète",
+    ],
   },
   {
+    min: 19,
+    max: 30,
     score: "19 à 30 points",
     title: "Surcharge structurelle",
+    estimate: "10 h ou plus perdues par semaine",
     text: "Vous perdez probablement 10 h ou plus par semaine — l'équivalent d'une journée et demie. Ce n'est pas un manque de volonté : c'est un problème de système. Bonne nouvelle : c'est exactement ce qui se répare le mieux. Parlons-en 15 minutes.",
+    actions: [
+      "Identifier les 3 circuits qui fuient le plus (devis, relances, pièces comptables)",
+      "Remettre de l'ordre avant d'ajouter le moindre outil",
+      "Réserver 15 minutes pour poser votre situation — c'est gratuit",
+    ],
   },
 ];
 

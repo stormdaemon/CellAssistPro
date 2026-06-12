@@ -1,5 +1,5 @@
-import { ClipboardCheck, Lock } from "lucide-react";
-import { SITE } from "@/lib/site-data";
+import Link from "next/link";
+import { ArrowRight, ClipboardCheck, Lock } from "lucide-react";
 
 export function LeadMagnet() {
   return (
@@ -15,18 +15,14 @@ export function LeadMagnet() {
           premières actions pour les récupérer.
         </p>
       </div>
-      <form className="lead-magnet__form" action={SITE.quizFormUrl} method="get">
-        <label className="sr-only" htmlFor="lead-email">
-          Votre email professionnel
-        </label>
-        <input id="lead-email" name="email" type="email" placeholder="Votre email" required />
-        <button className="button button--gold" type="submit">
-          Faire mon auto-diagnostic gratuit
-        </button>
+      <div className="lead-magnet__cta">
+        <Link className="button button--gold" href="/diagnostic">
+          Faire mon auto-diagnostic gratuit <ArrowRight aria-hidden="true" />
+        </Link>
         <small>
-          <Lock aria-hidden="true" /> Votre email ne sera jamais cédé. Désinscription en un clic.
+          <Lock aria-hidden="true" /> Résultat immédiat, sans email, sans engagement.
         </small>
-      </form>
+      </div>
     </section>
   );
 }

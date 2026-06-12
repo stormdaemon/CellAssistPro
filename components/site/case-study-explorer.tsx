@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowRight, Building2, ChartNoAxesColumnIncreasing, Clock3 } from "lucide-react";
+import { Fragment, useState } from "react";
+import { ArrowDown, Building2, ChartNoAxesColumnIncreasing, ChevronDown, Clock3 } from "lucide-react";
 
 type CaseStudy = {
   metric: string;
@@ -18,46 +18,35 @@ type CaseStudyExplorerProps = {
 const icons = [Building2, ChartNoAxesColumnIncreasing, Clock3];
 
 export function CaseStudyExplorer({ caseStudies }: CaseStudyExplorerProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <div className="case-explorer">
-      <div className="case-explorer__tabs" role="tablist" aria-label="Cas concrets">
-        {caseStudies.map((item, index) => {
-          const Icon = icons[index] ?? Building2;
-          const isActive = activeIndex === index;
+      {caseStudies.map((item, index) => {
+        const Icon = icons[index] ?? Building2;
+        const isActive = activeIndex === index;
 
-          return (
+        return (
+          <Fragment key={item.title}>
             <button
               aria-controls={`case-panel-${index}`}
-              aria-selected={isActive}
+              aria-expanded={isActive}
               className={isActive ? "case-explorer__tab case-explorer__tab--active" : "case-explorer__tab"}
               id={`case-tab-${index}`}
-              key={item.title}
-              role="tab"
               type="button"
-              onClick={() => setActiveIndex(index)}
+              onClick={() => setActiveIndex(isActive ? null : index)}
             >
               <span className="case-card__metric">{item.metric}</span>
               <Icon aria-hidden="true" />
               <span>{item.title}</span>
+              <ChevronDown aria-hidden="true" className="case-explorer__chevron" />
             </button>
-          );
-        })}
-      </div>
 
-      <div className="case-explorer__panels">
-        {caseStudies.map((item, index) => {
-          const isActive = activeIndex === index;
-
-          return (
             <article
               aria-labelledby={`case-tab-${index}`}
-              className={isActive ? "case-explorer__panel case-explorer__panel--active" : "case-explorer__panel"}
+              className="case-explorer__panel"
               hidden={!isActive}
               id={`case-panel-${index}`}
-              key={item.title}
-              role="tabpanel"
             >
               <div className="case-explorer__heading">
                 <span className="case-card__metric">{item.metric}</span>
@@ -69,7 +58,7 @@ export function CaseStudyExplorer({ caseStudies }: CaseStudyExplorerProps) {
                   <h3>La situation</h3>
                   <p>{item.context}</p>
                 </div>
-                <ArrowRight aria-hidden="true" className="case-card__arrow" />
+                <ArrowDown aria-hidden="true" className="case-card__arrow" />
                 <div>
                   <h3>Ce qui a été mis en place</h3>
                   <p>{item.work}</p>
@@ -80,9 +69,9 @@ export function CaseStudyExplorer({ caseStudies }: CaseStudyExplorerProps) {
                 </div>
               </div>
             </article>
-          );
-        })}
-      </div>
+          </Fragment>
+        );
+      })}
     </div>
   );
 }

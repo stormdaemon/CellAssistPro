@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { blogArticles, blogCategories } from "@/lib/blog-data";
 
 export const metadata: Metadata = pageMetadata("blog");
 
+const categoryAnchor = (category: string) => category.toLowerCase().replaceAll(" ", "-").replaceAll("&", "et");
+
 export default function BlogPage() {
+  const [headline, ...secondary] = blogArticles.slice(0, 3);
+
   return (
     <main>
       <PageHero
@@ -25,18 +29,27 @@ export default function BlogPage() {
         <div className="container blog-flow">
           <nav className="blog-topic-nav" aria-label="Catégories du blog">
             {blogCategories.map((category) => (
-              <a href={`#${category.toLowerCase().replaceAll(" ", "-")}`} key={category}>
+              <a href={`#${categoryAnchor(category)}`} key={category}>
                 {category}
               </a>
             ))}
           </nav>
 
-          <div className="blog-featured">
-            {blogArticles.slice(0, 3).map((article) => (
-              <article className="blog-card blog-card--featured" key={article.slug}>
-                <BookOpen aria-hidden="true" />
-                <p className="eyebrow">{article.keyword}</p>
-                <h2>{article.title}</h2>
+          <div className="bento bento--featured" aria-label="À la une">
+            <article className="bento-tile bento-tile--hero">
+              <p className="eyebrow">
+                <Sparkles aria-hidden="true" /> À la une — {headline.category}
+              </p>
+              <h2>{headline.title}</h2>
+              <p>{headline.description}</p>
+              <Link href={`/blog/${headline.slug}`}>
+                Lire l'article <ArrowRight aria-hidden="true" />
+              </Link>
+            </article>
+            {secondary.map((article) => (
+              <article className="bento-tile bento-tile--cream" key={article.slug}>
+                <p className="eyebrow">{article.category}</p>
+                <h3>{article.title}</h3>
                 <p>{article.description}</p>
                 <Link href={`/blog/${article.slug}`}>
                   Lire l'article <ArrowRight aria-hidden="true" />
@@ -45,17 +58,24 @@ export default function BlogPage() {
             ))}
           </div>
 
-          <div className="blog-layout">
           <div className="blog-list">
-            {blogCategories.map((category) => (
-              <section id={category.toLowerCase().replaceAll(" ", "-")} key={category}>
-                <h2>{category}</h2>
-                <div className="blog-card-grid">
-                  {blogArticles
-                    .filter((article) => article.category === category)
-                    .map((article) => (
-                      <article className="blog-card" key={article.slug}>
-                        <BookOpen aria-hidden="true" />
+            {blogCategories.map((category) => {
+              const articles = blogArticles.filter((article) => article.category === category);
+
+              return (
+                <section id={categoryAnchor(category)} key={category}>
+                  <header className="blog-list__heading">
+                    <h2>{category}</h2>
+                    <p>
+                      {articles.length} article{articles.length > 1 ? "s" : ""}
+                    </p>
+                  </header>
+                  <div className="bento">
+                    {articles.map((article, index) => (
+                      <article
+                        className={index % 5 === 0 ? "bento-tile bento-tile--wide" : "bento-tile"}
+                        key={article.slug}
+                      >
                         <p className="eyebrow">{article.keyword}</p>
                         <h3>{article.title}</h3>
                         <p>{article.description}</p>
@@ -64,10 +84,10 @@ export default function BlogPage() {
                         </Link>
                       </article>
                     ))}
-                </div>
-              </section>
-            ))}
-          </div>
+                  </div>
+                </section>
+              );
+            })}
           </div>
         </div>
       </section>
