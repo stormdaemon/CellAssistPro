@@ -222,9 +222,9 @@ export const caseStudies = [
 export const testimonials = [
   {
     name: "Raphaël",
-    role: "dirigeant de BR16BATIMENT (Charente)",
+    role: "dirigeant de BR16BATIMENT",
     quote:
-      "Céline gère ma structure depuis 2017 — d'abord dans l'ombre, en plus de son travail, puis officiellement depuis janvier 2026. Oui, c'est mon épouse, et c'est justement pour ça que je peux en parler mieux que personne : je l'ai vue tenir l'administratif, les échéances et le suivi d'une entreprise du bâtiment au quotidien, pendant des années. Devis suivis, relances faites, échéances anticipées au lieu d'être subies. Sans elle, je passerais mes soirées au bureau au lieu d'être sur mes chantiers. Si elle fait pour vous le dixième de ce qu'elle fait ici, vous ne reviendrez pas en arrière.",
+      "Céline gère ma structure depuis 2017 — d'abord dans l'ombre, en plus de son travail, puis officiellement depuis janvier 2026. Je l'ai vue tenir l'administratif, les échéances et le suivi d'une entreprise du bâtiment au quotidien, pendant des années. Devis suivis, relances faites, échéances anticipées au lieu d'être subies. Sans elle, je passerais mes soirées au bureau au lieu d'être sur mes chantiers. Si elle fait pour vous le dixième de ce qu'elle fait ici, vous ne reviendrez pas en arrière.",
   },
   {
     name: "Tanya",

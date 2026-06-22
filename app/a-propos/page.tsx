@@ -53,7 +53,7 @@ export default function AboutPage() {
             <p>
               Quand l'intelligence artificielle et l'automatisation sont devenues accessibles, j'ai
               compris que tout changeait. Je me suis formée sérieusement — assistanat virtuel, puis
-              automatisations et IA avec l'organisme L'Form, gestion du temps avec le GRETA CFA
+              automatisations et IA avec l'organisme L'Forme, gestion du temps avec le GRETA CFA
               Aquitaine. Pas pour suivre une mode : pour offrir aux TPE et indépendants ce qui était
               réservé aux grandes structures avec leur service administratif dédié.
             </p>
@@ -107,7 +107,7 @@ export default function AboutPage() {
             <span>CPME</span>
             <span>BNI Charente Grand Sud</span>
             <span>GRETA CFA Aquitaine</span>
-            <span>L'Form</span>
+            <span>L'Forme</span>
           </div>
           <div className="center-action">
             <a className="button button--gold" href={SITE.calendlyUrl}>
