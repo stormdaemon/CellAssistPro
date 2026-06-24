@@ -1484,6 +1484,7 @@ button.case-explorer__tab:nth-of-type(3) {
 }
 
 .testimonial-card:last-child {
+  grid-column: 1 / -1;
   background: var(--cream);
 }
 

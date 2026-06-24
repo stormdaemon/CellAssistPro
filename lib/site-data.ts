@@ -238,6 +238,12 @@ export const testimonials = [
     quote:
       "Céline est la personne qu'il vous faut : consciencieuse dans ce qu'elle fait, et quelqu'un qui n'a pas peur de s'investir dans l'inconnu.",
   },
+  {
+    name: "Magali",
+    role: "consultante & coach en évolution professionnelle",
+    quote:
+      "Libérez-vous l'esprit, concentrez-vous sur votre cœur de métier. N'hésitez pas à déléguer vos tâches administratives à Céline. Le travail sera bien fait et toujours avec le sourire. Libérez-vous de l'espace pour votre cœur de métier.",
+  },
 ];
 
 export const quizQuestions = [
