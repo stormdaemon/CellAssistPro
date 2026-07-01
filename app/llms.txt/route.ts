@@ -1,4 +1,4 @@
-import { blogArticles, blogCategories } from "@/lib/blog-data";
+import { blogArticles, blogCategories } from "@/lib/blog";
 import { SITE } from "@/lib/site-data";
 
 export const dynamic = "force-static";

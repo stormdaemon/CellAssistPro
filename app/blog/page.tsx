@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
-import { blogArticles, blogCategories } from "@/lib/blog-data";
+import { blogArticles, blogCategories, formatArticleDate, readingMinutes } from "@/lib/blog";
 
 export const metadata: Metadata = pageMetadata("blog");
 
@@ -76,7 +76,9 @@ export default function BlogPage() {
                         className={index % 5 === 0 ? "bento-tile bento-tile--wide" : "bento-tile"}
                         key={article.slug}
                       >
-                        <p className="eyebrow">{article.keyword}</p>
+                        <p className="eyebrow">
+                          {formatArticleDate(article.dateModified)} · {readingMinutes(article)} min
+                        </p>
                         <h3>{article.title}</h3>
                         <p>{article.description}</p>
                         <Link href={`/blog/${article.slug}`}>
