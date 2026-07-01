@@ -46,3 +46,6 @@ Thumbs.db
 
 # Dossier de préparation refonte (données personnelles, briefs internes)
 /refonte/
+
+# Pièces jointes de sessions distantes
+/.codex-remote-attachments/

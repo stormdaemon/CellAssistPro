@@ -1,30 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Bot,
-  CalendarCheck,
-  CheckCircle2,
-  FileWarning,
-  FolderClock,
-  Gauge,
-  HandCoins,
-  Home,
-  MailWarning,
-  Search,
-  ShieldCheck,
-  Sparkles,
-  TrendingUp,
-} from "lucide-react";
+import { Bot, CalendarCheck, HandCoins } from "lucide-react";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { pageMetadata } from "@/lib/metadata";
 import { methodSteps, offers, painPoints, SITE, stats } from "@/lib/site-data";
 
 export const metadata: Metadata = pageMetadata("home");
-
-const painIcons = [MailWarning, Home, FolderClock, FileWarning];
-const methodIcons = [Search, Gauge, TrendingUp];
-const offerIcons = [CheckCircle2, ShieldCheck, Sparkles];
 
 export default function HomePage() {
   return (
@@ -93,15 +75,12 @@ export default function HomePage() {
             <p>Vous vous reconnaissez ?</p>
           </div>
           <div className="cards-grid cards-grid--four">
-            {painPoints.map((point, index) => {
-              const Icon = painIcons[index];
-              return (
-                <article className="mini-card" key={point}>
-                  <Icon aria-hidden="true" />
-                  <p>{point}</p>
-                </article>
-              );
-            })}
+            {painPoints.map((point) => (
+              <article className="mini-card" key={point.text}>
+                <point.icon aria-hidden="true" />
+                <p>{point.text}</p>
+              </article>
+            ))}
           </div>
           <p className="transition-line">
             Si vous avez hoché la tête au moins une fois, la suite va vous intéresser.
@@ -115,25 +94,22 @@ export default function HomePage() {
             <h2>Je ne vends pas des heures. Je construis votre système.</h2>
           </div>
           <ol className="method-timeline">
-            {methodSteps.map((step, index) => {
-              const Icon = methodIcons[index];
-              return (
-                <li className="method-step" key={step.title}>
-                  <div className="method-step__marker" aria-hidden="true">
-                    <span>{index + 1}</span>
-                  </div>
-                  <article className="method-step__card">
-                    <header>
-                      <Icon aria-hidden="true" />
-                      <h3>{step.title}</h3>
-                    </header>
-                    {step.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </article>
-                </li>
-              );
-            })}
+            {methodSteps.map((step, index) => (
+              <li className="method-step" key={step.title}>
+                <div className="method-step__marker" aria-hidden="true">
+                  <span>{index + 1}</span>
+                </div>
+                <article className="method-step__card">
+                  <header>
+                    <step.icon aria-hidden="true" />
+                    <h3>{step.title}</h3>
+                  </header>
+                  {step.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </article>
+              </li>
+            ))}
           </ol>
           <div className="center-action">
             <a className="button button--gold" href={SITE.calendlyUrl}>
@@ -149,17 +125,14 @@ export default function HomePage() {
             <h2>Trois façons de travailler ensemble</h2>
           </div>
           <div className="cards-grid cards-grid--three">
-            {offers.map((offer, index) => {
-              const Icon = offerIcons[index];
-              return (
-                <article className="offer-preview" key={offer.name}>
-                  <Icon aria-hidden="true" />
-                  <h3>{offer.name.replace("La ", "").replace("Le ", "")}</h3>
-                  <p>{offer.short}</p>
-                  <Link href="/mes-offres">En savoir plus →</Link>
-                </article>
-              );
-            })}
+            {offers.map((offer) => (
+              <article className="offer-preview" key={offer.name}>
+                <offer.icon aria-hidden="true" />
+                <h3>{offer.shortName}</h3>
+                <p>{offer.short}</p>
+                <Link href="/mes-offres">En savoir plus →</Link>
+              </article>
+            ))}
           </div>
           <p className="disclaimer">
             Chaque entreprise est unique : toutes mes interventions font l'objet d'un devis

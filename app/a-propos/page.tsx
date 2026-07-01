@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CalendarCheck, Eye, LockKeyhole, Ruler } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { pageMetadata } from "@/lib/metadata";
@@ -8,8 +8,6 @@ import { SITE, values } from "@/lib/site-data";
 import { breadcrumbJsonLd, personJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("about");
-
-const valueIcons = [Ruler, LockKeyhole, Eye];
 
 export default function AboutPage() {
   return (
@@ -92,16 +90,13 @@ export default function AboutPage() {
       <section className="section section--cream">
         <div className="container">
           <div className="values-grid">
-            {values.map(([title, text], index) => {
-              const Icon = valueIcons[index];
-              return (
-                <article className="value-card" key={title}>
-                  <Icon aria-hidden="true" />
-                  <h2>{title}</h2>
-                  <p>{text}</p>
-                </article>
-              );
-            })}
+            {values.map((value) => (
+              <article className="value-card" key={value.title}>
+                <value.icon aria-hidden="true" />
+                <h2>{value.title}</h2>
+                <p>{value.text}</p>
+              </article>
+            ))}
           </div>
           <div className="logo-strip" aria-label="Réseaux et formations">
             <span>CPME</span>

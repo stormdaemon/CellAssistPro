@@ -1,4 +1,4 @@
-import { NAVIGATION, offerFaqs, SITE } from "@/lib/site-data";
+import { offerFaqs, SITE } from "@/lib/site-data";
 
 export function professionalServiceJsonLd() {
   return {
@@ -7,6 +7,9 @@ export function professionalServiceJsonLd() {
     name: SITE.name,
     url: SITE.baseUrl,
     email: SITE.email,
+    image: `${SITE.baseUrl}/images/celine/01-celine-hero-accueil-sourire.jpg`,
+    logo: `${SITE.baseUrl}/images/logos/celassistpro-flame-240.png`,
+    priceRange: "Sur devis",
     founder: {
       "@type": "Person",
       name: SITE.founder,
@@ -86,18 +89,5 @@ export function personJsonLd() {
       "Intelligence artificielle appliquée aux TPE",
     ],
     sameAs: [SITE.socials.linkedin],
-  };
-}
-
-export function siteNavigationJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: NAVIGATION.map((item, index) => ({
-      "@type": "SiteNavigationElement",
-      position: index + 1,
-      name: item.label,
-      url: `${SITE.baseUrl}${item.href === "/" ? "" : item.href}`,
-    })),
   };
 }

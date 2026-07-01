@@ -1,127 +1,77 @@
-# CelAssistPro - Landing Page
+# CelAssistPro — Site vitrine
 
-Site vitrine moderne développé avec Next.js 16.1, TypeScript, Tailwind CSS v4 et Bun.
+Site de CelAssistPro (Céline Bardan, assistante administrative indépendante en Charente), développé avec Next.js 16, TypeScript et Bun. Déployé sur Netlify.
 
-## 🚀 Stack Technique
+## Stack
 
-- **Next.js 16.1** - Framework React avec App Router
-- **TypeScript** - Typage strict pour la sécurité du code
-- **Tailwind CSS v4** - Framework CSS utility-first
-- **Bun 1.3.5** - Runtime JavaScript ultra-rapide
-- **Méthodologie BEM** - Architecture CSS maintenables
+- **Next.js 16** (App Router, React Compiler, Turbopack)
+- **TypeScript** strict
+- **CSS artisanal en BEM** dans `app/globals.css` (Tailwind v4 est importé pour le reset uniquement)
+- **Bun** comme runtime et gestionnaire de paquets
+- **Netlify** : hébergement, en-têtes de sécurité (`netlify.toml`) et formulaire de contact (Netlify Forms)
 
-## 📁 Structure du Projet
+## Structure
 
 ```
-celassistpro/
-├── app/                    # App Router Next.js
-│   ├── globals.css        # Styles globaux + BEM
-│   ├── layout.tsx         # Layout racine
-│   └── page.tsx           # Page d'accueil
-├── components/
-│   ├── sections/          # Sections de la page (BEM)
-│   │   ├── hero-section.tsx
-│   │   ├── sector-selector.tsx
-│   │   ├── oneshots-section.tsx
-│   │   ├── subscriptions-section.tsx
-│   │   ├── faq-section.tsx
-│   │   └── footer-section.tsx
-│   └── ui/                # Composants UI réutilisables
-│       └── modal.tsx
-├── lib/
-│   ├── data/              # Données constantes
-│   │   └── offers.ts
-│   └── types/             # Types TypeScript
-│       └── offers.ts
-└── public/                # Assets statiques
+app/                       # Pages (App Router)
+│   ├── blog/[slug]/       # Rendu des articles
+│   ├── sitemap.ts         # Sitemap (dates réelles par article)
+│   ├── robots.ts
+│   └── llms.txt/          # Route llms.txt
+components/site/           # Header, footer, formulaire, quiz, etc.
+lib/
+│   ├── blog/
+│   │   ├── types.ts       # Type BlogArticle + temps de lecture + dates
+│   │   ├── articles/      # Un fichier .ts par article (70)
+│   │   └── index.ts       # Agrégation + catégories (imports générés)
+│   ├── site-data.ts       # Contenu du site (offres, FAQ, témoignages…)
+│   ├── metadata.ts        # Metadata par page
+│   └── structured-data.ts # JSON-LD
+public/
+│   ├── __forms.html       # Déclaration statique Netlify Forms
+│   └── images/            # Photos, logos, image OG (1200×630)
 ```
 
-## 🛠️ Installation & Développement
-
-### Prérequis
-
-- Node.js 20+
-- Bun 1.3.5+
-
-### Installation des dépendances
+## Développement
 
 ```bash
-bun install
+bun install        # dépendances
+bun run dev        # serveur de dev (http://localhost:3000)
+bun run build      # build de production
+bun run type-check # tsc --noEmit
+bun run lint       # eslint
 ```
 
-### Démarrer le serveur de développement
+## Blog
 
-```bash
-bun run dev
-```
+Chaque article vit dans `lib/blog/articles/<slug>.ts` et exporte un objet `BlogArticle` :
+sections à structure libre (`paragraphs`, `list`, `steps`), FAQ optionnelle, dates réelles
+(`datePublished`, `dateModified` — à mettre à jour à chaque modification de fond).
+Le temps de lecture est calculé automatiquement. Pour ajouter un article : créer le fichier,
+puis l'importer dans `lib/blog/index.ts`.
 
-Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
+Règles éditoriales : français irréprochable, pas d'anglicismes, pas de statistiques inventées,
+jamais de référence au handicap en métaphore, structures de sections variées d'un article à l'autre.
 
-### Build de production
+## Formulaire de contact
 
-```bash
-bun run build
-```
+Le formulaire (`components/site/contact-form.tsx`) poste en fetch vers `/__forms.html`,
+intercepté par Netlify Forms (déclaration statique dans `public/__forms.html`).
+Les soumissions arrivent dans l'onglet **Forms** du dashboard Netlify — y configurer
+la notification email vers la boîte de Céline. Si un champ est ajouté au formulaire React,
+il faut aussi l'ajouter dans `public/__forms.html`.
 
-### Vérification des types TypeScript
+## Variables d'environnement (optionnelles)
 
-```bash
-bun run type-check
-```
+- `NEXT_PUBLIC_CONTACT_EMAIL` — email de contact (défaut : contact@celassistpro.fr)
+- `NEXT_PUBLIC_GOOGLE_BUSINESS_URL` — URL de la fiche Google Business
+- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` — active Plausible Analytics (ex. `celassistpro.fr`) ;
+  nécessite un compte Plausible, la CSP autorise déjà `plausible.io`
 
-### Linter
+## Sécurité
 
-```bash
-bun run lint
-```
+Les en-têtes (CSP, HSTS, etc.) sont définis une seule fois dans `netlify.toml` et
+s'appliquent au niveau du CDN. Si un service tiers est ajouté (script, iframe),
+mettre à jour la CSP en conséquence.
 
-## 🎨 Méthodologie BEM
-
-Le projet suit strictement la méthodologie BEM (Block Element Modifier) pour une architecture CSS maintenable :
-
-```css
-.block { }                   /* Block */
-.block__element { }          /* Element */
-.block--modifier { }         /* Modifier */
-.block__element--modifier { } /* Element + Modifier */
-```
-
-Exemples dans le projet :
-- `.hero__title` — Titre de la section hero
-- `.faq__question` — Question dans la FAQ
-- `.sector-selector__button--active` — Bouton actif du sélecteur
-
-## 🚢 Déploiement
-
-### Netlify
-
-Le projet est configuré pour le déploiement sur Netlify via `netlify.toml` :
-
-1. Connectez le repository Git à Netlify
-2. Les builds sont automatiques
-3. La configuration utilise Bun 1.3.5
-
-### Variables d'environnement
-
-Aucune variable d'environnement requise pour ce projet statique.
-
-## ✅ Bonnes Pratiques Appliquées
-
-- **Server Components par défaut** — Meilleures performances
-- **Typage TypeScript strict** — Zéro erreur de type
-- **Architecture BEM** — CSS maintenable et scalables
-- **Accessibilité** — ARIA labels, navigation clavier
-- **Performance** — Images optimisées, code-splitting
-- **SEO** — Metadata API, balises sémantiques
-
-## 📝 Scripts Disponibles
-
-- `bun run dev` — Démarre le serveur de développement
-- `bun run build` — Crée un build de production
-- `bun run start` — Lance le serveur de production
-- `bun run lint` — Exécute ESLint
-- `bun run type-check` — Vérifie les types TypeScript
-
-## 📄 Licence
-
-© 2025 CelAssistPro. Tous droits réservés.
+© 2026 CelAssistPro. Tous droits réservés.

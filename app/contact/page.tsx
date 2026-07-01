@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CalendarDays, Mail, MapPin, MessageSquareText, PhoneCall } from "lucide-react";
+import { ContactForm } from "@/components/site/contact-form";
 import { pageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site-data";
 
@@ -49,78 +50,7 @@ export default function ContactPage() {
           <article className="contact-card">
             <MessageSquareText aria-hidden="true" />
             <h2>Vous préférez écrire</h2>
-            <form className="contact-form" action={SITE.contactFormUrl} method="post" encType="text/plain">
-              <div className="field-row">
-                <label>
-                  Prénom et nom
-                  <input name="nom" required />
-                </label>
-                <label>
-                  Email
-                  <input name="email" type="email" required />
-                </label>
-              </div>
-              <label>
-                Téléphone
-                <input name="telephone" type="tel" placeholder="si vous préférez que je vous rappelle" />
-              </label>
-              <label>
-                Votre métier / secteur
-                <select name="secteur" defaultValue="">
-                  <option value="" disabled>
-                    Choisir
-                  </option>
-                  <option>Artisanat</option>
-                  <option>Tech & web</option>
-                  <option>Bien-être</option>
-                  <option>Services</option>
-                  <option>Autre</option>
-                </select>
-              </label>
-              <label>
-                Votre entreprise a…
-                <select name="anciennete" defaultValue="">
-                  <option value="" disabled>
-                    Choisir
-                  </option>
-                  <option>moins de 2 ans — en création ou jeune</option>
-                  <option>plus de 2 ans</option>
-                </select>
-              </label>
-              <label>
-                Vous cherchez plutôt…
-                <select name="besoin" defaultValue="">
-                  <option value="" disabled>
-                    Choisir
-                  </option>
-                  <option>une mission ponctuelle, même très courte</option>
-                  <option>un accompagnement régulier</option>
-                  <option>je ne sais pas encore — aidez-moi à y voir clair</option>
-                </select>
-              </label>
-              <label>
-                Qu'est-ce qui vous prend le plus de temps aujourd'hui ?
-                <textarea name="message" rows={5} required />
-              </label>
-              <label>
-                Comment m'avez-vous connue ?
-                <select name="origine" defaultValue="">
-                  <option value="" disabled>
-                    Choisir
-                  </option>
-                  <option>LinkedIn</option>
-                  <option>CPME</option>
-                  <option>BNI</option>
-                  <option>Bouche-à-oreille</option>
-                  <option>Recherche Google</option>
-                  <option>Autre</option>
-                </select>
-              </label>
-              <button className="button button--gold" type="submit">
-                Envoyer — réponse sous 24 h ouvrées
-              </button>
-              <small>Vos informations servent uniquement à vous répondre. Jamais cédées, jamais de spam.</small>
-            </form>
+            <ContactForm />
           </article>
 
           <article className="contact-card">

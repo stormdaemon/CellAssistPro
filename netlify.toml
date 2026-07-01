@@ -14,7 +14,7 @@
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; frame-src https://calendly.com https://docs.google.com; img-src 'self' data: https://*.calendly.com; connect-src 'self' https://calendly.com ws:; font-src 'self'; base-uri 'self'; form-action 'self' https://docs.google.com mailto:; frame-ancestors 'none'; upgrade-insecure-requests;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://plausible.io; style-src 'self' 'unsafe-inline' https://assets.calendly.com; frame-src https://calendly.com; img-src 'self' data: https://*.calendly.com; connect-src 'self' https://calendly.com https://plausible.io; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

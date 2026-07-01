@@ -48,7 +48,14 @@ export function DiagnosticQuiz() {
 
   return (
     <div className="quiz" id="auto-diagnostic">
-      <div className="quiz__progress" role="presentation">
+      <div
+        className="quiz__progress"
+        role="progressbar"
+        aria-label="Progression du diagnostic"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={progress}
+      >
         <span style={{ width: `${progress}%` }} />
       </div>
 

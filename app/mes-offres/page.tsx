@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import {
-  Bot,
-  CalendarCheck,
-  Handshake,
-  Layers3,
-  ShieldCheck,
-} from "lucide-react";
+import { CalendarCheck, Handshake } from "lucide-react";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -16,8 +10,6 @@ import { offers, offerFaqs, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("offers");
-
-const icons = [Layers3, ShieldCheck, Bot];
 
 export default function OffersPage() {
   return (
@@ -73,7 +65,6 @@ export default function OffersPage() {
 
           <div className="offer-detail-list" aria-label="Détail des offres">
             {offers.map((offer, index) => {
-              const Icon = icons[index];
               return (
                 <article
                   className={
@@ -83,7 +74,7 @@ export default function OffersPage() {
                   key={offer.name}
                 >
                   <div className="offer-detail-panel__intro">
-                    <Icon aria-hidden="true" />
+                    <offer.icon aria-hidden="true" />
                     <div>
                       {offer.badge ? <span className="badge">{offer.badge}</span> : null}
                       <h2>{offer.name}</h2>

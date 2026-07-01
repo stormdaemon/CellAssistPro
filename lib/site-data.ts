@@ -1,3 +1,20 @@
+import {
+  Bot,
+  Eye,
+  FileWarning,
+  FolderClock,
+  Gauge,
+  Home,
+  Layers3,
+  LockKeyhole,
+  MailWarning,
+  Ruler,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  type LucideIcon,
+} from "lucide-react";
+
 export const SITE = {
   name: "CelAssistPro",
   tagline: "Votre bras droit stratégique",
@@ -7,9 +24,6 @@ export const SITE = {
   baseUrl: "https://celassistpro.fr",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@celassistpro.fr",
   calendlyUrl: "https://calendly.com/celassistpro/15min",
-  contactFormUrl:
-    process.env.NEXT_PUBLIC_CONTACT_FORM_URL ??
-    "mailto:contact@celassistpro.fr?subject=Demande%20depuis%20le%20site%20CelAssistPro",
   googleBusinessUrl:
     process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL ??
     "https://www.google.com/search?q=CelAssistPro",
@@ -90,26 +104,45 @@ export type SeoKey = keyof typeof SEO;
 
 export const stats = [
   ["30 ans", "d'expertise administrative et pré-comptable"],
-  ["10 h", "récupérées chaque semaine en moyenne"],
-  ["25", "assistants IA personnalisés à votre activité"],
-  ["16", "sur place dans toute la Charente, à distance partout en France"],
+  ["2017", "l'année depuis laquelle je pilote l'administratif d'une entreprise du bâtiment"],
+  ["Jusqu'à 10 h", "récupérables chaque semaine, selon votre situation"],
+  ["15 min", "de diagnostic gratuit, sans engagement"],
 ];
 
-export const painPoints = [
-  "Vos devis et factures partent en retard — et vos relances aussi.",
-  "Votre dimanche soir est consacré à l'administratif au lieu de votre famille.",
-  "Votre expert-comptable vous relance pour des pièces manquantes.",
-  "Vous savez que vous perdez du temps et de l'argent, mais vous n'avez personne à qui déléguer.",
+export type PainPoint = {
+  icon: LucideIcon;
+  text: string;
+};
+
+export const painPoints: PainPoint[] = [
+  {
+    icon: MailWarning,
+    text: "Vos devis et factures partent en retard — et vos relances aussi.",
+  },
+  {
+    icon: Home,
+    text: "Votre dimanche soir est consacré à l'administratif au lieu de votre famille.",
+  },
+  {
+    icon: FileWarning,
+    text: "Votre expert-comptable vous relance pour des pièces manquantes.",
+  },
+  {
+    icon: FolderClock,
+    text: "Vous savez que vous perdez du temps et de l'argent, mais vous n'avez personne à qui déléguer.",
+  },
 ];
 
 export const methodSteps = [
   {
+    icon: Search,
     title: "Le diagnostic",
     paragraphs: [
       "En 15 minutes, nous identifions ensemble les 3 points de friction qui vous coûtent le plus de temps. C'est gratuit et sans engagement.",
     ],
   },
   {
+    icon: Gauge,
     title: "Le système",
     paragraphs: [
       "D'abord les fondations, ensuite la vitesse.",
@@ -119,6 +152,7 @@ export const methodSteps = [
     ],
   },
   {
+    icon: TrendingUp,
     title: "Le pilotage",
     paragraphs: [
       "Je veille, j'ajuste, je vous rends compte. Vous gardez la vision, je tiens la barre administrative. Votre structure est pilotée avec rigueur — vous le savez, vous dormez tranquille.",
@@ -128,14 +162,18 @@ export const methodSteps = [
 
 export const offers = [
   {
+    icon: Layers3,
     name: "La Structuration",
+    shortName: "Structuration",
     short: "Votre entreprise se crée ? Elle naît organisée.",
     audience: "Vous créez votre entreprise, ou elle a moins de 2 ans. Tout est à poser : la facturation, le classement, le suivi des règlements, les échéances. C'est maintenant que tout se joue.",
     what: "Je pose les fondations de votre gestion dès le départ : circuits de devis et de facturation, organisation documentaire, suivi de trésorerie, calendrier des échéances. Votre entreprise naît organisée — vous ne connaîtrez jamais le bureau qui déborde.",
     result: "Une gestion saine dès le premier jour, et les bons réflexes pour qu'elle le reste.",
   },
   {
+    icon: ShieldCheck,
     name: "La Restructuration",
+    shortName: "Restructuration",
     short: "Votre gestion s'est empilée ? On remet tout au cordeau.",
     badge: "Le point de départ le plus fréquent",
     audience: "Votre entreprise tourne depuis plusieurs années, mais la gestion s'est empilée : documents éparpillés, relances oubliées, échéances subies, dimanche soir sacrifié. Rien de grave — mais rien d'organisé non plus.",
@@ -143,7 +181,9 @@ export const offers = [
     result: "Une gestion remise au cordeau, des heures retrouvées chaque semaine, et la visibilité sur votre trésorerie.",
   },
   {
+    icon: Bot,
     name: "Le Pilotage automatisé",
+    shortName: "Pilotage automatisé",
     short: "Votre système est posé ? On le fait tourner tout seul.",
     audience: "Votre gestion est structurée — par moi ou par vous — et vous voulez maintenant qu'elle tourne toute seule : que les tâches répétitives disparaissent de votre semaine.",
     what: "J'automatise l'ensemble de votre gestion, brique par brique : tri et réponses de boîte mail, relances de factures, devis récurrents, pré-comptabilité, prise de rendez-vous, reporting, assistants IA personnalisés à votre activité. Chaque automatisation est testée, documentée, et maintenue.",
@@ -309,7 +349,19 @@ export const quizProfiles = [
 ];
 
 export const values = [
-  ["Rigueur", "Votre gestion est tenue au cordeau, sans approximation."],
-  ["Discrétion", "Vos données et vos chiffres restent entre nous, contractuellement."],
-  ["Clarté", "Vous savez toujours où vous en êtes, sans jargon."],
+  {
+    icon: Ruler,
+    title: "Rigueur",
+    text: "Votre gestion est tenue au cordeau, sans approximation.",
+  },
+  {
+    icon: LockKeyhole,
+    title: "Discrétion",
+    text: "Vos données et vos chiffres restent entre nous, contractuellement.",
+  },
+  {
+    icon: Eye,
+    title: "Clarté",
+    text: "Vous savez toujours où vous en êtes, sans jargon.",
+  },
 ];

@@ -1868,6 +1868,42 @@ button.case-explorer__tab:nth-of-type(3) {
   line-height: 1.35;
 }
 
+.contact-form__status {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  line-height: 1.5;
+}
+
+.contact-form__status svg {
+  flex-shrink: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.15rem;
+}
+
+.contact-form__status--success {
+  background: rgba(73, 122, 90, 0.12);
+  color: var(--success);
+}
+
+.contact-form__status--error {
+  background: rgba(178, 58, 58, 0.1);
+  color: #a03232;
+}
+
+.contact-form__status--error a {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.contact-form button[disabled] {
+  opacity: 0.65;
+  cursor: wait;
+}
+
 .field-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

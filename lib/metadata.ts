@@ -3,7 +3,7 @@ import { SEO, SITE, type SeoKey } from "@/lib/site-data";
 
 export function pageMetadata(key: SeoKey): Metadata {
   const page = SEO[key];
-  const image = "/images/celine/01-celine-hero-accueil-sourire.jpg";
+  const image = "/images/og-default.jpg";
 
   return {
     title: page.title,
@@ -19,9 +19,9 @@ export function pageMetadata(key: SeoKey): Metadata {
       images: [
         {
           url: image,
-          width: 1024,
-          height: 1024,
-          alt: "Céline Bardan, fondatrice de CelAssistPro",
+          width: 1200,
+          height: 630,
+          alt: "CelAssistPro — Céline Bardan, votre bras droit stratégique",
         },
       ],
       locale: "fr_FR",

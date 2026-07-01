@@ -11,10 +11,10 @@ export function BrandLogo({ inverted = false }: BrandLogoProps) {
     <Link className="brand-logo" href="/" aria-label="Accueil CelAssistPro">
       <Image
         className="brand-logo__mark"
-        src="/images/logos/celassistpro-flame-transparent.png"
+        src="/images/logos/celassistpro-flame-240.png"
         alt=""
-        width={542}
-        height={1027}
+        width={240}
+        height={455}
         priority
       />
       <span className="brand-logo__text">

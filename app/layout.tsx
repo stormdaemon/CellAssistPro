@@ -5,8 +5,10 @@ import { JsonLd } from "@/components/site/json-ld";
 import { RevealOnScroll } from "@/components/site/reveal-on-scroll";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
-import { professionalServiceJsonLd, siteNavigationJsonLd } from "@/lib/structured-data";
+import { professionalServiceJsonLd } from "@/lib/structured-data";
 import { SITE } from "@/lib/site-data";
+
+const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -44,10 +46,10 @@ export const metadata: Metadata = {
     siteName: "CelAssistPro",
     images: [
       {
-        url: "/images/celine/01-celine-hero-accueil-sourire.jpg",
-        width: 1024,
-        height: 1024,
-        alt: "Céline Bardan, fondatrice de CelAssistPro",
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CelAssistPro — Céline Bardan, votre bras droit stratégique",
       },
     ],
     locale: "fr_FR",
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
     title: "CelAssistPro — Votre bras droit stratégique",
     description:
       "Récupérez 10 heures par semaine. Votre gestion tourne — sans vous.",
-    images: ["/images/celine/01-celine-hero-accueil-sourire.jpg"],
+    images: ["/images/og-default.jpg"],
   },
 };
 
@@ -70,8 +72,14 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${jakarta.variable} ${fraunces.variable}`}>
+        {plausibleDomain ? (
+          <script
+            defer
+            data-domain={plausibleDomain}
+            src="https://plausible.io/js/script.js"
+          />
+        ) : null}
         <JsonLd data={professionalServiceJsonLd()} />
-        <JsonLd data={siteNavigationJsonLd()} />
         <SiteHeader />
         <RevealOnScroll />
         {children}
