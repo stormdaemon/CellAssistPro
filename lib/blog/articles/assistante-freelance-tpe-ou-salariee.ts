@@ -15,13 +15,13 @@ export const article: BlogArticle = {
     {
       "heading": "Pourquoi cette décision ressemble à un pari",
       "paragraphs": [
-        "Une TPE qui découvre la délégation administrative pense souvent : « J'ai besoin d'aide, donc j'embauche quelqu'un ». C'est un pari. Vous devinez qu'il y aura un travail stable, que vous saurez le formaliser, que vous serez un bon manager. Si vous vous trompez sur l'un de ces points, vous avez une salariée que vous ne pouvez pas renvoyer facilement. Une assistante freelance, c'est une hypothèse moins coûteuse à tester. Vous avez 20 heures d'administratif par mois ? Testez avec du freelance d'abord. Après trois mois, vous saurez : besoin stable, relation bonne, envie de pérenniser ? Alors passage au salariat. Besoin erratique, gérable en freelance ? Vous avez économisé une embauche."
+        "Une TPE qui découvre la délégation administrative pense souvent : « J'ai besoin d'aide, donc j'embauche quelqu'un ». C'est un pari. Vous pariez que le travail sera stable, que vous saurez le formaliser, que vous serez un bon manager. Si vous vous trompez sur l'un de ces points, vous avez une salariée que vous ne pouvez pas renvoyer facilement. Une assistante freelance, c'est une hypothèse moins coûteuse à tester. Vous avez 20 heures d'administratif par mois ? Testez avec du freelance d'abord. Après trois mois, vous saurez : besoin stable, relation bonne, envie de pérenniser ? Alors passage au salariat. Besoin erratique, gérable en freelance ? Vous avez économisé une embauche."
       ]
     },
     {
       "heading": "Le vrai coût d'une salariée qu'on oublie",
       "paragraphs": [
-        "Beaucoup de dirigeants comparent seulement le taux horaire : 20 euros de l'heure en freelance versus 12 euros en salariat. Mais une salariée coûte 50 % de plus en charges patronales, en congés payés, en formation, en gestion administrative. Et surtout, vous payez qu'elle soit 20 heures ou 30 heures : vous êtes engagé. Un freelance, vous le payez au résultat ou à l'heure réellement travaillée. Si vous avez 40 heures un mois et 10 heures l'autre, le freelance vous s'adapte."
+        "Beaucoup de dirigeants comparent seulement le taux horaire : 20 euros de l'heure en freelance versus 12 euros en salariat. Mais une salariée coûte 50 % de plus en charges patronales, en congés payés, en formation, en gestion administrative. Et surtout, vous la payez qu'elle travaille 20 heures ou 30 heures : vous êtes engagé. Un freelance, vous le payez au résultat ou à l'heure réellement travaillée. Si vous avez 40 heures un mois et 10 heures l'autre, le freelance s'adapte."
       ]
     },
     {
@@ -56,7 +56,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Peut-on passer d'une freelance à une salariée en conservant la même personne ?",
-      "answer": "Oui, c'est même souvent le meilleur scénario. Elle connaît vos circuits, vous savez comment elle travaille. C'est un simple changement administratif et contratuel, pas un redémarrage."
+      "answer": "Oui, c'est même souvent le meilleur scénario. Elle connaît vos circuits, vous savez comment elle travaille. C'est un simple changement administratif et contractuel, pas un redémarrage."
     }
   ]
 };

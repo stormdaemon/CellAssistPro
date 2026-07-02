@@ -27,8 +27,8 @@ export const article: BlogArticle = {
     {
       "heading": "Étape 3 : choisir votre outil ou votre plateforme (mars-avril)",
       "list": [
-        "Un outil de facturation simple (gratuit ou payant) capable de générer du Factur-X ou du format UBL.",
-        "Un accès direct à Chorus Pro si vous décidez de passer par la plateforme gouvernementale.",
+        "Un outil de facturation simple (gratuit ou payant) capable de générer du Factur-X, de l'UBL ou du CII.",
+        "Un abonnement à une plateforme de dématérialisation partenaire (PDP) agréée, par laquelle transiteront vos factures électroniques.",
         "Un test rapide avec un outil en ligne pour vérifier que vous pouvez créer un format et que votre comptable peut le lire."
       ]
     },

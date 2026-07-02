@@ -36,7 +36,7 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Les erreurs classiques qui paralyisent",
+      "heading": "Les erreurs classiques qui paralysent",
       "paragraphs": [
         "Première erreur : croire que l'IA va résoudre d'elle-même un problème que vous ne comprenez pas clairement. Si vous ne savez pas comment vous feriez manuellement, l'IA ne le saura pas non plus.",
         "Deuxième erreur : choisir la tâche la plus urgente au lieu de la plus simple. Attendez d'avoir une victoire rapide avant de vous attaquer à un circuit complexe.",

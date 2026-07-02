@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "confidentialité externalisation administrative",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/confidentialite-externalisation-administrative.jpg",
+    "alt": "Clé insérée dans la serrure d'un meuble de bureau blanc, symbole d'un accès verrouillé et sécurisé",
+    "credit": "Photo : Jakub Zerdzicki / Pexels"
+  },
   "intro": [
     "Vos données ne disparaissent pas en externalisant. Elles se sécurisent différemment — par des limites claires, une personne fiable et un processus documenté."
   ],
@@ -15,7 +20,7 @@ export const article: BlogArticle = {
     {
       "heading": "Le cadre légal et contractuel qui protège",
       "paragraphs": [
-        "Quand vous déléguez, vous ne lichez rien en droit. Un contrat de confidentialité est simplement un accord écrit qui précise : qui accède à quoi, pour faire quoi, et jusqu'où vont les responsabilités. Ce document n'a pas besoin d'être signé chez un notaire. Une page claire, lue et acceptée avant le travail, suffit complètement. Légalement, même un email où vous exposez les règles et où l'autre répond « d'accord » crée un engagement valable.",
+        "Quand vous déléguez, vous ne risquez rien en droit. Un contrat de confidentialité est simplement un accord écrit qui précise : qui accède à quoi, pour faire quoi, et jusqu'où vont les responsabilités. Ce document n'a pas besoin d'être signé chez un notaire. Une page claire, lue et acceptée avant le travail, suffit complètement. Légalement, même un e-mail où vous exposez les règles et où l'autre répond « d'accord » crée un engagement valable.",
         "Beaucoup de dirigeants s'imaginent que le vrai risque vient de malveillance. C'est rare. Le vrai risque vient de flou : pas de limite claire, pas de responsable clairement nommé, pas de trace écrite. Si une assistante accède à « presque tout » parce que vous aviez la flemme de définir le périmètre, vous vous exposez à des problèmes qui auraient été évitables. Une confidentialité bien posée élimine 90 % des conflits avant qu'ils ne naissent."
       ]
     },
@@ -64,11 +69,11 @@ export const article: BlogArticle = {
     },
     {
       "question": "Peut-on vraiment sécuriser des données sensibles avec une personne en télétravail ?",
-      "answer": "Oui, souvent mieux qu'au bureau. Vous n'imposez pas seulement à l'assistante de respecter la confidentialité — vous imposez aussi des conditions techniques (appareil chiffré, connection sécurisée). Elle en dépend elle-même pour son travail. Le système est souvent plus robuste qu'un bureau où chacun laisse son ordinateur allumé."
+      "answer": "Oui, souvent mieux qu'au bureau. Vous n'imposez pas seulement à l'assistante de respecter la confidentialité — vous imposez aussi des conditions techniques (appareil chiffré, connexion sécurisée). Elle en dépend elle-même pour son travail. Le système est souvent plus robuste qu'un bureau où chacun laisse son ordinateur allumé."
     },
     {
       "question": "Dois-je auditer vos accès ou vérifier ce qu'une assistante a consulté ?",
-      "answer": "Pas en permanence, ce serait de la micro-surveillance. Vérifiez la première semaine pour être sûr qu'elle explore uniquement le périmètre prévu, puis laissez tourner. Si vous sentez un souci, vérifiez ponctuellement. C'est comme un audit ponctuel, pas une traçabilité continue."
+      "answer": "Pas en permanence, ce serait de la surveillance excessive. Vérifiez la première semaine pour être sûr qu'elle explore uniquement le périmètre prévu, puis laissez faire. Si vous sentez un souci, vérifiez ponctuellement. C'est un audit ponctuel, pas une traçabilité continue."
     }
   ]
 };

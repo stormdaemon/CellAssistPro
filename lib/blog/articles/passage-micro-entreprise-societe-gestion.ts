@@ -39,13 +39,13 @@ export const article: BlogArticle = {
     {
       "heading": "La restructuration en quatre étapes",
       "paragraphs": [
-        "Étape 1 (semaine 1) : Créditer un nouveau modèle de facture qui inclut toutes les mentions légales de votre nouveau statut. Testez-le sur deux trois factures fictives. Validez avec votre comptable. Voilà."
+        "Étape 1 (semaine 1) : Créez un nouveau modèle de facture qui inclut toutes les mentions légales de votre nouveau statut. Testez-le sur deux ou trois factures fictives. Validez avec votre comptable. Voilà."
       ]
     },
     {
       "heading": "Étape 2 (semaine 2) : Archiver le passé et préparer l'avenir",
       "paragraphs": [
-        "Archivez tous vos documents de micro-entreprise dans une boîte à part. C'est du passé administratif. Créez une structure claire pour la nouvelle société : dossier par exercice, sous-dossier par nature (factures émises, factures reçues, justificatifs). N'essayez pas de migrer l'ancien désordre ; c'est inefficace. Laissez-le de côté, il survivra pour les contrôles, mais il n'entre pas en route."
+        "Archivez tous vos documents de micro-entreprise dans une boîte à part. C'est du passé administratif. Créez une structure claire pour la nouvelle société : dossier par exercice, sous-dossier par nature (factures émises, factures reçues, justificatifs). N'essayez pas de migrer l'ancien désordre ; c'est inefficace. Laissez-le de côté : il restera disponible pour d'éventuels contrôles, mais il n'entre pas dans le circuit courant."
       ]
     },
     {
@@ -68,7 +68,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Et si je n'ai pas le temps de restructurer avant le changement ?",
-      "answer": "Engagez une assistante pour deux ou trois jours. Elle créera la structure, archivera l'ancien, prépare la nouvelle organisation pendant que vous gérez la transition légale. C'est un petit investissement qui vaut très cher."
+      "answer": "Engagez une assistante pour deux ou trois jours. Elle créera la structure, archivera l'ancien et préparera la nouvelle organisation pendant que vous gérez la transition légale. C'est un petit investissement qui vaut très cher."
     }
   ]
 };

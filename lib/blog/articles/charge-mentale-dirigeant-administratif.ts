@@ -22,7 +22,7 @@ export const article: BlogArticle = {
     {
       "heading": "Comment l'administratif opaque crée la fatigue",
       "paragraphs": [
-        "Imaginons deux scénarios. Scenario 1 : vous avez dix factures en retard, mais vous les avez listées, vous savez exactement quelles relances envoyer vendredi, et après c'est réglé. Charge mentale : faible, l'action est délimitée. Scenario 2 : vous avez environ dix factures en retard (vous ne savez pas trop), elles sont un peu partout, vous les relancerez « dès que vous aurez le temps »... Ce ne sera jamais le moment. Charge mentale : très élevée, c'est vague et sans fin. Le volume est le même, mais le poids perçu est multiplié par trois. C'est l'absence de clarté qui fatigue."
+        "Imaginons deux scénarios. Scénario 1 : vous avez dix factures en retard, mais vous les avez listées, vous savez exactement quelles relances envoyer vendredi, et après c'est réglé. Charge mentale : faible, l'action est délimitée. Scénario 2 : vous avez environ dix factures en retard (vous ne savez pas trop), elles sont un peu partout, vous les relancerez « dès que vous aurez le temps »... Ce ne sera jamais le moment. Charge mentale : très élevée, c'est vague et sans fin. Le volume est le même, mais le poids perçu est multiplié par trois. C'est l'absence de clarté qui fatigue."
       ]
     },
     {
@@ -37,7 +37,7 @@ export const article: BlogArticle = {
       "heading": "Pour sortir de ce piège",
       "paragraphs": [
         "La sortie passe par deux changements : d'abord, rendre visible ce qui est invisible. Faire une liste unique de toutes les tâches administratives qui traînent, sans les faire tout de suite, juste les écrire. Le simple transfert du cerveau au papier réduit immédiatement la charge mentale — c'est une illusion, mais elle fonctionne. Vous avez externalisé le poids.",
-        "Ensuite, crée un rythme clair. Si chaque vendredi matin, entre 9 et 10 heures, vous relancez les factures impayées, alors ce sujet disparaît de votre tête le reste de la semaine. Le dimanche, vous ne pensez plus aux relances. C'est prévu, c'est fait, c'est clair. Et si vous pouvez confier ce rythme à une assistante, c'est encore mieux — la tâche quitte votre tête complètement."
+        "Ensuite, créez un rythme clair. Si chaque vendredi matin, entre 9 et 10 heures, vous relancez les factures impayées, alors ce sujet disparaît de votre tête le reste de la semaine. Le dimanche, vous ne pensez plus aux relances. C'est prévu, c'est fait, c'est clair. Et si vous pouvez confier ce rythme à une assistante, c'est encore mieux — la tâche quitte votre tête complètement."
       ]
     }
   ],

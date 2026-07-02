@@ -15,13 +15,13 @@ export const article: BlogArticle = {
     {
       "heading": "Le temps que vous pensez ne pas avoir",
       "paragraphs": [
-        "Un plombier chauffagiste dépense actuellement 50 heures par semaine : 30 à 35 sur le métier, 15 à 20 sur l'administratif. Il croit que c'est impossible à changer. En réalité, si quelqu'un d'autre gère les devis tapés, les factures classées et les relances envoyées, il pourrait ramener l'administratif à 3-4 heures hebdomadaires — essentiellement les décisions. Il retrouverait donc 10-15 heures, soit pour plus de chantiers, soit pour ne plus travailler les dimanche."
+        "Un plombier chauffagiste dépense actuellement 50 heures par semaine : 30 à 35 sur le métier, 15 à 20 sur l'administratif. Il croit que c'est impossible à changer. En réalité, si quelqu'un d'autre gère les devis tapés, les factures classées et les relances envoyées, il pourrait ramener l'administratif à 3-4 heures hebdomadaires — essentiellement les décisions. Il retrouverait donc 10 à 15 heures, soit pour plus de chantiers, soit pour ne plus travailler les dimanches."
       ]
     },
     {
       "heading": "Par où commencer : le circuit le plus visible",
       "paragraphs": [
-        "Ne déleguez pas tout d'un coup. Commencez par une mission avec un résultat clair, mesurable, qui vous libère immédiatement. Le circuit devis-facture-relance coche toutes les cases : c'est répétitif, c'est identifiable, et quand c'est bien fait, vous le voyez tout de suite."
+        "Ne déléguez pas tout d'un coup. Commencez par une mission avec un résultat clair, mesurable, qui vous libère immédiatement. Le circuit devis-facture-relance coche toutes les cases : c'est répétitif, c'est identifiable, et quand c'est bien fait, vous le voyez tout de suite."
       ],
       "list": [
         "Semaine 1 : vous montrez vos trois modèles de devis et comment vous les remplissez.",

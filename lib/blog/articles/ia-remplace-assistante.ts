@@ -30,20 +30,20 @@ export const article: BlogArticle = {
     {
       "heading": "Ce qu'une assistante reste seule à pouvoir faire",
       "paragraphs": [
-        "Une assistante qui connaît l'activité depuis trois ans sait ce qui est normal et ce qui cloche. Elle voit une facture de fournisseur trois fois plus chère que d'habitude et elle s'arrête. L'IA enregistre et paie. Elle remarque qu'un client n'a pas payé depuis deux mois et elle anticipe une relance douée. L'IA envoie un email générique.",
-        "Elle détecte les implicites : cette email d'un prospect ressemble à une tentative de phishing. Ce client demande une condition non-contractuelle mais son historique justifie qu'on l'examine. Ces détails, c'est le jugement humain qui les sauve."
+        "Une assistante qui connaît l'activité depuis trois ans sait ce qui est normal et ce qui cloche. Elle voit une facture de fournisseur trois fois plus chère que d'habitude et elle s'arrête. L'IA l'enregistre et la paie. Elle remarque qu'un client n'a pas payé depuis deux mois et elle prépare une relance mesurée. L'IA envoie un email générique.",
+        "Elle détecte les implicites : cet email d'un prospect ressemble à une tentative de phishing. Ce client demande une condition hors contrat, mais son historique justifie qu'on l'examine. Ce sont ces détails que seul le jugement humain permet de repérer."
       ]
     },
     {
       "heading": "Comment mettre en place cette complémentarité",
       "paragraphs": [
-        "Étape 1 : Auditez ce que fait votre assistante. Combien d'heures sur du travail très répétitif ? (génération de documents, tri d'emails, formatage de données)"
+        "Étape 1 : faites le bilan de ce que fait votre assistante. Combien d'heures sur du travail très répétitif ? (génération de documents, tri d'emails, mise en forme de données)"
       ]
     },
     {
       "heading": "Étape 2 : Testez l'IA sur ces tâches",
       "list": [
-        "Donnez-lui des exemples de ce que vous attendez, apprenez-la à reproduire votre style.",
+        "Donnez-lui des exemples de ce que vous attendez, apprenez-lui à reproduire votre style.",
         "Mesurez l'économie réelle : combien de temps gagnez-vous par semaine ?",
         "Vérifiez la qualité : est-ce que l'IA hallucine ? est-ce qu'elle oublie des détails critiques ?"
       ]
@@ -56,11 +56,11 @@ export const article: BlogArticle = {
     },
     {
       "question": "Comment éviter que l'IA fasse des erreurs qui vont aux clients ?",
-      "answer": "Jamais de publication sans révision humaine. L'IA produit les brouillons, mais chaque email, chaque facture, chaque document qui sort de votre porte doit avoir un regard humain. C'est non-négociable pour la confiance client."
+      "answer": "Jamais d'envoi sans révision humaine. L'IA produit les brouillons, mais chaque email, chaque facture, chaque document qui sort de votre entreprise doit avoir un regard humain. C'est non négociable pour la confiance client."
     },
     {
       "question": "Et si je n'ai pas d'assistante ? L'IA peut-elle remplacer ?",
-      "answer": "Partiellement. L'IA seule gère 50 % de ce qu'une assistante fait. Pour les 50 % qui demandent du jugement et de la réactivité, vous aurez besoin de quelqu'un. Donc l'IA peut retarder l'embauche, mais pas la supprimer si vous grandissez."
+      "answer": "Partiellement. L'IA seule ne gère qu'une partie de ce qu'une assistante fait. Pour les tâches qui demandent du jugement et de la réactivité, vous aurez besoin de quelqu'un. L'IA peut donc retarder l'embauche, mais pas la remplacer si votre activité se développe."
     }
   ]
 };

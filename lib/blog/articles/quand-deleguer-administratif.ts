@@ -28,7 +28,7 @@ export const article: BlogArticle = {
     {
       "heading": "L'exemple d'une conseillère en gestion de patrimoine",
       "paragraphs": [
-        "Elle exerce depuis cinq ans, elle gagne bien sa vie, mais un soir elle se rend compte qu'elle repense à une facture oubliée au moment de s'endormir. Elle repousse les devis au samedi. Elle doit retrouver les infos clients en urgence avant un rendez-vous, ce qui la stresse. Ce ne sont pas des crises dramatiques, c'est juste du bruit permanent. Elle confie 10 heures par semaine d'administratif à une assistante indépendante. Un mois après, elle dort mieux, elle prépare mieux ses rendez-vous, elle peut accepter plus de clients sans rallonger sa journée. Elle avait basculé le timing parfaitement : avant la crise, au signal psychologique."
+        "Elle exerce depuis cinq ans, elle gagne bien sa vie, mais un soir elle se rend compte qu'elle repense à une facture oubliée au moment de s'endormir. Elle repousse les devis au samedi. Elle doit retrouver les infos clients en urgence avant un rendez-vous, ce qui la stresse. Ce ne sont pas des crises dramatiques, c'est juste du bruit permanent. Elle confie 10 heures par semaine d'administratif à une assistante indépendante. Un mois après, elle dort mieux, elle prépare mieux ses rendez-vous, elle peut accepter plus de clients sans rallonger sa journée. Elle avait choisi le bon moment : avant la crise, dès le signal psychologique."
       ]
     },
     {

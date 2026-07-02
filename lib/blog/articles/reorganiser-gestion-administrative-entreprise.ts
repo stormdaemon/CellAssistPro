@@ -35,13 +35,13 @@ export const article: BlogArticle = {
       "list": [
         "Vouloir tout changer à la fois : vous ne tiendrez pas une semaine. Changez d'abord ce qui vous coûte le plus temps ou d'argent, ensuite élargissez progressivement.",
         "Jeter les anciennes habitudes sans les remplacer clairement : vous créerez un chaos temporaire pire qu'avant. Testez en parallèle deux à trois semaines.",
-        "Ne pas documenter la nouvelle organisation : deux mois plus tard, vous reverrez à l'ancienne façon parce que personne ne se souvient de la nouvelle logique."
+        "Ne pas documenter la nouvelle organisation : deux mois plus tard, vous reviendrez à l'ancienne façon parce que personne ne se souvient de la nouvelle logique."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Comment commencer sans arrêter le business ?",
+      "question": "Comment commencer sans arrêter l'activité ?",
       "answer": "Prenez un après-midi pour faire l'état des lieux sans rien changer. Notez où sont les factures, comment elles sont nommées, à quel rythme elles circulent, où votre comptable les cherche. Puis changez une seule chose à la fois, en gardant l'ancienne méthode 2-3 semaines en parallèle. Une fois la nouvelle habitude prise, vous pouvez arrêter l'ancienne."
     },
     {

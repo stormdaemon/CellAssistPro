@@ -30,7 +30,7 @@ export const article: BlogArticle = {
     {
       "heading": "Un exemple : le diagnostic puis la restructuration",
       "paragraphs": [
-        "Un consultant avec trois salariées vit dans l'urgence administrative. Les factures partent n'importe quand, les clients signalent des oublis, le comptable ne reçoit jamais les pièces à l'heure. Il engagert une directrice des opérations externalisée sur trois mois. Elle commence par observer et documenter : où sont les factures ? Comment circulent-elles ? Qui est responsable de chaque étape ? Elle cartographie le chaos. Puis elle redessinne : un formulaire unique de facturation, une personne responsable de chaque étape, un tableau de suivi des encours visibles en un coup d'œil. Elle aide à former. Elle met des points de suivi en place. Au bout de trois mois, elle rend ses mains : tout fonctionne, les salariées savent qui fait quoi, le dirigeant consulte un tableau une fois par semaine, la trésorerie respire. Elle n'intervient plus."
+        "Un consultant avec trois salariées vit dans l'urgence administrative. Les factures partent n'importe quand, les clients signalent des oublis, le comptable ne reçoit jamais les pièces à l'heure. Il engage une directrice des opérations externalisée sur trois mois. Elle commence par observer et documenter : où sont les factures ? Comment circulent-elles ? Qui est responsable de chaque étape ? Elle cartographie le chaos. Puis elle redessine : un formulaire unique de facturation, une personne responsable de chaque étape, un tableau de suivi des encours visibles en un coup d'œil. Elle aide à former. Elle met des points de suivi en place. Au bout de trois mois, elle rend ses mains : tout fonctionne, les salariées savent qui fait quoi, le dirigeant consulte un tableau une fois par semaine, la trésorerie respire. Elle n'intervient plus."
       ]
     },
     {
@@ -51,7 +51,7 @@ export const article: BlogArticle = {
   ],
   "faq": [
     {
-      "question": "Comment est-elle factuée, et quel budget prévoir ?",
+      "question": "Comment est-elle facturée, et quel budget prévoir ?",
       "answer": "Sur devis après diagnostic. Le périmètre (juste la facturation ou tout l'administratif ?), la complexité (deux salariés ou dix ?) et le niveau de transformation attendu varient trop pour un prix fixe. L'investissement s'amortit rapidement quand des heures de travail sont retrouvées et la trésorerie s'améliore."
     },
     {

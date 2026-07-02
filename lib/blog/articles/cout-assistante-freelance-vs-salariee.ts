@@ -30,7 +30,7 @@ export const article: BlogArticle = {
         "Recrutement et intégration : 2-3 semaines perdues.",
         "Points réguliers : 1-2 heures chaque semaine.",
         "Gestion d'absences ou de congés : réorganisation du travail.",
-        "Feedback, évaluation, formation : encore du temps.",
+        "Retours, évaluation, formation : encore du temps.",
         "Éventuellement : gestion de démotivation, remplacement d'urgence."
       ]
     },

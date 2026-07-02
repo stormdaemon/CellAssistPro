@@ -16,7 +16,7 @@ export const article: BlogArticle = {
       "heading": "Le calendrier de la réforme : ce qui vous touche vraiment",
       "paragraphs": [
         "La réforme progresse en deux étapes pour les TPE. Première étape, au 1er septembre 2026 : vous devez être capable de RECEVOIR l'ensemble de vos factures fournisseurs au format électronique (Factur-X principalement). Cela signifie que vos fournisseurs, qu'ils le sachent ou non, commenceront à les envoyer dans ce format. Deuxième étape, au 1er septembre 2027 : c'est votre tour d'ÉMETTRE vos factures clients au format requis.",
-        "Pourquoi deux dates ? Pour laisser le temps. La réception d'abord vous permet de tester votre infrastructure de classe mondiale (outil, classement, transmission au comptable) avant de changer votre propre processus de facturation. Vous récupérez une année pour vous adapter tranquillement, sans urgence collective."
+        "Pourquoi deux dates ? Pour laisser le temps. La réception d'abord vous permet de tester votre organisation (outil, classement, transmission au comptable) avant de changer votre propre façon de facturer. Vous gagnez ainsi une année pour vous adapter tranquillement, sans urgence collective."
       ]
     },
     {
@@ -47,11 +47,11 @@ export const article: BlogArticle = {
   "faq": [
     {
       "question": "Suis-je obligé de changer d'outil de facturation avant septembre 2026 ?",
-      "answer": "Pas si votre outil actuel peut importer des factures en Factur-X. Commencez par vérifier auprès de votre prestataire. Si votre outil ne le permet pas, c'est le moment d'en explorer un autre—idéalement plusieurs mois avant septembre, pas à la dernière minute."
+      "answer": "Pas si votre outil actuel peut importer des factures en Factur-X. Commencez par vérifier auprès de votre prestataire. Si votre outil ne le permet pas, c'est le moment d'en explorer un autre, idéalement plusieurs mois avant septembre, pas à la dernière minute."
     },
     {
       "question": "Qu'est-ce qui se passe si un de mes fournisseurs ne passe pas à la facturation électronique en 2026 ?",
-      "answer": "Impossible. La réforme s'applique à tous les fournisseurs assujettis à la TVA. Si l'un d'eux prétend qu'il ne peut pas ou ne veut pas, c'est un défaut de leur part. Vous êtes en droit d'insister ou de changer de fournisseur si c'est crucial."
+      "answer": "La réforme s'applique à toutes les entreprises assujetties à la TVA pour la réception, dès le 1er septembre 2026 : vos fournisseurs devront donc être en mesure d'émettre des factures électroniques dans les délais qui les concernent. Si l'un d'eux prend du retard, il reste possible d'insister ou d'envisager un autre fournisseur si c'est vraiment bloquant pour votre activité."
     }
   ]
 };

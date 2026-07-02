@@ -29,7 +29,7 @@ export const article: BlogArticle = {
     {
       "heading": "Comme ça fonctionne : un exemple réel",
       "paragraphs": [
-        "Un plombier chauffagiste en Charente changeait ses méthodes. Avant : un devis traînait trois jours, il factait après le chantier quand il avait le temps (une semaine de décalage), les relances se faisaient au feeling quand la trésorerie était serrée. Paiements moyens : 50 jours après facture. Après : un devis le jour même, une facture le jour du chantier, une relance le jour 15 sans exception. Trois mois plus tard, délai moyen : 28 jours. Il a récupéré trois semaines de trésorerie juste en mettant de l'ordre."
+        "Un plombier chauffagiste en Charente changeait ses méthodes. Avant : un devis traînait trois jours, il facturait après le chantier quand il avait le temps (une semaine de décalage), les relances se faisaient au hasard quand la trésorerie était serrée. Paiements moyens : 50 jours après facture. Après : un devis le jour même, une facture le jour du chantier, une relance le jour 15 sans exception. Trois mois plus tard, délai moyen : 28 jours. Il a récupéré trois semaines de trésorerie juste en mettant de l'ordre."
       ]
     },
     {

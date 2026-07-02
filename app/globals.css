@@ -2164,6 +2164,35 @@ button.case-explorer__tab:nth-of-type(3) {
   font-weight: 700;
 }
 
+.article-cover {
+  margin: -1.6rem 0 0;
+}
+
+.article-cover__media {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.article-cover__media img {
+  object-fit: cover;
+}
+
+.article-cover figcaption {
+  margin-top: 0.5rem;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .article-cover__media {
+    aspect-ratio: 16 / 10;
+  }
+}
+
 .blog-article__layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;

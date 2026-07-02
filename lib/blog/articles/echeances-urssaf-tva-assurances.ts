@@ -31,7 +31,7 @@ export const article: BlogArticle = {
     {
       "heading": "De la découverte à l'anticipation : un cas type",
       "paragraphs": [
-        "Un artisan découvrait ses échéances URSSAF, TVA et assurances selon le courrier qui arrivait. Certains mois il ne savait rien, d'autres il devait gérer deux paiements urgents. Il payait un jour une pénalité, il se demandait pourquoi. Depuis qu'il a noté toutes les dates et créé un rappel two weeks avant, il ne subbit plus rien. Il anticipe. Et il n'a plus payé de pénalité."
+        "Un artisan découvrait ses échéances URSSAF, TVA et assurances selon le courrier qui arrivait. Certains mois il ne savait rien, d'autres il devait gérer deux paiements urgents. Il payait un jour une pénalité, il se demandait pourquoi. Depuis qu'il a noté toutes les dates et créé un rappel deux semaines avant, il ne subit plus rien. Il anticipe. Et il n'a plus payé de pénalité."
       ]
     },
     {
@@ -48,7 +48,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Comment provisionner sans bloquer cash inutilement ?",
-      "answer": "Divisez le montant annuel par 12 et viralisez ce montant chaque mois sur un compte d'épargne dédié. Chaque mois c'est facile (petite somme), et quand l'échéance arrive, l'argent y est."
+      "answer": "Divisez le montant annuel par 12 et virez ce montant chaque mois sur un compte d'épargne dédié. Chaque mois c'est facile (petite somme), et quand l'échéance arrive, l'argent y est."
     },
     {
       "question": "Et si je n'ai pas assez de trésorerie pour tout payer à l'heure ?",

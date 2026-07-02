@@ -22,15 +22,15 @@ export const article: BlogArticle = {
     {
       "heading": "Deux tâches à maîtriser",
       "paragraphs": [
-        "Tâche 1 : Créer et envoyer une facture client. Elle doit contenir vos coordonnées, celles du client, la date, la description du travail, le prix HT et TTC, votre numéro de TVA (si applicable). Vous faites cela probablement déjà, mais peut-être pas toujours au même format. À partir de septembre 2027, vous devez utiliser un format standard (Factur-X par défaut).",
-        "Tâche 2 : Recevoir et ranger une facture fournisseur. Elle arrive par email, par courrier, ou parfois vous la notez en papier quand le livreur se présente. Vous devez la classer et la transmettre à votre comptable. Avant septembre 2026, c'est du PDF. À partir de cette date, beaucoup d'entre elles arriveront au format électronique structuré, que vous pourrez importer automatiquement."
+        "Tâche 1 : Créer et envoyer une facture client. Elle doit contenir vos coordonnées, celles du client, la date, la description du travail, le prix HT et TTC, votre numéro de TVA (si applicable). Vous faites cela probablement déjà, mais peut-être pas toujours au même format. À partir de septembre 2027, pour vos clients professionnels français, vous devrez utiliser un format standard (Factur-X, UBL ou CII) transmis via une plateforme de dématérialisation partenaire agréée.",
+        "Tâche 2 : Recevoir et ranger une facture fournisseur. Elle arrive par email, par courrier, ou parfois vous la notez sur papier quand le livreur se présente. Vous devez la classer et la transmettre à votre comptable. Avant septembre 2026, c'est souvent du PDF classique. À partir de cette date, beaucoup d'entre elles arriveront au format électronique structuré, que vous pourrez importer automatiquement."
       ]
     },
     {
       "heading": "Trois confusions à clarifier",
       "list": [
         "Facture et devis : ce ne sont pas la même chose. Le devis est une proposition, la facture est une demande de paiement. Ne pas les mélanger dans votre système de classement.",
-        "Facture papier et facture électronique : l'électronique, c'est un fichier structuré qui peut être lu par les ordinateurs. Un PDF c'est une image, moins puissant techniquement mais toujours acceptable transitoirement. Le format Factur-X, c'est un fichier qui se présente comme du PDF à l'écran mais avec des données exploitables.",
+        "Facture papier et facture électronique : l'électronique, c'est un fichier structuré qui peut être lu par les ordinateurs. Un PDF simple ressemble à une image, moins riche techniquement, mais encore accepté à titre transitoire. Le format Factur-X, lui, se présente comme un PDF à l'écran tout en contenant des données exploitables par les logiciels.",
         "Votre responsabilité et celle du comptable : vous devez émettre une facture propre, complète, légale. Le comptable doit la traiter correctement. Vous n'êtes pas comptable, vous n'avez pas à connaître les codes comptables. Vous devez juste être soigneux dans ce que vous transmettez."
       ]
     },
@@ -39,7 +39,7 @@ export const article: BlogArticle = {
       "paragraphs": [
         "Premier geste : prenez une facture que vous avez créée récemment. Vérifiez qu'elle contient tous les éléments légaux (date, numéro de facture unique, SIRET ou numéro TVA du client, montants HT/TTC). Demandez à votre comptable de la valider en deux minutes. C'est rapide et vous indique si votre modèle est bon.",
         "Deuxième geste : définissez où vous rangez actuellement les factures fournisseurs. Un dossier sur le bureau ? Un email sans structure ? Proposez à votre comptable ou assistante un point d'arrivée clair : un dossier numérisé « Factures Fournisseurs 2026 », avec des sous-dossiers par mois, par exemple.",
-        "Troisième geste : testez un outil gratuit ou peu cher de facturation (Factureo, Zoho Facture, etc.) pour émettre votre prochaine facture au bon format. Regardez le résultat. Si cela vous plaît et que le client ne voit pas de différence, vous êtes prêt pour la transition."
+        "Troisième geste : testez un outil de facturation adapté aux artisans — il en existe de gratuits ou peu coûteux — pour émettre votre prochaine facture au bon format. Regardez le résultat. Si cela vous convient et que le client ne voit pas de différence, vous êtes prêt pour la transition."
       ]
     }
   ],
@@ -50,7 +50,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Mes clients vont-ils refuser de recevoir une facture au nouveau format ?",
-      "answer": "Non, quasiment jamais. Pour eux, une facture au format Factur-X s'affiche comme un PDF normal. Ils ne voient pas de différence. C'est votre outil qui travaille en arrière-plan. Les dirigeants et petites entreprises reçoivent de plus en plus de factures structurées sans le savoir."
+      "answer": "Non, quasiment jamais. Pour eux, une facture au format Factur-X s'affiche comme un PDF normal. Ils ne voient pas de différence. C'est votre outil, via la plateforme de dématérialisation partenaire choisie, qui travaille en arrière-plan. Les dirigeants et petites entreprises reçoivent de plus en plus de factures structurées sans même le remarquer."
     },
     {
       "question": "Dois-je absolument numériser les factures papier que je reçois ?",

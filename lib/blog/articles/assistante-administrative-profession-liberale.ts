@@ -22,7 +22,7 @@ export const article: BlogArticle = {
       "heading": "Les tâches concrètes à déléguer",
       "list": [
         "Prise de rendez-vous et confirmations : elle appelle, vous ne faites que les rendez-vous.",
-        "Préparation des dossiers : elle rassemble les pièces administratives (mais ne lit pas le contenu confidentialité).",
+        "Préparation des dossiers : elle rassemble les pièces administratives (mais ne lit pas le contenu confidentiel).",
         "Facturation et suivi des paiements : elle émet les factures au bon moment, relance les retards.",
         "Classement des pièces non confidentielles : reçus, documents de suivi, correspondances avec les administrations."
       ]

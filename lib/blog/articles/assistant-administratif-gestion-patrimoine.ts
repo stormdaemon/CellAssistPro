@@ -9,13 +9,13 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "Chaque rendez-vous client en gestion de patrimoine demande une préparation minutieuse : historique de portefeuille, situation fiscale, objectifs de succession. Cela vous coûte une à deux heures avant le client n'arrive. Un assistant bien cadré peut réduire cette charge de moitié."
+    "Chaque rendez-vous client en gestion de patrimoine demande une préparation minutieuse : historique de portefeuille, situation fiscale, objectifs de succession. Cela vous coûte une à deux heures avant l'arrivée du client. Un assistant bien cadré peut réduire cette charge de moitié."
   ],
   "sections": [
     {
       "heading": "Le poids caché de la préparation client",
       "paragraphs": [
-        "Un conseiller efficace en gestion de patrimoine n'improvise jamais. Vous préparez : vous consultez les relevés, vous creusez la situation familiale, vous notez les changements depuis la dernière visite, vous esquissez les scénarios. Cette préparation, c'est souvent deux heures que personne n'a facturées et que le client n'a jamais vues. Si vous avez trois rendez-vous par semaine, vous consacrez six heures à préparer avant de rencontrer. C'est un tiers de votre semaine pour une fonction qui ne demande aucun jugement réglementaire — uniquement de la rigueur et de l'organisation."
+        "Un conseiller efficace en gestion de patrimoine n'improvise jamais. Vous préparez : vous consultez les relevés, vous creusez la situation familiale, vous notez les changements depuis la dernière visite, vous esquissez les scénarios. Cette préparation, c'est souvent deux heures que personne ne facture et que le client ne voit jamais. Si vous avez trois rendez-vous par semaine, vous consacrez six heures à préparer avant même de le rencontrer. C'est un tiers de votre semaine pour une fonction qui ne demande aucun jugement réglementaire — uniquement de la rigueur et de l'organisation."
       ]
     },
     {
@@ -36,7 +36,7 @@ export const article: BlogArticle = {
       "heading": "Les erreurs qui vous coûtent du temps",
       "list": [
         "Recommencer la préparation à zéro pour chaque client au lieu de réutiliser un modèle : vous faites du travail qui pourrait être aussi bien fait par une aide.",
-        "Chercher les informations client dans vos emails au lieu d'un dossier centralisé : vous retrouvez, vous relis, vous décortiques.",
+        "Chercher les informations client dans vos emails au lieu d'un dossier centralisé : vous cherchez, vous relisez, vous décortiquez.",
         "Préparer seul alors que vous êtes en sous-capacité : vous finissez par survoler et vous arrivez au rendez-vous moins armé que vous le seriez."
       ]
     }

@@ -16,7 +16,7 @@ export const article: BlogArticle = {
       "heading": "Où la vie de couple et la gestion se heurtent",
       "paragraphs": [
         "C'est presque un classique : l'administratif de l'entreprise familiale grossit sans être nommé, donc sans être vraiment accepté. L'un de vous finit par « s'en occuper » parce que l'autre était concentré sur le métier, ou par défaut de négociation. Des mois passent. Puis la personne qui porte tout commence à sentir que c'est injuste, mais elle ne l'a pas dit clairement. Des frictions naissent du non-dit. Et quand on en parle enfin, ça devient une dispute au lieu d'une discussion.",
-        "Quand les responsabilités sont implicites, chacun a sa vision : « Moi, je pense que tu dois… » au lieu de « On a convenu que tu… ». C'est le terrain des ressentiments."
+        "Quand les responsabilités sont implicites, chacun a sa vision : « Moi, je pense que tu dois… » au lieu de « On a convenu que tu… ». C'est le terreau des ressentiments."
       ]
     },
     {
@@ -30,7 +30,7 @@ export const article: BlogArticle = {
       "list": [
         "Certaines tâches (factures, impayés, échéances) doivent être exécutées par une personne mais validées par l'autre pour éviter les biais ou les pertes.",
         "D'autres tâches (signature de contrats, appels commerciaux, prises de décision importantes) restent partagées.",
-        "Clarifie chacun des rôles : directeur, exécutant, valideur. Quand c'est flou, tout le monde est valideur de tout, et rien n'avance."
+        "Clarifiez chacun des rôles : directeur, exécutant, valideur. Quand c'est flou, tout le monde est valideur de tout, et rien n'avance."
       ]
     },
     {

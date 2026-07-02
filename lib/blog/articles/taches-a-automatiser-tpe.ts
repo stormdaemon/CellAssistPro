@@ -29,13 +29,13 @@ export const article: BlogArticle = {
     {
       "heading": "Trois exemples d'automatisation rapide et gratuite",
       "paragraphs": [
-        "Relances de devis : si vous utilisez Gmail, une règle d'email peut libeller automatiquement vos brouillons « À relancer » et vous les montrer chaque vendredi. Cela transforme « j'oublie régulièrement » en « j'ai une liste prête ». Confirmations de rendez-vous : un message courrier avec un lien de confirmation (Doodle, Calendly ou même un simple Google Form) que vous copyez-collez chaque fois transforme 5 minutes de dialogue en 30 secondes. Classement : une règle simple dans votre stockage en ligne (Google Drive, OneDrive) qui range les factures par mois ou par client, selon que vous les mettez dans un dossier spécifique."
+        "Relances de devis : si vous utilisez Gmail, une règle d'email peut étiqueter automatiquement vos brouillons « À relancer » et vous les montrer chaque vendredi. Cela transforme « j'oublie régulièrement » en « j'ai une liste prête ». Confirmations de rendez-vous : un message type avec un lien de confirmation (Doodle, Calendly ou même un simple Google Form) que vous copiez-collez chaque fois transforme 5 minutes de dialogue en 30 secondes. Classement : une règle simple dans votre stockage en ligne (Google Drive, OneDrive) qui range les factures par mois ou par client, selon le dossier dans lequel vous les placez."
       ]
     },
     {
       "heading": "Les faux bons débuts à éviter",
       "list": [
-        "Automatiser les cas rares qui ne reviennent qu'une fois par an : vous dépenserez du temps de mise en place pour une économie imagée.",
+        "Automatiser les cas rares qui ne reviennent qu'une fois par an : vous dépenserez du temps de mise en place pour une économie dérisoire.",
         "Chercher l'outil parfait qui fera tout : commencez avec ce que vous avez (Gmail, Excel, un dossier partagé).",
         "Vouloir automatiser tout d'un coup et vous perdre : choisissez une tâche, maîtrisez-la, puis allez à la suivante."
       ]

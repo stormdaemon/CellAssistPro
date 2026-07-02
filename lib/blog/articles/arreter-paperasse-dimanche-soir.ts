@@ -9,14 +9,14 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "Il y a cette habitude : le dimanche arrive, la semaine vous attend déjà, et pourtant vous ouvrez l'ordonnateur pour ces deux trois petites choses administratives qui vous traînent depuis jeudi. Vous terminez à 23 h, exténué, sans avoir vraiment réparé quoi que ce soit."
+    "Il y a cette habitude : le dimanche arrive, la semaine vous attend déjà, et pourtant vous ouvrez l'ordinateur pour ces deux ou trois petites choses administratives qui traînent depuis jeudi. Vous terminez à 23 h, exténué, sans avoir vraiment réglé quoi que ce soit."
   ],
   "sections": [
     {
       "heading": "Pourquoi le dimanche soir est un piège",
       "paragraphs": [
         "Vous n'êtes pas flemmard. C'est votre système qui n'a pas de place prévue. Quand il n'y a pas de créneau administratif régulier en semaine, le travail s'accumule et réclame une grosse séance. Le dimanche soir, c'est le vide du calendrier professionnel où tout s'engouffre. Vous pensiez ne rester qu'une heure, mais une facture vous entraîne vers les relances, qui vous entraînent vers le classement — et voilà deux heures d'une journée qui aurait dû être de repos.",
-        "Ce cycle quotidien coûte réel : il sape votre repos, vous commencez la semaine déjà fatigué mentalement, vous n'avez jamais vraiment coupé. Et le travail en lui-même ? Vous êtes moins rigoureux à 22 h qu'à 14 h. Les décisions sont plus molles. Vous oubliez des étapes."
+        "Ce cycle a un coût réel : il sape votre repos, vous commencez la semaine déjà fatigué mentalement, vous n'avez jamais vraiment coupé. Et le travail en lui-même ? Vous êtes moins rigoureux à 22 h qu'à 14 h. Les décisions sont plus molles. Vous oubliez des étapes."
       ]
     },
     {
@@ -38,7 +38,7 @@ export const article: BlogArticle = {
     {
       "heading": "Un tournant qui change les dimanches",
       "paragraphs": [
-        "Une directrice artistique en freelance avait le même problème : dimanche 21 h, elle retrouvait ses notes de projets, ses factures non envoyées, ses relances oubliées. Elle a bloqué chaque jeudi de 15 h à 16 h30 pour cela — juste une heure et demie, une pause caféine incluse. Pendant trois mois, elle s'est forcée à respecter ce créeau, même quand ça semblait peu utile. Aujourd'hui, ses dimanches lui appartiennent vraiment, et elle commence la semaine sans ce poids en arrière-plan."
+        "Une directrice artistique en freelance avait le même problème : dimanche 21 h, elle retrouvait ses notes de projets, ses factures non envoyées, ses relances oubliées. Elle a bloqué chaque jeudi de 15 h à 16 h30 pour cela — juste une heure et demie, une pause café incluse. Pendant trois mois, elle s'est forcée à respecter ce créneau, même quand ça semblait peu utile. Aujourd'hui, ses dimanches lui appartiennent vraiment, et elle commence la semaine sans ce poids en arrière-plan."
       ]
     },
     {
@@ -53,7 +53,7 @@ export const article: BlogArticle = {
   "faq": [
     {
       "question": "Et si mon métier m'impose des urgences le jeudi ou le vendredi ?",
-      "answer": "Alors votre créneau administratif n'est pas assez tôt. Poussez-le en début de semaine (lundi ou mardi) et gardez les fins de semaine pour les vrais urgences. Ou acceptez que le mercredi soit le jour où vous gérez aussi les imprévus, mais pas les dimanche."
+      "answer": "Alors votre créneau administratif n'est pas assez tôt. Poussez-le en début de semaine (lundi ou mardi) et gardez les fins de semaine pour les vraies urgences. Ou acceptez que le mercredi soit le jour où vous gérez aussi les imprévus, mais pas le dimanche."
     },
     {
       "question": "Et si une heure ne suffit vraiment pas ?",

@@ -15,7 +15,7 @@ export const article: BlogArticle = {
     {
       "heading": "La pré-comptabilité, ce travail que le comptable n'attend pas de vous",
       "paragraphs": [
-        "Nombreux sont les dirigeants qui croient que leur cabinet comptable gère l'ensemble du travail comptable, y compris la récolte et le classement des pièces. C'est une confusion fréquente. Le cabinet traite les informations qui lui arrivent. C'est vous—ou une personne déléguée—qui collectez les factures, les relevés, les justificatifs, et qui les préparez de manière à ce que le comptable puisse travailler sans fouiller."
+        "Nombreux sont les dirigeants qui croient que leur cabinet comptable gère l'ensemble du travail comptable, y compris la collecte et le classement des pièces. C'est une confusion fréquente. Le cabinet traite les informations qui lui arrivent. C'est vous, ou une personne déléguée, qui collectez les factures, les relevés, les justificatifs, et qui les préparez de manière à ce que le comptable puisse travailler sans fouiller."
       ]
     },
     {
@@ -40,8 +40,8 @@ export const article: BlogArticle = {
         "La première erreur est de déléguer sans clarifier. Avant de confier ce travail à une assistante, vous devez expliquer : quelles catégories de dépense nous gérons ? Quel volume mensuel faut-il prévoir ? Quels formats de documents arrivent ? Une semaine d'explication au départ économise trois mois de confusion."
       ],
       "list": [
-        "Mélanger pré-comptabilité et comptabilité : ne demandez jamais à votre assistant de faire de la saisie comptable. C'est du ressort du cabinet. Votre assistant classe et transmet; le comptable traite.",
-        "Oublier que vous restez responsable. Même externalisée, la responsabilité de vos pièces demeure vôtre. Vous devez spot-checker régulièrement pour être sûr que le système fonctionne.",
+        "Mélanger pré-comptabilité et comptabilité : ne demandez jamais à votre assistant de faire de la saisie comptable. C'est du ressort du cabinet. Votre assistant classe et transmet ; le comptable traite.",
+        "Oublier que vous restez responsable. Même externalisée, la responsabilité de vos pièces demeure la vôtre. Vous devez effectuer des contrôles ponctuels réguliers pour être sûr que le système fonctionne.",
         "Attendre trop longtemps entre deux transmissions au cabinet. Hebdomadaire surcharge ; mensuel fonctionne bien. Plus espacé et vous accumulez du travail."
       ]
     }

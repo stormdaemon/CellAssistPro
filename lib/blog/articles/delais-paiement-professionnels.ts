@@ -9,7 +9,7 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "Les délais de paiement ne sont pas des flexibilités gracieuses. Ce sont des données commerciales à surveiller comme votre stock ou vos appels d'offre."
+    "Les délais de paiement ne sont pas des flexibilités gracieuses. Ce sont des données commerciales à surveiller comme votre stock ou vos appels d'offres."
   ],
   "sections": [
     {
@@ -31,14 +31,14 @@ export const article: BlogArticle = {
     {
       "heading": "Un cas réel : quand ignorer le délai coûte cher",
       "paragraphs": [
-        "Une petite agence de communication facturaît ses services 2 000 euros par projet. Son gros client payait « régulièrement » en 50-60 jours. Pendant deux ans, elle n'a rien tracé, elle fonctionnait « à peu près » avec ce décalage. Un jour, son comptable lui demande : « Pourquoi votre trésorerie est-elle toujours à -2 000 en novembre ? » Réponse : ce client représentait 30 % du chiffre d'affaires. 30 % payé systématiquement 20 jours trop tard, c'est de facto un crédit commercial de 12 000 euros par an qu'elle accordait sans le savoir. Elle a renégocié : soit il paye en 30 jours, soit 5 % de surcharge. Il a choisi de s'aligner."
+        "Une petite agence de communication facturait ses services 2 000 euros par projet. Son gros client payait « régulièrement » en 50-60 jours. Pendant deux ans, elle n'a rien tracé, elle fonctionnait « à peu près » avec ce décalage. Un jour, son comptable lui demande : « Pourquoi votre trésorerie est-elle toujours à -2 000 en novembre ? » Réponse : ce client représentait 30 % du chiffre d'affaires. 30 % payé systématiquement 20 jours trop tard, c'est de facto un crédit commercial de 12 000 euros par an qu'elle accordait sans le savoir. Elle a renégocié : soit il paye en 30 jours, soit 5 % de surcharge. Il a choisi de s'aligner."
       ]
     }
   ],
   "faq": [
     {
       "question": "Faut-il accepter les délais longs pour garder un gros client ?",
-      "answer": "Pas sans contrepartie. Si un client représente 30 % de votre chiffre et paie en 60 jours au lieu de 30, c'est un coût réel. Proposez : un prix augmenté de 3-4%, un dépôt de garantie, ou une autre formule. Sinon, vous le financez."
+      "answer": "Pas sans contrepartie. Si un client représente 30 % de votre chiffre et paie en 60 jours au lieu de 30, c'est un coût réel. Proposez : un prix augmenté de 3 à 4 %, un dépôt de garantie, ou une autre formule. Sinon, vous le financez."
     },
     {
       "question": "Comment relancer sans agresser le client ?",

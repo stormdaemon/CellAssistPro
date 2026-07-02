@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CalendarCheck, CheckCircle2 } from "lucide-react";
@@ -74,7 +75,14 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
     return {};
   }
 
-  const image = "/images/og-default.jpg";
+  const image = article.image
+    ? { url: article.image.src, alt: article.image.alt }
+    : {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CelAssistPro — Céline Bardan, votre bras droit stratégique",
+      };
 
   return {
     title: `${article.title} | CelAssistPro`,
@@ -87,7 +95,7 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
       description: article.description,
       url: `/blog/${article.slug}`,
       siteName: SITE.name,
-      images: [{ url: image, width: 1200, height: 630, alt: "CelAssistPro — Céline Bardan, votre bras droit stratégique" }],
+      images: [image],
       locale: "fr_FR",
       type: "article",
       publishedTime: article.datePublished,
@@ -98,7 +106,7 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
       card: "summary_large_image",
       title: article.title,
       description: article.description,
-      images: [image],
+      images: [image.url],
     },
   };
 }
@@ -136,6 +144,22 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             </div>
           </div>
         </header>
+
+        {article.image ? (
+          <div className="container">
+            <figure className="article-cover">
+              <div className="article-cover__media">
+                <Image
+                  src={article.image.src}
+                  alt={article.image.alt}
+                  fill
+                  sizes="(min-width: 1160px) 1120px, 100vw"
+                />
+              </div>
+              {article.image.credit ? <figcaption>{article.image.credit}</figcaption> : null}
+            </figure>
+          </div>
+        ) : null}
 
         <div className="container blog-article__layout">
           <aside className="article-aside">

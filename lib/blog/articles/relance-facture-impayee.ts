@@ -15,7 +15,7 @@ export const article: BlogArticle = {
     {
       "heading": "Le coût psychologique de la procrastination de relance",
       "paragraphs": [
-        "Vous envoyez une facture. Vous la relancer ? Vous repousser systématiquement : peur de déranger, crainte de passer pour quelqu'un d'insistant, malaise viscéral à mentionner l'argent directement. Résultat, les paiements traînent pendant des semaines, votre trésorerie s'étire, et vous accumulez du stress émotionnel à chaque fois que vous voyez ce client. Une relance faite à temps, calmement, avec les bonnes informations, change tout. Le client comprend rapidement que vous pilotez votre gestion, il répond. Ceux qui ne répondent pas finissent par révéler quelque chose : soit ils ont un vrai problème, soit ils ne respectent pas leurs engagements. Mieux vaut le découvrir tôt."
+        "Vous envoyez une facture. Faut-il la relancer ? Vous la repoussez systématiquement : peur de déranger, crainte de passer pour quelqu'un d'insistant, malaise viscéral à mentionner l'argent directement. Résultat, les paiements traînent pendant des semaines, votre trésorerie s'étire, et vous accumulez du stress émotionnel à chaque fois que vous voyez ce client. Une relance faite à temps, calmement, avec les bonnes informations, change tout. Le client comprend rapidement que vous pilotez votre gestion, il répond. Ceux qui ne répondent pas finissent par révéler quelque chose : soit ils ont un vrai problème, soit ils ne respectent pas leurs engagements. Mieux vaut le découvrir tôt."
       ]
     },
     {

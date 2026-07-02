@@ -15,7 +15,7 @@ export const article: BlogArticle = {
     {
       "heading": "Quand l'administratif crée de la tension là où il y a besoin de détente",
       "paragraphs": [
-        "Un praticien du bien-être excelle à créer un environnement apaisé pour ses clients. Mais si vous jongler avec les paiements impayés, les confirmations oubliées, les relances à faire de mémoire, vous videz votre ressource. L'atelier ou le cabinet devient un lieu où vous gérez la crise, pas où vous offrez de la présence.",
+        "Un praticien du bien-être excelle à créer un environnement apaisé pour ses clients. Mais si vous jonglez avec les paiements impayés, les confirmations oubliées, les relances à faire de mémoire, vous videz votre ressource. L'atelier ou le cabinet devient un lieu où vous gérez la crise, pas où vous offrez de la présence.",
         "Ce qui tend l'administratif pour cette profession, c'est souvent une contradiction apparente : vous projetez une image souveraine et douce, mais vous craignez que facturer rapidement, confirmer les rendez-vous ou relancer les retards ne vous fasse paraître rigide. C'est l'inverse qui est vrai. Un client traité avec clarté se sent assuré, revient, paie sans hésiter."
       ]
     },
@@ -23,7 +23,7 @@ export const article: BlogArticle = {
       "heading": "Trois étapes pour alléger sans sacrifier la professionnalité",
       "steps": [
         "Établir un formulaire de prise de rendez-vous unique (en ligne ou par formulaire papier), sans emails dispersés.",
-        "Programmer des confirmations et rappels automatiques ou déléguées (la veille, doucement).",
+        "Programmer des confirmations et rappels automatiques ou délégués (la veille, doucement).",
         "Facturer le jour de la séance ou le lendemain, avec un message qui valorise le client plutôt que de mendier le paiement."
       ]
     },

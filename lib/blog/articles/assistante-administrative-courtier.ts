@@ -9,7 +9,7 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "Un client en attente d'approbation de crédit appelle déjà une fois par semaine pour connaître l'avancée. Répondre à chaque appel vous arrache de votre analyse. Pire : la réponse varie selon ce que vous vous souvenez du dossier à cet instant. Une assistante transforme ce chaos en flux lisible."
+    "Un client en attente d'approbation de crédit appelle déjà une fois par semaine pour connaître l'avancée. Répondre à chaque appel vous arrache à votre analyse. Pire : la réponse varie selon ce que vous vous souvenez du dossier à cet instant. Une assistante transforme ce chaos en flux lisible."
   ],
   "sections": [
     {

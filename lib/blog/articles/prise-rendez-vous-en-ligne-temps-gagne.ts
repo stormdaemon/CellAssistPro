@@ -13,7 +13,7 @@ export const article: BlogArticle = {
   ],
   "sections": [
     {
-      "heading": "Le dance habituel : emails, confusion, oublis",
+      "heading": "Le ballet habituel : emails, confusion, oublis",
       "paragraphs": [
         "Un client vous demande un rendez-vous par email. Il propose trois créneaux. Vous consultez votre agenda et trouvez un créneau qui marche — probablement pas celui qu'il a proposé. Vous lui répondez. Il reçoit votre email et répond d'accord. Vous le mettez dans votre calendrier. Trois à quatre emails minimum pour une décision qui prend 30 secondes. Multiplié par trois demandes par semaine, c'est quatre à cinq heures perdues en échanges. Et si le client annule et reprogramme, la boucle recommence.",
         "Pire : les oublis. Un rendez-vous confirmé par email le matin en urgence se retrouve quelques fois pas bien noté dans l'agenda. Le client arrive, vous l'aviez oublié. Mauvais pour l'image."
@@ -45,7 +45,7 @@ export const article: BlogArticle = {
       "list": [
         "Afficher des créneaux qui ne sont pas vraiment disponibles : si vous listez l'horaire 17h mais refusez ensuite, c'est du théâtre et les clients le sentent.",
         "Oublier le rappel : une réservation en ligne marche encore mieux si un email ou SMS rappelle au client 24 heures avant.",
-        "Garder plusieurs canaux en même temps : email, téléphone, et réservation en ligne à la fois crée juste la confusion. Progressivement vers un seul."
+        "Garder plusieurs canaux en même temps : email, téléphone, et réservation en ligne à la fois crée juste la confusion. Passez progressivement à un seul canal."
       ]
     }
   ],

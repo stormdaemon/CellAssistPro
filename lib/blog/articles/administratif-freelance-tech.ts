@@ -22,7 +22,7 @@ export const article: BlogArticle = {
     {
       "heading": "Ce qui ralentit vraiment un freelance tech",
       "paragraphs": [
-        "Les freins administratifs ne sont pas les mêmes pour tous. Un freelance en début de carrière galère sur la structure des devis et les termes de paiement. Un freelance établi oublie les relances et laisse des impayés s'accumuler. Un tiers travaille avec quatre clients réguliers mais n'a jamais su comment facturer la maintenance ou les petit ajustements. Dans tous ces cas, la solution n'est pas une app de plus — c'est un système humain : quelqu'un qui pilote le circuit, envoie, suit, relance."
+        "Les freins administratifs ne sont pas les mêmes pour tous. Un freelance en début de carrière peine sur la structure des devis et les conditions de paiement. Un freelance établi oublie les relances et laisse les impayés s'accumuler. Un autre travaille avec quatre clients réguliers mais n'a jamais su comment facturer la maintenance ou les petits ajustements. Dans tous ces cas, la solution n'est pas une application de plus — c'est un système humain : quelqu'un qui pilote le circuit, envoie, suit, relance."
       ]
     },
     {

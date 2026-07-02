@@ -32,13 +32,13 @@ export const article: BlogArticle = {
     {
       "heading": "Quand le créneau change tout",
       "paragraphs": [
-        "Un artisan du bâtiment qui attendait « le moment » pour faire ses relances se les planifiait toujours le dimanche soir. Il s'endormait mal. Depuis qu'il a réservé vendredi matin pour cela, non seulement c'est fait proprement, mais il n'y pense plus les autres jours. Un consultant qui se noyait dans ses tâches administratives disait « c'est impossible, ça change tous les jours ». Il a quand même essayé mercredi. Résultat : 70 % du travail administratif se concentre en trois jours quand même, ce qui signifie qu'il a libéré quatre jours de sa semaine. C'est moins qu'il y paraît."
+        "Un artisan du bâtiment qui attendait « le moment » pour faire ses relances les planifiait toujours le dimanche soir. Il s'endormait mal. Depuis qu'il a réservé le vendredi matin pour cela, non seulement c'est fait proprement, mais il n'y pense plus les autres jours. Un consultant qui se noyait dans ses tâches administratives disait : « C'est impossible, ça change tous les jours. » Il a quand même essayé le mercredi. Résultat : le travail administratif se concentre malgré tout sur trois jours, ce qui signifie qu'il a libéré quatre jours de sa semaine. C'est plus simple qu'il n'y paraît."
       ]
     },
     {
       "heading": "Les pièges qui annihilent le créneau",
       "list": [
-        "Le créneau qui n'existe que en théorie : vous en bloquez un mais vous le sacrifiez à la première urgence qui monte.",
+        "Le créneau qui n'existe qu'en théorie : vous en bloquez un mais vous le sacrifiez à la première urgence qui monte.",
         "L'heure trop tardive : jeudi soir à 17 h, vous êtes vidé. Le matin du mercredi ou du jeudi, c'est meilleur pour la concentration.",
         "Un créneau trop court : 30 minutes, c'est impossible si vous avez vraiment 8-10 tâches. Soyez réaliste sur le volume avant de bloquer."
       ]

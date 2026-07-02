@@ -21,7 +21,7 @@ export const article: BlogArticle = {
     {
       "heading": "Où l'IA aide vraiment, où elle n'aide pas",
       "paragraphs": [
-        "L'IA aide sur : la rédaction de premiers brouillons, la reformulation d'un texte brouillon en document propre, la structuration d'une information désordonnée, l'esquisse d'une trame. Elle ne remplace pas : le jugement métier, la connaissance client, la prise de décision, la créativité. Une avocate qui utilise l'IA pour esquissser un premier mémoire sur une loi de base gagne du temps ; une avocate qui laisse l'IA écrire son mémoire sur un point subtil risque une catastrophe. Le curseur dépend de ce que vous faites."
+        "L'IA aide sur : la rédaction de premiers brouillons, la reformulation d'un texte brouillon en document propre, la structuration d'une information désordonnée, l'esquisse d'une trame. Elle ne remplace pas : le jugement métier, la connaissance client, la prise de décision, la créativité. Une avocate qui utilise l'IA pour esquisser un premier mémoire sur une loi de base gagne du temps ; une avocate qui laisse l'IA écrire son mémoire sur un point subtil risque une catastrophe. Le curseur dépend de ce que vous faites."
       ]
     },
     {
@@ -54,7 +54,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Est-ce que l'IA peut vraiment me gagner du temps ou c'est une illusion ?",
-      "answer": "Sur une tâche que vous répétez 10 fois par mois, si vous récupérez 30 minutes par itération, c'est 5 heures mensuelles. Après deux mois de rodage, ça vale le coup. Sur une tâche unique, non."
+      "answer": "Sur une tâche que vous répétez 10 fois par mois, si vous récupérez 30 minutes par itération, c'est 5 heures mensuelles. Après deux mois de rodage, ça vaut le coup. Sur une tâche unique, non."
     }
   ]
 };

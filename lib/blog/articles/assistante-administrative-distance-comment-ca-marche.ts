@@ -27,7 +27,7 @@ export const article: BlogArticle = {
     {
       "heading": "Comment démarrer le partenariat",
       "steps": [
-        "Semaine 1 : préparer le dossier partagé avec modèles, factures en attente, dossiers clients. Faire un point de 30 min : elle pose ses questions, vous clarifie les priorités.",
+        "Semaine 1 : préparer le dossier partagé avec modèles, factures en attente, dossiers clients. Faire un point de 30 min : elle pose ses questions, vous clarifiez les priorités.",
         "Semaine 2-3 : elle fait le travail, vous vérifiez quotidiennement. Vous signalez tout de suite ce qui ne convient pas.",
         "Semaine 4 : vous passez à un suivi tous les trois jours. Si ça roule, passage à une fois par semaine à la fin du mois."
       ]

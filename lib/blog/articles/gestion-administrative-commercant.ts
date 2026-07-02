@@ -9,14 +9,14 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "Tenir votre gestion administrative ne devrait jamais vous obliger à rester tard après la fermeture. Le commerce prospère sur la qualité du service en boutique : c'est là que se nouent les relations client et se réalise le chiffre. L'arrière-boutique doit s'organiser autour de ce priorité absolue, sans la concurrencer."
+    "Tenir votre gestion administrative ne devrait jamais vous obliger à rester tard après la fermeture. Le commerce prospère sur la qualité du service en boutique : c'est là que se nouent les relations client et se réalise le chiffre. L'arrière-boutique doit s'organiser autour de cette priorité absolue, sans la concurrencer."
   ],
   "sections": [
     {
       "heading": "Le piège de l'accumulation quotidienne",
       "paragraphs": [
         "Les factures fournisseurs arrivent par email, par courrier, parfois glissées dans un carton. Chaque jour apporte son lot de reçus, bons de livraison, notes d'achat éparpillées. Un commerçant qui n'impose pas un circuit clair dès le départ se retrouve vite débordé : les documents s'empilent sur le comptoir, un classeur reste ouvert sur le bureau, les échéances se chevauchent.",
-        "Ce qui fait basculer la situation du gêne à la crise, c'est souvent un détail : une facture oubliée, un paiement fournisseur raté ou un doute sur les stocks. Alors, on fouille. Trois heures pour retrouver un devis. Deux jours de ventes perdues pour traiter une relance."
+        "Ce qui fait basculer la situation de la gêne à la crise, c'est souvent un détail : une facture oubliée, un paiement fournisseur raté ou un doute sur les stocks. Alors, on fouille. Trois heures pour retrouver un devis. Deux jours de ventes perdues pour traiter une relance."
       ]
     },
     {
@@ -53,11 +53,11 @@ export const article: BlogArticle = {
   "faq": [
     {
       "question": "Vaut-il mieux numériser tout ou conserver les originaux ?",
-      "answer": "Les deux : numérisez chaque facture en arrivant, puis rangez les papiers par mois dans une chemise-classeur. Numérisation prend quinze minutes et vous protège contre la perte. Les originaux restent votre preuve légale."
+      "answer": "Les deux : numérisez chaque facture en arrivant, puis rangez les papiers par mois dans une chemise-classeur. La numérisation prend quinze minutes et vous protège contre la perte. Les originaux restent votre preuve légale."
     },
     {
       "question": "Combien de temps faut-il vraiment pour tenir ce suivi à jour ?",
-      "answer": "Trente minutes par semaine si vous avez un système clair. Sans système, vous en perdez trois heures. La différence, c'est l'ordre du jour où elle a été mise en place."
+      "answer": "Trente minutes par semaine si vous avez un système clair. Sans système, vous en perdez trois heures. La différence, c'est l'ordre mis en place dès le premier jour."
     }
   ]
 };

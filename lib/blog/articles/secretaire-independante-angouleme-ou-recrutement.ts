@@ -15,13 +15,13 @@ export const article: BlogArticle = {
     {
       "heading": "Recruter : les vraies barrières pour une TPE",
       "paragraphs": [
-        "Embaucher une assistante, ce n'est pas juste un salaire. C'est un contrat de travail, des charges patronales, une gestion administrative à l'année, une responsabilité légale, et surtout l'engagement d'une dépense fixe tous les mois, quels que soient votre chiffre d'affaires et votre volume de travail. Pour un artisan ou un petit prestataire où le travail varie selon les saisons ou les projets, cette rigidité est un frein. Vous imaginez recruter en plein pic d'activité, mais vous demandez : que ferai-je d'une salariée pendant les trois mois creux ? Réduire ses heures de manière durable gère des complications légales (suspension, rupture progressive). C'est coûteux."
+        "Embaucher une assistante, ce n'est pas juste un salaire. C'est un contrat de travail, des charges patronales, une gestion administrative à l'année, une responsabilité légale, et surtout l'engagement d'une dépense fixe tous les mois, quels que soient votre chiffre d'affaires et votre volume de travail. Pour un artisan ou un petit prestataire où le travail varie selon les saisons ou les projets, cette rigidité est un frein. Vous imaginez recruter en plein pic d'activité, mais vous vous demandez : que ferai-je d'une salariée pendant les trois mois creux ? Réduire durablement ses heures entraîne des complications légales (suspension, rupture progressive). C'est coûteux."
       ]
     },
     {
-      "heading": "L'indépendante : la flexibilité sans le coûts caché",
+      "heading": "L'indépendante : la flexibilité sans le coût caché",
       "paragraphs": [
-        "Une secrétaire indépendante à Angoulême n'est pas salariée. Vous lui confiez une mission ou un volume d'heures, elle vous facture le travail. En septembre vous pouvez avoir besoin de cinq heures par semaine. En novembre, dix heures. En janvier, trois. Elle s'adapte. Pas de rupture conventionnelle douloureuse, pas de surcoût fixe, juste le travail réel facturé. Vous testez aussi la collaboration avant de vous engager longtemps — un premier projet de trois mois vous dit clairement si le courant passe. L'indépendante apporte aussi une expertise qui dépasse la simple gestionnaire généraliste : elle connaît la pré-comptabilité, les circuits de factures, les nuances de vos obligations administratives."
+        "Une secrétaire indépendante à Angoulême n'est pas salariée. Vous lui confiez une mission ou un volume d'heures, elle vous facture le travail effectué. En septembre, vous pouvez avoir besoin de cinq heures par semaine. En novembre, dix heures. En janvier, trois. Elle s'adapte. Pas de rupture conventionnelle douloureuse, pas de surcoût fixe, juste le travail réel facturé. Vous testez aussi la collaboration avant de vous engager longtemps — un premier projet de trois mois vous dit clairement si le courant passe. L'indépendante apporte aussi une expertise qui dépasse celle d'une gestionnaire généraliste : elle connaît la pré-comptabilité, les circuits de factures, les nuances de vos obligations administratives."
       ]
     },
     {
@@ -36,7 +36,7 @@ export const article: BlogArticle = {
     {
       "heading": "Mesurer vrai avant de décider",
       "paragraphs": [
-        "Avant de contacter une indépendante ou de poster une annonce, passez une semaine à noter précisément chaque heure que vous consacrez à de l'administratif. Soyez honnête : relances, devis, factures, classement, emails administratifs, relances, encore des relances. Mesurez vraiment. Vous allez probablement découvrir que c'est plus qu'une heure par jour (ce que beaucoup croient) mais moins que ce qui justifierait une embauche à temps plein. C'est exactement la zone de confort de l'indépendante."
+        "Avant de contacter une indépendante ou de poster une annonce, passez une semaine à noter précisément chaque heure que vous consacrez à de l'administratif. Soyez honnête : relances, devis, factures, classement, emails administratifs, encore des relances. Mesurez vraiment. Vous allez probablement découvrir que c'est plus qu'une heure par jour (ce que beaucoup croient) mais moins que ce qui justifierait une embauche à temps plein. C'est exactement la zone de confort de l'indépendante."
       ]
     },
     {

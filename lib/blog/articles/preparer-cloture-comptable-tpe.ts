@@ -9,7 +9,7 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "La clôture comptable vous panique parce que vous l'attendez jusqu'à la dernière semaine. Mais elle devient legère dès que vous la commencez dès novembre."
+    "La clôture comptable vous panique parce que vous l'attendez jusqu'à la dernière semaine. Mais elle devient légère dès que vous la commencez dès novembre."
   ],
   "sections": [
     {

@@ -23,7 +23,7 @@ export const article: BlogArticle = {
       "heading": "Par où ça commence à vous perdre du temps",
       "list": [
         "Les devis sont esquissés sur chantier et tapés le dimanche soir entre deux corvées.",
-        "Les paiements arrivent au compte goutte parce que personne ne suit les échéances de règlement.",
+        "Les paiements arrivent au compte-gouttes parce que personne ne suit les échéances de règlement.",
         "Les justificatifs (reçus, factures fournisseurs) s'accumulent en vrac dans une boîte."
       ]
     },
@@ -38,7 +38,7 @@ export const article: BlogArticle = {
     {
       "heading": "Un exemple qui tourne",
       "paragraphs": [
-        "Un menuisier fait en moyenne quatre à six chantiers par mois. Avant, il consacrait ses jeudis soir à la paperasse — devis à revoir, factures à finaliser, relances à noter. Il a confié ce travail à une assistante indépendante trois demi-journées par mois. Résultat : les devis partent le lendemain du chantier (au lieu d'attendre une semaine), les paiements sont tracés, les pièces comptables sont prêtes pour l'expert-comptable. Le jeudi soir du menuisier est redevenu libre, et son trésorier (son expert-comptable) reçoit des dossiers propres au lieu d'un sac poubelle de reçus."
+        "Un menuisier fait en moyenne quatre à six chantiers par mois. Avant, il consacrait ses jeudis soir à la paperasse — devis à revoir, factures à finaliser, relances à noter. Il a confié ce travail à une assistante indépendante trois demi-journées par mois. Résultat : les devis partent le lendemain du chantier (au lieu d'attendre une semaine), les paiements sont tracés, les pièces comptables sont prêtes pour l'expert-comptable. Le jeudi soir du menuisier est redevenu libre, et son expert-comptable reçoit des dossiers propres au lieu d'un sac de reçus en vrac."
       ]
     },
     {

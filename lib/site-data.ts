@@ -26,7 +26,7 @@ export const SITE = {
   calendlyUrl: "https://calendly.com/celassistpro/15min",
   googleBusinessUrl:
     process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL ??
-    "https://www.google.com/search?q=CelAssistPro",
+    "https://maps.app.goo.gl/31UW2GBGLZLqhagu6",
   socials: {
     linkedin: "https://www.linkedin.com/in/c%C3%A9line-bardan-39897515b/",
     facebook: "https://www.facebook.com/people/CelassistPro/61585664695001/",

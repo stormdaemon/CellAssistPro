@@ -13,6 +13,14 @@ export type BlogFaqItem = {
   answer: string;
 };
 
+export type BlogImage = {
+  /** Chemin public, ex. /images/blog/mon-slug.jpg */
+  src: string;
+  alt: string;
+  /** Crédit photo, ex. "Photo : Prénom Nom / Pexels" */
+  credit?: string;
+};
+
 export type BlogArticle = {
   slug: string;
   title: string;
@@ -27,6 +35,7 @@ export type BlogArticle = {
   intro: string[];
   sections: BlogSection[];
   faq?: BlogFaqItem[];
+  image?: BlogImage;
 };
 
 const WORDS_PER_MINUTE = 220;

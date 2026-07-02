@@ -20,7 +20,7 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Trois bénéficiaires de ta pré-comptabilité bien tenue",
+      "heading": "Trois bénéficiaires de votre pré-comptabilité bien tenue",
       "paragraphs": [
         "D'abord, vous : vous savez où trouver une pièce, vous vérifiez une dépense en quelques secondes, vous n'avez jamais de surprise sur ce qui a été envoyé au cabinet.",
         "Ensuite, votre expert-comptable : il reçoit un dossier propre, sans à-côtés. Il peut confier le classement à n'importe quel membre de son équipe sans risque. Il gagne du temps de facturation parce qu'il ne doit pas corriger ou reconstituer.",
@@ -30,7 +30,7 @@ export const article: BlogArticle = {
     {
       "heading": "L'expérience concrète : la facture qui traîne",
       "paragraphs": [
-        "Un avocat reçoit ses factures fournisseurs par quatre canaux différents : email, portail client, courrier papier, et appels de vendeurs. Chacune tourne en rond quelques jours. Quand il les envoie au comptable, il en oublie toujours. Le cabinet lui redemande les pièces manquantes. Deux semaines s'écoulent avant qu'il les retrouve et les envoie de nouveau. L'expert-comptable doit repasser derrière pour rectifier ses imputations — une heure de travail perdue. Avec une routine simple — une inbox dédiée, un classement par mois, une vérification rapide avant transmission — cette avocate libérerait une heure de cabinet chaque trimestre et dort mieux sachant qu'elle ne perd rien."
+        "Un avocat reçoit ses factures fournisseurs par quatre canaux différents : email, portail client, courrier papier, et appels de vendeurs. Chacune tourne en rond quelques jours. Quand il les envoie au comptable, il en oublie toujours. Le cabinet lui redemande les pièces manquantes. Deux semaines s'écoulent avant qu'il les retrouve et les envoie de nouveau. L'expert-comptable doit repasser derrière pour rectifier ses imputations — une heure de travail perdue. Avec une routine simple — une boîte de réception dédiée, un classement par mois, une vérification rapide avant transmission — cet avocat libérerait une heure de cabinet chaque trimestre et dort mieux sachant qu'il ne perd rien."
       ]
     },
     {

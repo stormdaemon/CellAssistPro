@@ -15,7 +15,7 @@ export const article: BlogArticle = {
     {
       "heading": "Quand l'impatience du client devient votre pression",
       "paragraphs": [
-        "Votre téléphone sonne. Un client vous demande si vous avez vu son email d'hier. Vous l'aviez aperçu, mais vous n'aviez pas eu le temps de répondre vraiment. Quelque minutes plus tôt, vous aviez reçu un autre message : « Bonjour, je vous recontacte car mon dernier email reste sans réponse. » Trois jours ont passé. Le client n'a aucun moyen de savoir si vous avez lu son message ou s'il s'est perdu. Cet écart crée du doute chez lui et canalise vos propres efforts vers des relances inutiles plutôt que vers du travail réel.",
+        "Votre téléphone sonne. Un client vous demande si vous avez vu son email d'hier. Vous l'aviez aperçu, mais vous n'aviez pas eu le temps de répondre vraiment. Quelques minutes plus tôt, vous aviez reçu un autre message : « Bonjour, je vous recontacte car mon dernier email reste sans réponse. » Trois jours ont passé. Le client n'a aucun moyen de savoir si vous avez lu son message ou s'il s'est perdu. Cet écart crée du doute chez lui et canalise vos propres efforts vers des relances inutiles plutôt que vers du travail réel.",
         "Un accusé automatique remplit le vide : il dit au client « J'ai reçu, je traite votre demande, vous aurez une réponse le jour X. » Ce simple message retarde les relances. Il réduit votre charge mentale de devoir répondre en urgence. Et, pour vous, il crée une frontière claire entre « j'ai vu » et « je traite »."
       ]
     },
@@ -23,7 +23,7 @@ export const article: BlogArticle = {
       "heading": "Deux cas où l'accusé automatique sauve du temps",
       "list": [
         "Vous êtes en rendez-vous client et vous ne pouvez vraiment pas lire vos emails pendant des heures : l'accusé dit à votre prospect que vous le recontacterez le lendemain.",
-        "Vous gérez en rafale une fin d'après-midi chargée : vous lisez chaque email qui rentre, vous lui envoyer l'accusé, et vous traitez les fonds de panier ensemble à 18h, en une seule session."
+        "Vous gérez en rafale une fin d'après-midi chargée : vous lisez chaque email qui rentre, vous lui envoyez l'accusé, et vous traitez le fond de panier ensemble à 18h, en une seule session."
       ]
     },
     {

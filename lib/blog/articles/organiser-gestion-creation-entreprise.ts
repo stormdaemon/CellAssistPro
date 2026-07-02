@@ -9,14 +9,14 @@ export const article: BlogArticle = {
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
   "intro": [
-    "Vous lancez votre entreprise. C'est le moment idéal — le seul moment idéal — pour poser des circuits clairs avant que l'urgence du client ne vous submerge. Trois ans après, vous n'aura plus le temps de corriger ce que vous aurez mal pensé aujourd'hui."
+    "Vous lancez votre entreprise. C'est le moment idéal — le seul moment idéal — pour poser des circuits clairs avant que l'urgence du client ne vous submerge. Trois ans après, vous n'aurez plus le temps de corriger ce que vous aurez mal pensé aujourd'hui."
   ],
   "sections": [
     {
       "heading": "Le paradoxe de la création : l'urgence viendra trop vite",
       "paragraphs": [
-        "Au moment de créer, tout semble lointain. L'administratif ressemble à un détail, vous êtes rempli d'énergie sur le commercial, le produit, votre offre. Vous repensez l'organisation quand vous aurez grandir, vous vous dites. Or, quand les premiers clients arrivent, vous ne pouvez plus réfléchir. Vous êtes en urgence de production. Les documents restent alors comme vous les aviez, à la va-vite. Et trois ans après, vous me dites : « Si j'avais su, j'aurais commencé autrement ».",
-        "La bonne nouvelle : bien structurer sa gestion à la création prend quatre heures maximum. Vous créez quatre ou cinq dossiers clairs, vous posez un modèle de facture, vous listez les échéances annuelles que vous devrez respecter, vous convenu comment votre comptable recevra vos pièces. C'est tout. Trois ans plus tard, même si vous avez 10x le volume, cette base tiendra."
+        "Au moment de créer, tout semble lointain. L'administratif ressemble à un détail, vous êtes rempli d'énergie sur le commercial, le produit, votre offre. Vous vous dites que vous repenserez l'organisation quand vous aurez grandi. Or, quand les premiers clients arrivent, vous ne pouvez plus réfléchir. Vous êtes en urgence de production. Les documents restent alors comme vous les aviez laissés, à la va-vite. Et trois ans après, vous me dites : « Si j'avais su, j'aurais commencé autrement ».",
+        "La bonne nouvelle : bien structurer sa gestion à la création prend quatre heures maximum. Vous créez quatre ou cinq dossiers clairs, vous posez un modèle de facture, vous listez les échéances annuelles que vous devrez respecter, vous convenez avec votre comptable de la façon dont il recevra vos pièces. C'est tout. Trois ans plus tard, même si vous avez dix fois le volume, cette base tiendra."
       ]
     },
     {
@@ -49,7 +49,7 @@ export const article: BlogArticle = {
     {
       "heading": "5. Une communication claire avec votre comptable dès le début",
       "paragraphs": [
-        "Avant de factur le premier client, appelez votre comptable. Demandez-lui exactement comment il veut recevoir vos pièces, à quel rythme, dans quel format. Dites-lui comment vous les organiserez. Ces vingt minutes de conversation évitent mille allers-retours."
+        "Avant de facturer le premier client, appelez votre comptable. Demandez-lui exactement comment il veut recevoir vos pièces, à quel rythme, dans quel format. Dites-lui comment vous les organiserez. Ces vingt minutes de conversation évitent mille allers-retours."
       ]
     }
   ],

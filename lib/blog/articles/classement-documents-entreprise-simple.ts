@@ -37,7 +37,7 @@ export const article: BlogArticle = {
     {
       "heading": "Les pièges qui ruinent le classement",
       "list": [
-        "Trop de catégories : au-delà de cinq, vous passerez plus de temps à vous demander où ranger que à ranger.",
+        "Trop de catégories : au-delà de cinq, vous passerez plus de temps à vous demander où ranger qu'à ranger.",
         "Changer de système : si vous trouvez une logique simple qui marche, tenez-vous-y au moins un an avant de la modifier. Le meilleur système est celui que vous pouvez expliquer en 20 secondes.",
         "Repousser le classement en masse : une pile « à classer » qui s'accumule devient un barrage psychologique. Mieux vaut deux minutes par jour que cinq heures un dimanche."
       ]

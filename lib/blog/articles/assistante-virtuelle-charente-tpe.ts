@@ -42,7 +42,7 @@ export const article: BlogArticle = {
       "heading": "Ce qui ne marche pas (et comment l'éviter)",
       "paragraphs": [
         "Le piège le plus courant : confier du travail administratif avant d'avoir clarifié soi-même comment on le ferait. L'assistante virtuelle ne peut pas deviner votre logique ; elle peut seulement la mettre en ordre. Avant de lui donner du travail, prenez une journée pour écrire vos processus tels qu'ils sont — même si c'est brouillon.",
-        "Deuxième erreur : vouloir une assistante uniquement à distance dès le jour un. Sans poser les bases ensemble sur place, le suivi sera laborieux, dépendant de mails et d'allers-retours. Une ou deux rendez-vous en Charente suffisent pour transformer la dynamique.",
+        "Deuxième erreur : vouloir une assistante uniquement à distance dès le jour un. Sans poser les bases ensemble sur place, le suivi sera laborieux, dépendant de mails et d'allers-retours. Un ou deux rendez-vous en Charente suffisent pour transformer la dynamique.",
         "Troisième erreur : lui donner des accès sans limites à tous vos outils et documents. Définissez précisément ce dont elle a besoin, réduisez l'accès au strict nécessaire pour protéger vos données sensibles."
       ]
     },

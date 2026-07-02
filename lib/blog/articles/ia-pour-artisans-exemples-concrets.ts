@@ -16,17 +16,17 @@ export const article: BlogArticle = {
       "heading": "Où gisent les véritables gains de temps",
       "paragraphs": [
         "Un artisan perd des heures chaque mois à faire du travail sans créativité : rédiger pour la dixième fois une réponse à une question récurrente, mettre en forme les notes d'un chantier avant d'envoyer un devis, relancer un client en essayant d'être sympathique. Ce sont des tâches nécessaires, elles occupent du cerveau, mais elles ne mobilisent pas votre expertise métier.",
-        "L'IA brille justement là : elle prend ces tâches repétitives et les expédie. Vous lui donnez les éléments bruts (notes, contexte, exigences), elle structure, elle rédige un brouillon, vous validez et ajustez. Vous gagnez une à deux heures par semaine sur du travail qui n'ajoute rien."
+        "L'IA brille justement là : elle prend ces tâches répétitives et les expédie. Vous lui donnez les éléments bruts (notes, contexte, exigences), elle structure, elle rédige un brouillon, vous validez et ajustez. Vous gagnez une à deux heures par semaine sur du travail qui n'ajoute rien."
       ]
     },
     {
       "heading": "Quatre scénarios que j'observe régulièrement",
       "paragraphs": [
-        "Scenario 1 : Votre téléphone sonne dix fois par semaine avec la même question (« Quel est votre tarif pour… », « Faites-vous ce type de chantier ? »). Au lieu de répondre manuellement chaque fois, vous dictez trois réponses modèles une fois à l'IA. Elle les reformule légèrement pour chaque appel. Le client ne voit que du sur-mesure, vous gagnez trois heures par semaine."
+        "Scénario 1 : Votre téléphone sonne dix fois par semaine avec la même question (« Quel est votre tarif pour… », « Faites-vous ce type de chantier ? »). Au lieu de répondre manuellement chaque fois, vous dictez trois réponses modèles une fois à l'IA. Elle les reformule légèrement pour chaque appel. Le client ne voit que du sur-mesure, vous gagnez trois heures par semaine."
       ]
     },
     {
-      "heading": "Scenario 2 : Structurer un devis depuis des notes désordonnées",
+      "heading": "Scénario 2 : Structurer un devis depuis des notes désordonnées",
       "paragraphs": [
         "Vous venez de visiter un chantier. Vos notes sur votre téléphone sont un fouillis : dimensions, remarques, points à clarifier. Au lieu de passer une heure à tout remettre en forme, vous collez vos notes dans une IA qui comprend le secteur du bâtiment (menuiserie, peinture, etc.), et elle produit une structure claire : description du travail, matériaux, délai, conditions. Vous vérifiez les prix, vous envoyez."
       ]

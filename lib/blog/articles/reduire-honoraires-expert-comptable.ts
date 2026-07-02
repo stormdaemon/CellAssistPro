@@ -25,7 +25,7 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "L'exemple du consultant qui a changé ses enclassements",
+      "heading": "L'exemple du consultant qui a changé son classement",
       "paragraphs": [
         "Un consultant envoie ses pièces comptables en trois lots d'urgence dans l'année : janvier, mars, septembre. Chaque lot est incomplet, mélange plusieurs mois, nécessite une clarification. Le cabinet appelle pour vérifier, trie, reclasse, cherche les pièces manquantes — chacune de ces heures de tri se retrouve en montant sur la facture. Depuis qu'il transmet ses documents classés par mois, tous les trimestres, avec un résumé d'une ligne par facture notable, sa note annuelle a sensiblement baissé. Moins d'échanges, moins de stress, une relation avec le cabinet nettement plus fluide. Il récupère aussi du recul sur sa comptabilité puisqu'elle ne traîne plus."
       ]
@@ -33,7 +33,7 @@ export const article: BlogArticle = {
     {
       "heading": "L'hygiène minimale qui économise le plus",
       "paragraphs": [
-        "Vous ne cherchez pas la perfection, juste l'ordre de base : pièces rangées par mois, montants lisibles, nature de la dépense noté brièvement, aucun doublon. Une heure par mois suffit pour la plupart des TPE. Votre cabinet vous en remerciera et cette petite routine réduit vos factures sans diminuer le service."
+        "Vous ne cherchez pas la perfection, juste l'ordre de base : pièces rangées par mois, montants lisibles, nature de la dépense notée brièvement, aucun doublon. Une heure par mois suffit pour la plupart des TPE. Votre cabinet vous en remerciera et cette petite routine réduit vos factures sans diminuer le service."
       ]
     }
   ],

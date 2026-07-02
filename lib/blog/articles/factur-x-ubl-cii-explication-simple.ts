@@ -16,7 +16,7 @@ export const article: BlogArticle = {
       "heading": "Pourquoi une facture a besoin d'une structure",
       "paragraphs": [
         "Une facture papier, un PDF simple ou une image : un humain peut lire facilement le montant, la date, le fournisseur. Mais un ordinateur doit recevoir l'information de manière ordonnée, prévisible. Si le montant se trouve parfois à gauche, parfois à droite, parfois caché dans un texte, la machine ne saura pas où le chercher. Un format structuré, c'est un contrat : le montant est toujours au même endroit, la date de facturation aussi, le numéro de TVA également. Cela permet à votre logiciel de comptabilité d'importer directement, sans recopie manuelle.",
-        "En France, le format attendu est Factur-X, un format qui vient de la norme européenne. UBL et CII sont d'autres formats, acceptés en Europe mais moins courants chez nous. Ce qui compte : votre outil de facturation doit pouvoir émettre dans le format attendu, et vos fournisseurs doivent pouvoir recevoir le vôtre."
+        "Pour la facturation électronique en France, trois formats sont acceptés : Factur-X, un PDF classique auquel est associé un fichier de données structurées invisible à l'œil nu ; UBL et CII, deux formats entièrement en XML, sans version « lisible » pour un humain. Les trois respectent la même norme européenne de contenu, mais ne se présentent pas de la même façon. Ce qui compte pour vous : votre outil de facturation doit pouvoir émettre dans un format accepté par vos clients, et être capable de recevoir celui que choisissent vos fournisseurs."
       ]
     },
     {

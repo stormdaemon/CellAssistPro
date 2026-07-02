@@ -44,7 +44,7 @@ export const article: BlogArticle = {
         "Écoutez sa réponse (formats, fréquence, détails de contenu). Vous découvrirez peut-être qu'il a déjà une vision claire.",
         "Proposez de lui envoyer une facture test avant septembre 2026, pour vérifier que votre flux fonctionne avec sa méthode d'importation",
         "Validez ensemble la fréquence de transmission (hebdomadaire, mensuelle) et le point d'arrivée des factures chez lui",
-        "Documentez ce qui a été convenu et relisez-le ensemble pour éviter les malaises ultérieurs"
+        "Documentez ce qui a été convenu et relisez-le ensemble pour éviter les malentendus ultérieurs"
       ]
     }
   ],
