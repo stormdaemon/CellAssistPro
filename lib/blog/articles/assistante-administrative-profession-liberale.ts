@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistante administrative profession libérale",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistante-administrative-profession-liberale.jpg",
+    "alt": "Une professionnelle serre la main de clients en présentant un dossier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Une profession libérale doit préserver deux choses : le secret professionnel et la relation client. C'est souvent ce qui fait hésiter à déléguer. Pourtant, l'administratif ne demande aucune compétence réglementée — vous pouvez le confier sans jamais exposer le cœur de votre métier."
   ],

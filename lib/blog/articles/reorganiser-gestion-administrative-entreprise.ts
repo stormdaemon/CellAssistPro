@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "réorganiser gestion administrative entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/reorganiser-gestion-administrative-entreprise.jpg",
+    "alt": "Mains rangeant des dossiers reliés par des liens dans une boîte en carton, évoquant un classement d'archives",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Une gestion qui s'est empilée n'est pas un échec de dirigeant. C'est le résultat normal d'une entreprise qui a grandi sans prendre le temps de revoir ses méthodes de base."
   ],

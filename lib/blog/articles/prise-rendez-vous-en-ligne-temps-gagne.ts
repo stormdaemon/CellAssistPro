@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "prise de rendez-vous en ligne entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/prise-rendez-vous-en-ligne-temps-gagne.jpg",
+    "alt": "Ordinateur portable et smartphone posés sur un bureau en bois",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Chaque demande de rendez-vous génère deux à quatre échanges email inutiles : le client propose, vous vérifiez, vous répondez, il confirme. Multiplié par plusieurs demandes par semaine, c'est des heures de calendrier qui s'évaporent."
   ],

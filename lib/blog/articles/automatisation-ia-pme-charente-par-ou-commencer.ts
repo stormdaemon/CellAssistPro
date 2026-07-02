@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "automatisation IA PME Charente",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/automatisation-ia-pme-charente-par-ou-commencer.jpg",
+    "alt": "Équipe de professionnels échangeant devant un tableau blanc couvert de graphiques lors d'une réunion",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Envisager l'automatisation en PME, c'est d'abord accepter que les outils ne vous aideront que si votre travail est déjà clair et organisé. Automatiser du désordre, c'est passer une voiture de luxe sur une piste de terre.",
     "Pour les dirigeants de PME en Charente ou ailleurs, le vrai succès avec l'automatisation vient de l'ordre qu'on crée avant, pas de la sophistication de l'outil."

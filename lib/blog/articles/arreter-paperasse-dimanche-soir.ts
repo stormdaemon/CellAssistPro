@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "administratif dimanche soir dirigeant",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/arreter-paperasse-dimanche-soir.jpg",
+    "alt": "Femme travaillant tard le soir sur son ordinateur portable dans un bureau faiblement éclairé",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Il y a cette habitude : le dimanche arrive, la semaine vous attend déjà, et pourtant vous ouvrez l'ordinateur pour ces deux ou trois petites choses administratives qui traînent depuis jeudi. Vous terminez à 23 h, exténué, sans avoir vraiment réglé quoi que ce soit."
   ],

@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "pré-comptabilité définition",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/pre-comptabilite-definition.jpg",
+    "alt": "Employée de bureau cherchant un classeur dans une étagère de classeurs de documents colorés",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "La pré-comptabilité n'est pas de la comptabilité. C'est tout ce qui prépare votre dossier à devenir comptable sans que vous fassiez le travail du cabinet.",
     "Elle commence dès qu'un papier ou un justificatif entre chez vous — facture, reçu, relevé — et s'achève quand ce même document, bien préparé et référencé, attend sur le bureau de votre expert-comptable."

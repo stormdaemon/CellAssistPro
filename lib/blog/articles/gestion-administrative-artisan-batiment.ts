@@ -8,15 +8,20 @@ export const article: BlogArticle = {
   "keyword": "gestion administrative artisan bâtiment",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gestion-administrative-artisan-batiment.jpg",
+    "alt": "Casque de chantier et niveau à bulle posés sur des plans de construction",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
-    "Pour un artisan du bâtiment, l'administratif n'est jamais le métier, mais c'est souvent ce qui prend le plus de temps le soir et le weekend. Entre deux ou trois chantiers en parallèle, la multiplication des documents et des suivis peut transformer votre bureau en deuxième chantier, plus fatigant que le premier."
+    "Pour un artisan du bâtiment, l'administratif n'est jamais le métier, mais c'est souvent ce qui prend le plus de temps le soir et en fin de semaine. Entre deux ou trois chantiers en parallèle, la multiplication des documents et des suivis peut transformer votre bureau en deuxième chantier, plus fatigant que le premier."
   ],
   "sections": [
     {
       "heading": "La variabilité du bâtiment crée le désordre",
       "paragraphs": [
         "Chaque chantier est unique : budget différent, durée différente, équipes différentes, matériaux différents. Cette variabilité, c'est la richesse de votre métier. Mais c'est aussi la source du chaos administratif. Vous avez l'habitude de laisser chaque chantier générer ses propres habitudes : un pour lequel vous classez les factures dans un dossier, un autre où vous les gardez en papier dans une boîte, un troisième où vous les photographiez. Quand vous avez trois chantiers en parallèle, vous avez trois systèmes différents. Quand vous en avez six, c'est un enfer pour retrouver une pièce.",
-        "Structurer votre gestion administrative au bâtiment, ce n'est pas compliquer votre vie. C'est créer un cadre qui absorbe la variabilité sans vous noyer dedans. Vous pouvez continuer à être flexible sur le terrain. Chez le bureau, vous suivez un circuit."
+        "Structurer votre gestion administrative au bâtiment, ce n'est pas compliquer votre vie. C'est créer un cadre qui absorbe la variabilité sans vous noyer dedans. Vous pouvez continuer à être flexible sur le terrain. Au bureau, vous suivez un circuit."
       ]
     },
     {

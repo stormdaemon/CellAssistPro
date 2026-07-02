@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "gestion administrative commerçant",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gestion-administrative-commercant.jpg",
+    "alt": "Commerçante souriante tenant une tablette dans sa boutique de vêtements",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Tenir votre gestion administrative ne devrait jamais vous obliger à rester tard après la fermeture. Le commerce prospère sur la qualité du service en boutique : c'est là que se nouent les relations client et se réalise le chiffre. L'arrière-boutique doit s'organiser autour de cette priorité absolue, sans la concurrencer."
   ],

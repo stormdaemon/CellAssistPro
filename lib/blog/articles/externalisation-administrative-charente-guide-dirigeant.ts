@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "externalisation administrative Charente",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/externalisation-administrative-charente-guide-dirigeant.jpg",
+    "alt": "Mains annotant au feutre des documents financiers posés sur un bureau en bois",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Externaliser l'administratif, c'est confier le suivi courant à quelqu'un qui sait organiser et rendre compte. Vous gardez la direction, vous n'êtes plus seul à porter le poids des rappels et des délais."
   ],

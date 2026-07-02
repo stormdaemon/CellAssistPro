@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "PDF facture électronique",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/pdf-email-facture-electronique.jpg",
+    "alt": "Gros plan sur des doigts tapant sur le clavier d'un ordinateur portable, avec l'écran lumineux en arrière-plan",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "La réponse est claire : non, pas vraiment. Envoyer un PDF par email ressemble à de l'électronique, mais ce n'est qu'une apparence. Une vraie facture électronique est structurée de façon à être traitée automatiquement par les systèmes des clients, et doit transiter par une plateforme de dématérialisation agréée. Un PDF reste un simple fichier que seul un humain peut lire utilement. Cette différence fera toute la différence à partir du 1er septembre 2026."
   ],

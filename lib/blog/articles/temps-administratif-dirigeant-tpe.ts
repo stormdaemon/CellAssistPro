@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "temps administratif dirigeant TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/temps-administratif-dirigeant-tpe.jpg",
+    "alt": "Dirigeant fatigué, tête en arrière et mains sur le visage, assis à son bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous ne voyez pas passer l'administratif parce qu'il n'occupe jamais un créneau bloc de deux heures. Il s'émiette, se glisse entre deux clients, s'accomplit le soir. Et pourtant, il coûte une journée complète ou presque chaque semaine."
   ],
@@ -15,7 +20,7 @@ export const article: BlogArticle = {
     {
       "heading": "Le comptage honnête : une semaine de traçabilité",
       "paragraphs": [
-        "Posez cette question à un dirigeant de TPE : « Combien de temps perdez-vous en administratif chaque semaine ? » La réponse moyenne est « oh, une ou deux heures ». Puis vous lui demandez de noter réellement pendant une semaine. Lundi 9h30, chercher une facture fournisseur (15 minutes). Lundi 14h, recopier un devis en facture (20 minutes). Mardi matin, relancer un client qui n'a pas répondu à un devis (10 minutes). Mardi 17h, vérifier si un paiement est arrivé (5 minutes). Mercredi 11h, ranger un document dans le bon dossier (10 minutes). Et ainsi de suite. La semaine finie, le dirigeant total : 4 heures 30. Soit 10 % de sa semaine. Lui qui croyait faire juste « un peu d'administratif »."
+        "Posez cette question à un dirigeant de TPE : « Combien de temps perdez-vous en administratif chaque semaine ? » La réponse moyenne est « oh, une ou deux heures ». Puis vous lui demandez de noter réellement pendant une semaine. Lundi 9h30, chercher une facture fournisseur (15 minutes). Lundi 14h, recopier un devis en facture (20 minutes). Mardi matin, relancer un client qui n'a pas répondu à un devis (10 minutes). Mardi 17h, vérifier si un paiement est arrivé (5 minutes). Mercredi 11h, ranger un document dans le bon dossier (10 minutes). Et ainsi de suite. La semaine finie, le total du dirigeant : 4 heures 30. Soit 10 % de sa semaine. Lui qui croyait faire juste « un peu d'administratif »."
       ]
     },
     {
@@ -39,7 +44,7 @@ export const article: BlogArticle = {
       "steps": [
         "Mesurer vraiment : notez chaque geste administratif pendant une semaine entière, sans arrondir « à la baisse ». Incluez chercher un document, relancer, classer, vérifier.",
         "Regrouper : classez ces gestes par famille (devis, factures, relances, classement, suivi de trésorerie).",
-        "Agir : automatisez la première tâche qui revient le plus souvent, déléguer la deuxième, structurez la troisième pour ne plus y penser."
+        "Agir : automatisez la première tâche qui revient le plus souvent, déléguez la deuxième, structurez la troisième pour ne plus y penser."
       ]
     },
     {

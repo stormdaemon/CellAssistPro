@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "secrétaire indépendante Angoulême",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/secretaire-independante-angouleme-ou-recrutement.jpg",
+    "alt": "Un homme et une femme discutant autour d'un bureau dans un espace de travail moderne, un dossier à la main",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Quand vous sentez que l'administratif vous échappe mais que vous ne savez pas si vous avez besoin d'une personne à temps plein, une secrétaire indépendante à Angoulême offre souvent le meilleur des deux mondes : l'expertise, sans la rigidité du CDI."
   ],

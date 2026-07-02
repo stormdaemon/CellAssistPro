@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "directrice des opérations externalisée",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/directrice-operations-externalisee-role.jpg",
+    "alt": "Une professionnelle analyse des documents et graphiques sur son ordinateur portable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Une directrice des opérations externalisée n'exécute pas à votre place. Elle structure, pilote et améliore ce qui tourne mal chez vous, puis elle laisse tourner."
   ],

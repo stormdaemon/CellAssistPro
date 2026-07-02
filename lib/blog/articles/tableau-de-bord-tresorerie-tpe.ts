@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "tableau de bord trésorerie TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/tableau-de-bord-tresorerie-tpe.jpg",
+    "alt": "Main tenant un stylo pointant sur un graphique en barres et courbes imprimé sur papier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Un tableau de bord de trésorerie ne doit pas vous impressionner. Il doit vous dire en 30 secondes si vous pouvez respirer tranquille la semaine prochaine, et quoi faire si la réponse est non."
   ],
@@ -27,7 +32,7 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Les metadonnées qui sauvent votre tableau",
+      "heading": "Les métadonnées qui sauvent votre tableau",
       "paragraphs": [
         "Vous ne notez pas « 3 000 euros » sans contexte. Vous écrivez « Devis approuvé, client Dupont, facture présentée le 10/01 ». Cela vous permet trois choses : de rappeler à ce client le 8 janvier si vous manquez de visibilité, de vérifier que vous n'avez pas compté deux fois la même facture, et d'expliquer à votre comptable pourquoi vous avez prévu quelque chose qu'il ne voit pas encore dans les registres."
       ]
@@ -49,7 +54,7 @@ export const article: BlogArticle = {
   ],
   "faq": [
     {
-      "question": "Dois-je prévoir mon trésorerie sur trois mois ou deux semaines ?",
+      "question": "Dois-je prévoir ma trésorerie sur trois mois ou deux semaines ?",
       "answer": "Commencez par deux à quatre semaines pour avoir assez de réaction. Pour les dépenses vraiment fixes et prévisibles (salaires, charges, loyers), vous pouvez voir trois mois. Au-delà, tout est trop incertain pour influencer vos décisions de la semaine."
     }
   ]

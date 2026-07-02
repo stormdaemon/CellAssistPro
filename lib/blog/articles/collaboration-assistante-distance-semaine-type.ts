@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "collaboration assistante à distance",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/collaboration-assistante-distance-semaine-type.jpg",
+    "alt": "Femme en visioconférence avec trois interlocutrices sur son ordinateur portable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Beaucoup de dirigeants pensent que travailler avec une assistante à distance signifie lui envoyer des demandes au fil de l'eau et espérer que tout se règle. C'est une recette pour la confusion. La vraie collaboration fonctionne sur un rythme clair, répétable, et honnête."
   ],
@@ -24,7 +29,7 @@ export const article: BlogArticle = {
       "paragraphs": [
         "Lundi matin (30 minutes). Vous listez ce qui arrive : factures fournisseurs à classer, devis à relancer, dossier comptable à préparer pour mercredi, une question spéciale sur un modèle. Un appel court ou un message écrit partagé suffit. Elle confirme d'un « Compris » ou pose une clarification.",
         "Mardi à jeudi. Elle travaille. Elle classe, elle envoie, elle prépare. Elle n'a besoin que de votre attention si elle trouve un obstacle (« Cette facture fournisseur a une ligne bizarre, dois-je l'ignorer ? »). Vous répondez dans la journée.",
-        "Vendredi avant 17h. Elle envoie un bilan : « 12 factures classées, 5 relances envoyées, dossier comptable prêt, une question sur le crédit TVA ». Vous répondez, vous validez, c'est clos. Elle peut faire un week-end sans penser à vos dossiers."
+        "Vendredi avant 17 h. Elle envoie un bilan : « 12 factures classées, 5 relances envoyées, dossier comptable prêt, une question sur le crédit de TVA ». Vous répondez, vous validez, c'est clos. Elle peut passer un week-end sans penser à vos dossiers."
       ]
     },
     {

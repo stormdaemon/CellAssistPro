@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "automatiser relances factures",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/automatiser-relances-factures.jpg",
+    "alt": "Femme examinant des tickets et factures à côté de son ordinateur portable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Attendre que la trésorerie serre avant de relancer un client, c'est laisser l'argent que vous avez gagné dormir sous un autre toit. Automatiser les relances, c'est mettre en place un système régulier qui ne dépend pas de votre courage du jour."
   ],
@@ -15,7 +20,7 @@ export const article: BlogArticle = {
     {
       "heading": "Pourquoi cette tâche absorbe tant d'énergie",
       "paragraphs": [
-        "Vous savez qu'une facture traîne, mais vous ne savez pas trop comment relancer sans craindre de froisser le client. Vous attendez donc. Une semaine passe, deux semaines, un mois. À un moment donné, la situation devient tendue, et vous êtes forcé de relancer, mais c'est trop tard et c'est trop fort — le client sent de l'urgence ou de la frustration dans votre message. Le temps s'accumule, la trésorerie souffre, et vous vous reprochez de n'avoir pas agi plus tôt.",
+        "Vous savez qu'une facture traîne, mais vous ne savez pas trop comment relancer sans craindre de froisser le client. Vous attendez donc. Une semaine passe, deux semaines, un mois. À un moment donné, la situation devient tendue et vous êtes contraint de relancer, mais trop tard et avec trop de fermeté — le client sent l'urgence ou la frustration dans votre message. Le temps s'accumule, la trésorerie en souffre, et vous vous reprochez de ne pas avoir agi plus tôt.",
         "La bonne nouvelle ? Un système régulier, bien pensé et clairement communiqué au départ enlève toute cette charge émotionnelle. Le client comprend dès la signature qu'il recevra un rappel à J+15 s'il oublie de payer. C'est professionnel. Vous ne devez plus choisir entre être agressif et ne rien faire : l'automatisation gère ça pour vous."
       ]
     },
@@ -28,9 +33,9 @@ export const article: BlogArticle = {
     {
       "heading": "Résultats concrets d'une TPE",
       "list": [
-        "Une clinique vétérinaire qui relançait sporadiquement vit ses délais de paiement moyen passer de 50 jours à 28 jours.",
-        "Un consultant qui automatisa ses rappels découvrit que la moitié de ses retards venaient d'une mauvaise adresse email : une correction et c'était résolu.",
-        "Un artisan qui ajouta une simple phrase « Un rappel partira automatiquement à J+15 » baissa ses impayés de 40 % sans jamais appeler."
+        "Une clinique vétérinaire qui relançait sporadiquement a vu son délai de paiement moyen passer de 50 jours à 28 jours.",
+        "Un consultant qui a automatisé ses rappels a découvert que la moitié de ses retards venaient d'une adresse e-mail erronée : une correction a suffi à résoudre le problème.",
+        "Un artisan qui a ajouté une simple phrase « Un rappel partira automatiquement à J+15 » a fait baisser ses impayés de 40 % sans jamais avoir besoin d'appeler."
       ]
     },
     {

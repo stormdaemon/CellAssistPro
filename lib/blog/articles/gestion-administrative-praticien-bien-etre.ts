@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "gestion administrative praticien bien-être",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gestion-administrative-praticien-bien-etre.jpg",
+    "alt": "Table de massage préparée dans une salle de soin lumineuse et épurée",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Votre pratique du bien-être repose sur la qualité énergétique que vous apportez à chaque client. Or, dès que l'administratif devient brouillon — rendez-vous oubliés, factures tardives, impayés qui s'accumulent — cette énergie s'échappe. Ce ne sont pas des tâches rivales : une gestion légère et fiable protège justement votre présence auprès des clients."
   ],

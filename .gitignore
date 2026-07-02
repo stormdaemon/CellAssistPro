@@ -49,3 +49,6 @@ Thumbs.db
 
 # Pièces jointes de sessions distantes
 /.codex-remote-attachments/
+
+# Local Netlify folder
+.netlify

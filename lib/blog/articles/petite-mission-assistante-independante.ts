@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "petite mission assistante indépendante",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/petite-mission-assistante-independante.jpg",
+    "alt": "Professionnelle prenant des notes sur un bloc-notes lors d'une réunion courte",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Souvent, nous pensons qu'il faut beaucoup de travail à confier pour justifier un appel à une assistante indépendante. C'est une erreur. Deux heures concentrées sur un vrai blocage peuvent transformer votre mois, voire votre année."
   ],

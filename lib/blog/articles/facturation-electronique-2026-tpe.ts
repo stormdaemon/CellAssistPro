@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "facturation électronique 2026 TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/facturation-electronique-2026-tpe.jpg",
+    "alt": "Professionnelle au bureau avec ordinateur portable, dossiers et tasse de café",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "À partir du 1er septembre 2026, votre TPE devra recevoir les factures de ses fournisseurs uniquement sous forme électronique structurée. Vous avez jusqu'au 1er septembre 2027 pour adapter vos propres émissions. C'est moins une révolution technologique qu'une occasion de revoir vos circuits administratifs avant l'urgence."
   ],

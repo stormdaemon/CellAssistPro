@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "automatiser gestion entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/automatiser-desordre-gestion-entreprise.jpg",
+    "alt": "Bureau encombré de livres, papiers froissés et documents empilés en désordre",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous rêvez d'un système qui arrangerait magiquement votre gestion en panne ? C'est une illusion. Automatiser un circuit confus, c'est construire un escalator sur une pente qui monte dans tous les sens — vous irez juste plus vite dans le vide."
   ],

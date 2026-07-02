@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "échéances URSSAF TVA anticiper",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/echeances-urssaf-tva-assurances.jpg",
+    "alt": "Une professionnelle vérifie des documents et des calculs à son bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Les échéances gouvernementales arrivent implacablement. Quand on les anticipe, on respire. Quand on les découvre, on panique."
   ],

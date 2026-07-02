@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "organiser temps administratif",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/creneau-administratif-hebdomadaire.jpg",
+    "alt": "Une personne note un rendez-vous sur un planning hebdomadaire papier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Quand l'administratif n'a pas de moment dédié, il vous interrompt partout. Fixer un créneau, c'est reprendre votre agenda et votre mental."
   ],

@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "envoyer devis rapidement",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/envoyer-devis-rapidement.jpg",
+    "alt": "Main signant un document avec un stylo à plume, en gros plan",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Envoyer un devis rapidement fait plus que gagner du temps. Cela rassure le prospect : il se sent pris au sérieux."
   ],

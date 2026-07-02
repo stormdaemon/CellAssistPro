@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "externaliser pré-comptabilité",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/externaliser-pre-comptabilite.jpg",
+    "alt": "Femme en tenue professionnelle debout à son bureau en train de consulter des documents, avec des classeurs rangés en arrière-plan",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Confier sa pré-comptabilité à quelqu'un d'autre, c'est faire le pari de devenir transparent vis-à-vis de son cabinet comptable. Au lieu d'arriver avec des piles désorganisées, vous offrez à votre expert-comptable un dossier proprement rangé, ce qui réduit significativement ses honoraires et accélère la clôture de vos comptes."
   ],

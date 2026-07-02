@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "quand déléguer administratif",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/quand-deleguer-administratif.jpg",
+    "alt": "Femme visiblement débordée assise à son bureau, tête entre les mains devant un ordinateur portable et des papiers froissés",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Ne pas attendre la saturation complète. Si l'administratif vous prend vos soirées, retarde vos clients, ou vous empêche de penser à votre métier le dimanche, le signal est déjà là."
   ],

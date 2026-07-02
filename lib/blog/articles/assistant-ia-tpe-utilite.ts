@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistant IA TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistant-ia-tpe-utilite.jpg",
+    "alt": "Femme en tenue professionnelle travaillant sur son ordinateur portable dans un bureau lumineux entouré de plantes",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Un assistant IA dans une TPE n'est utile que s'il vous fait gagner du temps sur ce qui vous coûte vraiment — pas sur ce qui n'est pas votre métier, mais qui entre dans votre expertise. C'est un brouillon rapide, pas un remplacement."
   ],

@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "préparer clôture comptable TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/preparer-cloture-comptable-tpe.jpg",
+    "alt": "Calculatrice et documents financiers avec graphiques sur un bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "La clôture comptable vous panique parce que vous l'attendez jusqu'à la dernière semaine. Mais elle devient légère dès que vous la commencez dès novembre."
   ],

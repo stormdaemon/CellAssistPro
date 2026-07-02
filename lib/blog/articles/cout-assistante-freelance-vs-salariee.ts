@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "coût assistante freelance vs salariée",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/cout-assistante-freelance-vs-salariee.jpg",
+    "alt": "Un professionnel compte des billets et fait des calculs devant un bilan comptable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Comparer une assistante indépendante et une salariée sur le taux seul vous trompe. Il faut intégrer les charges, le temps d'encadrement, la régularité du besoin et la souplesse réelle."
   ],

@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "Factur-X c'est quoi",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/factur-x-ubl-cii-explication-simple.jpg",
+    "alt": "Mains tapant sur le clavier d'un ordinateur portable face à un écran clair",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Les trois noms Factur-X, UBL et CII désignent des façons différentes de structurer l'information dans une facture électronique afin qu'un ordinateur puisse la lire automatiquement. Pour vous, le vrai sujet n'est pas le sigle technique mais le résultat : une facture qu'on peut traiter sans perte de temps ni erreur de recopie."
   ],

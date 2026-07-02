@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "indicateurs gestion TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/indicateurs-gestion-tpe.jpg",
+    "alt": "Feuille imprimée présentant plusieurs graphiques et tableaux de bord, examinée à la loupe",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Piloter une TPE sans quelques chiffres simples, c'est naviguer à vue. Trois ou quatre indicateurs clés suffisent à donner une image fidèle : vous saurez si c'est le moment de relancer le commercial, si votre trésorerie déraille, si les clients paient plus lentement que d'habitude. Le reste, c'est du bruit."
   ],
@@ -15,18 +20,18 @@ export const article: BlogArticle = {
     {
       "heading": "Pourquoi les intuitions ne suffisent pas",
       "paragraphs": [
-        "Un dirigeant de TPE ressent les mouvements de son activité : « Cette année est meilleure », « Les clients traînent plus ». Ce sont souvent des intuitions justes. Mais une intuition n'est pas une donnée. Elle ne convainc pas un banquier, elle ne donne pas de repères pour corriger le tir, elle ne se discute pas avec votre comptable sur des faits concrets.",
+        "Un dirigeant de TPE ressent les mouvements de son activité : « Cette année est meilleure », « Les clients traînent plus ». Ce sont souvent des intuitions justes. Mais une intuition n'est pas une donnée. Elle ne convainc pas un banquier, elle ne donne pas de repères pour corriger le tir, et elle ne permet pas d'échanger avec votre comptable sur des faits concrets.",
         "Le moment où tout bascule : quand vous pouvez dire « j'ai quatre devis en attente depuis plus de trois semaines » au lieu de « je crois qu'il y a moins de devis ». L'un invite à une action précise, l'autre reste flou. Un indicateur simple — le nombre de devis en attente — transforme votre intuition en fait observable."
       ]
     },
     {
       "heading": "Les cinq indicateurs qui font la différence",
       "steps": [
-        "Nombre de devis émis et nombre de devis en attente de réponse : ça vous dit si le pipeline commercial est vivant.",
-        "Factures non réglées et délai moyen de paiement : votre trésorerie dépend de là. Si vos clients paient en 60 jours au lieu de 30, vous le saurez.",
+        "Nombre de devis émis et nombre de devis en attente de réponse : cela vous indique si votre activité commerciale est vivante.",
+        "Factures non réglées et délai moyen de paiement : votre trésorerie en dépend directement. Si vos clients paient en 60 jours au lieu de 30, vous le saurez.",
         "Solde de trésorerie immédiate : argent disponible moins engagements à court terme.",
-        "Chiffre d'affaires réalisé et prévisionnel pour le mois : vous êtes sur piste ou en retard.",
-        "Temps passé en administratif chaque mois : si c'est plus de 15 % de votre temps, vous vous faites étrangler."
+        "Chiffre d'affaires réalisé et prévisionnel pour le mois : vous êtes dans les temps ou en retard.",
+        "Temps passé en administratif chaque mois : au-delà de 15 % de votre temps, la charge devient étouffante."
       ]
     },
     {
@@ -49,7 +54,7 @@ export const article: BlogArticle = {
   "faq": [
     {
       "question": "À quelle fréquence je dois mettre à jour mes indicateurs ?",
-      "answer": "Une fois par mois suffit pour la plupart. Quelques indicateurs volatiles — trésorerie, devis en attente — peuvent être mis à jour hebdomadairement si votre activité est très fluctuante."
+      "answer": "Une fois par mois suffit pour la plupart. Quelques indicateurs volatils — trésorerie, devis en attente — peuvent être mis à jour chaque semaine si votre activité est très fluctuante."
     },
     {
       "question": "Et si mes indicateurs montrent quelque chose d'inquiétant ?",

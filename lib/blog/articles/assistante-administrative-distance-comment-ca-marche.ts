@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistante administrative à distance",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistante-administrative-distance-comment-ca-marche.jpg",
+    "alt": "Une femme en visioconférence à son bureau depuis son domicile",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous hésitiez : comment contrôler le travail s'il n'y a pas une présence physique ? Comment être sûr que c'est bien fait ? La vérité, c'est que l'absence de proximité vous force à être bien plus clair — et paradoxalement, c'est souvent ce qui fonctionne le mieux."
   ],

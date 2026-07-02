@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "IA pour artisans",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/ia-pour-artisans-exemples-concrets.jpg",
+    "alt": "Artisan menuisier travaillant une pièce de bois sur une machine dans son atelier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Quand on évoque l'IA pour une activité artisanale, on imagine souvent de la science-fiction ou des investissements massifs. En réalité, l'IA devient utile pour un artisan sur des tâches très basiques : rédiger plus vite une réponse, structurer des notes de chantier, reformuler un message pour le rendre plus clair. Ce n'est pas magique, mais c'est utile."
   ],

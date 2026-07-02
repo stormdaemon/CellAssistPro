@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "facturation électronique expert-comptable",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/facturation-electronique-expert-comptable-qui-fait-quoi.jpg",
+    "alt": "Espace de travail avec calculatrice, billets et ordinateur portable pour la gestion comptable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Beaucoup de dirigeants attendent que leur cabinet comptable les appelle pour se dire « nous gérons la facturation électronique pour vous ». C'est une attente fréquente, et souvent déçue. Votre expert-comptable est votre partenaire, pas celui qui vit votre quotidien administratif."
   ],

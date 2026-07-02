@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistante freelance TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistante-freelance-tpe-ou-salariee.jpg",
+    "alt": "Une commerçante indépendante prend des notes dans son atelier entouré de cartons",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "La question « freelance ou salariée » n'est pas une question de principe. C'est une question de volume, de régularité et de durée. La mauvaise réponse vous coûte cher ; la bonne répond à votre réalité."
   ],

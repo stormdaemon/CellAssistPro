@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "tâches à automatiser TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/taches-a-automatiser-tpe.jpg",
+    "alt": "Gros plan sur des mains tapant sur le clavier d'un ordinateur portable dans un cadre professionnel épuré",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous pensez que l'automatisation, c'est pour les grosses entreprises. Faux. Pour une TPE, c'est l'inverse : l'automatisation des petites tâches répétitives vous donne directement des heures de liberté chaque semaine."
   ],

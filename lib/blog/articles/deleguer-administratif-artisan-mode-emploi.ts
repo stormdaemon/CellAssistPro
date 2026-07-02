@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "déléguer administratif artisan",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/deleguer-administratif-artisan-mode-emploi.jpg",
+    "alt": "Un artisan menuisier prend des notes sur un carnet dans son atelier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Pour un artisan, déléguer son administratif n'est pas perdre votre métier. C'est le protéger en récupérant du temps pour la vraie valeur : votre travail et vos clients."
   ],

@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "facturation récurrente consultant",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/facturation-recurrente-consultant.jpg",
+    "alt": "Trois personnes en tenue professionnelle échangeant autour d'un ordinateur portable en réunion",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Votre force, en tant que consultant, c'est d'exceller dans votre domaine d'expertise. Votre faiblesse habituelle, c'est d'oublier d'envoyer une facture récurrente ou de ne pas appliquer la revalorisation annuelle. Ce sont des fuites de revenu silencieuses et systématiques."
   ],

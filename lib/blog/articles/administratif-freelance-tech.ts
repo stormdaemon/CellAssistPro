@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "administratif freelance tech",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/administratif-freelance-tech.jpg",
+    "alt": "Développeur travaillant sur du code face à un écran d'ordinateur portable et un moniteur",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous avez été embauché pour coder, concevoir ou vendre votre expertise — pas pour relancer les clients qui oublient vos factures ou constituer des dossiers. Chaque heure passée à gérer l'administratif est une heure volée à ce qui vous fait gagner de l'argent."
   ],

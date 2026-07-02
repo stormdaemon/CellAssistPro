@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "charge mentale dirigeant entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/charge-mentale-dirigeant-administratif.jpg",
+    "alt": "Femme pensive assise à son bureau, la tête posée sur la main, l'air préoccupé",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous êtes en week-end et une facture non envoyée vous traverse l'esprit. Vous dormez mal parce que des tâches traînent sans fin fixée. C'est cette présence constante qui épuise, bien plus que le volume de travail lui-même."
   ],

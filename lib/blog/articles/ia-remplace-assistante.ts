@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "IA remplace assistante",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/ia-remplace-assistante.jpg",
+    "alt": "Femme souriante assise à son bureau avec un ordinateur portable ouvert devant elle",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "La vraie question n'est pas « l'IA remplacera-t-elle une assistante ? », mais « comment travailler ensemble pour aller plus vite ? ». L'IA n'a jamais le contexte complet, le jugement relationnel, la capacité à détecter ce qui cloche. Mais elle excelle à faire les brouillons, à trier, à structurer. C'est un outil d'augmentation, pas de substitution."
   ],

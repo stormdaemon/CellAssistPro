@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "suivre trésorerie petite entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/suivre-tresorerie-petite-entreprise.jpg",
+    "alt": "Mains tenant des pièces de monnaie autour d'une jeune pousse verte",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Votre compte bancaire vous dit où vous étiez hier. Pour savoir où vous serez dans deux semaines, vous avez besoin d'un suivi de trésorerie — trois colonnes, une discipline hebdomadaire, et soudain vous pilotez au lieu de subir."
   ],
@@ -37,14 +42,14 @@ export const article: BlogArticle = {
       "steps": [
         "Chaque lundi matin, vous consultez votre compte bancaire et vos emails de clients pour identifier ce qui doit arriver.",
         "Vous notez aussi vos dépenses fixes connues (salaire, prélèvements, fournisseurs réguliers) pour les quatre prochaines semaines.",
-        "Vous faites la soustraction et vous voyez votre solde de fin de semaine par semaine.",
+        "Vous faites la soustraction et vous voyez votre solde de fin de semaine, semaine après semaine.",
         "Vous faites cela pendant quinze minutes, une fois par semaine, plutôt que d'y penser toute la semaine en arrière-plan."
       ]
     },
     {
       "heading": "Ce qui change quand vous avez cette visibilité",
       "paragraphs": [
-        "Vous voyez une semaine difficile mercredi soir : vous savez que jeudi vous manquerez de 2 000 euros. Vous appelez deux clients pour une relance soft (« au fait, votre paiement devrait partir mercredi ? »). Ou vous retardez une commande de 48 heures. Vous respirez. Vous n'êtes plus dans l'urgence, vous êtes dans l'ajustement."
+        "Vous voyez une semaine difficile mercredi soir : vous savez que jeudi vous manquerez de 2 000 euros. Vous appelez deux clients pour une relance en douceur (« au fait, votre paiement devrait partir mercredi ? »). Ou vous retardez une commande de 48 heures. Vous respirez. Vous n'êtes plus dans l'urgence, vous êtes dans l'ajustement."
       ]
     }
   ]

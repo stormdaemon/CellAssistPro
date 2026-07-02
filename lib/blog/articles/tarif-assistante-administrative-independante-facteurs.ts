@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "tarif assistante administrative indépendante",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/tarif-assistante-administrative-independante-facteurs.jpg",
+    "alt": "Calculatrice et stylo posés sur un graphique imprimé, gros plan",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Demander le tarif d'une assistante indépendante sans décrire votre situation, c'est demander « combien coûte une voiture ? » sans préciser si vous voulez une citadine ou un SUV. La réponse ne veut rien dire sans contexte."
   ],
@@ -35,7 +40,7 @@ export const article: BlogArticle = {
     {
       "heading": "Pourquoi le catalogue de prix n'existe pas",
       "paragraphs": [
-        "Deux dirigeants qui demandent un devis à la même assistante ne feront jamais la même mission. Le premier veut un classement ponctuel avec périmètre clair. Le second demande une remise à plat complète suivi de trois mois de pilotage continu. C'est deux projets différents, deux prix différents. Un tarif affiché « 50 euros de l'heure » ne dit rien du résultat final. Une assistante expérimentée qui règle votre problème en dix heures à 60 euros revient moins cher qu'une généraliste à 35 euros qui en met 30 heures. Le bon prix se mesure au résultat livré, pas au taux horaire."
+        "Deux dirigeants qui demandent un devis à la même assistante ne feront jamais la même mission. Le premier veut un classement ponctuel avec périmètre clair. Le second demande une remise à plat complète suivi de trois mois de pilotage continu. C'est deux projets différents, deux prix différents. Un taux horaire affiché seul ne dit rien du résultat final. Une assistante expérimentée qui règle votre problème en peu d'heures peut revenir moins cher au total qu'une généraliste à un taux inférieur mais qui met beaucoup plus de temps. Le bon prix se mesure au résultat livré, pas au taux horaire."
       ]
     },
     {

@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "gain de temps automatisation entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gain-temps-automatisation-entreprise.jpg",
+    "alt": "Sablier posé sur une étagère en bois, symbole du temps qui passe",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "L'automatisation promet des miracles, mais elle livre surtout ce que vous lui demandez : une tâche bien définie et très répétitive peut vous rendre 3 à 5 heures par semaine. Une tâche mal définie ne vous rend rien."
   ],
@@ -15,7 +20,7 @@ export const article: BlogArticle = {
     {
       "heading": "Quand l'automatisation marche vraiment",
       "paragraphs": [
-        "L'automatisation fonctionne quand vous automatisez quelque chose qui est déjà CLAIR. Si votre processus de classement des factures est désordonné et change tous les mois, l'automatisation ne la régulera pas—elle la rendra seulement plus rapide dans le désordre. Si en revanche vous avez défini : chaque facture fournisseur doit arriver ici, se ranger dans ce dossier, recevoir cette étiquette, et être transmise au comptable avant le 30 du mois, alors l'automatisation peut prendre ce flux standardisé et l'exécuter sans intervention."
+        "L'automatisation fonctionne quand vous automatisez quelque chose qui est déjà CLAIR. Si votre processus de classement des factures est désordonné et change tous les mois, l'automatisation ne le réglera pas : elle le rendra seulement plus rapide dans le désordre. Si en revanche vous avez défini : chaque facture fournisseur doit arriver ici, se ranger dans ce dossier, recevoir cette étiquette, et être transmise au comptable avant le 30 du mois, alors l'automatisation peut prendre ce flux standardisé et l'exécuter sans intervention."
       ]
     },
     {

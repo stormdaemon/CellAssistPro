@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "relance facture impayée",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/relance-facture-impayee.jpg",
+    "alt": "Femme au téléphone devant son ordinateur portable dans un bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Relancer une facture impayée n'est pas un conflit, c'est un acte normal de gestion financière. Le problème : beaucoup de dirigeants la repousse semaine après semaine et laisse la situation s'envenimer."
   ],

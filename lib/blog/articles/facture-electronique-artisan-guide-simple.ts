@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "facture électronique artisan",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/facture-electronique-artisan-guide-simple.jpg",
+    "alt": "Ouvrière du bâtiment avec casque de chantier consultant une tablette numérique",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Pour un artisan du bâtiment, de la mécanique ou de l'électricité, la facture est le pont entre le travail effectué et l'argent reçu. La facturation électronique n'est pas une complication de plus : c'est une occasion de clarifier ce pont avant que la réforme ne vous l'impose."
   ],

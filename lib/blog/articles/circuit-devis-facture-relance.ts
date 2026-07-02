@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "circuit devis facture relance",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/circuit-devis-facture-relance.jpg",
+    "alt": "Classeur et documents administratifs posés sur une table de bureau avec des tasses de café",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Il y a le devis qui traîne avant d'être envoyé, la facture qu'on crée une semaine après la fin du chantier, la relance qu'on oublie parce qu'on espère que le client paye de lui-même. Chaque étape retardée coûte deux semaines de trésorerie. Un circuit clarifié change tout."
   ],

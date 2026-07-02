@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "classement documents entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/classement-documents-entreprise-simple.jpg",
+    "alt": "Classeurs noirs empilés et rangés les uns sur les autres",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous avez des centaines de documents importants : factures, devis, contrats, pièces comptables. Si vous devez en chercher un d'urgence, vous savez d'instinct qu'il vous faudra 30 minutes de fouille. C'est le signal que votre classement ne tient pas, et que c'est le moment de simplifier."
   ],

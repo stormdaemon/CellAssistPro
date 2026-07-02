@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "gestion administrative TPE Angoulême",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gestion-administrative-tpe-angouleme-erreurs.jpg",
+    "alt": "Deux personnes travaillant ensemble sur des documents et graphiques étalés sur une table de bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "J'observe depuis trois décennies que les TPE charentaises — à Angoulême ou ailleurs — ne souffrent jamais d'un manque de volonté. Elles pâtissent d'un défaut d'organisation : l'administratif qui repose entièrement sur la mémoire d'une seule personne, débordée et distraite par cent urgences métier. Ce qui paraît mineur au quotidien devient coûteux à l'année."
   ],
@@ -22,11 +27,11 @@ export const article: BlogArticle = {
     {
       "heading": "Les six erreurs qui reviennent le plus souvent",
       "list": [
-        "Laisser les documents vagabonder dans plusieurs endroits : emails, tiroirs, dossiers de bureau, clés USB oubliées.",
+        "Laisser les documents vagabonder dans plusieurs endroits : e-mails, tiroirs, dossiers de bureau, clés USB oubliées.",
         "Attendre la semaine avant la fin du mois pour classer : vous avez oublié le contexte, les justificatifs se perdent.",
         "Traiter les relances au jour le jour au lieu de les planifier : certaines ne sont jamais faites.",
         "Garder les devis et les factures dans le même dossier sans état de progression : impossible de savoir qui doit répondre.",
-        "Mélanger administratif et opérationnel dans le même document ou email : personne ne sait ce qui est une tâche effective.",
+        "Mélanger administratif et opérationnel dans le même document ou e-mail : personne ne sait ce qui est une tâche effective.",
         "Reporter l'organisation quand vous aurez « le temps » : le chaos s'aggrave à chaque report."
       ]
     },

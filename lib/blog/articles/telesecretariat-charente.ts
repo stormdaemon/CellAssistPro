@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "télésecrétariat Charente",
   "datePublished": "2026-07-02",
   "dateModified": "2026-07-02",
+  "image": {
+    "src": "/images/blog/telesecretariat-charente.jpg",
+    "alt": "Femme portant un casque avec micro, assise devant un ordinateur portable dans un bureau lumineux",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Le télésecrétariat en Charente séduit de plus en plus de dirigeants de TPE qui n'ont ni le temps ni le budget pour embaucher une assistante à temps plein. Avant d'aller plus loin, une précision utile : ce dont il est question ici n'est pas une permanence téléphonique, mais un accompagnement administratif à distance, avec la possibilité d'un suivi sur place pour les entreprises du département."
   ],

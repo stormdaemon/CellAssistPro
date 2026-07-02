@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "réponse automatique email entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/reponse-automatique-email-entreprise.jpg",
+    "alt": "Mains tapant rapidement sur le clavier d'un ordinateur portable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Activez un accusé de réception automatique et changez d'une seule ligne le rapport que votre client entretient avec votre email. Il sait désormais que sa demande est reçue. Vous retrouvez le droit de répondre en vrai, pas en catastrophe."
   ],

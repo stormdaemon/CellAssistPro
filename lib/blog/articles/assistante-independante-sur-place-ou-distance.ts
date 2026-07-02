@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistante indépendante sur place ou à distance",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistante-independante-sur-place-ou-distance.jpg",
+    "alt": "Deux collègues penchés ensemble sur un ordinateur portable pour échanger sur un dossier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Le choix entre sur place et à distance n'est pas une question de principe. C'est une stratégie en deux temps : la phase de diagnostic demande souvent une présence physique ; la phase de suivi courant fonctionne très bien à distance. Pour 80 % des TPE, le meilleur format est un mélange des deux."
   ],

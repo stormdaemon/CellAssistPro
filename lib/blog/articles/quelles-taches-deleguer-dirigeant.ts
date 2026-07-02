@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "quelles tâches déléguer dirigeant",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/quelles-taches-deleguer-dirigeant.jpg",
+    "alt": "Deux collègues penchés sur une table en train d'examiner ensemble des documents",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Quand on n'a jamais délégué, on choisit souvent mal. Il faut commencer par une tâche qui libère du temps mais vous laisse les décisions importantes, avec un résultat facile à mesurer."
   ],
@@ -41,7 +46,7 @@ export const article: BlogArticle = {
     {
       "heading": "Les écueils classiques",
       "list": [
-        "Déléguer quelque chose qu'on maîtrise mal soi-même : vous finirez à reprendre un travail mal expliqué au départ.",
+        "Déléguer quelque chose qu'on maîtrise mal soi-même : vous finirez par reprendre un travail mal expliqué au départ.",
         "Donner cinq missions complexes à la fois : vous créez de la confusion au lieu de confiance.",
         "Choisir une tâche dont vous douteriez à jamais du résultat : c'est de la sous-traitance, pas de la délégation."
       ]
@@ -54,7 +59,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Que faire si le résultat n'est pas du tout comme prévu ?",
-      "answer": "C'est rarement une catastrophe à ce stade. Vous pausez la mission, vous comprenez ensemble où est l'écart, vous corrigez. Les ajustements au début évitent les erreurs qui traîneraient des mois."
+      "answer": "C'est rarement une catastrophe à ce stade. Vous suspendez la mission, vous comprenez ensemble où est l'écart, vous corrigez. Les ajustements au début évitent les erreurs qui traîneraient des mois."
     }
   ]
 };

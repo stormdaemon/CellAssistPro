@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "tarif secrétaire indépendante",
   "datePublished": "2026-07-02",
   "dateModified": "2026-07-02",
+  "image": {
+    "src": "/images/blog/tarif-secretaire-independante-2026.jpg",
+    "alt": "Smartphone affichant une calculatrice à côté d'un tas de pièces en euros sur une table en bois",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous cherchez un tarif de secrétaire indépendante et vous tombez sur des chiffres très différents d'un site à l'autre. C'est normal : ce n'est pas un tarif horaire universel qui compte, mais une combinaison de facteurs propres à votre activité. Voici ce qui fait réellement varier le prix, sans grille toute faite."
   ],

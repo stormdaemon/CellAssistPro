@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "organiser gestion création entreprise",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/organiser-gestion-creation-entreprise.jpg",
+    "alt": "Carnet à spirale ouvert avec des notes manuscrites, posé sur un bureau en bois à côté d'un ordinateur portable et d'un stylo",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous lancez votre entreprise. C'est le moment idéal — le seul moment idéal — pour poser des circuits clairs avant que l'urgence du client ne vous submerge. Trois ans après, vous n'aurez plus le temps de corriger ce que vous aurez mal pensé aujourd'hui."
   ],

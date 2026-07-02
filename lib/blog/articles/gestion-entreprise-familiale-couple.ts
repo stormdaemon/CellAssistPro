@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "gestion entreprise familiale couple",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gestion-entreprise-familiale-couple.jpg",
+    "alt": "Un homme et une femme penchés ensemble sur un document de travail",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Gérer une entreprise à deux, c'est mélanger vie familiale et vie professionnelle. Ce mélange, quand il est flou, forge des malentendus durables. Vous discutez gestion le dimanche matin, puis tard le soir, sans jamais vraiment avoir mis les choses à plat. Les responsabilités s'arrangent au fil de l'eau, chacun suppose ce que l'autre fait, et les frustrations s'accumulent en silence. La clarté n'est pas sèche ou froide : elle libère."
   ],

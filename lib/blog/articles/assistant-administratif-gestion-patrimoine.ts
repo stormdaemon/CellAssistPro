@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistant administratif gestion de patrimoine",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistant-administratif-gestion-patrimoine.jpg",
+    "alt": "Conseiller présentant un document à des clients lors d'un rendez-vous, ordinateur portable ouvert sur la table",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Chaque rendez-vous client en gestion de patrimoine demande une préparation minutieuse : historique de portefeuille, situation fiscale, objectifs de succession. Cela vous coûte une à deux heures avant l'arrivée du client. Un assistant bien cadré peut réduire cette charge de moitié."
   ],

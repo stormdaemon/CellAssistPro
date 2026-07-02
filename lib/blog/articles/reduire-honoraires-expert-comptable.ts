@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "réduire honoraires expert-comptable",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/reduire-honoraires-expert-comptable.jpg",
+    "alt": "Calculatrice, surligneur et stylos posés sur une table en bois",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Votre expert-comptable facture en heures. Plus le dossier qu'il reçoit est bien préparé, moins il vous facture — et mieux vous la connaissez, votre comptabilité."
   ],

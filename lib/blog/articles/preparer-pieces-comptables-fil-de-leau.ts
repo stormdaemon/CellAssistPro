@@ -8,8 +8,13 @@ export const article: BlogArticle = {
   "keyword": "préparer pièces comptables",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/preparer-pieces-comptables-fil-de-leau.jpg",
+    "alt": "Femme portant une pile de classeurs et boîtes d'archives dans les bras",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
-    "La pré-comptabilité pèse lourd seulement si elle s'accumule. Habituée en routine, elle redevient une série de gestes simples et presque invisibles qui vous libèrent vraiment."
+    "La pré-comptabilité pèse lourd seulement si elle s'accumule. Une fois installée en routine, elle redevient une série de gestes simples et presque invisibles qui vous libèrent vraiment."
   ],
   "sections": [
     {
@@ -37,7 +42,7 @@ export const article: BlogArticle = {
     {
       "heading": "Maintenir le rythme sans effort",
       "paragraphs": [
-        "La vraie question n'est pas « comment faire », mais « où insérer cela dans ma semaine sans effort ». Beaucoup trouvent que le vendredi après-midi donne du rythme : une à deux heures avant le week-end, vous avez la main sur votre semaine. D'autres préfèrent mardi matin après avoir d'abord pris l'air. Peu importe : ce qui compte c'est une régularité que vous tiendrez sur la durée, pas une perfection que vous abandonnerez à la première semaine chargée."
+        "La vraie question n'est pas « comment faire », mais « où insérer cela dans ma semaine sans effort ». Beaucoup trouvent que le vendredi après-midi donne du rythme : une à deux heures avant la fin de semaine, vous avez la main sur votre semaine. D'autres préfèrent mardi matin après avoir d'abord pris l'air. Peu importe : ce qui compte c'est une régularité que vous tiendrez sur la durée, pas une perfection que vous abandonnerez à la première semaine chargée."
       ]
     }
   ],
@@ -48,7 +53,7 @@ export const article: BlogArticle = {
     },
     {
       "question": "Transmission mensuelle ou attendre trois mois ?",
-      "answer": "Cela dépend de votre cabinet. Mensuel est idéal parce que vous n'accumulez jamais. Mais certains experts comptent par trimestre. L'essentiel : respecter le rythme convenu et arriver toujours préparé. Ne jamais faire deviner votre comptable."
+      "answer": "Cela dépend de votre cabinet. Mensuel est idéal parce que vous n'accumulez jamais. Mais certains experts comptent par trimestre. L'essentiel : respecter le rythme convenu et arriver toujours préparé. Ne jamais laisser votre comptable deviner."
     }
   ]
 };

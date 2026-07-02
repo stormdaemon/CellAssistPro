@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "facturation électronique micro-entrepreneur",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/facturation-electronique-micro-entrepreneur.jpg",
+    "alt": "Homme travaillant sur son ordinateur portable à la maison",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "La réforme de la facturation électronique vous concerne aussi, même si votre activité est minimaliste. Deux ou trois factures par mois doivent être gérées comme les vingt du commerce voisin : avec clarté et anticipation."
   ],

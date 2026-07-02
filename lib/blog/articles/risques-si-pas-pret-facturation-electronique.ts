@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "risque facturation électronique TPE",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/risques-si-pas-pret-facturation-electronique.jpg",
+    "alt": "Deux personnes analysant des graphiques financiers sur un ordinateur portable",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Attendre septembre 2026 pour se préparer à la facturation électronique, c'est choisir la précipitation. Les vrais dégâts ne sont pas l'amende administrative, ce sont les circuits cassés, les relances urgentes chez le comptable et la trésorerie obscurcie."
   ],

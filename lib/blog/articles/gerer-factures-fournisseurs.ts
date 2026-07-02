@@ -8,8 +8,13 @@ export const article: BlogArticle = {
   "keyword": "gérer factures fournisseurs",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/gerer-factures-fournisseurs.jpg",
+    "alt": "Factures et reçus papier empilés sur un bureau avec pince, stylo et blocs-notes",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
-    "Une facture fournisseur oubliée, ce n'est jamais juste une facture. C'est un fournisseur qui ne vous recontacte plus parce qu'il n'a pas été payé, c'est un comptable qui appelle pour demander une pièce, c'est votre trésorerie qui s'en va un jour sans prevenir. Les factures fournisseurs demandent le même respect que vos factures clients."
+    "Une facture fournisseur oubliée, ce n'est jamais juste une facture. C'est un fournisseur qui ne vous recontacte plus parce qu'il n'a pas été payé, c'est un comptable qui appelle pour demander une pièce, c'est votre trésorerie qui s'en va un jour sans prévenir. Les factures fournisseurs demandent le même respect que vos factures clients."
   ],
   "sections": [
     {
@@ -35,7 +40,7 @@ export const article: BlogArticle = {
     {
       "heading": "Trois organisations de classement pour trois types d'entreprise",
       "list": [
-        "Par mois : Janvier, Février, Février, etc. Idéal si vous transmettez au comptable mensuellement. C'est le plus simple pour lui.",
+        "Par mois : Janvier, Février, Mars, etc. Idéal si vous transmettez au comptable mensuellement. C'est le plus simple pour lui.",
         "Par fournisseur : Fournisseur A, Fournisseur B, Fournisseur C. Idéal si vous avez souvent besoin de retrouver « tous les achats chez le fournisseur X » pour un audit ou une négociation.",
         "Par catégorie puis mois : Fournitures/Janvier, Fournitures/Février, Transport/Janvier, Transport/Février. Idéal si vous avez beaucoup de fournisseurs différents et que vous voulez voir d'un coup vos dépenses par type."
       ]

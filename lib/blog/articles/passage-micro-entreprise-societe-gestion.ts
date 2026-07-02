@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "passage micro-entreprise société gestion",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/passage-micro-entreprise-societe-gestion.jpg",
+    "alt": "Homme en costume signant un document officiel avec un stylo, gros plan sur les mains et le document",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Le passage de micro-entreprise à SARL ou EIRL est un tournant. Votre administratif va devenir plus exigeant : plus d'obligations légales, plus d'échéances, la comptabilité se complexifie. C'est paradoxal, mais c'est aussi le moment privilégié pour vous réorganiser, parce que vous avez une raison externe qui justifie de changer les habitudes."
   ],

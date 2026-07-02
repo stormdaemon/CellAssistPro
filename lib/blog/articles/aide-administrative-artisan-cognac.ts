@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "aide administrative artisan Cognac",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/aide-administrative-artisan-cognac.jpg",
+    "alt": "Artisan menuisier travaillant le bois sur un établi dans son atelier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Vous êtes trop bon à ce que vous faites — c'est votre malheur. Vos clients vous rappellent pour des chantiers, mais pendant ce temps, qui envoie les devis ? Qui relance les retards de paiement ? Qui trie les justificatifs de décembre ?"
   ],

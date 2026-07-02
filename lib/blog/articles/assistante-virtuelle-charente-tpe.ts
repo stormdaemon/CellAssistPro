@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistante virtuelle Charente",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistante-virtuelle-charente-tpe.jpg",
+    "alt": "Femme en télétravail échangeant en visioconférence depuis son ordinateur portable, documents à portée de main",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Diriger une TPE en Charente, c'est jongler entre le cœur de votre métier et une foule de tâches administratives qui ne vous intéressent pas. Une assistante virtuelle reprend exactement ces sujets : elle restructure votre gestion, crée des processus simples et durables, sans vous imposer un recrutement coûteux ni une augmentation de vos charges sociales."
   ],

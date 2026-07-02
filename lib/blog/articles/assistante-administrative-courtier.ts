@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "assistante administrative courtier",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/assistante-administrative-courtier.jpg",
+    "alt": "Un client signe un document remis par un conseiller en costume dans un bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Un client en attente d'approbation de crédit appelle déjà une fois par semaine pour connaître l'avancée. Répondre à chaque appel vous arrache à votre analyse. Pire : la réponse varie selon ce que vous vous souvenez du dossier à cet instant. Une assistante transforme ce chaos en flux lisible."
   ],

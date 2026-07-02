@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "externaliser administratif contrôle",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/externaliser-administratif-sans-perdre-controle.jpg",
+    "alt": "Poignée de main entre deux professionnels tenant chacun un dossier",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Externaliser ne signifie pas lâcher vos dossiers. Vous gardez la vision et les décisions ; l'externalisation apporte ordre, suivi et exécution."
   ],

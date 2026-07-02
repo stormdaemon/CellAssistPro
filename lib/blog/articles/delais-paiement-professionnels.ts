@@ -8,6 +8,11 @@ export const article: BlogArticle = {
   "keyword": "délais de paiement entre professionnels",
   "datePublished": "2026-06-12",
   "dateModified": "2026-07-01",
+  "image": {
+    "src": "/images/blog/delais-paiement-professionnels.jpg",
+    "alt": "Une femme souriante utilise une calculatrice devant son ordinateur portable au bureau",
+    "credit": "Photo : Pexels"
+  },
   "intro": [
     "Les délais de paiement ne sont pas des flexibilités gracieuses. Ce sont des données commerciales à surveiller comme votre stock ou vos appels d'offres."
   ],
