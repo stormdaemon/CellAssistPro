@@ -3,12 +3,15 @@ import { blogArticles } from "@/lib/blog";
 import { SEO, SITE } from "@/lib/site-data";
 
 // À mettre à jour lors d'une évolution réelle du contenu des pages fixes.
-const PAGES_LAST_MODIFIED = "2026-07-01";
+const PAGES_LAST_MODIFIED = "2026-08-17";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const priorities: Record<string, number> = {
     "/": 1,
-    "/mes-offres": 0.9,
+    "/assistante-administrative": 0.9,
+    "/assistante-administrative-btp": 0.9,
+    "/bras-droit-automatisation": 0.9,
+    "/mes-offres": 0.8,
     "/contact": 0.9,
     "/a-propos": 0.7,
     "/cas-concrets": 0.7,
@@ -19,7 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   };
 
   const pages = Object.values(SEO).map((page) => ({
-    url: `${SITE.baseUrl}${page.path === "/" ? "" : page.path}`,
+    // La home est déclarée avec son slash final, comme sa balise canonical.
+    url: `${SITE.baseUrl}${page.path}`,
     lastModified: PAGES_LAST_MODIFIED,
     changeFrequency: "monthly" as const,
     priority: priorities[page.path] ?? 0.5,

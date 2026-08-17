@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Camera, Mail, MapPin, MessageCircle, Network } from "lucide-react";
 import { BrandLogo } from "@/components/site/brand-logo";
-import { NAVIGATION, SITE } from "@/lib/site-data";
+import { CTA, FOOTER_NAVIGATION, SITE } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
@@ -21,7 +21,7 @@ export function SiteFooter() {
 
         <nav aria-label="Navigation pied de page">
           <h2>Navigation</h2>
-          {NAVIGATION.map((item) => (
+          {FOOTER_NAVIGATION.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
             </Link>
@@ -30,7 +30,7 @@ export function SiteFooter() {
 
         <nav aria-label="Ressources">
           <h2>Ressources</h2>
-          <Link href="/diagnostic">Auto-diagnostic gratuit</Link>
+          <Link href="/diagnostic">{CTA.secondary}</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/mes-offres#faq">FAQ</Link>
           <Link href="/cas-concrets">Résultats clients</Link>

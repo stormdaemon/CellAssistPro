@@ -4,7 +4,7 @@ import { DiagnosticQuiz } from "@/components/site/diagnostic-quiz";
 import { JsonLd } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
-import { quizProfiles, SITE } from "@/lib/site-data";
+import { CTA, quizProfiles, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("resources");
@@ -15,7 +15,7 @@ export default function DiagnosticPage() {
       <JsonLd data={breadcrumbJsonLd("Diagnostic", "/diagnostic")} />
 
       <PageHero
-        eyebrow="Auto-diagnostic gratuit"
+        eyebrow="Évaluer mon temps perdu — 5 min"
         title="5 minutes pour savoir combien de temps vous perdez vraiment"
       >
         <p>
@@ -81,7 +81,7 @@ export default function DiagnosticPage() {
           </div>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             <MailCheck aria-hidden="true" />
-            Réserver mon diagnostic gratuit — 15 min
+            {CTA.primary}
           </a>
         </div>
       </section>

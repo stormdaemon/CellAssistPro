@@ -4,7 +4,7 @@ import { CalendarCheck } from "lucide-react";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { pageMetadata } from "@/lib/metadata";
-import { SITE, values } from "@/lib/site-data";
+import { CTA, SITE, values } from "@/lib/site-data";
 import { breadcrumbJsonLd, personJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("about");
@@ -107,7 +107,7 @@ export default function AboutPage() {
           <div className="center-action">
             <a className="button button--gold" href={SITE.calendlyUrl}>
               <CalendarCheck aria-hidden="true" />
-              Faisons connaissance — 15 min offertes
+              {CTA.primary}
             </a>
           </div>
         </div>

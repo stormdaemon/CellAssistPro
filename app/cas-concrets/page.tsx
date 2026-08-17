@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { CaseStudyExplorer } from "@/components/site/case-study-explorer";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
-import { caseStudies, SITE, testimonials } from "@/lib/site-data";
+import { caseStudies, CTA, SITE, testimonials } from "@/lib/site-data";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("cases");
@@ -22,7 +23,7 @@ export default function CasesPage() {
         <p>
           Voici quelques situations réelles — certaines anonymisées par respect pour mes clients,
           d'autres racontées par les intéressés eux-mêmes. Si vous vous reconnaissez dans l'une
-          d'elles, le diagnostic gratuit est fait pour vous.
+          d'elles, les 15 minutes de diagnostic sont faites pour vous.
         </p>
       </PageHero>
 
@@ -59,8 +60,19 @@ export default function CasesPage() {
               sur mesure. Et qu'il s'agisse d'une mission d'une heure ou d'un accompagnement au long
               cours, parlons du vôtre.
             </p>
+            <p>
+              Vous êtes du bâtiment ? Le premier cas ci-dessus est le vôtre —{" "}
+              <Link href="/assistante-administrative-btp">
+                voir l'expertise artisans et BTP en détail
+              </Link>
+              . Vous cherchez d'abord à déléguer votre gestion courante ?{" "}
+              <Link href="/assistante-administrative">
+                Découvrir l'assistance administrative
+              </Link>
+              .
+            </p>
             <a className="button button--gold" href={SITE.calendlyUrl}>
-              Réserver mon diagnostic gratuit — 15 min
+              {CTA.primary}
             </a>
           </div>
         </div>

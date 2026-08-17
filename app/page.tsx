@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Bot, CalendarCheck, HandCoins } from "lucide-react";
+import { ArrowRight, HardHat, Lock } from "lucide-react";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { pageMetadata } from "@/lib/metadata";
-import { methodSteps, offers, painPoints, SITE, stats } from "@/lib/site-data";
+import {
+  beforeAfter,
+  btpTrades,
+  CTA,
+  entryPoints,
+  heroProofs,
+  homeResults,
+  methodSteps,
+  painPoints,
+  SITE,
+} from "@/lib/site-data";
 
 export const metadata: Metadata = pageMetadata("home");
 
@@ -14,57 +24,49 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="container home-hero__grid">
           <div className="home-hero__content">
-            <p className="eyebrow">Assistante virtuelle Charente</p>
+            <p className="eyebrow">
+              Assistante administrative indépendante · Bras droit stratégique · Automatisation
+            </p>
             <h1>
-              Récupérez <span>10 heures</span> par semaine. Votre gestion tourne — sans vous.
+              Récupérez jusqu'à <span>10 heures par semaine.</span>
             </h1>
+            <p className="home-hero__baseline">
+              Votre gestion avance, même quand vous êtes sur votre métier.
+            </p>
             <p>
-              J'allège les dirigeants de TPE — artisans, indépendants de la tech, du bien-être et
-              des services — de toute leur charge administrative, organisationnelle et
-              pré-comptable. Grâce à l'IA et à l'automatisation, votre gestion devient un système
-              fluide qui fonctionne pendant que vous exercez votre métier.
+              J'accompagne les dirigeants de TPE, artisans et indépendants dans leur gestion
+              administrative, commerciale et pré-comptable — de la simple délégation à la
+              structuration complète.
             </p>
             <div className="actions">
               <a className="button button--gold" href={SITE.calendlyUrl}>
-                Réserver mon diagnostic gratuit — 15 min
+                {CTA.primary}
               </a>
-              <Link className="button button--outline-light" href="/mes-offres">
-                Découvrir mes offres
+              <Link className="button button--outline-light" href="/diagnostic">
+                {CTA.secondary}
               </Link>
             </div>
+            <p className="home-hero__note">
+              <Lock aria-hidden="true" /> Les deux sont gratuits et sans engagement.
+            </p>
             <ul className="hero-proof">
-              <li>
-                <CalendarCheck aria-hidden="true" /> 30 ans d'expertise
-              </li>
-              <li>
-                <Bot aria-hidden="true" /> IA & automatisation
-              </li>
-              <li>
-                <HandCoins aria-hidden="true" /> Sur place en Charente, à distance partout en France
-              </li>
+              {heroProofs.map((proof) => (
+                <li key={proof.text}>
+                  <proof.icon aria-hidden="true" /> {proof.text}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="home-hero__photo">
             <Image
               src="/images/celine/01-celine-hero-accueil-sourire.jpg"
-              alt="Céline Bardan, fondatrice de CelAssistPro"
+              alt="Céline Bardan, fondatrice de CelAssistPro, assistante administrative et bras droit stratégique"
               width={1024}
               height={1024}
               priority
               sizes="(min-width: 900px) 45vw, 100vw"
             />
           </div>
-        </div>
-      </section>
-
-      <section className="stats-band" aria-label="Chiffres clés">
-        <div className="container stats-band__grid">
-          {stats.map(([value, label]) => (
-            <div key={value} className="stat">
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -88,7 +90,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--cream">
+      <section className="section section--cream" aria-labelledby="entry-points-title">
+        <div className="container">
+          <div className="section-heading section-heading--center">
+            <p className="eyebrow">Un accompagnement qui s'adapte à votre besoin</p>
+            <h2 id="entry-points-title">De quoi avez-vous besoin aujourd'hui ?</h2>
+            <p>
+              Besoin de déléguer votre administratif ? Je le prends en charge. Besoin d'aller plus
+              loin ? Je structure vos processus, mets en place les bons outils et automatise ce qui
+              peut l'être.
+            </p>
+          </div>
+          <div className="cards-grid cards-grid--three entry-points">
+            {entryPoints.map((entry) => (
+              <article className="entry-card" key={entry.href}>
+                <entry.icon aria-hidden="true" />
+                <h3>{entry.title}</h3>
+                <p>{entry.text}</p>
+                <Link href={entry.href}>
+                  {entry.linkLabel} <ArrowRight aria-hidden="true" />
+                </Link>
+              </article>
+            ))}
+          </div>
+          <p className="disclaimer">
+            Chaque entreprise est unique : toutes mes interventions font l'objet d'un devis
+            personnalisé après diagnostic.
+          </p>
+        </div>
+      </section>
+
+      <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
             <h2>Je ne vends pas des heures. Je construis votre système.</h2>
@@ -113,30 +145,76 @@ export default function HomePage() {
           </ol>
           <div className="center-action">
             <a className="button button--gold" href={SITE.calendlyUrl}>
-              Commencer par le diagnostic gratuit
+              {CTA.primary}
             </a>
           </div>
         </div>
       </section>
 
-      <section className="section section--white">
+      <section className="results-strip" aria-labelledby="results-title">
         <div className="container">
-          <div className="section-heading section-heading--center">
-            <h2>Trois façons de travailler ensemble</h2>
-          </div>
-          <div className="cards-grid cards-grid--three">
-            {offers.map((offer) => (
-              <article className="offer-preview" key={offer.name}>
-                <offer.icon aria-hidden="true" />
-                <h3>{offer.shortName}</h3>
-                <p>{offer.short}</p>
-                <Link href="/mes-offres">En savoir plus →</Link>
+          <h2 id="results-title">Des résultats, pas seulement des tâches réalisées.</h2>
+          <div className="results-strip__grid">
+            {homeResults.map((result) => (
+              <article key={result.value}>
+                <strong>{result.value}</strong>
+                <p>{result.label}</p>
               </article>
             ))}
           </div>
-          <p className="disclaimer">
-            Chaque entreprise est unique : toutes mes interventions font l'objet d'un devis
-            personnalisé après diagnostic gratuit.
+          <Link className="results-strip__link" href="/cas-concrets">
+            Voir les cas concrets <ArrowRight aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
+
+      <section className="section section--cream" aria-labelledby="btp-title">
+        <div className="container btp-expertise">
+          <div className="btp-expertise__content">
+            <p className="eyebrow">Expertise métier</p>
+            <h2 id="btp-title">Une expertise particulière : artisans &amp; BTP</h2>
+            <p>
+              Je travaille avec des TPE de différents secteurs, mais le bâtiment est un univers que
+              je connais de l'intérieur depuis 2017.
+            </p>
+            <p>
+              Devis, acomptes, relances, facturation, achats, justificatifs, pré-comptabilité et
+              organisation entre le terrain et le bureau : je connais les contraintes d'une
+              entreprise où le dirigeant passe davantage de temps sur ses chantiers que devant son
+              ordinateur.
+            </p>
+            <Link className="button button--purple" href="/assistante-administrative-btp">
+              Découvrir mon expertise BTP <ArrowRight aria-hidden="true" />
+            </Link>
+          </div>
+          <aside className="btp-expertise__aside">
+            <HardHat aria-hidden="true" />
+            <p>Des corps de métier que je connais déjà</p>
+            <ul className="trade-chips">
+              {btpTrades.map((trade) => (
+                <li key={trade}>{trade}</li>
+              ))}
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section className="section section--white" aria-labelledby="before-after-title">
+        <div className="container narrow">
+          <div className="section-heading section-heading--center">
+            <h2 id="before-after-title">Avant CelAssistPro / Avec CelAssistPro</h2>
+          </div>
+          <ul className="before-after">
+            {beforeAfter.map((row) => (
+              <li key={row.before}>
+                <span className="before-after__before">{row.before}</span>
+                <ArrowRight aria-hidden="true" />
+                <span className="before-after__after">{row.after}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="transition-line">
+            C'est cela, une gestion qui avance sans vous monopoliser.
           </p>
         </div>
       </section>
@@ -182,7 +260,7 @@ export default function HomePage() {
         <div className="container">
           <h2>Et si dans 30 jours, votre gestion tournait sans vous ?</h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
-            Réserver mon diagnostic gratuit — 15 min
+            {CTA.primary}
           </a>
         </div>
       </section>

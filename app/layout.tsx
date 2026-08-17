@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { RevealOnScroll } from "@/components/site/reveal-on-scroll";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
-import { professionalServiceJsonLd } from "@/lib/structured-data";
+import { organizationJsonLd } from "@/lib/structured-data";
 import { SITE } from "@/lib/site-data";
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
@@ -24,9 +24,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Assistante virtuelle Charente | CelAssistPro",
+  title: "Assistante administrative & bras droit en Charente | CelAssistPro",
   description:
-    "Gestion administrative, organisation et pré-comptable pour TPE et indépendants. IA & automatisation. Sur place en Charente, à distance partout en France.",
+    "Assistante administrative indépendante en Charente et à distance partout en France. Gestion, pré-compta, automatisation et expertise BTP pour TPE et artisans.",
   metadataBase: new URL(SITE.baseUrl),
   icons: {
     icon: [
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "CelAssistPro — Votre bras droit stratégique",
+    title: "Assistante administrative & bras droit en Charente | CelAssistPro",
     description:
-      "Récupérez 10 heures par semaine. Votre gestion tourne — sans vous.",
+      "Gestion administrative, pré-compta, structuration et automatisation pour TPE et artisans. Expertise particulière BTP.",
     url: SITE.baseUrl,
     siteName: "CelAssistPro",
     images: [
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CelAssistPro — Votre bras droit stratégique",
+    title: "Assistante administrative & bras droit en Charente | CelAssistPro",
     description:
-      "Récupérez 10 heures par semaine. Votre gestion tourne — sans vous.",
+      "Gestion administrative, pré-compta, structuration et automatisation pour TPE et artisans. Expertise particulière BTP.",
     images: ["/images/og-default.jpg"],
   },
 };
@@ -79,7 +79,7 @@ export default function RootLayout({
             src="https://plausible.io/js/script.js"
           />
         ) : null}
-        <JsonLd data={professionalServiceJsonLd()} />
+        <JsonLd data={organizationJsonLd()} />
         <SiteHeader />
         <RevealOnScroll />
         {children}

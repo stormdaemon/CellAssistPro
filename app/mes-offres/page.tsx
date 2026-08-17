@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { CalendarCheck, Handshake } from "lucide-react";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
-import { offers, offerFaqs, SITE } from "@/lib/site-data";
+import { CTA, offers, offerFaqs, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("offers");
@@ -22,9 +23,16 @@ export default function OffersPage() {
         title="Des offres construites autour d'une seule question : de combien de temps avez-vous besoin ?"
       >
         <p>
-          Pas de catalogue de tâche imposées, pas de minimum d'heures. Trois formules claires, du
+          Pas de catalogue de tâches imposées, pas de minimum d'heures. Trois formules claires, du
           coup de main ponctuel à la délégation complète. Toutes commencent par un diagnostic
-          gratuit, toutes font l'objet d'un devis personnalisé.
+          gratuit de 15 minutes, toutes font l'objet d'un devis personnalisé.
+        </p>
+        <p>
+          Ces formules décrivent <strong>comment</strong> nous travaillons ensemble. Pour savoir{" "}
+          <strong>ce que</strong> je peux prendre en charge, voyez l'
+          <Link href="/assistante-administrative">assistance administrative</Link>, l'
+          <Link href="/assistante-administrative-btp">expertise artisans et BTP</Link> ou le{" "}
+          <Link href="/bras-droit-automatisation">bras droit et l'automatisation</Link>.
         </p>
       </PageHero>
 
@@ -120,7 +128,7 @@ export default function OffersPage() {
               </p>
             </div>
             <a className="button button--gold" href={SITE.calendlyUrl}>
-              Construire mon parcours — diagnostic gratuit 15 min
+              {CTA.primary}
             </a>
           </div>
         </div>

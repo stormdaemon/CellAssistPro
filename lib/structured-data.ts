@@ -1,15 +1,23 @@
 import { offerFaqs, SITE } from "@/lib/site-data";
 
-export function professionalServiceJsonLd() {
+/** Identifiant stable de l'entreprise, référencé par les autres entités (Service…). */
+export const ORGANIZATION_ID = `${SITE.baseUrl}/#organization`;
+
+const AREA_SERVED = [
+  { "@type": "AdministrativeArea", name: "Charente" },
+  { "@type": "Country", name: "France" },
+];
+
+export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
+    "@id": ORGANIZATION_ID,
     name: SITE.name,
-    url: SITE.baseUrl,
+    url: `${SITE.baseUrl}/`,
     email: SITE.email,
     image: `${SITE.baseUrl}/images/celine/01-celine-hero-accueil-sourire.jpg`,
     logo: `${SITE.baseUrl}/images/logos/celassistpro-flame-240.png`,
-    priceRange: "Sur devis",
     founder: {
       "@type": "Person",
       name: SITE.founder,
@@ -22,15 +30,35 @@ export function professionalServiceJsonLd() {
       addressLocality: "Champagne-Vigny",
       addressCountry: "FR",
     },
-    areaServed: ["Charente", "Angoulême", "France"],
+    areaServed: AREA_SERVED,
     description:
-      "Gestion administrative, organisationnelle et pré-comptable pour dirigeants de TPE, sur place en Charente et à distance partout en France.",
+      "Assistance administrative, bras droit stratégique, structuration et automatisation pour TPE, artisans et indépendants.",
     sameAs: [
       SITE.socials.linkedin,
       SITE.socials.facebook,
       SITE.socials.instagram,
       SITE.googleBusinessUrl,
     ],
+  };
+}
+
+type ServiceJsonLdInput = {
+  /** Chemin de la page, ex. /assistante-administrative-btp */
+  path: string;
+  name: string;
+  serviceType: string;
+};
+
+export function serviceJsonLd({ path, name, serviceType }: ServiceJsonLdInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE.baseUrl}${path}#service`,
+    name,
+    serviceType,
+    provider: { "@id": ORGANIZATION_ID },
+    areaServed: AREA_SERVED,
+    url: `${SITE.baseUrl}${path}`,
   };
 }
 

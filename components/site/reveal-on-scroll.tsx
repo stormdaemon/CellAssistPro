@@ -6,6 +6,7 @@ const revealSelector = [
   ".section-heading",
   ".mini-card",
   ".method-card",
+  ".entry-card",
   ".offer-preview",
   ".offer-card",
   ".offer-detail-panel",

@@ -12,7 +12,8 @@ import {
   readingMinutes,
   type BlogArticle,
 } from "@/lib/blog";
-import { SITE } from "@/lib/site-data";
+import { commercialLinksFor } from "@/lib/blog/commercial-links";
+import { CTA, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
 
 type BlogArticlePageProps = {
@@ -122,6 +123,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
   }
 
   const relatedArticles = getRelatedArticles(article);
+  const commercialLinks = commercialLinksFor(article);
 
   return (
     <main>
@@ -166,7 +168,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             <CalendarCheck aria-hidden="true" />
             <p>Besoin de faire le point sur votre propre situation ?</p>
             <a className="button button--gold" href={SITE.calendlyUrl}>
-              Diagnostic gratuit — 15 min
+              {CTA.primary}
             </a>
           </aside>
 
@@ -224,11 +226,19 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             <section className="article-tile article-tile--wide article-tile--accent">
               <h2>Et pour votre entreprise ?</h2>
               <p>
-                Vous pouvez situer votre propre gestion en 5 minutes avec l'
-                <Link href="/diagnostic">auto-diagnostic gratuit</Link>, comparer les{" "}
-                <Link href="/mes-offres">formules d'accompagnement</Link>, ou réserver directement
-                15 minutes pour poser votre situation.
+                Selon l'endroit où vous en êtes, la suite logique n'est pas la même. Voici les
+                pistes les plus utiles pour aller plus loin :
               </p>
+              <ul>
+                {commercialLinks.map((link) => (
+                  <li key={link.href}>
+                    <CheckCircle2 aria-hidden="true" />
+                    <span>
+                      <Link href={link.href}>{link.label}</Link>
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </section>
 
             <section className="article-tile article-tile--wide">

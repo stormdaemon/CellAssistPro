@@ -1,17 +1,22 @@
 import {
   Bot,
+  CalendarCheck,
+  ClipboardList,
   Eye,
   FileWarning,
   FolderClock,
   Gauge,
+  HardHat,
   Home,
   Layers3,
   LockKeyhole,
   MailWarning,
+  MapPin,
   Ruler,
   Search,
   ShieldCheck,
   TrendingUp,
+  Workflow,
   type LucideIcon,
 } from "lucide-react";
 
@@ -34,22 +39,73 @@ export const SITE = {
   },
 };
 
-export const NAVIGATION = [
+/**
+ * Libellés de CTA uniques sur tout le site : deux parcours, deux formulations.
+ * Toute autre variante (« diagnostic gratuit », « mon diagnostic »…) est proscrite,
+ * pour que le visiteur identifie immédiatement où mène chaque bouton.
+ */
+export const CTA = {
+  /** Rendez-vous Calendly de 15 minutes. */
+  primary: "Réserver mon diagnostic stratégique — 15 min",
+  /** Version courte du CTA principal, pour la barre de navigation. */
+  primaryShort: "Diagnostic — 15 min",
+  /** Auto-diagnostic en ligne (/diagnostic). */
+  secondary: "Évaluer mon temps perdu — 5 min",
+} as const;
+
+export type NavItem = {
+  href: string;
+  label: string;
+  children?: { href: string; label: string }[];
+};
+
+export const NAVIGATION: NavItem[] = [
   { href: "/", label: "Accueil" },
-  { href: "/mes-offres", label: "Mes offres" },
-  { href: "/a-propos", label: "À propos" },
+  {
+    href: "/assistante-administrative",
+    label: "Services",
+    children: [
+      { href: "/assistante-administrative", label: "Assistance administrative" },
+      { href: "/bras-droit-automatisation", label: "Bras droit & automatisation" },
+      { href: "/mes-offres", label: "Mes offres" },
+    ],
+  },
+  { href: "/assistante-administrative-btp", label: "Expertise BTP" },
   { href: "/cas-concrets", label: "Cas concrets" },
-  { href: "/diagnostic", label: "Diagnostic" },
+  { href: "/a-propos", label: "À propos" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
+/** Navigation aplatie (sous-menus dépliés), pour le pied de page. */
+export const FOOTER_NAVIGATION = NAVIGATION.flatMap((item) =>
+  item.children ? item.children : [item],
+);
+
 export const SEO = {
   home: {
     path: "/",
-    title: "Assistante virtuelle Charente | CelAssistPro — Récupérez 10 h/semaine",
+    title: "Assistante administrative & bras droit en Charente | CelAssistPro",
     description:
-      "Gestion administrative, organisation et pré-comptable pour TPE et indépendants. IA & automatisation. Sur place en Charente, à distance partout en France.",
+      "Assistante administrative indépendante en Charente et à distance partout en France. Gestion, pré-compta, automatisation et expertise BTP pour TPE et artisans.",
+  },
+  assistance: {
+    path: "/assistante-administrative",
+    title: "Assistante administrative indépendante | Charente & France | CelAssistPro",
+    description:
+      "Déléguez devis, facturation, relances, pré-comptabilité et suivi administratif à une assistante indépendante en Charente ou à distance partout en France.",
+  },
+  btp: {
+    path: "/assistante-administrative-btp",
+    title: "Assistante administrative BTP & artisans | CelAssistPro",
+    description:
+      "Gestion administrative BTP : devis, relances, facturation, acomptes, pré-compta et organisation. Expertise terrain depuis 2017, en Charente et à distance.",
+  },
+  premium: {
+    path: "/bras-droit-automatisation",
+    title: "Bras droit externalisé & automatisation TPE | CelAssistPro",
+    description:
+      "Structurez, simplifiez et automatisez la gestion de votre TPE avec un bras droit externalisé : processus, outils, IA, pilotage et suivi.",
   },
   offers: {
     path: "/mes-offres",
@@ -102,11 +158,123 @@ export const SEO = {
 
 export type SeoKey = keyof typeof SEO;
 
-export const stats = [
-  ["30 ans", "d'expertise administrative et pré-comptable"],
-  ["2017", "l'année depuis laquelle je pilote l'administratif d'une entreprise du bâtiment"],
-  ["Jusqu'à 10 h", "récupérables chaque semaine, selon votre situation"],
-  ["15 min", "de diagnostic gratuit, sans engagement"],
+/** Preuves affichées directement sous le titre de la page d'accueil. */
+export const heroProofs = [
+  { icon: CalendarCheck, text: "30 ans d'expertise administrative" },
+  { icon: HardHat, text: "Depuis 2017 au cœur d'une entreprise du bâtiment" },
+  { icon: Bot, text: "IA & automatisation" },
+  { icon: MapPin, text: "Charente · à distance partout en France" },
+];
+
+/**
+ * Les trois portes d'entrée de la page d'accueil : un visiteur venu chercher
+ * une assistante doit pouvoir rester sur ce besoin, ou monter en gamme.
+ */
+export const entryPoints = [
+  {
+    icon: ClipboardList,
+    title: "Déléguer mon administratif",
+    text: "Devis, facturation, relances, pré-comptabilité, classement, suivi des règlements et gestion courante.",
+    linkLabel: "Découvrir l'assistance administrative",
+    href: "/assistante-administrative",
+  },
+  {
+    icon: HardHat,
+    title: "Je suis artisan ou dirigeant dans le BTP",
+    text: "Une gestion adaptée aux réalités du terrain : devis, acomptes, relances, chantiers, facturation, justificatifs et pré-comptabilité.",
+    linkLabel: "Découvrir l'expertise BTP",
+    href: "/assistante-administrative-btp",
+  },
+  {
+    icon: Workflow,
+    title: "Structurer et automatiser mon entreprise",
+    text: "Organisation, processus, outils, IA, automatisations et pilotage pour réduire la dépendance au dirigeant.",
+    linkLabel: "Découvrir l'accompagnement stratégique",
+    href: "/bras-droit-automatisation",
+  },
+];
+
+/** Résultats chiffrés remontés sur la page d'accueil (détaillés dans /cas-concrets). */
+export const homeResults = [
+  { value: "24 h", label: "Devis envoyés après structuration du circuit" },
+  { value: "2 h 30 → 30 min", label: "Temps de préparation d'une présentation client" },
+  { value: "1 h", label: "Pour devenir autonome sur un nouvel outil de facturation" },
+];
+
+/** Bloc avant / après de la page d'accueil. */
+export const beforeAfter = [
+  { before: "Informations dispersées", after: "Un circuit défini" },
+  { before: "Relances à retenir", after: "Relances suivies ou automatisées" },
+  { before: "Devis en attente", after: "Pipeline suivi" },
+  {
+    before: "Justificatifs recherchés en urgence",
+    after: "Documents organisés au fil de l'eau",
+  },
+  {
+    before: "Tout repose sur le dirigeant",
+    after: "La gestion continue sans dépendre de sa mémoire",
+  },
+  { before: "Administratif subi", after: "Gestion pilotée" },
+];
+
+/** Ce qui peut être délégué — page /assistante-administrative. */
+export const delegableTasks = [
+  "Devis et facturation",
+  "Suivi des règlements",
+  "Relances clients",
+  "Préparation et transmission des pièces comptables",
+  "Classement et organisation documentaire",
+  "Suivi administratif",
+  "Gestion de boîte mail",
+  "Tableaux de suivi",
+  "Aide à la mise en place d'outils",
+  "Missions ponctuelles ou récurrentes",
+];
+
+/** Corps de métier du bâtiment déjà accompagnés. */
+export const btpTrades = [
+  "Charpente",
+  "Couverture",
+  "Ossature bois",
+  "Menuiserie",
+  "Placo",
+  "Isolation",
+  "Démoussage",
+];
+
+/** Le circuit administratif complet d'une entreprise du bâtiment. */
+export const btpWorkflow = [
+  "Demande client",
+  "Qualification",
+  "Rendez-vous",
+  "Prise de cotes",
+  "Devis",
+  "Relance",
+  "Acompte",
+  "Chantier",
+  "Facture",
+  "Encaissement",
+  "Comptabilité",
+  "Avis client",
+];
+
+/** Les trois piliers de la page /bras-droit-automatisation. */
+export const premiumPillars = [
+  {
+    icon: Layers3,
+    title: "Structurer",
+    text: "Mettre de l'ordre dans les circuits et définir qui fait quoi, quand et avec quel outil.",
+  },
+  {
+    icon: Bot,
+    title: "Automatiser",
+    text: "Supprimer les manipulations inutiles : relances, classements, formulaires, documents, assistants IA et transmissions.",
+  },
+  {
+    icon: Gauge,
+    title: "Piloter",
+    text: "Suivre les échéances, contrôler le fonctionnement du système et l'ajuster quand l'entreprise évolue.",
+  },
 ];
 
 export type PainPoint = {
