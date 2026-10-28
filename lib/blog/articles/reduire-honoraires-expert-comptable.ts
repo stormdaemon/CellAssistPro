@@ -2,54 +2,63 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "reduire-honoraires-expert-comptable",
-  "title": "Mieux préparer sa comptabilité pour payer moins d'honoraires",
-  "description": "Un dossier clair fait gagner du temps au cabinet comptable et peut réduire les allers-retours coûteux.",
+  "title": "Mieux préparer sa comptabilité pour limiter ses honoraires",
+  "seoTitle": "Combien facture un expert comptable : préparer son dossier",
+  "description": "Un dossier clair, classé et complet réduit le temps de tri facturé par le cabinet. Méthode simple, exemple fictif et limites du rôle de chacun.",
   "category": "Pré-comptabilité",
-  "keyword": "réduire honoraires expert-comptable",
+  "keyword": "combien facture un expert comptable",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/reduire-honoraires-expert-comptable.jpg",
     "alt": "Calculatrice, surligneur et stylos posés sur une table en bois",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Votre expert-comptable facture en heures. Plus le dossier qu'il reçoit est bien préparé, moins il vous facture — et mieux vous la connaissez, votre comptabilité."
+    "Les honoraires d'un expert-comptable tiennent compte du temps passé sur votre dossier. Un dossier désorganisé (pièces manquantes, doublons, explications à reconstituer) fait donc payer du tri, qui n'est pas de la comptabilité. Préparer ses pièces au fil de l'eau réduit ce temps, sans changer la qualité du travail du cabinet.",
+    "Cette préparation relève de la pré-comptabilité, pas de la saisie. Vous pouvez la faire vous-même ou la confier à une [assistante administrative](/assistante-administrative) ; la saisie et les comptes restent du ressort du cabinet."
   ],
   "sections": [
     {
-      "heading": "Le travail qui coûte vraiment cher : le tri plutôt que la comptabilité",
+      "heading": "Le travail qui coûte le plus : le tri",
       "paragraphs": [
-        "Un expert-comptable facture en heures. Quand vous envoyez un dossier désorganisé — factures manquantes, doublons, mal classées, explications cryptiques —, vous payez pour du travail qui n'existe que parce que c'est le désordre. Retrouver une facture manquante, c'est du temps facturé. Trier une pile de papiers mélangés, c'est du temps facturé. Relancer le client pour clarifier une dépense, c'est du temps facturé. Si vous envoyez une pile à décortiquer, vous payez pour du tri. Si vous envoyez un dossier organisé, vous payez pour de la comptabilité réelle. L'économie peut atteindre 20 à 30 % sur la facture annuelle, juste en changeant votre préparation — et sans réduire la qualité."
+        "Retrouver une facture manquante, trier une pile de papiers mélangés, relancer le client pour clarifier une dépense : ce temps-là est du tri, pas de la comptabilité. Un dossier organisé laisse au cabinet le temps de faire le travail comptable proprement dit."
       ]
     },
     {
-      "heading": "Mieux préparer n'est pas faire le travail du cabinet",
+      "heading": "Ce qui relève de la préparation, ce qui relève du cabinet",
       "paragraphs": [
-        "Il y a une ligne claire entre pré-comptabilité et comptabilité. Vous ne faites pas la saisie comptable vous-même (ce n'est pas votre métier et c'est le rôle du cabinet). Vous organisez simplement les matériaux de base : les pièces arrivent chez vous, vous les classez, vous vérifiez qu'elles sont complètes et lisibles. C'est de la préparation basique, pas de l'expertise. Un dossier propre, c'est aussi un dossier que le cabinet peut confier à n'importe quel collaborateur sans risque d'erreur — c'est de la robustesse. Et quand votre expert-comptable vous le dit, il veut dire : « Vous me facilitez le travail, et je peux faire mieux pour vous avec le même temps. »"
+        "Il y a une ligne claire entre pré-comptabilité et comptabilité. Ne faites pas vous-même la saisie comptable : elle relève du cabinet. Organisez en revanche les pièces de base : elles arrivent chez vous, vous les classez, vous vérifiez qu'elles sont complètes et lisibles.",
+        "Un dossier propre peut être confié à n'importe quel collaborateur du cabinet sans risque d'erreur. Quand votre expert-comptable souhaite un dossier organisé, il veut dire : « vous me facilitez le travail, et je peux faire mieux pour vous avec le même temps »."
       ]
     },
     {
-      "heading": "L'exemple du consultant qui a changé son classement",
+      "heading": "Un exemple fictif : du tri d'urgence au classement mensuel",
       "paragraphs": [
-        "Un consultant envoie ses pièces comptables en trois lots d'urgence dans l'année : janvier, mars, septembre. Chaque lot est incomplet, mélange plusieurs mois, nécessite une clarification. Le cabinet appelle pour vérifier, trie, reclasse, cherche les pièces manquantes — chacune de ces heures de tri se retrouve en montant sur la facture. Depuis qu'il transmet ses documents classés par mois, tous les trimestres, avec un résumé d'une ligne par facture notable, sa note annuelle a sensiblement baissé. Moins d'échanges, moins de stress, une relation avec le cabinet nettement plus fluide. Il récupère aussi du recul sur sa comptabilité puisqu'elle ne traîne plus."
+        "Prenons l'exemple fictif d'un consultant qui envoie ses pièces en trois lots d'urgence dans l'année : janvier, mars, septembre. Chaque lot est incomplet, mélange plusieurs mois et demande des clarifications. Le cabinet trie, reclasse et cherche les pièces manquantes, et ces heures de tri se retrouvent dans la facture.",
+        "Quand il transmet ses documents classés par mois, chaque trimestre, avec une ligne de résumé par facture notable, le cabinet passe moins de temps au tri. Dans cet exemple, la facture ne porte plus le coût de ce tri."
       ]
     },
     {
-      "heading": "L'hygiène minimale qui économise le plus",
+      "heading": "L'hygiène minimale qui évite le plus de tri",
       "paragraphs": [
-        "Vous ne cherchez pas la perfection, juste l'ordre de base : pièces rangées par mois, montants lisibles, nature de la dépense notée brièvement, aucun doublon. Une heure par mois suffit pour la plupart des TPE. Votre cabinet vous en remerciera et cette petite routine réduit vos factures sans diminuer le service."
+        "Inutile de viser la perfection : des pièces rangées par mois, des montants lisibles, la nature de la dépense notée brièvement, aucun doublon. Pour un petit volume, une heure par mois suffit souvent ; ce repère est une estimation, à ajuster à votre activité. Pour la différence entre ce que vous préparez et ce que fait le cabinet, voir [pré-comptabilité : définition et limites](/blog/pre-comptabilite-definition)."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Quel rythme de transmission au cabinet est le plus efficace ?",
-      "answer": "Mensuel est idéal pour l'immense majorité : les pièces restent fraîches en mémoire, le circuit tient mieux, aucune accumulation. Certains cabinets acceptent le trimestriel, mais moins c'est mieux. L'essentiel : cohérence et organisation à la source."
+      "question": "Combien facture un expert-comptable ?",
+      "answer": "Le tarif dépend de la taille de l'entreprise, des prestations incluses et du temps passé. Demandez une proposition écrite, détaillée par prestation, et interrogez le cabinet sur ce qui est facturé en plus, comme le tri de pièces ou les relances de justificatifs."
     },
     {
-      "question": "Est-ce que je peux demander à mon comptable un chiffrage de ce que lui coûte mon désordre ?",
-      "answer": "Oui, c'est une excellente question. Un bon comptable peut vous estimer combien sa facture annuelle inclut « tri et correction de votre dossier ». C'est souvent une surprise, et ça justifie immédiatement l'investissement d'une heure par mois pour ne pas payer inutilement."
+      "question": "Quel rythme de transmission au cabinet est le plus efficace ?",
+      "answer": "Le mensuel est souvent le plus simple : les pièces restent fraîches, le circuit tient et rien ne s'accumule. Certains cabinets acceptent le trimestriel. Le bon rythme est celui que vous tiendrez et que le cabinet accepte."
+    },
+    {
+      "question": "Peut-on payer moins cher son expert-comptable en préparant son dossier ?",
+      "answer": "Un dossier préparé réduit surtout le temps de tri, qui est facturé lorsque le cabinet le prend en charge. Le montant final dépend de votre contrat : demandez à votre cabinet ce que représente le tri dans sa facture annuelle."
     }
-  ]
+  ],
+  "related": ["preparer-pieces-comptables-fil-de-leau", "preparer-cloture-comptable-tpe", "pre-comptabilite-definition"]
 };

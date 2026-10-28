@@ -3,62 +3,93 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "externaliser-pre-comptabilite",
   "title": "Externaliser sa pré-comptabilité : comment ça se passe ?",
-  "description": "Externaliser la pré-comptabilité aide à préparer un dossier propre sans remplacer votre cabinet comptable.",
+  "seoTitle": "Pré-comptabilité freelance : comment externaliser",
+  "description": "Externaliser la pré-comptabilité : collecte, tri et vérification des pièces pour un dossier propre à transmettre au cabinet. Ce qui reste au cabinet.",
   "category": "Délégation",
-  "keyword": "externaliser pré-comptabilité",
+  "keyword": "pré-comptabilité freelance",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/externaliser-pre-comptabilite.jpg",
     "alt": "Femme en tenue professionnelle debout à son bureau en train de consulter des documents, avec des classeurs rangés en arrière-plan",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Confier sa pré-comptabilité à quelqu'un d'autre, c'est faire le pari de devenir transparent vis-à-vis de son cabinet comptable. Au lieu d'arriver avec des piles désorganisées, vous offrez à votre expert-comptable un dossier proprement rangé, ce qui réduit significativement ses honoraires et accélère la clôture de vos comptes."
+    "Externaliser sa pré-comptabilité consiste à confier à une personne la collecte, le tri et la vérification des pièces comptables, afin que l'expert-comptable reçoive un dossier propre. Ce n'est pas de la comptabilité : la tenue des comptes, les déclarations et les conseils qui en découlent restent du ressort du cabinet.",
+    "La pré-comptabilité relève de l'organisation administrative, donc de la page [assistante administrative](/assistante-administrative). Une définition complète figure dans [l'article consacré à la pré-comptabilité](/blog/pre-comptabilite-definition)."
   ],
   "sections": [
     {
-      "heading": "La pré-comptabilité, ce travail que le comptable n'attend pas de vous",
-      "paragraphs": [
-        "Nombreux sont les dirigeants qui croient que leur cabinet comptable gère l'ensemble du travail comptable, y compris la collecte et le classement des pièces. C'est une confusion fréquente. Le cabinet traite les informations qui lui arrivent. C'est vous, ou une personne déléguée, qui collectez les factures, les relevés, les justificatifs, et qui les préparez de manière à ce que le comptable puisse travailler sans fouiller."
-      ]
-    },
-    {
-      "heading": "Qu'est-ce qu'on externalise exactement ?",
+      "heading": "Ce qu'on externalise, concrètement",
       "list": [
-        "La collecte quotidienne des factures (fournisseurs, services, transport)",
-        "Le tri par catégorie de dépense (fournitures, repas client, déplacements, fournitures informatiques)",
-        "La vérification que chaque pièce est complète (numéro, date, montant, TVA, description)",
-        "Le classement chronologique ou par type",
-        "La transmission au comptable selon un calendrier régulier (souvent mensuel)"
+        "La collecte régulière des factures fournisseurs et des justificatifs : services, transport, fournitures.",
+        "Le tri par catégorie de dépense : fournitures, repas d'affaires, déplacements, matériel informatique.",
+        "La vérification de chaque pièce : numéro, date, montant, TVA, description.",
+        "Le classement, chronologique ou par type, selon le format attendu par le cabinet.",
+        "La transmission au cabinet selon le calendrier convenu, souvent mensuel."
       ]
     },
     {
-      "heading": "Quand c'est bien fait, ça change la facturation du cabinet",
+      "heading": "Ce qui reste au cabinet",
       "paragraphs": [
-        "Un dossier externalisé correctement réduit le travail comptable de 20 à 30 % en moyenne. Le comptable n'a plus à demander « où est la facture de décembre » ou à recopier des montants dispersés. Il reçoit du travail stabilisé, ce qui diminue ses honoraires et accélère le rendu des comptes. Plus important encore pour vous : vous récupérez une clarté mentale précieuse. Vous savez que tous les documents sont rangés, que rien ne se perdra, et que votre comptable a ce dont il a besoin pour faire son travail proprement."
+        "Le cabinet tient la comptabilité à partir des pièces qui lui arrivent : saisie, contrôles, comptes annuels, déclarations fiscales et conseils qui en découlent. CelAssistPro ne remplace pas l'expert-comptable : il le complète en lui transmettant un dossier propre. Une pièce manquante doit être recherchée avant la transmission ; c'est justement le travail de la pré-comptabilité."
       ]
     },
     {
-      "heading": "Les trois erreurs qui tuent l'externalisation",
+      "heading": "Un dossier propre change le travail du cabinet",
       "paragraphs": [
-        "La première erreur est de déléguer sans clarifier. Avant de confier ce travail à une assistante, vous devez expliquer : quelles catégories de dépense nous gérons ? Quel volume mensuel faut-il prévoir ? Quels formats de documents arrivent ? Une semaine d'explication au départ économise trois mois de confusion."
+        "Le comptable n'a plus à demander où se trouve la facture de décembre ni à recopier des montants dispersés. Le dossier est prêt à être traité, et vous retrouvez la clarté d'avoir tous vos justificatifs au même endroit.",
+        "L'effet sur les honoraires dépend de votre cabinet et de votre contrat. Demandez-lui comment il facture un dossier désorganisé et ce qu'il attend en matière de format et de délais : un dossier propre ne se traduit en gain réel que si le cabinet le reconnaît."
+      ]
+    },
+    {
+      "heading": "Les erreurs qui font échouer l'externalisation",
+      "paragraphs": [
+        "Une demi-journée de cadrage au départ évite souvent des allers-retours pendant des mois. Elle doit répondre à trois questions : quelles catégories de dépenses gère-t-on ? quel volume mensuel prévoir ? quels formats de documents arrivent ?"
       ],
       "list": [
-        "Mélanger pré-comptabilité et comptabilité : ne demandez jamais à votre assistant de faire de la saisie comptable. C'est du ressort du cabinet. Votre assistant classe et transmet ; le comptable traite.",
-        "Oublier que vous restez responsable. Même externalisée, la responsabilité de vos pièces demeure la vôtre. Vous devez effectuer des contrôles ponctuels réguliers pour être sûr que le système fonctionne.",
-        "Attendre trop longtemps entre deux transmissions au cabinet. Hebdomadaire surcharge ; mensuel fonctionne bien. Plus espacé et vous accumulez du travail."
+        "Mélanger pré-comptabilité et comptabilité : la saisie et la tenue des comptes restent au cabinet. La personne qui classe et transmet ne fait pas la comptabilité.",
+        "Oublier que vous restez responsable de vos pièces : même externalisé, le contrôle ponctuel reste votre affaire.",
+        "Espacer trop les transmissions, ou au contraire les multiplier : un envoi trop espacé accumule le travail, un envoi trop fréquent surcharge le cabinet. Le rythme se convient avec lui."
+      ]
+    },
+    {
+      "heading": "Une routine mensuelle en cinq étapes",
+      "steps": [
+        "Relever les factures reçues et émises du mois, dans l'ordre de leur date.",
+        "Vérifier que chaque pièce est complète : numéro, date, montant, TVA, description.",
+        "Ranger les pièces par catégorie, dans le dossier partagé du mois.",
+        "Signaler au dirigeant les pièces manquantes, et demander les justificatifs aux fournisseurs concernés.",
+        "Transmettre le dossier au cabinet selon le calendrier convenu, avec la liste des pièces encore en attente."
+      ]
+    },
+    {
+      "heading": "Par où commencer",
+      "steps": [
+        "Demander au cabinet son calendrier de transmission et le format attendu.",
+        "Lister les catégories de dépenses et les sources de pièces : factures, relevés, notes de frais.",
+        "Mettre en place un dossier partagé par mois et une liste des documents attendus.",
+        "Vérifier le premier envoi avec le cabinet, puis ajuster."
       ]
     }
   ],
   "faq": [
     {
-      "question": "L'assistant qui gère la pré-comptabilité doit-il avoir des connaissances comptables ?",
-      "answer": "Non. Il suffit qu'il ou elle sache classer, vérifier la complétude des documents et ranger selon vos catégories. Ce n'est pas de la comptabilité, c'est de l'organisation. Une assistante administrative ordinaire suffit amplement."
+      "question": "L'assistante qui gère la pré-comptabilité doit-elle avoir des connaissances comptables ?",
+      "answer": "Pas forcément. Il s'agit de classer, de vérifier que chaque pièce est complète et de ranger selon vos catégories. Ce n'est pas de la comptabilité, mais de l'organisation : une assistante administrative formée à la gestion d'un dossier suffit pour ce travail. Les questions de comptabilisation restent au cabinet."
     },
     {
       "question": "Combien de temps dois-je consacrer à vérifier le travail externalisé ?",
-      "answer": "Environ une heure par mois pour un dossier d'une TPE. Vous vérifiez qu'aucune facture clé ne manque, que les catégories ont du sens, et que la transmission au comptable est complète."
+      "answer": "Un contrôle mensuel court suffit généralement : vérifiez qu'aucune facture clé ne manque, que les catégories sont cohérentes et que la transmission au cabinet est complète."
+    },
+    {
+      "question": "Faut-il un logiciel spécial pour la pré-comptabilité ?",
+      "answer": "Pas nécessairement. Un dossier partagé, une liste de catégories et une routine mensuelle suffisent pour commencer. Le cabinet indique le format qu'il attend : c'est lui qui fixe la forme finale du dossier."
     }
+  ],
+  "related": [
+    "pre-comptabilite-definition",
+    "preparer-pieces-comptables-fil-de-leau",
+    "quand-deleguer-administratif"
   ]
 };

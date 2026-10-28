@@ -3,60 +3,71 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "automatisation-ia-pme-charente-par-ou-commencer",
   "title": "Automatisation et IA pour les PME de Charente : par où commencer ?",
-  "description": "L'automatisation aide une TPE quand les bases sont propres : d'abord structurer, ensuite faire gagner du temps.",
+  "seoTitle": "IA et automatisation pour TPE et PME : par où commencer ?",
+  "description": "Pour une TPE ou une PME de Charente, l'automatisation ne tient que si les circuits sont clairs. Méthode en trois temps pour choisir la première tâche.",
   "category": "Automatisation & IA",
-  "keyword": "automatisation IA PME Charente",
+  "keyword": "ia tpe pme",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/automatisation-ia-pme-charente-par-ou-commencer.jpg",
     "alt": "Équipe de professionnels échangeant devant un tableau blanc couvert de graphiques lors d'une réunion",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Envisager l'automatisation en PME, c'est d'abord accepter que les outils ne vous aideront que si votre travail est déjà clair et organisé. Automatiser du désordre, c'est passer une voiture de luxe sur une piste de terre.",
-    "Pour les dirigeants de PME en Charente ou ailleurs, le vrai succès avec l'automatisation vient de l'ordre qu'on crée avant, pas de la sophistication de l'outil."
+    "Par où commencer l'automatisation dans une TPE ou une PME de Charente ? Par une tâche simple, répétitive et bien délimitée, que l'on sait d'abord faire à la main. Un outil automatique accélère un circuit ; il ne crée pas d'ordre. C'est pourquoi la clarté des tâches compte davantage que la sophistication de l'outil.",
+    "CelAssistPro accompagne ces démarches à distance partout en France, et sur place dans la Charente, comme le précise la [page dédiée à l'assistance administrative en Charente](/assistante-administrative-charente)."
   ],
   "sections": [
     {
-      "heading": "Pourquoi l'automatisation échoue quand on n'a pas préparé le terrain",
+      "heading": "Pourquoi l'automatisation échoue sans préparation",
       "paragraphs": [
-        "Beaucoup de chefs d'entreprise rêvent que l'IA et l'automatisation vont soudainement libérer des heures entières de leur semaine. La réalité ? Si vos circuits administratifs sont confus aujourd'hui, ajouter de la technologie va simplement les rendre confus plus vite. Vous automatiserez des recopies de données, des processus mal définis, des envois sans vérification. L'IA ne crée pas de l'ordre : elle accélère ce qu'on lui demande, bon ou mauvais.",
-        "Le chemin correct pour une PME de Charente : identifier une seule tâche simple, bien délimitée et véritablement répétitive. L'accepter telle qu'elle est, la clarifier jusqu'à la maîtriser manuellement, puis examiner où l'automatisation pourrait vraiment gagner du temps sans risque."
+        "Beaucoup de dirigeants espèrent que l'automatisation libérera soudainement des heures de leur semaine. Pourtant, si les circuits administratifs sont confus, la technologie les rendra confus plus vite : recopies de données, processus mal définis, envois sans vérification. Un outil exécute des règles ; il ne sait pas quelles règles vous voulez.",
+        "La démarche correcte consiste à identifier une seule tâche simple, bien délimitée et véritablement répétitive. Il faut ensuite la faire à la main jusqu'à la maîtriser, puis examiner où l'automatisation peut gagner du temps sans faire perdre le contrôle. La démarche complète, de la structuration au pilotage, est décrite sur la page [bras droit et automatisation](/bras-droit-automatisation)."
       ]
     },
     {
-      "heading": "Un processus qui a marché : l'exemple du carreleur",
+      "heading": "Un exemple fictif pour illustrer la méthode",
       "paragraphs": [
-        "Un artisan du bâtiment près de Cognac recevait des appels et des messages pour des demandes de visite. Il rédigeait chaque réponse à la main, proposant des créneaux, relançant ceux qui ne confirmaient pas. Trois heures par semaine dans ce seul circuit. En six semaines de travail collectif, il a écrit les étapes précises : recevoir une demande, proposer trois créneaux définis, envoyer un rappel trois jours après, conclure après cinq jours. Ensuite, il a validé le circuit manuellement quelques jours, puis l'a confié à une petite automatisation d'envoi de messages. Résultat : deux heures récupérées, zéro risque oublié, et lui peut continuer à vérifier les demandes qui sortent du cadre."
+        "Prenons un exemple fictif : un artisan du bâtiment reçoit chaque semaine des demandes de visite, par téléphone et par courriel, et rédige chaque réponse à la main. Il propose des créneaux, relance ceux qui ne confirment pas, et y consacre environ trois heures par semaine.",
+        "Dans cet exemple, il écrit d'abord les étapes du circuit : recevoir la demande, proposer trois créneaux définis, envoyer un rappel au bout de trois jours, clore la demande après cinq jours sans réponse. Il valide ce circuit à la main pendant quelques jours, puis confie l'envoi des messages à un outil simple. Le temps consacré à ce circuit baisse nettement, et il garde la main sur les demandes qui sortent du cadre."
       ]
     },
     {
       "heading": "Comment repérer la bonne première tâche",
       "list": [
-        "Elle se répète au moins deux fois par semaine de manière identique ou très similaire.",
-        "Vous pouvez la décrire en moins de cinq étapes ; au-delà, c'est trop complexe pour débuter.",
-        "Le résultat est facile à vérifier : vous voyez immédiatement si c'est correct ou non.",
-        "Elle vous coûte au moins deux heures par mois, mais son automatisation ne vous ferait pas perdre de contrôle sur votre métier."
+        "Elle se répète au moins deux fois par semaine, de façon identique ou très proche.",
+        "Vous pouvez la décrire en cinq étapes au plus ; au-delà, elle est trop complexe pour débuter.",
+        "Le résultat se vérifie d'un coup d'œil : le message est correct ou il ne l'est pas.",
+        "Elle vous prend au moins deux heures par mois, et son automatisation ne vous fait pas perdre le contrôle de votre métier."
       ]
     },
     {
-      "heading": "Les erreurs classiques qui paralysent",
+      "heading": "Les erreurs qui paralysent",
       "paragraphs": [
-        "Première erreur : croire que l'IA va résoudre d'elle-même un problème que vous ne comprenez pas clairement. Si vous ne savez pas comment vous feriez manuellement, l'IA ne le saura pas non plus.",
-        "Deuxième erreur : choisir la tâche la plus urgente au lieu de la plus simple. Attendez d'avoir une victoire rapide avant de vous attaquer à un circuit complexe.",
-        "Troisième erreur : mettre en place l'automatisation et l'oublier. Le suivi régulier — vérifier que les résultats sont corrects, ajuster si une règle change — c'est ce qui maintient la confiance."
+        "Première erreur : croire qu'une IA résoudra d'elle-même un problème que vous ne comprenez pas encore. Si vous ne savez pas comment vous feriez la tâche à la main, l'outil ne le saura pas davantage.",
+        "Deuxième erreur : choisir la tâche la plus urgente au lieu de la plus simple. Une première réussite rapide donne les moyens d'aborder ensuite un circuit complexe.",
+        "Troisième erreur : mettre en place l'automatisation, puis l'oublier. Un contrôle régulier, pour vérifier que les résultats restent justes et ajuster quand une règle change, entretient la confiance. Sur le rôle respectif de l'IA et d'une assistante, voir l'article [sur le rôle de l'IA face à une assistante](/blog/ia-remplace-assistante)."
       ]
     }
   ],
   "faq": [
     {
       "question": "Faut-il un consultant spécialisé en automatisation pour commencer ?",
-      "answer": "Pas forcément pour une première tâche simple. Commencez par regarder les outils que vous utilisez déjà : email, facturateur, agenda. Beaucoup offrent des fonctions d'automatisation basique intégrées. Si vous êtes bloqué, une ou deux heures de conseil suffiront à clarifier. Un consultant sur place peut être plus rapide qu'un échange par mail."
+      "answer": "Pas forcément pour une première tâche simple. Commencez par les outils que vous utilisez déjà : courriel, logiciel de facturation, agenda. Beaucoup proposent des fonctions d'automatisation de base. Si vous êtes bloqué, une ou deux heures de conseil suffisent souvent à clarifier la démarche."
     },
     {
       "question": "L'automatisation va-t-elle remplacer mon assistante ?",
-      "answer": "Non. Une assistante apporte du jugement, du relationnel et de la flexibilité. L'automatisation exécute des règles strictes. Idéalement, une assistante gère ce qui est complexe ou personnalisé, et l'automatisation fait les tâches simples et très répétitives. Ensemble, elles vous libèrent bien plus qu'une seule des deux."
+      "answer": "Non. Une assistante apporte du jugement, du relationnel et de la souplesse. L'automatisation exécute des règles strictes. Idéalement, l'assistante gère ce qui est complexe ou personnalisé, et l'automatisation prend les tâches simples et très répétitives."
+    },
+    {
+      "question": "Faut-il acheter un outil avant de commencer ?",
+      "answer": "Pas nécessairement. Clarifiez d'abord la tâche et faites-la à la main pendant une période d'essai. Un outil acheté avant cette étape risque de reproduire le désordre existant, plus vite."
     }
+  ],
+  "related": [
+    "taches-a-automatiser-tpe",
+    "gain-temps-automatisation-entreprise",
+    "ia-remplace-assistante"
   ]
 };

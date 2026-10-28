@@ -3,59 +3,66 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "classement-documents-entreprise-simple",
   "title": "Classement des documents d'entreprise : une méthode simple qui tient",
-  "description": "Un bon classement n'est pas compliqué : il permet surtout de retrouver vite le bon document au bon moment.",
+  "seoTitle": "Classer les documents d'entreprise : méthode simple",
+  "description": "Quatre à cinq dossiers, des noms de fichiers cohérents et un rangement quotidien : une méthode simple pour retrouver un document en deux minutes.",
   "category": "Organisation TPE",
-  "keyword": "classement documents entreprise",
+  "keyword": "comment classer documents entreprise",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/classement-documents-entreprise-simple.jpg",
     "alt": "Classeurs noirs empilés et rangés les uns sur les autres",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Vous avez des centaines de documents importants : factures, devis, contrats, pièces comptables. Si vous devez en chercher un d'urgence, vous savez d'instinct qu'il vous faudra 30 minutes de fouille. C'est le signal que votre classement ne tient pas, et que c'est le moment de simplifier."
+    "Un bon classement de documents d'entreprise repose sur quatre ou cinq dossiers stables, des noms de fichiers cohérents et un rangement le jour même. Avec cette méthode, vous retrouvez un document en deux minutes, et vous savez tout de suite s'il existe ou s'il faut le demander.",
+    "Le suivi documentaire peut être confié à une [assistante administrative](/assistante-administrative)."
   ],
   "sections": [
     {
       "heading": "Le vrai coût d'un mauvais classement",
       "paragraphs": [
-        "Chaque fois que vous cherchez une facture que vous ne retrouvez pas en deux minutes, vous perdez une ressource précieuse : votre attention. Vous la cherchez ici, puis là, vous vous demandez si elle n'a pas été supprimée, vous refaites une demande au client. Entre les relances, les déplacements mentaux, c'est facilement une demi-heure. Multipliez par trois fois par semaine, et c'est quatre heures par mois. En un an, c'est une semaine entière de travail qui disparaît dans la recherche de documents.",
-        "Deuxième problème : l'oubli. Si vous ne trouvez pas, vous supposez que vous n'avez pas la pièce. Vous la redemandez au client ou à un fournisseur. Mauvais pour l'image professionnelle, et double travail. Un bon classement élimine ces deux problèmes."
+        "Chaque fois qu'une facture ne se retrouve pas en deux minutes, votre attention se perd : vous la cherchez ici puis là, vous doutez de son existence et vous la redemandez. Prenons une hypothèse de calcul : une demi-heure perdue trois fois par semaine représente environ six heures par mois, soit près de 80 heures par an.",
+        "Le second problème est l'oubli. Si vous ne trouvez pas un document, vous supposez qu'il n'existe pas et vous le redemandez au client ou au fournisseur, ce qui nuit à votre image professionnelle. Un bon classement supprime ces deux problèmes."
       ]
     },
     {
-      "heading": "La méthode qui fonctionne réellement",
+      "heading": "La méthode en quatre temps",
       "steps": [
-        "Créer quatre à cinq dossiers principaux immuables : Clients (factures, devis, contrats avec clients), Fournisseurs (factures, devis reçus, justificatifs), Comptable (synthèses envoyées, justificatifs en attente), Ressources (modèles, contrats types, documents de référence). C'est tout.",
-        "Nommer chaque fichier de la même manière : Date_NomClient-ou-Type_Description. Exemple : 2026-07-15_Artisan-Cognac_Facture-Chantier. Au fil du temps, cela devient automatique.",
-        "Ranger le jour même ou le jour d'après, pas en accumulant une pile pour « plus tard ». Deux minutes par jour coûte moins cher que trois heures un trimestre.",
-        "Une fois par an, archiver les documents de l'année précédente dans un dossier séparé. Vous déchargez votre classement courant sans supprimer l'historique."
+        "Créez quatre ou cinq dossiers principaux, stables : Clients (factures, devis, contrats), Fournisseurs (factures, devis reçus, justificatifs), Comptable (synthèses envoyées, justificatifs en attente) et Ressources (modèles, contrats types, documents de référence).",
+        "Nommez chaque fichier de la même manière, par exemple : 2026-07-15_Artisan-Cognac_Facture-Chantier (date, nom ou type, description). Au fil du temps, ce geste devient automatique.",
+        "Rangez le document le jour même ou le lendemain, et non dans une pile « pour plus tard ». Deux minutes par jour coûtent moins cher que trois heures un trimestre.",
+        "Une fois par an, archivez les documents de l'année précédente dans un dossier séparé. Votre classement courant se simplifie, sans que l'historique disparaisse."
       ]
     },
     {
-      "heading": "L'expérience concrète d'une indépendante",
+      "heading": "Un exemple fictif : cinquante dossiers pour rien",
       "paragraphs": [
-        "Une consultante graphique en Charente avait grandi sans système : elle nommait ses fichiers « Truc-urgent », « à-faire », « factures-j'enpense » selon son humeur. Elle créait aussi des dossiers quand elle pensait en avoir besoin. Au bout de deux ans, elle avait cinquante dossiers et impossible de s'y retrouver. Elle passe un après-midi à organiser cinq dossiers simples et renommer proprement ses 200 fichiers. Trois mois après, elle classe automatiquement au fil de l'eau, retrouve en 30 secondes ce qu'elle cherche, et elle a pu dire au comptable « Voilà, tout est dans le dossier Comptable » sans culpabilité."
+        "Prenons l'exemple fictif d'une consultante graphique qui nommait ses fichiers « Truc-urgent » ou « à-faire » selon son humeur, et créait des dossiers au gré de ses besoins. Au bout de deux ans, elle en avait cinquante, et ne s'y retrouvait plus. Un après-midi a suffi pour créer cinq dossiers et renommer les fichiers existants. Trois mois plus tard, elle classe au fil de l'eau et retrouve en quelques secondes ce qu'elle cherche."
       ]
     },
     {
       "heading": "Les pièges qui ruinent le classement",
       "list": [
-        "Trop de catégories : au-delà de cinq, vous passerez plus de temps à vous demander où ranger qu'à ranger.",
-        "Changer de système : si vous trouvez une logique simple qui marche, tenez-vous-y au moins un an avant de la modifier. Le meilleur système est celui que vous pouvez expliquer en 20 secondes.",
-        "Repousser le classement en masse : une pile « à classer » qui s'accumule devient un barrage psychologique. Mieux vaut deux minutes par jour que cinq heures un dimanche."
+        "Trop de catégories : au-delà de cinq, vous passez plus de temps à décider où ranger qu'à ranger.",
+        "Changer de système sans raison : tenez-vous à une logique simple pendant au moins un an. Le meilleur système est celui que vous pouvez expliquer en vingt secondes.",
+        "Repousser le classement : une pile « à classer » devient un barrage psychologique. Mieux vaut deux minutes par jour qu'une demi-journée le dimanche."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Dois-je classer physiquement en papier ou tout en numérique ?",
-      "answer": "Pour la plupart des TPE, le numérique suffit : plus rapide à chercher, moins volumineux, facile à partager avec le comptable ou une assistante. Gardez en papier seulement les originaux que la loi exige (certains contrats, documents importants). Scannez le reste pour avoir un double traçable."
+      "question": "Faut-il classer les documents en papier ou tout en numérique ?",
+      "answer": "Dans la plupart des cas, le numérique suffit : il se cherche plus vite, prend moins de place et se partage facilement avec votre comptable ou une assistante. Gardez les originaux papier lorsque la réglementation l'exige, et vérifiez-le avec votre expert-comptable. Pour les pièces comptables, voir aussi [préparer ses pièces au fil de l'eau](/blog/preparer-pieces-comptables-fil-de-leau)."
     },
     {
-      "question": "Et si j'ai 500 documents qui ne sont pas classés du tout ?",
-      "answer": "Ne nettoyez pas tout d'un coup, c'est paralysant. Créez vos cinq dossiers maintenant et commencez à ranger les nouveaux au fur et à mesure. Quand vous cherchez un vieux document, classez-le en le trouvant. Petit à petit, le désordre se résorbe sans que vous ayez l'impression de passer une journée au rangement."
+      "question": "Que faire avec des centaines de documents non classés ?",
+      "answer": "Ne tout nettoyer d'un coup, ce serait paralysant. Créez vos cinq dossiers, rangez les nouveaux documents au fil de l'eau, et classez les anciens au moment où vous les retrouvez. Le désordre se résorbe sans journée de rangement."
+    },
+    {
+      "question": "Combien de temps garder les documents ?",
+      "answer": "Ne jetez pas une pièce avant d'avoir vérifié avec votre expert-comptable la durée à respecter pour ce type de document. Les durées varient selon la nature des pièces, et votre cabinet vous indique la liste à conserver."
     }
-  ]
+  ],
+  "related": ["preparer-pieces-comptables-fil-de-leau", "reorganiser-gestion-administrative-entreprise", "organiser-gestion-creation-entreprise"]
 };

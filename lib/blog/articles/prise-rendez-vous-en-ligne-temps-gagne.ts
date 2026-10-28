@@ -3,61 +3,80 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "prise-rendez-vous-en-ligne-temps-gagne",
   "title": "Prise de rendez-vous en ligne : combien de temps gagné, vraiment ?",
-  "description": "La prise de rendez-vous en ligne réduit les échanges inutiles, les oublis et les allers-retours de planning.",
+  "seoTitle": "Prise de rendez-vous en ligne : le temps gagné",
+  "description": "La prise de rendez-vous en ligne supprime les allers-retours de créneaux et réduit les oublis. Méthode de mise en place et calcul du gain réel.",
   "category": "Automatisation & IA",
-  "keyword": "prise de rendez-vous en ligne entreprise",
+  "keyword": "prise de rendez-vous en ligne",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/prise-rendez-vous-en-ligne-temps-gagne.jpg",
     "alt": "Ordinateur portable et smartphone posés sur un bureau en bois",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Chaque demande de rendez-vous génère deux à quatre échanges email inutiles : le client propose, vous vérifiez, vous répondez, il confirme. Multiplié par plusieurs demandes par semaine, c'est des heures de calendrier qui s'évaporent."
+    "La prise de rendez-vous en ligne permet au client de choisir lui-même un créneau réellement libre dans votre agenda, sans échange de courriels. Elle supprime les allers-retours de propositions et réduit les oublis, à condition de bien régler les disponibilités et les rappels.",
+    "Le gain dépend du nombre de demandes et des échanges qu'elles provoquent. Pour replacer cet outil dans l'organisation de votre activité, voir [notre page sur l'automatisation et l'organisation](/bras-droit-automatisation). Les calculs ci-dessous sont des exemples fictifs."
   ],
   "sections": [
     {
-      "heading": "Le ballet habituel : emails, confusion, oublis",
+      "heading": "Le ballet des demandes par courriel",
       "paragraphs": [
-        "Un client vous demande un rendez-vous par email. Il propose trois créneaux. Vous consultez votre agenda et trouvez un créneau qui marche — probablement pas celui qu'il a proposé. Vous lui répondez. Il reçoit votre email et répond d'accord. Vous le mettez dans votre calendrier. Trois à quatre emails minimum pour une décision qui prend 30 secondes. Multiplié par trois demandes par semaine, c'est quatre à cinq heures perdues en échanges. Et si le client annule et reprogramme, la boucle recommence.",
-        "Pire : les oublis. Un rendez-vous confirmé par email le matin en urgence se retrouve quelques fois pas bien noté dans l'agenda. Le client arrive, vous l'aviez oublié. Mauvais pour l'image."
+        "Un client demande un rendez-vous par courriel et propose trois créneaux. Vous consultez votre agenda, constatez qu'aucun ne convient exactement, répondez, il confirme, et vous inscrivez le rendez-vous. Quatre messages pour une décision qui prend trente secondes. Si le client annule, la boucle recommence.",
+        "Prenons un exemple fictif : une personne reçoit trois demandes de rendez-vous par semaine, et chacune provoque trois courriels. Cela fait neuf courriels par semaine, soit une quarantaine par mois. À raison de deux minutes par courriel, lecture et réponse comprises, cela représente environ une heure vingt par mois. Ce n'est pas dramatique, mais c'est une tâche qui revient sans cesse et interrompt le reste.",
+        "Il y a aussi les oublis. Un rendez-vous confirmé à la hâte, en fin de journée, se retrouve mal inscrit dans l'agenda. Le client se présente, et vous ne l'attendiez pas. Quand la demande porte sur un rendez-vous, la réservation en ligne évite justement ce nouvel échange."
       ]
     },
     {
-      "heading": "Le changement qu'apporte la prise de rendez-vous en ligne",
+      "heading": "Ce que change un lien de réservation",
       "paragraphs": [
-        "Le client visite votre lien de réservation. Il voit vos créneaux réellement libres. Il en choisit un. C'est fini. Un événement s'ajoute à votre calendrier. Vous recevez une notification. Plus tard, le client reçoit un rappel automatique la veille pour qu'il ne vous pose pas un lapin. C'est simple, c'est linéaire, c'est zéro allers-retours."
+        "Le client ouvre votre lien de réservation et voit uniquement les créneaux réellement disponibles. Il en choisit un, l'événement s'inscrit dans votre agenda, et vous recevez une notification. Un rappel automatique part la veille. Vous ne négociez plus d'horaires : vous définissez une fois les plages ouvertes, et l'outil fait le reste.",
+        "Cette mécanique supprime les allers-retours, pas le contact humain. Le client reste libre de demander un autre créneau, par un autre canal, pour les cas particuliers. Pour les autres demandes, qui arrivent par courriel, l'[accusé de réception automatique](/blog/reponse-automatique-email-entreprise) annonce le délai de réponse."
       ]
     },
     {
-      "heading": "Exemple concret : le professionnel libéral",
+      "heading": "Un exemple fictif : le praticien libéral",
       "paragraphs": [
-        "Un ostéopathe reçoit quatre à cinq demandes de rendez-vous par semaine. Avant, c'était deux à trois échanges email par demande, avec des confusions occasionnelles ou des annulations oubliées. En mettant un système de réservation en ligne, il voit immédiatement l'impact : les patients oublient nettement moins — les rappels aident — et ses échanges email chutent de 80%. Il récupère une à deux heures par semaine sans rien perdre du contact humain, puisque le patient reste maître de son choix de créneau. Plus encore : il peut bloquer les heures où il n'est pas disponible plutôt que de gérer des exceptions permanentes."
+        "Prenons un praticien libéral qui reçoit quatre à cinq demandes par semaine. Avant, chaque demande donnait lieu à deux ou trois échanges, avec des confusions et des annulations oubliées. Après la mise en place d'une réservation en ligne, les échanges se réduisent nettement, les rappels limitent les absences, et le praticien bloque les heures où il n'est pas disponible au lieu de gérer des exceptions. Le patient reste maître de son choix de créneau."
       ]
     },
     {
-      "heading": "Mettre ça en place sans briser votre système",
+      "heading": "Mettre en place sans casser l'existant",
+      "steps": [
+        "Définissez les plages disponibles, semaine par semaine, en bloquant les créneaux que vous ne souhaitez pas ouvrir.",
+        "Activez un rappel automatique avant chaque rendez-vous, qui indique la date, l'heure et la manière de modifier ou d'annuler.",
+        "Gardez une solution de secours pour les demandes spéciales qui ne rentrent pas dans le cadre prévu.",
+        "Testez pendant deux semaines, puis annoncez à vos clients que la réservation en ligne devient votre canal habituel."
+      ]
+    },
+    {
+      "heading": "Les erreurs qui découragent les clients",
       "list": [
-        "Définir les créneaux disponibles semaine par semaine.",
-        "Configurer un rappel automatique pour les clients 24 heures avant.",
-        "Garder un système de secours pour les demandes spéciales qui ne rentrent pas dans le cadre.",
-        "Tester pendant deux semaines, puis annoncer à vos clients que c'est désormais le canal préféré."
+        "Afficher des créneaux qui ne sont plus réellement libres : le client le sent vite, et la confiance s'effondre.",
+        "Oublier le rappel, alors que c'est lui qui limite les absences.",
+        "Garder trois canaux en parallèle : courriel, téléphone et réservation en même temps créent de la confusion. Passez progressivement à un canal principal."
       ]
     },
     {
-      "heading": "Les erreurs qui détruisent l'adoption",
-      "list": [
-        "Afficher des créneaux qui ne sont pas vraiment disponibles : si vous listez l'horaire 17h mais refusez ensuite, c'est du théâtre et les clients le sentent.",
-        "Oublier le rappel : une réservation en ligne marche encore mieux si un email ou SMS rappelle au client 24 heures avant.",
-        "Garder plusieurs canaux en même temps : email, téléphone, et réservation en ligne à la fois crée juste la confusion. Passez progressivement à un seul canal."
+      "heading": "Ce que CelAssistPro ne fait pas",
+      "paragraphs": [
+        "CelAssistPro ne tient pas de permanence téléphonique et ne prend pas d'appels à la place de ses clients : la réservation en ligne reste un outil que vous gardez en main. CelAssistPro peut en revanche vous aider à le mettre en place, dans le cadre d'une organisation administrative plus large. Pour en parler, un [contact par le formulaire](/contact) suffit."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Les clients vont-ils la trouver trop froide ou trop impersonnelle ?",
-      "answer": "Non. Après une ou deux semaines, la plupart trouvez ça normal. Vous pouvez même noter dans votre email : « Prendre rendez-vous en ligne, c'est plus rapide pour vous et pour moi ». Ils comprendront."
+      "question": "Prise de rendez-vous en ligne gratuit : laquelle choisir ?",
+      "answer": "Plusieurs outils proposent une formule gratuite pour un usage simple. Comparez ce qu'elle limite (nombre de rendez-vous, rappels, personnalisation, synchronisation avec votre agenda) et lisez les conditions de traitement des données de vos clients. Un outil gratuit qui ne rappelle pas les rendez-vous ne fera pas gagner grand-chose."
+    },
+    {
+      "question": "Prise de rendez-vous en ligne pour un cabinet de kiné : combien de temps on gagne ?",
+      "answer": "Il n'existe pas de chiffre valable pour tous les cabinets. Le calcul est simple : nombre de demandes par semaine, multiplié par le nombre d'échanges qu'elles provoquent aujourd'hui, multiplié par la durée moyenne d'un échange. Le gain est la différence, à condition que le rappel automatique soit en service."
+    },
+    {
+      "question": "Prise de rendez-vous en ligne : quel outil choisir ?",
+      "answer": "Choisissez un outil qui lit vos disponibilités, envoie un rappel et se synchronise avec votre agenda. Le meilleur est celui que vous utiliserez chaque semaine, sans refaire vos réglages à chaque changement d'horaire."
     }
-  ]
+  ],
+  "related": ["reponse-automatique-email-entreprise", "trier-emails-automatiquement", "taches-a-automatiser-tpe"]
 };

@@ -2,38 +2,25 @@ import type { MetadataRoute } from "next";
 import { blogArticles } from "@/lib/blog";
 import { SEO, SITE } from "@/lib/site-data";
 
-// À mettre à jour lors d'une évolution réelle du contenu des pages fixes.
-const PAGES_LAST_MODIFIED = "2026-08-17";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const priorities: Record<string, number> = {
-    "/": 1,
-    "/assistante-administrative": 0.9,
-    "/assistante-administrative-btp": 0.9,
-    "/bras-droit-automatisation": 0.9,
-    "/mes-offres": 0.8,
-    "/contact": 0.9,
-    "/a-propos": 0.7,
-    "/cas-concrets": 0.7,
-    "/diagnostic": 0.7,
-    "/blog": 0.8,
-    "/mentions-legales": 0.3,
-    "/politique-confidentialite": 0.3,
-  };
+  // Dates réelles : `lastModified` de chaque page fixe, `dateModified` de chaque article.
+  // `changefreq` et `priority` ne sont pas utilisés par Google : ils sont omis.
+  const latestArticle = blogArticles.reduce(
+    (latest, article) => (article.dateModified > latest ? article.dateModified : latest),
+    "",
+  );
 
   const pages = Object.values(SEO).map((page) => ({
-    // La home est déclarée avec son slash final, comme sa balise canonical.
     url: `${SITE.baseUrl}${page.path}`,
-    lastModified: PAGES_LAST_MODIFIED,
-    changeFrequency: "monthly" as const,
-    priority: priorities[page.path] ?? 0.5,
+    lastModified:
+      page.path === "/blog" && latestArticle > page.lastModified ? latestArticle : page.lastModified,
   }));
 
   const articles = blogArticles.map((article) => ({
     url: `${SITE.baseUrl}/blog/${article.slug}`,
     lastModified: article.dateModified,
-    changeFrequency: "monthly" as const,
-    priority: 0.65,
+    // Sitemap d'images : la couverture de l'article, pour Google Images.
+    ...(article.image ? { images: [`${SITE.baseUrl}${article.image.src}`] } : {}),
   }));
 
   return [...pages, ...articles];

@@ -3,64 +3,72 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "facturation-recurrente-consultant",
   "title": "Consultants : mettre sa facturation récurrente en pilote automatique",
-  "description": "La facturation récurrente doit être suivie sans dépendre de la mémoire du consultant.",
+  "seoTitle": "Facturation freelance récurrente : pilote automatique",
+  "description": "Consultant avec des forfaits mensuels ? Programmez l'émission des factures, les revalorisations et le suivi des paiements, sans dépendre de votre mémoire.",
   "category": "Métiers",
-  "keyword": "facturation récurrente consultant",
+  "keyword": "assistant facturation freelance",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/facturation-recurrente-consultant.jpg",
     "alt": "Trois personnes en tenue professionnelle échangeant autour d'un ordinateur portable en réunion",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Votre force, en tant que consultant, c'est d'exceller dans votre domaine d'expertise. Votre faiblesse habituelle, c'est d'oublier d'envoyer une facture récurrente ou de ne pas appliquer la revalorisation annuelle. Ce sont des fuites de revenu silencieuses et systématiques."
+    "Un consultant qui facture des forfaits mensuels peut automatiser son envoi de factures, ses revalorisations et le suivi de ses paiements. Une échéance fixée dans le contrat, un outil qui programme l'émission et un contrôle mensuel des règlements suffisent. La facturation ne dépend alors plus de la mémoire du consultant.",
+    "Une assistante peut prendre en charge ce circuit à distance : le détail de l'accompagnement est présenté sur la page [assistance administrative à distance](/assistante-administrative)."
   ],
   "sections": [
     {
-      "heading": "La récurrence est un piège de mémoire, pas d'organisation",
+      "heading": "Une facturation récurrente qui repose sur la mémoire",
       "paragraphs": [
-        "Vous avez trois clients sous contrat mensuel récurrent. Vous gagnez 3 000 euros par mois rien que sur eux. Vous croyez que vous ne pouvez pas oublier d'envoyer les factures. Et puis, une mission urgente surgit, vous êtes absorbé par un projet client, et vous réalisez en novembre que vous avez oublié septembre. Vous envoyez une facture en retard, le client conteste, vous perdez du temps et de la confiance. Ou pire : vous n'y pensez jamais et vous oubliez six mois de facturation sans y revenir.",
-        "Le problème n'est pas l'organisation abstraite, c'est l'absence de système qui surpasse votre mémoire. Tant que c'est vous qui décidez « je vais penser à facturer », vous allez oublier. Tant que c'est vous qui appliquez les revalorisations tarifaires « au cas par cas », vous allez en oublier une."
+        "Prenons un exemple fictif : trois clients sous contrat mensuel, pour 3 000 euros au total chaque mois. Une mission urgente survient, un projet client vous absorbe, et vous découvrez en novembre que la facture de septembre n'a jamais été envoyée. Le client la conteste, et vous perdez du temps et de la confiance.",
+        "Le problème n'est pas une question d'organisation abstraite : il tient à l'absence d'un système qui ne dépende pas de votre attention. Tant que vous décidez vous-même de penser à facturer, vous risquez d'oublier."
       ]
     },
     {
-      "heading": "Le système minimal qui ne coûte presque rien",
+      "heading": "Un système simple, qui demande peu d'efforts",
       "paragraphs": [
-        "Vous avez deux options. Soit vous utilisez un outil de facturation léger qui vous envoie un rappel au bon moment (beaucoup de logiciels faciles d'accès offrent cela). Soit vous déléguez ce rappel à une assistante (une ou deux heures par mois, rien d'exceptionnel). L'important : le système doit être AUTOMATIQUE. Vous ne devez rien décider, rien mémoriser. Le jour 25 du mois, la facture est générée et prête à être envoyée. Vous la vérifiez, vous l'envoyez, c'est fini."
+        "Deux options existent. Un logiciel de facturation peut émettre les factures et rappeler les échéances, comme le proposent beaucoup d'outils courants. Ou bien une assistante prépare ces factures chaque mois, pour un temps proportionné au volume.",
+        "Dans les deux cas, le système doit être automatique : vous ne décidez rien, vous ne mémorisez rien. À date fixe, la facture est prête ; vous la vérifiez et vous l'envoyez. Pour les freelances du numérique, la question se pose dans les mêmes termes, comme le montre [l'article sur l'administratif des indépendants de la tech](/blog/administratif-freelance-tech)."
       ]
     },
     {
-      "heading": "Où la plupart des consultants se trompent",
+      "heading": "Trois endroits où la facturation se perd",
       "list": [
-        "Ils gardent plusieurs calendriers ou rythmes de facturation selon les clients. Janvier, ça sort le 15. Février, c'est le 20. Impossible de tenir sur la durée.",
-        "Ils oublient d'appliquer les revalorisations tarifaires. Un client est facturé 2 000 euros depuis trois ans. Vous aviez prévu 2 % par an. Il en reçoit la facture une fois et vous la laissez tomber. Vous perdez 120 euros cette année, 240 l'année suivante.",
-        "Ils ne vérifient pas que les paiements arrivent. Parfois un client « oublie » de payer. Vous êtes trop occupé pour relancer. Vous découvrez après deux mois qu'il vous doit cinq mois de factures impayées. Relancer est alors maladroit."
+        "Plusieurs calendriers de facturation selon les clients : chaque échéance différente se gère mal sur la durée.",
+        "Des revalorisations oubliées. Prenons un exemple fictif : un forfait mensuel de 2 000 euros, revalorisé de 2 % par an. Une hausse non appliquée représente 40 euros par mois, soit 480 euros par an.",
+        "Des paiements non vérifiés. Un client qui oublie de régler se découvre parfois après deux mois d'impayés, et relancer devient alors plus délicat."
       ]
     },
     {
-      "heading": "Comment structurer une mission au forfait récurrent",
+      "heading": "Structurer une mission au forfait récurrent",
       "steps": [
-        "Définir dans le contrat une date d'émission précise (le 25 de chaque mois, par exemple) et une date limite de paiement (net 15 ou net 30)",
-        "Spécifier les modalités de variation si le volume change (un minimum mensuel, puis facturation supplémentaire si dépassement)",
-        "Inclure une clause de revalorisation annuelle (2 à 3 %) pour les contrats de plus d'un an",
-        "Programmer les factures une fois pour toutes dans votre outil (dès janvier ou dès la signature du contrat)",
-        "Mettre en place un suivi mensuel des paiements avant de passer à la prochaine facturation"
+        "Fixer dans le contrat une date d'émission précise, par exemple le 25 de chaque mois, et un délai de paiement, par exemple 30 jours.",
+        "Prévoir les variations de volume : un montant minimum mensuel, puis une prestation complémentaire chiffrée à l'avance lorsque le volume convenu est dépassé.",
+        "Inscrire une clause de revalorisation annuelle, par exemple de 2 % à 3 %, pour les contrats de plus d'un an.",
+        "Programmer les émissions dès la signature du contrat, dans votre outil de facturation.",
+        "Vérifier chaque mois les paiements avant de passer à la facturation suivante."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Comment facturer quand le volume de travail varie beaucoup chaque mois ?",
-      "answer": "Fixez un montant minimum mensuel et une facturation supplémentaire si dépassement. Exemple : 2 500 euros minimum, plus 100 euros par heure si vous dépassez 25 heures. C'est clair pour vous et pour le client, et c'est contractuel."
+      "question": "Comment facturer quand le volume de travail varie beaucoup d'un mois à l'autre ?",
+      "answer": "Fixez un montant minimum mensuel et une facturation complémentaire au-delà d'un volume convenu. Cette règle est claire pour vous comme pour le client, et elle figure dans le contrat."
     },
     {
-      "question": "Dois-je augmenter les tarifs chaque année ? N'est-ce pas risqué ?",
-      "answer": "Oui, progressivement et de manière transparente. Incluez une clause de revalorisation dans le contrat (2 à 3 % par an, indexée sur l'inflation par exemple). C'est normal et attendu. Un client qui refuse une hausse de 2 % n'est pas un bon client pour une relation durable."
+      "question": "Dois-je augmenter mes tarifs chaque année ? N'est-ce pas risqué ?",
+      "answer": "Oui, progressivement et de façon transparente. Une clause de revalorisation, par exemple de 2 % à 3 % par an, est courante et prévisible : elle se prévoit dès la signature du contrat."
     },
     {
-      "question": "Un contrat mensuel récurrent peut-il être interrompu rapidement si le client change d'avis ?",
-      "answer": "Cela dépend de votre contrat. Définissez une durée minimale (six mois, par exemple) et un préavis de rupture (30 jours). Ainsi, vous n'êtes pas pris par surprise et le client peut partir tranquillement."
+      "question": "Un contrat mensuel peut-il être interrompu rapidement si le client change d'avis ?",
+      "answer": "Cela dépend du contrat. Une durée minimale, par exemple six mois, et un préavis de rupture, par exemple 30 jours, donnent de la visibilité aux deux parties. Le détail relève de votre contrat, à faire vérifier si besoin."
     }
+  ],
+  "related": [
+    "administratif-freelance-tech",
+    "assistante-administrative-profession-liberale",
+    "gestion-administrative-commercant"
   ]
 };

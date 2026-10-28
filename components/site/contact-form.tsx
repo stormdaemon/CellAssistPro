@@ -46,7 +46,15 @@ export function ContactForm() {
   }
 
   return (
-    <form className="contact-form" name="contact" onSubmit={handleSubmit}>
+    // method/action : repli sans JavaScript (envoi natif vers Netlify Forms) ; sinon le
+    // navigateur enverrait un GET avec les données personnelles dans l'URL.
+    <form
+      className="contact-form"
+      name="contact"
+      method="post"
+      action="/__forms.html"
+      onSubmit={handleSubmit}
+    >
       <input type="hidden" name="form-name" value="contact" />
       <p className="sr-only" aria-hidden="true">
         <label>

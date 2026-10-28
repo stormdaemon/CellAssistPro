@@ -16,19 +16,20 @@ export default function DiagnosticPage() {
 
       <PageHero
         eyebrow="Évaluer mon temps perdu — 5 min"
-        title="5 minutes pour savoir combien de temps vous perdez vraiment"
+        title="Combien d'heures l'administratif vous coûte-t-il chaque semaine ?"
       >
         <p>
-          Répondez à 10 questions simples sur votre quotidien de dirigeant. Votre score s'affiche
+          Répondez à 10 questions sur votre quotidien de dirigeant. Votre score s'affiche
           immédiatement, avec votre profil et les 3 premières actions pour récupérer du temps dès
-          cette semaine. Gratuit, sans email, sans engagement.
+          cette semaine. Gratuit et sans engagement : aucune donnée n'est collectée, le calcul se fait
+          dans votre navigateur, sans compte ni e-mail.
         </p>
       </PageHero>
 
       <section className="section section--white">
         <div className="container diagnostic-layout">
           <div className="diagnostic-side">
-            <h2>Combien d'heures votre administratif vous vole-t-il chaque semaine ?</h2>
+            <h2>Répondez selon votre réalité</h2>
             <p>
               Pour chaque question, répondez selon votre réalité des dernières semaines — pas celle
               que vous aimeriez avoir. Le résultat n'en sera que plus utile.

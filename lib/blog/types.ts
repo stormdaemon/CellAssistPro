@@ -21,9 +21,21 @@ export type BlogImage = {
   credit?: string;
 };
 
+/** Source citée en fin d'article (texte officiel en priorité). */
+export type BlogSource = {
+  label: string;
+  url: string;
+};
+
+/**
+ * Les textes (intro, paragraphes, listes, étapes, réponses de FAQ) acceptent des liens au
+ * format `[ancre descriptive](/chemin)` ou `[ancre](https://…)`, rendus par `RichText`.
+ */
 export type BlogArticle = {
   slug: string;
   title: string;
+  /** Balise <title> (60 caractères au plus, sans le nom de la marque). À défaut : `title`. */
+  seoTitle?: string;
   description: string;
   category: string;
   keyword: string;
@@ -36,7 +48,16 @@ export type BlogArticle = {
   sections: BlogSection[];
   faq?: BlogFaqItem[];
   image?: BlogImage;
+  /** Sources consultées, affichées en fin d'article. */
+  sources?: BlogSource[];
+  /** Slugs proposés dans « À lire aussi » (sinon : rotation dans la catégorie). */
+  related?: string[];
 };
+
+/** Retire la syntaxe des liens `[ancre](url)` pour ne garder que l'ancre. */
+export function stripLinks(text: string): string {
+  return text.replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1");
+}
 
 const WORDS_PER_MINUTE = 220;
 
@@ -50,7 +71,9 @@ export function readingMinutes(article: BlogArticle): number {
       ...(section.steps ?? []),
     ]),
     ...(article.faq ?? []).flatMap((item) => [item.question, item.answer]),
-  ].join(" ");
+  ]
+    .map(stripLinks)
+    .join(" ");
 
   return Math.max(1, Math.round(text.split(/\s+/).length / WORDS_PER_MINUTE));
 }

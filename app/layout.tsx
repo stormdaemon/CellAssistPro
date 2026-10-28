@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { RevealOnScroll } from "@/components/site/reveal-on-scroll";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
-import { organizationJsonLd } from "@/lib/structured-data";
+import { siteGraphJsonLd } from "@/lib/structured-data";
 import { SITE } from "@/lib/site-data";
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
@@ -35,9 +35,8 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
   },
-  alternates: {
-    canonical: "/",
-  },
+  // Pas de canonical ici : chaque page déclare la sienne (pageMetadata), sinon une page
+  // sans métadonnées hériterait de celle de l'accueil.
   openGraph: {
     title: "Assistante administrative & bras droit en Charente | CelAssistPro",
     description:
@@ -79,7 +78,7 @@ export default function RootLayout({
             src="https://plausible.io/js/script.js"
           />
         ) : null}
-        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={siteGraphJsonLd()} />
         <SiteHeader />
         <RevealOnScroll />
         {children}

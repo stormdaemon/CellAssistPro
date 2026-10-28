@@ -1,59 +1,108 @@
 import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
-  "slug": "choisir-plateforme-facturation-agreee",
-  "title": "Comment choisir sa plateforme de facturation quand on n'y connaît rien",
-  "description": "Le bon choix n'est pas forcément l'outil le plus complet, mais celui que vous utiliserez vraiment.",
-  "category": "Facturation électronique",
-  "keyword": "plateforme facturation électronique choisir",
-  "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
-  "image": {
-    "src": "/images/blog/choisir-plateforme-facturation-agreee.jpg",
-    "alt": "Femme signant un document à son bureau, ordinateur portable ouvert à côté",
-    "credit": "Photo : Pexels"
+  slug: "choisir-plateforme-facturation-agreee",
+  title: "Quelle plateforme agréée choisir pour la facturation électronique ?",
+  seoTitle: "Quelle plateforme agréée choisir ? Critères et méthode",
+  description:
+    "Choisir une plateforme agréée : liste officielle impots.gouv.fr, annuaire, fonctions gratuites ou payantes, questions à poser, changement.",
+  category: "Facturation électronique",
+  keyword: "quelle plateforme agréée choisir",
+  datePublished: "2026-06-12",
+  dateModified: "2026-10-28",
+  image: {
+    src: "/images/blog/choisir-plateforme-facturation-agreee.jpg",
+    alt: "Femme signant un document à son bureau, ordinateur portable ouvert à côté",
+    credit: "Photo : Pexels",
   },
-  "intro": [
-    "Chercher la plateforme de facturation idéale, c'est mettre la charrue avant les bœufs si vous ne savez pas d'abord ce dont vous avez vraiment besoin. Le bon outil est celui que vous utiliserez au quotidien sans soupirer."
+  intro: [
+    "Une plateforme agréée est un opérateur privé, immatriculé par l'administration pour trois ans renouvelables, qui assure les fonctions de la réforme pour la réception et l'émission des factures électroniques. Depuis le 1er septembre 2026, chaque entreprise assujettie à la TVA doit pouvoir s'appuyer sur une plateforme agréée pour recevoir ses factures. Le choix est libre : une ou plusieurs plateformes, et la possibilité de changer à tout moment.",
+    "Pour choisir sans vous tromper, partez de la liste officielle, puis comparez les fonctions dont vous avez réellement besoin. Le cadre général de la réforme est expliqué sur la page [facturation électronique](/facturation-electronique).",
   ],
-  "sections": [
+  sections: [
     {
-      "heading": "Avant de regarder les outils : vérifiez ce que vous faites vraiment",
-      "paragraphs": [
-        "Une erreur classique : ouvrir un comparatif d'outils et être submergé par le choix. L'outil idéal n'existe pas. Il existe des outils adaptés à ce que vous faites. Avant de cliquer sur la première démo, demandez-vous : combien de factures je crée par mois ? Qui doit les recevoir et les traiter ? Mes clients paient uniquement par virement, ou faut-il gérer d'autres modes ? Le comptable a-t-il besoin de tout vérifier ou simplement de récupérer les synthèses en fin de mois ? Avez-vous des clients qui demandent des devis préalables ? Doit-il y avoir un lien automatique entre un devis accepté et la facture correspondante ?",
-        "Un critère technique s'ajoute désormais à cette réflexion : avec la réforme de la facturation électronique, vos factures devront transiter par une plateforme de dématérialisation partenaire (PDP), agréée par l'administration. Certains outils de facturation sont eux-mêmes des PDP ou sont déjà raccordés à une PDP ; d'autres ne le sont pas encore. Vérifiez ce point avant de vous engager, pour éviter d'avoir à changer d'outil une seconde fois en 2026 ou en 2027.",
-        "Une plateforme usine à gaz qui fait mille choses que vous ne ferez jamais sera une source d'angoisse permanente. Une plateforme trop simple qui ne sauvegarde pas automatiquement les données auprès de votre comptable vous fera revenir au copier-coller à la main. La bonne plateforme répond à 100 % de vos besoins réels et à 0 % de vos besoins imaginaires."
-      ]
+      heading: "Partir de la liste officielle, pas des publicités",
+      paragraphs: [
+        "La liste des plateformes agréées est publiée sur [impots.gouv.fr](https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees). Elle sert de point de départ, avant toute démonstration commerciale. Un logiciel de facturation présenté comme « compatible » n'est pas une plateforme agréée : il doit se connecter à l'une d'elles pour que vos factures circulent correctement.",
+        "Le terme ancien « PDP » (plateforme de dématérialisation partenaire) ne doit plus être employé seul : on parle désormais de plateforme agréée, anciennement appelée PDP. Le portail public Chorus Pro ne sert qu'aux factures adressées au secteur public ; il n'est pas un outil de facturation entre entreprises.",
+      ],
     },
     {
-      "heading": "Les trois critères qui tranchent vraiment",
-      "list": [
-        "Facilité d'une facture simple : pouvez-vous en créer une en moins d'une minute, ou faut-il naviguer trois écrans ?",
-        "Intégration avec votre comptable : les données lui arrivent-elles lisibles, ou devrez-vous les recopier ?",
-        "Possibilité de changer : pouvez-vous exporter vos données et partir si vous n'êtes pas satisfait, ou êtes-vous enfermé ?"
-      ]
+      heading: "Vérifier son inscription à l'annuaire",
+      paragraphs: [
+        "Une fois la plateforme choisie, votre entreprise est inscrite dans l'annuaire de l'administration par son intermédiaire. Demandez à la plateforme la confirmation de cette inscription, puis vérifiez-la vous-même. Cette étape vient après le choix, puisqu'elle dépend de la plateforme retenue.",
+      ],
     },
     {
-      "heading": "L'histoire du décorateur qui a choisi juste",
-      "paragraphs": [
-        "Un décorateur d'intérieur en Charente avait trois clients réguliers et quelques chantiers ponctuels. On lui recommande la plateforme « complète » que tout le monde utilise. À la démonstration, il voit : gestion de clients, module de devis en ligne, calendrier partagé, suivi de projet, modèles de communication, analytics. Il est effrayé. Il regarde une plateforme minimaliste recommandée par un confrère artisan : une facture se crée en deux clics, elle se classe automatiquement, un rappel de paiement part à J+15 si nécessaire. Pas plus. Il l'essaie deux semaines gratuitement, la maîtrise en 20 minutes, et l'adopte. Deux ans après, il n'a jamais exploré 90 % de ses fonctionnalités, mais il facture régulièrement sans stress."
-      ]
+      heading: "Les questions à poser avant de vous engager",
+      list: [
+        "Ma plateforme figure-t-elle sur la liste officielle, et mon immatriculation est-elle à jour ? Elle vaut trois ans, renouvelable.",
+        "Comment mes factures arrivent-elles à mon expert-comptable, et dans quel format ?",
+        "Comment reçoit-on les factures émises depuis une autre plateforme ?",
+        "Quelles fonctions sont incluses dans l'offre gratuite, et lesquelles deviennent payantes ?",
+        "Puis-je exporter mes données et changer de plateforme sans perdre mes factures, et à quel coût ?",
+        "Quel accompagnement est prévu si une facture est rejetée, ou si l'envoi échoue à l'approche d'une échéance ?",
+      ],
     },
     {
-      "heading": "Piège courant : croire que plus cher signifie meilleur",
-      "paragraphs": [
-        "Une plateforme premium avec tarif à trois chiffres mensuels offre souvent des fonctions que vous n'utiliserez jamais. Si vos besoins sont simples, une solution à vingt euros par mois peut faire le travail aussi bien. Testez d'abord gratuitement si c'est possible. Regardez les avis, mais méfiez-vous : quelqu'un qui facture mille factures par mois et vous qui en facturez dix n'ont pas les mêmes enjeux. Lisez les avis de gens dans votre secteur ou votre volume."
-      ]
-    }
+      heading: "Gratuit ou payant : regarder les fonctions, pas seulement le prix",
+      paragraphs: [
+        "Des offres gratuites existent pour les besoins simples. Les fonctions avancées sont en revanche souvent payantes. Le bon critère n'est donc pas le prix affiché, mais la liste des fonctions dont vous avez besoin : réception, émission, classement, export vers votre comptable, éventuelles relances.",
+        "Le détail des offres gratuites et de leurs limites figure dans [l'article sur les plateformes agréées gratuites](/blog/plateforme-agreee-gratuite).",
+      ],
+    },
+    {
+      heading: "Un exemple fictif pour se repérer",
+      paragraphs: [
+        "Prenons un exemple fictif : une décoratrice d'intérieur, sans salarié, avec trois clients réguliers et quelques chantiers ponctuels. Une plateforme très complète lui ferait découvrir des fonctions qu'elle n'utiliserait jamais. Elle retient une offre simple, la teste deux semaines avec de vraies factures, puis l'adopte. Si son besoin évolue, elle pourra changer de plateforme sans rupture.",
+      ],
+    },
+    {
+      heading: "Changer de plateforme sans rupture",
+      paragraphs: [
+        "Le changement est possible à tout moment. Avant de basculer, prévenez votre expert-comptable, créez une facture test, exportez-la et vérifiez qu'elle est bien importée chez lui. Après le changement, contrôlez à nouveau votre inscription à l'annuaire, qui passe désormais par la nouvelle plateforme. La méthode pas à pas est dans [l'article sur la facturation électronique au quotidien](/blog/facture-electronique-au-quotidien).",
+      ],
+    },
   ],
-  "faq": [
+  faq: [
     {
-      "question": "L'outil que j'envisage dit qu'il est conforme Factur-X. C'est bon, je dois le choisir ?",
-      "answer": "Être compatible avec le format Factur-X (ou les formats UBL et CII) est une condition nécessaire, mais pas suffisante pour être un bon choix. À partir de 2026-2027, vos factures devront de toute façon transiter par une plateforme agréée (PDP) ou le portail public : vérifiez que l'outil envisagé est bien raccordé à une PDP, ou qu'il en fait office. Vous devez aussi vérifier que l'interface vous convient et qu'elle communique bien avec votre comptable. La conformité réglementaire n'a pas d'impact, à elle seule, sur votre satisfaction quotidienne d'utilisation."
+      question: "L'outil que j'envisage est conforme Factur-X : est-ce suffisant ?",
+      answer:
+        "Non. Factur-X, UBL ou CII sont des formats nécessaires, mais l'outil doit aussi se connecter à une plateforme agréée. Vérifiez auprès de l'éditeur qu'il est raccordé à une plateforme agréée.",
     },
     {
-      "question": "Et si j'essaie un outil et je ne l'aime pas ?",
-      "answer": "Vous pouvez changer. C'est coûteux en énergie (récupérer vos données, les importer ailleurs), mais pas impossible. Avant de vous engager définitivement, testez au moins deux semaines réelles, avec des vraies factures. La plupart des outils offrent un essai gratuit. Utilisez-le pour vraiment travailler, pas seulement regarder les démos."
-    }
-  ]
+      question: "Puis-je avoir plusieurs plateformes agréées ?",
+      answer:
+        "Oui. Le choix est libre : vous pouvez en retenir une ou plusieurs. Une plateforme peut aussi être différente de celle de votre fournisseur ou de celle de votre client.",
+    },
+    {
+      question: "Et si je change d'avis plus tard ?",
+      answer:
+        "Vous pouvez changer de plateforme à tout moment. Préparez la bascule avec une facture test et prévenez votre expert-comptable.",
+    },
+    {
+      question: "Où trouver la liste officielle des plateformes agréées ?",
+      answer:
+        "Sur impots.gouv.fr, dans la page consacrée à la facturation électronique et aux plateformes agréées. Consultez-la avant de comparer les offres.",
+    },
+  ],
+  sources: [
+    {
+      label: "impots.gouv.fr : facturation électronique et plateformes agréées (liste officielle)",
+      url: "https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees",
+    },
+    {
+      label: "impots.gouv.fr : Je découvre la facturation électronique",
+      url: "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+    },
+    {
+      label: "FAQ de la DGFiP « Je découvre la facturation électronique » (PDF)",
+      url: "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/faq---fe_je-decouvre-la-facturation-electronique.pdf",
+    },
+  ],
+  related: [
+    "plateforme-agreee-gratuite",
+    "facture-electronique-au-quotidien",
+    "facturation-electronique-expert-comptable-qui-fait-quoi",
+  ],
 };

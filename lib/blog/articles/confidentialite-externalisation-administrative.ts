@@ -2,78 +2,102 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "confidentialite-externalisation-administrative",
-  "title": "Confidentialité : que deviennent vos données quand vous déléguez ?",
-  "description": "La confidentialité repose sur un cadre contractuel, des accès limités et une habitude de manipuler des données sensibles.",
+  "title": "Externalisation administrative : que deviennent vos données confidentielles ?",
+  "seoTitle": "Externalisation administrative : protéger vos données",
+  "description": "Déléguer ne dispense pas de protéger vos données : contrat, accès limités et rôle de sous-traitant selon le RGPD. Repères CNIL et bonnes pratiques.",
   "category": "Délégation",
-  "keyword": "confidentialité externalisation administrative",
+  "keyword": "externalisation administrative",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/confidentialite-externalisation-administrative.jpg",
     "alt": "Clé insérée dans la serrure d'un meuble de bureau blanc, symbole d'un accès verrouillé et sécurisé",
     "credit": "Photo : Jakub Zerdzicki / Pexels"
   },
   "intro": [
-    "Vos données ne disparaissent pas en externalisant. Elles se sécurisent différemment — par des limites claires, une personne fiable et un processus documenté."
+    "Confier son administratif à une personne extérieure ne fait pas disparaître vos obligations sur les données. La personne qui traite des données pour votre compte peut être qualifiée de sous-traitant au sens du RGPD, et la relation se cadre par écrit. Accès limités, clause de confidentialité, outils sécurisés et révocation des accès en fin de mission forment le socle.",
+    "Cet article présente le cadre, les accès à limiter et les écueils. Il ne remplace pas un avis juridique : pour une situation précise, rapprochez-vous d'un juriste. Le contexte général de la prestation figure sur la page [assistante administrative](/assistante-administrative)."
   ],
   "sections": [
     {
-      "heading": "Le cadre légal et contractuel qui protège",
+      "heading": "Le cadre : une personne qui traite vos données pour votre compte",
       "paragraphs": [
-        "Quand vous déléguez, vous ne risquez rien en droit. Un contrat de confidentialité est simplement un accord écrit qui précise : qui accède à quoi, pour faire quoi, et jusqu'où vont les responsabilités. Ce document n'a pas besoin d'être signé chez un notaire. Une page claire, lue et acceptée avant le travail, suffit complètement. Légalement, même un e-mail où vous exposez les règles et où l'autre répond « d'accord » crée un engagement valable.",
-        "Beaucoup de dirigeants s'imaginent que le vrai risque vient de malveillance. C'est rare. Le vrai risque vient de flou : pas de limite claire, pas de responsable clairement nommé, pas de trace écrite. Si une assistante accède à « presque tout » parce que vous aviez la flemme de définir le périmètre, vous vous exposez à des problèmes qui auraient été évitables. Une confidentialité bien posée élimine 90 % des conflits avant qu'ils ne naissent."
+        "La CNIL définit le sous-traitant comme une personne physique ou morale qui traite des données « pour le compte d'un autre organisme », appelé responsable de traitement, dans le cadre d'une prestation de services ([définition du sous-traitant sur cnil.fr](https://www.cnil.fr/fr/definition/sous-traitant)). Une indépendante qui gère vos factures ou vos fichiers clients peut entrer dans cette définition.",
+        "Le RGPD demande que cette relation soit encadrée par un contrat ou un autre acte juridique. Celui-ci prévoit notamment que le sous-traitant ne traite les données que sur instruction documentée du responsable ; que son personnel s'engage à la confidentialité ou y est soumis par la loi ; qu'il prend les mesures de sécurité prévues à l'article 32 ; et qu'à la fin de la prestation il supprime les données ou les restitue, au choix du responsable, en détruisant les copies, sauf obligation légale de les conserver ([chapitre IV du RGPD, sur cnil.fr](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4)).",
+        "Une clause de confidentialité est donc utile, mais elle ne suffit pas à elle seule : ces points se rédigent dans le contrat de prestation ou dans un avenant. Chez CelAssistPro, chaque mission comporte une clause de confidentialité systématique, et les outils utilisés sont conformes au RGPD. Demandez le détail avant de signer."
       ]
     },
     {
-      "heading": "Structurer les accès par besoin précis",
+      "heading": "Limiter les accès à ce qui est nécessaire",
       "list": [
-        "Dossier partagé : elle voit le dossier « Gestion admin », rien d'autre.",
-        "Noms de clients : elle utilise les codes internes, jamais les marges ou contrats sensibles.",
-        "Finances : elle sait le montant des factures, pas votre marge réelle ou votre trésorerie.",
-        "Données sensibles : elle ne télécharge rien sauf sur un appareil chiffré chez elle.",
-        "Durée des accès : révoqués immédiatement dès que le travail se termine."
+        "Dossier partagé : la personne voit le dossier « gestion administrative », et rien d'autre.",
+        "Clients : elle utilise les codes internes plutôt que les contrats ou les marges.",
+        "Finances : elle connaît le montant des factures, pas votre trésorerie ni votre marge réelle.",
+        "Fichiers : elle n'en télécharge aucun, sauf sur un appareil protégé et chiffré.",
+        "Durée : les accès sont révoqués dès la fin de la mission."
       ]
     },
     {
-      "heading": "Un exemple concret : le contrat en pratique",
+      "heading": "Un exemple fictif de cadrage écrit",
       "paragraphs": [
-        "Une petite consultante confie la pré-comptabilité à une assistante indépendante. Elle rédige un accord très simple : accès au dossier mensuel, les factures clients et fournisseurs qu'elle classe, rien d'autre. Interdiction formelle de discuter des clients ou des montants hors contexte professionnel. Obligation de restituer ou détruire les copies avant fermeture de la collaboration. Confidentialité postérieure garantie deux ans après. Aucune complication, une confiance fondée. Si l'assistante quitte, elle n'a plus d'accès le jour même."
+        "Exemple fictif : une consultante confie la pré-comptabilité de son cabinet à une indépendante. L'accord tient en une page : accès au dossier mensuel (factures clients et fournisseurs à classer), rien d'autre ; interdiction de parler des clients ou des montants hors du cadre professionnel ; restitution ou destruction des copies à la fin de la collaboration ; confidentialité maintenue deux ans après la fin de la mission. Si la collaboration s'arrête, les accès cessent le jour même."
       ]
     },
     {
-      "heading": "Ce qui rassure vraiment",
+      "heading": "Ce qui rassure en pratique",
       "steps": [
-        "Écrire ensemble le périmètre exact : le dirigeant explique ce qu'il faut toucher, et seulement cela.",
-        "Configurer les accès informatiques pour qu'il soit matériellement impossible d'aller au-delà.",
-        "Mettre par écrit les trois à quatre règles de base (pas de copie personnelle, pas de discussion externe, etc.).",
-        "Vérifier la première semaine en consultant l'historique des documents consultés ou modifiés.",
-        "Maintenir un point régulier (mensuel) pour discuter de la confidentialité si besoin."
+        "Écrire ensemble le périmètre : vous expliquez ce qu'il faut toucher, et seulement cela.",
+        "Régler les accès informatiques pour que tout accès au-delà du périmètre soit techniquement impossible.",
+        "Mettre par écrit trois ou quatre règles de base : pas de copie personnelle, pas de discussion des dossiers à l'extérieur, retour des fichiers en fin de mission.",
+        "Vérifier pendant la première semaine l'historique des documents consultés ou modifiés.",
+        "Prévoir un point régulier sur la confidentialité, au moment de la revue du périmètre."
       ]
     },
     {
       "heading": "Les écueils à éviter",
       "paragraphs": [
-        "Ne pas rédiger le cadre de confidentialité signé : vous laissez la porte ouverte à des malentendus impossibles à résoudre après coup. Une phrase écrite aujourd'hui épargne une dispute demain."
+        "Ne pas rédiger le cadre expose à des malentendus impossibles à régler après coup. Une phrase écrite aujourd'hui évite une dispute demain."
       ],
       "list": [
-        "Laisser accéder à bien plus qu'il n'est nécessaire : si quelqu'un gère les relances, elle n'a pas besoin de voir vos contrats clients ou vos marges réelles.",
-        "Oublier la révocation d'accès : c'est l'erreur la plus courante. Vous terminez une collaboration et vous laissez les accès actifs « au cas où ». C'est un risque inutile.",
-        "Compter sur la confiance personnelle seule sans formalisation : la confiance peut fléchir face à une mauvaise passe. Le cadre écrit la protège."
+        "Donner accès à bien plus que nécessaire : une personne chargée des relances n'a pas besoin de vos contrats clients ni de vos marges.",
+        "Oublier la révocation des accès : c'est l'erreur la plus courante. Les accès restent actifs « au cas où », sans raison.",
+        "Compter sur la seule confiance : elle peut fléchir face à une mauvaise passe. Le cadre écrit protège la relation, vous comme elle."
+      ]
+    },
+    {
+      "heading": "Le cas des professions soumises au secret professionnel",
+      "paragraphs": [
+        "Si votre activité est soumise au secret professionnel, vérifiez d'abord les règles de votre ordre ou de votre déontologie avant de confier des dossiers. Le cadre écrit et les accès limités restent utiles, mais ils ne tranchent pas à votre place ce qui peut être partagé. Le sujet est développé dans [l'article consacré aux professions libérales](/blog/assistante-administrative-profession-liberale)."
       ]
     }
   ],
   "faq": [
     {
       "question": "Un accord à l'oral suffit-il pour la confidentialité ?",
-      "answer": "Non. À l'oral, c'est votre parole contre la sienne en cas de litige. Par écrit, même dans un email simple, vous avez une preuve. Une phrase suffit : « À compter d'aujourd'hui, vous acceptez de garder la confidentialité de tous les éléments que vous découvrez dans votre mission. Confirmez-vous ? » Une réponse « oui » ou « d'accord » crée un lien."
+      "answer": "Non. À l'oral, c'est votre parole contre la sienne en cas de litige. Par écrit, même dans un courriel simple, vous gardez une preuve. Une question suffit : « Acceptez-vous de garder confidentiels les éléments découverts pendant cette mission ? »"
     },
     {
-      "question": "Peut-on vraiment sécuriser des données sensibles avec une personne en télétravail ?",
-      "answer": "Oui, souvent mieux qu'au bureau. Vous n'imposez pas seulement à l'assistante de respecter la confidentialité — vous imposez aussi des conditions techniques (appareil chiffré, connexion sécurisée). Elle en dépend elle-même pour son travail. Le système est souvent plus robuste qu'un bureau où chacun laisse son ordinateur allumé."
+      "question": "Peut-on sécuriser des données sensibles avec une personne en télétravail ?",
+      "answer": "Oui, si les conditions techniques sont posées : appareil protégé, connexion sécurisée, accès limités à un espace partagé plutôt qu'à des pièces jointes envoyées par courriel. La sécurité tient à ces réglages autant qu'au lieu de travail."
     },
     {
-      "question": "Dois-je auditer vos accès ou vérifier ce qu'une assistante a consulté ?",
-      "answer": "Pas en permanence, ce serait de la surveillance excessive. Vérifiez la première semaine pour être sûr qu'elle explore uniquement le périmètre prévu, puis laissez faire. Si vous sentez un souci, vérifiez ponctuellement. C'est un audit ponctuel, pas une traçabilité continue."
+      "question": "Faut-il contrôler ce que l'assistante consulte ?",
+      "answer": "Pas en permanence, une surveillance constante n'est pas nécessaire. Vérifiez pendant la première semaine que le périmètre est respecté, puis contrôlez ponctuellement."
     }
+  ],
+  "sources": [
+    {
+      "label": "CNIL, définition du sous-traitant",
+      "url": "https://www.cnil.fr/fr/definition/sous-traitant"
+    },
+    {
+      "label": "CNIL, RGPD chapitre IV (article 28 : responsable de traitement et sous-traitant)",
+      "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+    }
+  ],
+  "related": [
+    "externaliser-administratif-sans-perdre-controle",
+    "assistante-administrative-distance-comment-ca-marche",
+    "assistante-administrative-profession-liberale"
   ]
 };

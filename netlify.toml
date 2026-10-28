@@ -6,6 +6,16 @@
   NODE_VERSION = "22"
   BUN_VERSION = "1.3.13"
 
+# Le sous-domaine Netlify servait une copie complète du site : on le renvoie vers le domaine.
+# (Les déploiements de prévisualisation, en « xxx--celassistpro.netlify.app », ne sont pas concernés.)
+[[redirects]]
+  from = "https://celassistpro.netlify.app/*"
+  to = "https://celassistpro.fr/:splat"
+  status = 301
+  force = true
+
+# En-têtes des fichiers statiques. Les réponses produites par Next.js reçoivent les mêmes
+# valeurs via next.config.ts : garder les deux alignés.
 [[headers]]
   for = "/*"
   [headers.values]
@@ -15,6 +25,12 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://plausible.io; style-src 'self' 'unsafe-inline' https://assets.calendly.com; frame-src https://calendly.com; img-src 'self' data: https://*.calendly.com; connect-src 'self' https://calendly.com https://plausible.io; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+
+# Fichier technique de Netlify Forms : ne pas l'indexer.
+[[headers]]
+  for = "/__forms.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

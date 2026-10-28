@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, HardHat, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle2, HardHat, Lock } from "lucide-react";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { pageMetadata } from "@/lib/metadata";
 import {
@@ -18,25 +18,55 @@ import {
 
 export const metadata: Metadata = pageMetadata("home");
 
+/** Les services détaillés, reliés depuis l'accueil (maillage interne). */
+const services = [
+  {
+    href: "/assistante-administrative",
+    label: "Assistance administrative",
+    text: "devis, facturation, relances, pièces comptables et suivi courant, à la mission ou au mois.",
+  },
+  {
+    href: "/secretaire-independante",
+    label: "Secrétariat externalisé",
+    text: "classement, suivi administratif et gestion de la boîte mail pour TPE, artisans et indépendants.",
+  },
+  {
+    href: "/facturation-electronique",
+    label: "Facturation électronique",
+    text: "calendrier 2026-2027, plateforme agréée et mise en conformité, expliqués simplement.",
+  },
+  {
+    href: "/assistante-administrative-btp",
+    label: "Expertise BTP",
+    text: "devis, acomptes, relances et pièces pour le comptable d'une entreprise du bâtiment.",
+  },
+  {
+    href: "/bras-droit-automatisation",
+    label: "Bras droit et automatisation",
+    text: "structurer, automatiser et piloter la gestion pour que l'entreprise dépende moins du dirigeant.",
+  },
+  {
+    href: "/assistante-administrative-charente",
+    label: "Assistante administrative en Charente",
+    text: "déplacements à Angoulême, Cognac, Barbezieux, Jarnac et dans toute la Charente.",
+  },
+];
+
 export default function HomePage() {
   return (
     <main>
       <section className="home-hero">
         <div className="container home-hero__grid">
           <div className="home-hero__content">
-            <p className="eyebrow">
-              Assistante administrative indépendante · Bras droit stratégique · Automatisation
-            </p>
+            <p className="eyebrow">Bras droit stratégique · Automatisation · Charente et à distance</p>
             <h1>
-              Récupérez jusqu'à <span>10 heures par semaine.</span>
+              Assistante administrative indépendante <span>en Charente</span>
             </h1>
-            <p className="home-hero__baseline">
-              Votre gestion avance, même quand vous êtes sur votre métier.
-            </p>
+            <p className="home-hero__baseline">Récupérez jusqu'à 10 heures par semaine.</p>
             <p>
-              J'accompagne les dirigeants de TPE, artisans et indépendants dans leur gestion
-              administrative, commerciale et pré-comptable — de la simple délégation à la
-              structuration complète.
+              Votre gestion avance, même quand vous êtes sur votre métier. J'accompagne les
+              dirigeants de TPE, artisans et indépendants dans leur gestion administrative,
+              commerciale et pré-comptable, de la simple délégation à la structuration complète.
             </p>
             <div className="actions">
               <a className="button button--gold" href={SITE.calendlyUrl}>
@@ -66,6 +96,35 @@ export default function HomePage() {
               priority
               sizes="(min-width: 900px) 45vw, 100vw"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--cream" aria-labelledby="what-title">
+        <div className="container narrow">
+          <div className="section-heading">
+            <h2 id="what-title">Qu'est-ce que CelAssistPro ?</h2>
+          </div>
+          <div className="story">
+            <p>
+              CelAssistPro est l'activité d'assistance administrative indépendante de Céline Bardan,
+              entrepreneuse individuelle installée à Champagne-Vigny, en Charente. Elle prend en
+              charge la gestion administrative, commerciale et pré-comptable des dirigeants de TPE,
+              d'artisans et d'indépendants.
+            </p>
+            <p>
+              Devis et facturation, relances clients, suivi des règlements, préparation des pièces
+              comptables, classement, gestion de la boîte mail : Céline Bardan se déplace dans toute
+              la Charente et travaille à distance partout en France. Au-delà de la délégation, elle
+              structure les circuits de gestion, met en place les outils et automatise les tâches
+              répétitives, jusqu'à des assistants d'intelligence artificielle personnalisés.
+            </p>
+            <p>
+              Céline Bardan cumule trente ans d'expérience administrative et pré-comptable. Depuis
+              2017, elle tient l'administratif d'une entreprise du bâtiment en Charente, BR16BATIMENT.
+              Ses tarifs ne sont pas publiés : chaque mission fait l'objet d'un devis personnalisé,
+              remis sous 48 heures après un diagnostic gratuit de 15 minutes.
+            </p>
           </div>
         </div>
       </section>
@@ -120,10 +179,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--white">
+      <section className="section section--white" aria-labelledby="services-title">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Je ne vends pas des heures. Je construis votre système.</h2>
+            <h2 id="services-title">Mes services</h2>
+            <p>Une mission ponctuelle ou un accompagnement dans la durée.</p>
+          </div>
+          <ul className="task-list">
+            {services.map((service) => (
+              <li key={service.href}>
+                <CheckCircle2 aria-hidden="true" />
+                <span>
+                  <Link href={service.href}>{service.label}</Link> : {service.text}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section section--cream">
+        <div className="container">
+          <div className="section-heading section-heading--center">
+            <h2>Je construis votre système de gestion, étape par étape.</h2>
           </div>
           <ol className="method-timeline">
             {methodSteps.map((step, index) => (
@@ -247,7 +325,10 @@ export default function HomePage() {
             “Si elle fait pour vous le dixième de ce qu'elle fait ici, vous ne reviendrez pas en
             arrière.”
           </blockquote>
-          <p>— Raphaël, dirigeant de BR16BATIMENT</p>
+          <p>
+            — Raphaël, dirigeant de BR16BATIMENT, entreprise dont je tiens l'administratif depuis
+            2017
+          </p>
           <Link href="/cas-concrets">Voir tous les retours clients →</Link>
         </div>
       </section>
@@ -258,7 +339,7 @@ export default function HomePage() {
 
       <section className="final-cta">
         <div className="container">
-          <h2>Et si dans 30 jours, votre gestion tournait sans vous ?</h2>
+          <h2>Et si votre gestion tournait sans vous ?</h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>

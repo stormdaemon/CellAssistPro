@@ -3,61 +3,84 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "echeances-urssaf-tva-assurances",
   "title": "URSSAF, TVA, assurances : ne plus jamais subir une échéance",
-  "description": "Les échéances deviennent moins stressantes quand elles sont visibles, anticipées et suivies.",
+  "seoTitle": "Échéances URSSAF, TVA et CFE : calendrier annuel",
+  "description": "Noter une fois par an les échéances URSSAF, TVA, CFE et assurances, avec un rappel deux semaines avant. Sources officielles et méthode simple.",
   "category": "Organisation TPE",
-  "keyword": "échéances URSSAF TVA anticiper",
+  "keyword": "échéances urssaf",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/echeances-urssaf-tva-assurances.jpg",
     "alt": "Une professionnelle vérifie des documents et des calculs à son bureau",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Les échéances gouvernementales arrivent implacablement. Quand on les anticipe, on respire. Quand on les découvre, on panique."
+    "Les échéances fiscales et sociales reviennent chaque année, à date fixe. Pour les anticiper, notez une fois par an toutes les dates de paiement de votre entreprise (cotisations, TVA, CFE, impôt, contrats d'assurance) dans un calendrier unique, avec un rappel deux semaines avant chaque date limite.",
+    "Le suivi de ce calendrier peut être confié à une [assistante administrative](/assistante-administrative), qui prépare les documents attendus. Les montants et le choix du régime fiscal restent du ressort de votre expert-comptable."
   ],
   "sections": [
     {
-      "heading": "L'erreur : compter sur le courrier",
+      "heading": "L'erreur : attendre le courrier",
       "paragraphs": [
-        "Vous attendez le courrier de l'URSSAF pour savoir quand payer. Erreur. Certains courriers arrivent en retard, d'autres ne vous trouvent pas. Entre-temps, votre délai court. Vous découvrez l'échéance quand elle est déjà urgente ou dépassée. Plus stressant : vous vous payez une pénalité pour retard alors qu'il aurait suffi de noter la date une fois pour toutes. C'est une fuite invisible mais récurrente."
+        "Attendre le courrier pour savoir quand payer est une erreur : un avis peut arriver tard, ou ne pas vous parvenir. Pendant ce temps, le délai court. Une date oubliée se paie souvent en majoration de retard, alors qu'il suffisait de la noter une fois."
       ]
     },
     {
-      "heading": "Construire le calendrier annuel une seule fois",
+      "heading": "Les échéances à noter dans votre calendrier",
+      "list": [
+        "Les cotisations sociales : leurs dates dépendent de votre statut et de votre mode de paiement.",
+        "La TVA, si vous y êtes assujetti : en régime réel normal, la déclaration, mensuelle ou trimestrielle, se dépose et se paie entre le 15 et le 24 du mois qui suit la période. La date exacte figure dans votre espace professionnel sur [impots.gouv.fr](https://www.impots.gouv.fr/professionnel/calendrier-fiscal).",
+        "La CFE (cotisation foncière des entreprises) : la date limite de paiement se situe en général le 15 décembre. Pour les montants les plus élevés, elle peut être payée en deux fois, un acompte en juin et le solde en décembre, comme l'indique [impots.gouv.fr](https://www.impots.gouv.fr/le-prelevement-mensuel-ou-lecheance-de-la-cfe-de-lifer-et-des-taxes-foncieres).",
+        "L'impôt sur les sociétés ou l'impôt sur le revenu, selon votre statut : les dates dépendent de la date de clôture de votre exercice.",
+        "Vos contrats d'assurance professionnelle : la date de renouvellement figure sur chaque contrat."
+      ]
+    },
+    {
+      "heading": "Construire le calendrier une seule fois",
       "steps": [
-        "Appeler votre comptable et demander : « Quelles sont toutes les dates que je dois payer cette année ? » (URSSAF, TVA, impôt sur le revenu, assurances professionnelles, renouvellement de patente, etc.).",
-        "Noter chaque date dans un calendrier dédié — un seul endroit, pas trois post-it et quatre rappels.",
-        "Pour chaque date, demander aussi le montant prévisionnel, pour pouvoir le provisionner progressivement.",
-        "Ajouter un rappel automatique deux semaines avant la date limite.",
-        "Consulter ce calendrier chaque premier du mois."
+        "Demandez à votre expert-comptable la liste des dates de paiement de l'année : URSSAF, TVA, impôts, CFE, assurances.",
+        "Notez chaque date dans un calendrier unique, à un seul endroit, plutôt que sur trois post-it.",
+        "Demandez pour chaque échéance le montant prévisionnel, afin de le provisionner progressivement.",
+        "Ajoutez un rappel deux semaines avant chaque date limite.",
+        "Consultez ce calendrier le premier jour de chaque mois."
       ]
     },
     {
-      "heading": "De la découverte à l'anticipation : un cas type",
+      "heading": "Un cas fictif : de la découverte à l'anticipation",
       "paragraphs": [
-        "Un artisan découvrait ses échéances URSSAF, TVA et assurances selon le courrier qui arrivait. Certains mois il ne savait rien, d'autres il devait gérer deux paiements urgents. Il payait un jour une pénalité, il se demandait pourquoi. Depuis qu'il a noté toutes les dates et créé un rappel deux semaines avant, il ne subit plus rien. Il anticipe. Et il n'a plus payé de pénalité."
+        "Imaginons un artisan qui découvrait ses échéances au gré du courrier. Un mois, il ne savait rien ; un autre, il devait gérer deux paiements urgents, et il a dû payer une majoration. Depuis qu'il a noté toutes les dates et créé un rappel deux semaines avant, il anticipe au lieu de subir."
       ]
     },
     {
-      "heading": "La tentation de la proximité : déléguer cette vigilance",
+      "heading": "Si la trésorerie manque à l'échéance",
       "paragraphs": [
-        "Si vous avez une assistante, elle peut gérer ce calendrier. Elle peut vous relancer deux semaines avant chaque date, elle peut même préparer les documents attendus (bilan, TVA collectée/déductible). Vous ne faites que vérifier et approuver. Le stress baisse énormément : quelqu'un d'autre y pense à votre place, légalement."
+        "Ne laissez pas l'échéance passer sans rien dire. Avant la date limite, prenez contact avec l'organisme concerné : des délais de paiement peuvent être demandés. Attendre que la dette s'accumule rend la discussion plus difficile. Les pièces à conserver se classent comme l'explique [le classement des documents d'entreprise](/blog/classement-documents-entreprise-simple)."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Je dois payer quoi au juste chaque année, et comment le savoir ?",
-      "answer": "Cela dépend de votre statut (SARL, micro-entreprise, libéral) et de votre chiffre d'affaires. Appelez ou emailez votre comptable avec cette question. Il vous donnera la liste exhaustive, les dates exactes et les montants prévisionnels. Notez-le une fois, c'est valable deux ans."
+      "question": "Quelles échéances faut-il noter chaque année ?",
+      "answer": "Cela dépend de votre statut et de votre régime : cotisations URSSAF, TVA, CFE, impôt sur les sociétés ou sur le revenu, assurances professionnelles. Demandez la liste à votre expert-comptable une fois, puis tenez-la à jour."
     },
     {
-      "question": "Comment provisionner sans bloquer cash inutilement ?",
-      "answer": "Divisez le montant annuel par 12 et virez ce montant chaque mois sur un compte d'épargne dédié. Chaque mois c'est facile (petite somme), et quand l'échéance arrive, l'argent y est."
+      "question": "Comment provisionner sans immobiliser de la trésorerie ?",
+      "answer": "Divisez le montant annuel estimé par douze, et mettez cette somme de côté chaque mois sur un compte dédié. Quand l'échéance arrive, l'argent est disponible."
     },
     {
-      "question": "Et si je n'ai pas assez de trésorerie pour tout payer à l'heure ?",
-      "answer": "Parlez à votre URSSAF ou votre centre fiscal AVANT la date limite. Ils peuvent vous proposer un étalement, c'est beaucoup mieux que de payer une pénalité de retard. Mais il faut les appeler, pas attendre que ça s'empile."
+      "question": "Comment demander un échéancier à l'URSSAF ou aux impôts ?",
+      "answer": "Prenez contact avant la date limite, et non après. Les organismes peuvent examiner une demande d'étalement selon votre situation : une demande anticipée est toujours plus simple qu'une régularisation après coup."
     }
-  ]
+  ],
+  "sources": [
+    {
+      "label": "impots.gouv.fr : calendrier fiscal professionnel (consulté le 28/10/2026)",
+      "url": "https://www.impots.gouv.fr/professionnel/calendrier-fiscal"
+    },
+    {
+      "label": "impots.gouv.fr : CFE, prélèvement mensuel ou échéance (modifié le 07/04/2026)",
+      "url": "https://www.impots.gouv.fr/le-prelevement-mensuel-ou-lecheance-de-la-cfe-de-lifer-et-des-taxes-foncieres"
+    }
+  ],
+  "related": ["classement-documents-entreprise-simple", "reorganiser-gestion-administrative-entreprise", "organiser-gestion-creation-entreprise"]
 };

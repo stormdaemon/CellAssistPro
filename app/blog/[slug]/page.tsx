@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, CalendarCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CalendarCheck, CheckCircle2 } from "lucide-react";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { JsonLd } from "@/components/site/json-ld";
+import { RichText } from "@/components/site/rich-text";
 import {
   blogArticles,
   formatArticleDate,
@@ -14,7 +15,7 @@ import {
 } from "@/lib/blog";
 import { commercialLinksFor } from "@/lib/blog/commercial-links";
 import { CTA, SITE } from "@/lib/site-data";
-import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { articleJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
 
 type BlogArticlePageProps = {
   params: Promise<{
@@ -22,50 +23,43 @@ type BlogArticlePageProps = {
   }>;
 };
 
+const BRAND_SUFFIX = " | CelAssistPro";
+const MAX_TITLE_LENGTH = 60;
+
 export function generateStaticParams() {
   return blogArticles.map((article) => ({ slug: article.slug }));
 }
 
+/**
+ * « À lire aussi » : d'abord la sélection éditoriale (`related`), puis une rotation dans la
+ * catégorie (les articles qui suivent celui-ci), pour qu'aucun article ne reste sans lien
+ * venant d'un autre article.
+ */
 function getRelatedArticles(article: BlogArticle) {
-  const sameCategory = blogArticles.filter(
-    (candidate) => candidate.category === article.category && candidate.slug !== article.slug,
-  );
-  const fallback = blogArticles.filter((candidate) => candidate.slug !== article.slug);
+  const picked = (article.related ?? [])
+    .map((slug) => getBlogArticle(slug))
+    .filter((candidate): candidate is BlogArticle => candidate !== undefined);
 
-  return [...sameCategory, ...fallback.filter((candidate) => candidate.category !== article.category)].slice(0, 4);
+  const sameCategory = blogArticles.filter((candidate) => candidate.category === article.category);
+  const position = sameCategory.findIndex((candidate) => candidate.slug === article.slug);
+  const rotation = sameCategory.map(
+    (_, offset) => sameCategory[(position + offset + 1) % sameCategory.length],
+  );
+  const otherCategories = blogArticles.filter((candidate) => candidate.category !== article.category);
+
+  return [...picked, ...rotation, ...otherCategories]
+    .filter(
+      (candidate, index, list) =>
+        candidate.slug !== article.slug &&
+        list.findIndex((other) => other.slug === candidate.slug) === index,
+    )
+    .slice(0, 4);
 }
 
-function articleJsonLd(article: BlogArticle) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: article.title,
-    description: article.description,
-    articleSection: article.category,
-    keywords: article.keyword,
-    inLanguage: "fr-FR",
-    datePublished: article.datePublished,
-    dateModified: article.dateModified,
-    author: {
-      "@type": "Person",
-      name: SITE.founder,
-      jobTitle: "Directrice des opérations externalisée",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: SITE.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE.baseUrl}/images/logos/celassistpro-flame-240.png`,
-      },
-    },
-    mainEntityOfPage: `${SITE.baseUrl}/blog/${article.slug}`,
-    isPartOf: {
-      "@type": "Blog",
-      name: "Blog CelAssistPro",
-      url: `${SITE.baseUrl}/blog`,
-    },
-  };
+/** Titre de la balise <title> : 60 caractères au plus, marque ajoutée seulement si elle tient. */
+function metaTitle(article: BlogArticle) {
+  const base = article.seoTitle ?? article.title;
+  return `${base}${BRAND_SUFFIX}`.length <= MAX_TITLE_LENGTH ? `${base}${BRAND_SUFFIX}` : base;
 }
 
 export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
@@ -86,7 +80,7 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
       };
 
   return {
-    title: `${article.title} | CelAssistPro`,
+    title: metaTitle(article),
     description: article.description,
     alternates: {
       canonical: `/blog/${article.slug}`,
@@ -124,24 +118,41 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
   const relatedArticles = getRelatedArticles(article);
   const commercialLinks = commercialLinksFor(article);
+  const wasUpdated = article.dateModified !== article.datePublished;
 
   return (
     <main>
-      <JsonLd data={breadcrumbJsonLd(article.title, `/blog/${article.slug}`)} />
+      <JsonLd
+        data={breadcrumbJsonLd(article.title, `/blog/${article.slug}`, {
+          label: "Blog",
+          path: "/blog",
+        })}
+      />
       <JsonLd data={articleJsonLd(article)} />
 
       <article className="blog-article">
         <header className="blog-article__hero">
           <div className="container">
-            <Link className="blog-back" href="/blog">
-              <ArrowLeft aria-hidden="true" /> Retour au blog
-            </Link>
+            <nav className="breadcrumb" aria-label="Fil d'Ariane">
+              <ol>
+                <li>
+                  <Link href="/">Accueil</Link>
+                </li>
+                <li>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li aria-current="page">{article.title}</li>
+              </ol>
+            </nav>
             <p className="eyebrow">{article.category}</p>
             <h1>{article.title}</h1>
             <p>{article.description}</p>
             <div className="blog-article__meta">
-              <span>Mis à jour le {formatArticleDate(article.dateModified)}</span>
-              <span>Par {SITE.founder}</span>
+              <span>Publié le {formatArticleDate(article.datePublished)}</span>
+              {wasUpdated ? <span>Mis à jour le {formatArticleDate(article.dateModified)}</span> : null}
+              <span>
+                Par <Link href="/a-propos">{SITE.founder}</Link>
+              </span>
               <span>{readingMinutes(article)} min de lecture</span>
             </div>
           </div>
@@ -151,10 +162,12 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
           <div className="container">
             <figure className="article-cover">
               <div className="article-cover__media">
+                {/* Élément le plus grand au-dessus de la ligne de flottaison : chargé en priorité. */}
                 <Image
                   src={article.image.src}
                   alt={article.image.alt}
                   fill
+                  priority
                   sizes="(min-width: 1160px) 1120px, 100vw"
                 />
               </div>
@@ -176,7 +189,9 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             <section className="article-tile article-tile--wide article-lead">
               <h2>À retenir</h2>
               {article.intro.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph}>
+                  <RichText text={paragraph} />
+                </p>
               ))}
             </section>
 
@@ -187,14 +202,18 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
               >
                 <h2>{section.heading}</h2>
                 {section.paragraphs?.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph}>
+                    <RichText text={paragraph} />
+                  </p>
                 ))}
                 {section.list ? (
                   <ul>
                     {section.list.map((item) => (
                       <li key={item}>
                         <CheckCircle2 aria-hidden="true" />
-                        <span>{item}</span>
+                        <span>
+                          <RichText text={item} />
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -202,7 +221,9 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 {section.steps ? (
                   <ol>
                     {section.steps.map((step) => (
-                      <li key={step}>{step}</li>
+                      <li key={step}>
+                        <RichText text={step} />
+                      </li>
                     ))}
                   </ol>
                 ) : null}
@@ -216,12 +237,40 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                   {article.faq.map((item) => (
                     <details key={item.question}>
                       <summary>{item.question}</summary>
-                      <p>{item.answer}</p>
+                      <p>
+                        <RichText text={item.answer} />
+                      </p>
                     </details>
                   ))}
                 </div>
               </section>
             ) : null}
+
+            {article.sources && article.sources.length > 0 ? (
+              <section className="article-tile article-tile--wide">
+                <h2>Sources</h2>
+                <ul className="article-sources">
+                  {article.sources.map((source) => (
+                    <li key={source.url}>
+                      <a href={source.url} rel="noopener" target="_blank">
+                        {source.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+
+            <section className="article-tile article-tile--wide article-author">
+              <h2>Qui écrit ?</h2>
+              <p>
+                <Link href="/a-propos">{SITE.founder}</Link>, assistante administrative indépendante
+                basée à Champagne-Vigny, en Charente, fondatrice de CelAssistPro. Trente ans
+                d'administratif et de pré-comptabilité, et depuis 2017 la gestion administrative
+                d'une entreprise du bâtiment : les méthodes décrites ici sont celles qu'elle applique
+                chaque semaine.
+              </p>
+            </section>
 
             <section className="article-tile article-tile--wide article-tile--accent">
               <h2>Et pour votre entreprise ?</h2>

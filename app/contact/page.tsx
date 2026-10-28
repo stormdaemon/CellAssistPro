@@ -1,23 +1,37 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CalendarDays, Mail, MapPin, MessageSquareText, PhoneCall } from "lucide-react";
+import { Building2, CalendarDays, Mail, MapPin, MessageSquareText } from "lucide-react";
 import { ContactForm } from "@/components/site/contact-form";
+import { JsonLd } from "@/components/site/json-ld";
 import { pageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site-data";
+import { breadcrumbJsonLd, contactPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("contact");
 
 export default function ContactPage() {
   return (
     <main>
+      <JsonLd data={contactPageJsonLd()} />
+      <JsonLd data={breadcrumbJsonLd("Contact", "/contact")} />
+
       <section className="contact-hero">
         <div className="container contact-hero__grid">
           <div>
             <p className="eyebrow">Contact</p>
-            <h1>Parlons de votre temps</h1>
+            <h1>Contacter Céline Bardan</h1>
             <p>
-              Mission ponctuelle, récurrente ou même très courte — d'une heure de formation à la
-              délégation complète, toutes les portes sont ouvertes. Choisissez la vôtre.
+              Pour contacter CelAssistPro, trois moyens existent. Le plus simple : réserver directement
+              un entretien gratuit de 15 minutes avec Céline Bardan dans son agenda en ligne, sans
+              formulaire ni engagement.
+            </p>
+            <p>
+              Vous pouvez aussi remplir le formulaire de contact ou écrire à{" "}
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a> ; la réponse arrive sous 24 heures
+              ouvrées. CelAssistPro est basée à Champagne-Vigny, en Charente : Céline Bardan se déplace
+              dans tout le département et travaille à distance partout en France. Toutes les demandes
+              sont possibles, d'une heure de formation à la délégation complète de la gestion
+              administrative.
             </p>
           </div>
           <Image
@@ -54,21 +68,28 @@ export default function ContactPage() {
           </article>
 
           <article className="contact-card">
-            <PhoneCall aria-hidden="true" />
+            <Building2 aria-hidden="true" />
             <h2>Coordonnées directes</h2>
             <ul className="contact-list">
+              <li>
+                <Building2 aria-hidden="true" />
+                <span>
+                  CelAssistPro · Céline Bardan EI
+                  <br />
+                  Champagne-Vigny (16250), Charente
+                </span>
+              </li>
               <li>
                 <Mail aria-hidden="true" />
                 <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
               </li>
               <li>
                 <MapPin aria-hidden="true" />
-                Basée en Charente — déplacements dans tout le département · à distance partout en
-                France
+                <span>Zone : sur place en Charente, à distance partout en France</span>
               </li>
               <li>
                 <MapPin aria-hidden="true" />
-                <a href={SITE.googleBusinessUrl}>Voir mon profil Google Business</a>
+                <a href={SITE.googleBusinessUrl}>Voir la fiche Google</a>
               </li>
             </ul>
             <div className="charente-map" aria-hidden="true">

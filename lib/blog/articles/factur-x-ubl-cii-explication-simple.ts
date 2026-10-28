@@ -1,62 +1,104 @@
 import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
-  "slug": "factur-x-ubl-cii-explication-simple",
-  "title": "Factur-X, UBL, CII : ce que ces formats veulent dire pour votre entreprise",
-  "description": "Ces mots techniques cachent une réalité simple : vos factures doivent pouvoir être lues et traitées correctement.",
-  "category": "Facturation électronique",
-  "keyword": "Factur-X c'est quoi",
-  "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
-  "image": {
-    "src": "/images/blog/factur-x-ubl-cii-explication-simple.jpg",
-    "alt": "Mains tapant sur le clavier d'un ordinateur portable face à un écran clair",
-    "credit": "Photo : Pexels"
+  slug: "factur-x-ubl-cii-explication-simple",
+  title: "Factur-X, UBL, CII : les trois formats de la facture électronique, expliqués simplement",
+  seoTitle: "Factur-X c'est quoi ? UBL et CII expliqués simplement",
+  description:
+    "Factur-X, UBL et CII : les formats acceptés pour la facture électronique entre entreprises, ce qu'ils changent pour vous et comment vérifier votre outil.",
+  category: "Facturation électronique",
+  keyword: "factur-x c'est quoi",
+  datePublished: "2026-06-12",
+  dateModified: "2026-10-28",
+  image: {
+    src: "/images/blog/factur-x-ubl-cii-explication-simple.jpg",
+    alt: "Mains tapant sur le clavier d'un ordinateur portable face à un écran clair",
+    credit: "Photo : Pexels",
   },
-  "intro": [
-    "Les trois noms Factur-X, UBL et CII désignent des façons différentes de structurer l'information dans une facture électronique afin qu'un ordinateur puisse la lire automatiquement. Pour vous, le vrai sujet n'est pas le sigle technique mais le résultat : une facture qu'on peut traiter sans perte de temps ni erreur de recopie."
+  intro: [
+    "Factur-X, UBL et CII sont les formats acceptés pour la facture électronique entre entreprises assujetties à la TVA en France. Ils poursuivent le même objectif : donner à la facture des données structurées qu'un logiciel lit sans recopie. Factur-X associe un PDF lisible à des données intégrées ; UBL et CII sont entièrement structurés.",
+    "Vous n'avez pas à choisir la norme vous-même : votre outil et votre plateforme agréée s'en chargent. Ce qui compte, c'est de savoir ce que vos clients et vos fournisseurs attendent, et de vérifier que votre outil sait émettre et recevoir. Le cadre d'ensemble est sur la page [facturation électronique](/facturation-electronique).",
   ],
-  "sections": [
+  sections: [
     {
-      "heading": "Pourquoi une facture a besoin d'une structure",
-      "paragraphs": [
-        "Une facture papier, un PDF simple ou une image : un humain peut lire facilement le montant, la date, le fournisseur. Mais un ordinateur doit recevoir l'information de manière ordonnée, prévisible. Si le montant se trouve parfois à gauche, parfois à droite, parfois caché dans un texte, la machine ne saura pas où le chercher. Un format structuré, c'est un contrat : le montant est toujours au même endroit, la date de facturation aussi, le numéro de TVA également. Cela permet à votre logiciel de comptabilité d'importer directement, sans recopie manuelle.",
-        "Pour la facturation électronique en France, trois formats sont acceptés : Factur-X, un PDF classique auquel est associé un fichier de données structurées invisible à l'œil nu ; UBL et CII, deux formats entièrement en XML, sans version « lisible » pour un humain. Les trois respectent la même norme européenne de contenu, mais ne se présentent pas de la même façon. Ce qui compte pour vous : votre outil de facturation doit pouvoir émettre dans un format accepté par vos clients, et être capable de recevoir celui que choisissent vos fournisseurs."
-      ]
+      heading: "Pourquoi une facture a besoin d'une structure",
+      paragraphs: [
+        "Un humain repère un montant à l'œil, où qu'il se trouve sur la page. Un logiciel doit savoir où le chercher. Un format structuré fonctionne comme un contrat : le numéro de facture, la date, le montant hors taxe, le taux de TVA et le numéro de TVA sont toujours au même endroit. Le logiciel de comptabilité peut alors importer la facture sans recopie manuelle.",
+      ],
     },
     {
-      "heading": "L'impact réel pour vous : temps et erreurs",
-      "paragraphs": [
-        "Prenez deux scénarios. Dans le premier, vous recevez une facture fournisseur en Factur-X ; votre logiciel de gestion l'importe en quelques secondes. La date, le montant, la référence fournisseur vont directement aux bons emplacements. Dans le second, une facture fournisseur en PDF : votre assistant doit recopier les trois informations clés à la main, ce qui introduit un risque d'erreur et consomme dix minutes de travail par facture.",
-        "Pour un service ou un petit commerce recevant 30 factures par mois, c'est déjà 5 heures mensuelles de travail en moins si tout est structuré. Plus important : zéro risque de confondre 152 euros et 125 euros à cause d'une mauvaise lecture."
-      ]
+      heading: "Les trois formats, en clair",
+      paragraphs: [
+        "Les trois formats visent le même contenu, mais ils ne se présentent pas de la même façon.",
+      ],
+      list: [
+        "Factur-X : un format mixte. C'est un PDF lisible par une personne, auquel sont associées des données structurées que les logiciels exploitent.",
+        "UBL : un format entièrement en XML. Il n'est pas conçu pour être lu tel quel par une personne : un logiciel d'affichage est nécessaire.",
+        "CII : un autre format entièrement en XML, qui repose sur la même norme européenne de contenu que UBL et Factur-X.",
+      ],
     },
     {
-      "heading": "Comment vérifier que votre outil gère les bons formats",
-      "steps": [
-        "Demandez à votre prestataire de facturation : « Pouvez-vous émettre en Factur-X ? » (la réponse doit être oui pour 2026)",
-        "Posez aussi : « Pouvez-vous recevoir et importer des factures au format Factur-X ? » (parfois c'est non, c'est un défaut)",
-        "Demandez une démonstration concise de chacun de ces deux flux pour être certain",
-        "Testez avec une vraie facture ou un fichier de test avant la date limite"
-      ]
+      heading: "Un PDF simple ne suffit plus entre entreprises",
+      paragraphs: [
+        "Un PDF simple, un scan ou une facture envoyée par courriel ne sont plus conformes pour les factures échangées entre entreprises assujetties à la TVA. Le détail de ce point est dans [l'article sur le PDF envoyé par courriel](/blog/pdf-email-facture-electronique).",
+        "Pour référence officielle, la page [Je découvre la facturation électronique](https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique) sur impots.gouv.fr présente les formats acceptés.",
+      ],
     },
     {
-      "heading": "Ce qu'il faut éviter à tout prix",
-      "list": [
-        "Supposer que parce qu'un logiciel « gère les formats » il peut les émettre ET les recevoir. Vérifiez les deux.",
-        "Ignorer le sujet jusqu'à août 2026 en pensant que c'est un détail technique. Ce n'est pas technique pour vous, c'est organisationnel.",
-        "Accepter qu'un fournisseur continue d'envoyer un PDF sans structure sous prétexte qu'il ne sait pas faire. Une demande polite et une explication des bénéfices pour lui aussi peuvent changer les choses."
-      ]
-    }
+      heading: "Ce que les formats changent pour votre temps",
+      paragraphs: [
+        "Prenons un exemple fictif. Une facture fournisseur arrive en Factur-X : votre logiciel l'importe en quelques secondes, avec la date, le montant et la référence au bon endroit. Une facture reçue en PDF doit en revanche être recopiée à la main. Si cette recopie prend dix minutes par facture, 30 factures par mois représentent 5 heures de saisie. C'est une hypothèse de calcul, à ajuster à votre réalité.",
+      ],
+    },
+    {
+      heading: "Comment vérifier que votre outil gère les bons formats",
+      steps: [
+        "Demandez à votre prestataire s'il peut émettre en Factur-X, en UBL ou en CII.",
+        "Demandez-lui aussi s'il peut recevoir et importer ces formats : les deux sens doivent être vérifiés séparément.",
+        "Faites confirmer par votre plateforme agréée que la réception et l'émission passent bien par elle.",
+        "Testez avec une facture de test avant la date qui vous concerne, puis faites-la contrôler par votre expert-comptable.",
+      ],
+    },
+    {
+      heading: "Les erreurs à éviter",
+      list: [
+        "Croire qu'un logiciel qui « gère les formats » émet et reçoit forcément : vérifiez les deux sens.",
+        "Penser qu'un outil compatible Factur-X suffit : il doit aussi se connecter à une plateforme agréée.",
+        "Attendre la fin de l'été pour s'y mettre : la réception est obligatoire depuis le 1er septembre 2026.",
+        "Demander à un fournisseur de changer de format sans lui demander à quelle date il passera à l'électronique.",
+      ],
+    },
   ],
-  "faq": [
+  faq: [
     {
-      "question": "Si mon outil de facturation gère Factur-X, suis-je automatiquement en conformité ?",
-      "answer": "Presque. Vous êtes en conformité technique, mais vérifiez auprès de votre expert-comptable que le flux de réception fonctionne bien avec sa méthode. Testez une facture avant septembre 2026."
+      question: "Si mon outil de facturation gère Factur-X, suis-je en conformité ?",
+      answer:
+        "Pas forcément. Le format ne suffit pas : l'outil doit aussi se connecter à une plateforme agréée pour recevoir et émettre. Faites-le vérifier par votre plateforme et par votre expert-comptable.",
     },
     {
-      "question": "Que faire si un de mes trois plus importants fournisseurs ne peut pas passer à Factur-X en 2026 ?",
-      "answer": "Continuez à recevoir ses PDF classiques pendant qu'il effectue la transition. Vous pouvez aussi lui demander aimablement quand il prévoit de passer au format structuré. Beaucoup avancent progressivement, pas tous au même rythme."
-    }
-  ]
+      question: "Quelle différence entre Factur-X et UBL ?",
+      answer:
+        "Factur-X est un PDF lisible qui contient des données structurées. UBL est un format entièrement en XML, prévu pour être lu par un logiciel plutôt que par une personne.",
+    },
+    {
+      question: "Mon fournisseur n'envoie que des PDF : que faire ?",
+      answer:
+        "Classez ses PDF dans votre circuit de réception, et demandez-lui à quelle date il passera au format structuré. Les PME, les TPE et les micro-entreprises émettent au plus tard le 1er septembre 2027.",
+    },
+  ],
+  sources: [
+    {
+      label: "impots.gouv.fr : Je découvre la facturation électronique",
+      url: "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+    },
+    {
+      label: "FAQ de la DGFiP « Je découvre la facturation électronique » (PDF)",
+      url: "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/faq---fe_je-decouvre-la-facturation-electronique.pdf",
+    },
+  ],
+  related: [
+    "pdf-email-facture-electronique",
+    "facture-electronique-au-quotidien",
+    "choisir-plateforme-facturation-agreee",
+  ],
 };

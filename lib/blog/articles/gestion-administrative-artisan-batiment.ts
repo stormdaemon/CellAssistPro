@@ -2,65 +2,116 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "gestion-administrative-artisan-batiment",
-  "title": "Artisan du bâtiment : gérer devis et chantiers sans y laisser ses soirées",
-  "description": "Le bâtiment demande un suivi administratif solide : devis rapides, relances, échéances, pièces et coordination comptable.",
+  "title": "Artisan du bâtiment : l'administratif d'un chantier, du devis à la réception",
+  "seoTitle": "Gestion entreprise artisanale du bâtiment : le guide",
+  "description": "Acomptes, situations, retenue de garantie, autoliquidation, décennale et réception : l'administratif d'un chantier de bâtiment, étape par étape.",
   "category": "Métiers",
-  "keyword": "gestion administrative artisan bâtiment",
+  "keyword": "gestion entreprise artisanale",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/gestion-administrative-artisan-batiment.jpg",
     "alt": "Casque de chantier et niveau à bulle posés sur des plans de construction",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Pour un artisan du bâtiment, l'administratif n'est jamais le métier, mais c'est souvent ce qui prend le plus de temps le soir et en fin de semaine. Entre deux ou trois chantiers en parallèle, la multiplication des documents et des suivis peut transformer votre bureau en deuxième chantier, plus fatigant que le premier."
+    "Une entreprise du bâtiment suit plusieurs dossiers administratifs pour chaque chantier : le devis signé, les acomptes ou les situations de travaux, la retenue de garantie si le contrat la prévoit, la facturation en sous-traitance et la réception des travaux. Cet article les présente dans l'ordre où ils arrivent sur le chantier.",
+    "Pour confier une partie de ces dossiers à une assistante qui connaît le bâtiment, la présentation de l'accompagnement est sur la page [assistance administrative BTP](/assistante-administrative-btp). Depuis 2017, Céline Bardan, à travers CelAssistPro, tient l'administratif d'une entreprise du bâtiment en Charente. Les points qui suivent sont ceux qu'elle prépare et suit dans ce cadre."
   ],
   "sections": [
     {
-      "heading": "La variabilité du bâtiment crée le désordre",
+      "heading": "Du devis à la facture finale",
       "paragraphs": [
-        "Chaque chantier est unique : budget différent, durée différente, équipes différentes, matériaux différents. Cette variabilité, c'est la richesse de votre métier. Mais c'est aussi la source du chaos administratif. Vous avez l'habitude de laisser chaque chantier générer ses propres habitudes : un pour lequel vous classez les factures dans un dossier, un autre où vous les gardez en papier dans une boîte, un troisième où vous les photographiez. Quand vous avez trois chantiers en parallèle, vous avez trois systèmes différents. Quand vous en avez six, c'est un enfer pour retrouver une pièce.",
-        "Structurer votre gestion administrative au bâtiment, ce n'est pas compliquer votre vie. C'est créer un cadre qui absorbe la variabilité sans vous noyer dedans. Vous pouvez continuer à être flexible sur le terrain. Au bureau, vous suivez un circuit."
+        "Le devis signé est le premier document de référence du chantier. Pour un particulier, il doit contenir les mentions attendues, dont la durée de validité. Une fois accepté, il sert de repère pour les acomptes, pour les situations de travaux si le marché prévoit des paiements échelonnés, puis pour la facture finale.",
+        "Chaque chantier mérite donc un dossier unique, papier ou numérique, qui se reconstitue en quelques minutes : devis accepté, commandes, factures des fournisseurs, acomptes et situations émis, paiements reçus, procès-verbal de réception."
       ]
     },
     {
-      "heading": "Le circuit clé : devis → commande → facturation → paiement",
+      "heading": "Acomptes et situations : une facture à chaque étape",
       "paragraphs": [
-        "Cela commence avec le devis. Le client appelle, vous allez voir, vous prenez les mesures sur site. Vous rédigez le devis chez vous le soir. Idéalement, vous l'envoyez le lendemain. Le client le reçoit, il réfléchit, il demande des modifications, il signe ou refuse. Si signé : vous passez une commande aux fournisseurs (matériaux, équipements). Vous gardez la trace de cette commande. Les fournisseurs livrent. Vous rangez les factures d'achat. Vous livrez au client. Vous facturez le client. Vous encaissez.",
-        "Tout cela, c'est votre revenu qui circule. C'est aussi votre trésorerie. Si les devis traînent à être émis, votre comptabilité s'étale. Si les factures d'achat sont perdues, votre comptable crie. Si vous facturez tard, vous encaissez tard. Le circuit doit être rapide."
+        "Un acompte est un paiement versé avant la fin des travaux. Il donne lieu à une facture, dont la date est celle du versement de l'acompte, avec les autres mentions obligatoires. Quand le marché prévoit des paiements par étapes, la facture intermédiaire s'appelle une situation de travaux. Le calcul pas à pas est détaillé dans [l'exemple chiffré fictif sur les situations de travaux](/blog/situation-de-travaux-exemple).",
+        "La facture finale reprend les acomptes déjà facturés et les déduit du montant à payer. Un tableau par chantier, qui indique le montant HT facturé, le pourcentage réalisé et le reste à facturer, évite les doubles facturations."
       ]
     },
     {
-      "heading": "L'organisation minimale par chantier",
+      "heading": "La retenue de garantie : 5 % au plus, restituée un an après la réception",
+      "paragraphs": [
+        "Sur un marché privé, le contrat peut prévoir une retenue de garantie. La loi du 16 juillet 1971 la limite à 5 %, calculés sur chaque acompte versé et non sur le prix global. Elle sert à garantir la levée des réserves faites à la réception. Elle peut être remplacée par une caution personnelle et solidaire délivrée par un établissement financier.",
+        "La somme est restituée un an après la réception, avec ou sans réserves, sauf opposition motivée du maître d'ouvrage notifiée par lettre recommandée. Les règles complètes et les modalités de la caution sont dans [l'article consacré à la retenue de garantie](/blog/retenue-de-garantie-caution-bancaire)."
+      ]
+    },
+    {
+      "heading": "Sous-traitance : qui facture et qui déclare la TVA",
+      "paragraphs": [
+        "Lorsqu'une partie du chantier est confiée à un autre professionnel, celui-ci facture hors taxe avec la mention « Autoliquidation ». C'est l'entreprise principale qui déclare et paie la TVA. Le régime, prévu par l'article 283-2 nonies du code général des impôts, a des conditions précises, détaillées dans [l'article sur l'autoliquidation en sous-traitance BTP](/blog/autoliquidation-tva-sous-traitance-btp)."
+      ]
+    },
+    {
+      "heading": "Assurance décennale et réception des travaux",
+      "paragraphs": [
+        "Un artisan soumis à l'assurance décennale doit indiquer les coordonnées de son assureur et la couverture géographique de son contrat, et joindre l'attestation d'assurance, selon la fiche de la DGCCRF consacrée au devis. Ces informations figurent donc dès le devis.",
+        "La réception est l'acte par lequel le maître d'ouvrage accepte les travaux, avec ou sans réserves. Elle fait courir plusieurs délais : la restitution de la retenue de garantie, un an après la réception, et la garantie décennale, qui couvre dix ans à compter de la réception (articles 1792 et suivants du code civil). Un procès-verbal daté, avec la liste des réserves et la date de leur levée, permet de retrouver ces dates des années plus tard."
+      ]
+    },
+    {
+      "heading": "Liste de contrôle pour chaque chantier",
       "list": [
-        "Un dossier central (numérique ou physique) par chantier nommé avec le nom du client et la date de démarrage",
-        "À l'intérieur : devis accepté, bons de commande passés, factures de fournisseurs au fur et à mesure des achats, pièces photos du travail en cours si pertinent, documents administratifs (garanties, certificats)",
-        "Une section « Facturation » où vous gardez la facture que vous émettez au client et la trace du paiement",
-        "Un carnet ou fichier léger où vous notez les achats imprévus ou les modifications au fil de l'eau"
+        "Devis signé et daté, avec les mentions attendues chez un particulier",
+        "Acomptes et situations : montant HT, pourcentage d'avancement, reste à facturer",
+        "Retenue de garantie : prévue au contrat, montant retenu sur chaque facture, date de restitution notée (un an après la réception)",
+        "Factures de sous-traitance portant la mention « Autoliquidation », le cas échéant",
+        "Attestation d'assurance décennale jointe au devis, si vous y êtes soumis",
+        "Procès-verbal de réception et liste des réserves levées"
       ]
     },
     {
-      "heading": "Comment rouler à trois chantiers sans perdre la tête",
+      "heading": "Ce qui reste de votre responsabilité",
       "paragraphs": [
-        "Première semaine du chantier : mettez les trois choses essentielles en place : le devis signé (rangé), le plan ou les spécifications (notées), les fournisseurs clés contactés (premiers bons de commande lancés).",
-        "Toutes les semaines : quelques minutes pour noter les achats improvisés sur votre portable ou un petit carnet. Rien de formel, juste « mercredi : 200 euros de sable chez Durand ».",
-        "Fin de chantier : une heure pour préparer la facture cliente (quantités, prix, conditions). Vérifier que tous les justificatifs d'achat sont au même endroit. Envoyer la facture."
+        "Une assistante peut tenir le classement, préparer les pièces, suivre les échéances et les relances selon vos consignes. Les prix, les choix techniques, les engagements pris avec le client sur le chantier et la validation des documents restent de votre ressort.",
+        "L'expert-comptable reste l'interlocuteur pour la comptabilité, les obligations fiscales et les conseils. Pour une question juridique, un avocat est le bon interlocuteur. CelAssistPro prépare et suit les dossiers, sans remplacer ni l'un ni l'autre."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Dois-je vraiment garder une trace de chaque petit achat en magasin ou est-ce trop ?",
-      "answer": "Oui, même les petits achats. Ce n'est pas pour vous, c'est pour votre comptable et pour la TVA. Gardez les tickets ou notez-les. Vous pouvez les rassembler dans une enveloppe par semaine et les transmettre au comptable mensuellement."
+      "question": "Faut-il garder la trace de chaque petit achat en magasin ?",
+      "answer": "Oui, même les petits achats, pour votre comptable et pour la TVA. Gardez les tickets ou notez-les, puis rassemblez-les chaque semaine dans un dossier ou une enveloppe, avec le nom du chantier."
     },
     {
-      "question": "Comment différencier les factures d'achat par chantier si certains fournisseurs me livrent pour plusieurs chantiers à la fois ?",
-      "answer": "Notez le numéro du chantier ou le nom du client sur la facture au moment de la réception (surlignage, stylo, peu importe). Ainsi, vous pouvez ranger la facture dans le dossier adéquat. Si une facture couvre deux chantiers, scannez-la et mettez la copie dans chaque dossier."
+      "question": "Comment ranger une facture d'achat qui concerne deux chantiers ?",
+      "answer": "Notez sur la facture le chantier concerné au moment de la réception. Si une facture couvre deux chantiers, copiez-la dans chaque dossier en précisant la part de chacun."
     },
     {
-      "question": "Est-ce qu'une assistante peut gérer ce circuit pour moi ?",
-      "answer": "Oui, absolument. Si vous notez les informations clés (devis envoyés, commandes passées, achats imprévus), votre assistante peut ranger les documents, préparer la facturation et vérifier que rien ne manque. C'est une excellente délégation."
+      "question": "La retenue de garantie concerne-t-elle tous les chantiers ?",
+      "answer": "Non. Elle doit être prévue au contrat et concerne les marchés privés de travaux. Les marchés publics relèvent du code de la commande publique (articles R2191-32 à R2191-35)."
+    },
+    {
+      "question": "Une assistante peut-elle gérer ces dossiers pour un artisan du bâtiment ?",
+      "answer": "Oui. Depuis 2017, Céline Bardan tient l'administratif d'une entreprise du bâtiment en Charente, en préparant et en suivant ces documents. Elle ne remplace pas votre expert-comptable. Le détail des tâches figure sur la [page dédiée au BTP](/assistante-administrative-btp)."
     }
+  ],
+  "sources": [
+    {
+      "label": "Légifrance : loi n° 71-584 du 16 juillet 1971 (retenue de garantie)",
+      "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000687670"
+    },
+    {
+      "label": "Service-public Entreprendre : mentions obligatoires d'une facture (F31808)",
+      "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31808"
+    },
+    {
+      "label": "Service-public Entreprendre : devis de travaux ou de dépannage (F31144)",
+      "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F31144"
+    },
+    {
+      "label": "DGCCRF : fiche pratique « Devis »",
+      "url": "https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/devis"
+    }
+  ],
+  "related": [
+    "situation-de-travaux-exemple",
+    "retenue-de-garantie-caution-bancaire",
+    "autoliquidation-tva-sous-traitance-btp",
+    "devis-artisan-mentions-obligatoires"
   ]
 };

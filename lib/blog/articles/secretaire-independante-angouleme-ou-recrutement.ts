@@ -2,65 +2,92 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "secretaire-independante-angouleme-ou-recrutement",
-  "title": "Secrétaire indépendante à Angoulême : le comparatif honnête avec un recrutement",
-  "description": "Recruter n'est pas toujours nécessaire : une secrétaire indépendante peut répondre à un besoin ponctuel, régulier ou évolutif.",
+  "title": "Secrétaire à Angoulême : indépendante ou recrutement, le comparatif honnête",
+  "seoTitle": "Secrétaire à Angoulême : indépendante ou recrutement ?",
+  "description": "À Angoulême, une secrétaire indépendante répond à un besoin ponctuel ou régulier. Comparatif honnête avec une embauche, pour une TPE ou un artisan.",
   "category": "En Charente",
-  "keyword": "secrétaire indépendante Angoulême",
+  "keyword": "secrétaire angoulême",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/secretaire-independante-angouleme-ou-recrutement.jpg",
     "alt": "Un homme et une femme discutant autour d'un bureau dans un espace de travail moderne, un dossier à la main",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Quand vous sentez que l'administratif vous échappe mais que vous ne savez pas si vous avez besoin d'une personne à temps plein, une secrétaire indépendante à Angoulême offre souvent le meilleur des deux mondes : l'expertise, sans la rigidité du CDI."
+    "Une secrétaire à Angoulême peut être une indépendante, intervenant à la mission ou au mois, ou une salariée recrutée. Pour une activité dont le volume administratif varie, une prestataire indépendante n'ajoute aucune charge fixe mensuelle. CelAssistPro, de Céline Bardan, se déplace à Angoulême, située à environ 18 km de son installation à Champagne-Vigny.",
+    "Le détail de l'offre de secrétariat indépendant pour les TPE et les artisans se trouve sur la page [secrétariat indépendant](/secretaire-independante)."
   ],
   "sections": [
     {
-      "heading": "Recruter : les vraies barrières pour une TPE",
+      "heading": "Ce qu'un recrutement engage vraiment",
       "paragraphs": [
-        "Embaucher une assistante, ce n'est pas juste un salaire. C'est un contrat de travail, des charges patronales, une gestion administrative à l'année, une responsabilité légale, et surtout l'engagement d'une dépense fixe tous les mois, quels que soient votre chiffre d'affaires et votre volume de travail. Pour un artisan ou un petit prestataire où le travail varie selon les saisons ou les projets, cette rigidité est un frein. Vous imaginez recruter en plein pic d'activité, mais vous vous demandez : que ferai-je d'une salariée pendant les trois mois creux ? Réduire durablement ses heures entraîne des complications légales (suspension, rupture progressive). C'est coûteux."
+        "Embaucher une assistante, ce n'est pas seulement un salaire. Il faut gérer un contrat de travail, les charges patronales, les formalités d'embauche et une dépense fixe chaque mois, que le volume de travail soit fort ou faible. Pour un artisan ou un petit prestataire dont l'activité varie selon les saisons ou les chantiers, cette rigidité pèse lourd.",
+        "Pour les formats proposés à Angoulême et dans le département, voir la [page dédiée à l'assistance administrative en Charente](/assistante-administrative-charente).",
+        "Pour chiffrer le coût réel d'un salarié, le plus sûr est de passer par le [simulateur officiel de l'Urssaf](https://mon-entreprise.urssaf.fr) plutôt que par un pourcentage forfaitaire."
       ]
     },
     {
-      "heading": "L'indépendante : la flexibilité sans le coût caché",
+      "heading": "La prestataire indépendante : un volume qui suit l'activité",
       "paragraphs": [
-        "Une secrétaire indépendante à Angoulême n'est pas salariée. Vous lui confiez une mission ou un volume d'heures, elle vous facture le travail effectué. En septembre, vous pouvez avoir besoin de cinq heures par semaine. En novembre, dix heures. En janvier, trois. Elle s'adapte. Pas de rupture conventionnelle douloureuse, pas de surcoût fixe, juste le travail réel facturé. Vous testez aussi la collaboration avant de vous engager longtemps — un premier projet de trois mois vous dit clairement si le courant passe. L'indépendante apporte aussi une expertise qui dépasse celle d'une gestionnaire généraliste : elle connaît la pré-comptabilité, les circuits de factures, les nuances de vos obligations administratives."
+        "Une secrétaire indépendante n'est pas salariée. Vous lui confiez une mission ou un volume de travail convenu, sur devis, et ce volume s'ajuste lorsque votre activité change. En septembre, le besoin peut être plus important qu'en janvier ; la prestation suit ce rythme.",
+        "Un premier projet délimité, de quelques semaines ou de quelques mois, permet de tester la collaboration avant de s'engager sur la durée. Les accompagnements mensuels sont sans engagement au-delà du préavis prévu au contrat."
       ]
     },
     {
       "heading": "Quand choisir quelle formule",
       "list": [
-        "Indépendante : vous avez un besoin variable selon les mois, les projets ou les saisons.",
-        "Indépendante : vous voulez d'abord tester la délégation avant d'inscrire un poste.",
-        "Indépendante : votre volume actuel fait entre 5 et 20 heures par semaine, pas plus.",
-        "Salariée : vous avez identifié un besoin stable et durable, semaine après semaine, sans variation."
+        "Prestataire indépendante : un besoin variable selon les mois, les projets ou les saisons.",
+        "Prestataire indépendante : vous voulez tester la délégation avant d'ouvrir un poste.",
+        "Salariée : un besoin stable et durable, qui ne varie pas d'une semaine à l'autre."
       ]
     },
     {
-      "heading": "Mesurer vrai avant de décider",
+      "heading": "Mesurer avant de décider",
       "paragraphs": [
-        "Avant de contacter une indépendante ou de poster une annonce, passez une semaine à noter précisément chaque heure que vous consacrez à de l'administratif. Soyez honnête : relances, devis, factures, classement, emails administratifs, encore des relances. Mesurez vraiment. Vous allez probablement découvrir que c'est plus qu'une heure par jour (ce que beaucoup croient) mais moins que ce qui justifierait une embauche à temps plein. C'est exactement la zone de confort de l'indépendante."
+        "Avant de contacter une prestataire ou de publier une annonce, notez pendant une semaine chaque moment passé sur de l'administratif : relances, devis, factures, classement, courriels. Cette mesure remplace l'intuition. Elle montre si le besoin se situe plutôt autour d'un volume modeste et variable, ou d'un poste à temps plein.",
+        "Le diagnostic gratuit de 15 minutes, réservable depuis la [page de contact](/contact), peut aider à faire ce bilan avant toute décision."
       ]
     },
     {
-      "heading": "Les erreurs qui cristallisent une mauvaise décision",
+      "heading": "Trois manières de se tromper",
       "list": [
-        "Estimer votre besoin « à l'intuition » sans le mesurer : vous allez sous-évaluer ou surévaluer, et vous serez déçu.",
-        "Prendre une indépendante sans vérifier qu'elle connaît vraiment la pré-comptabilité ou votre secteur : une généraliste ne saura pas trier les factures comme il faut.",
-        "Attendre que ce soit devenu une crise avant d'agir : vous aurez moins de choix, et vous forcerez une embauche urgente."
+        "Estimer son besoin à l'intuition : on sous-estime ou on surestime, et la déception suit.",
+        "Confier des tâches de pré-comptabilité à une prestataire généraliste sans vérifier son expérience : le tri des pièces demande de la méthode.",
+        "Attendre que la situation devienne une crise : les choix se réduisent et l'embauche se fait dans l'urgence."
+      ]
+    },
+    {
+      "heading": "Un cadre écrit dès le départ",
+      "paragraphs": [
+        "Un contrat simple fixe le périmètre des tâches, le volume convenu, le délai de traitement, les accès aux outils, la confidentialité et le préavis. Ce préavis encadre la fin de la collaboration si elle ne convient pas.",
+        "Pour distinguer le secrétariat à distance de l'accueil téléphonique, voir [l'article sur le secrétariat à distance](/blog/telesecretariat-charente)."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Comment éviter les litiges avec une indépendante si on n'est pas satisfait ?",
-      "answer": "Par un contrat simple et clair au démarrage : périmètre des tâches, nombre d'heures, délai de traitement, accès aux systèmes, confidentialité. Si au bout de trois mois le courant ne passe pas, vous pouvez arrêter sans complications légales. C'est justement l'avantage de l'indépendance."
+      "question": "Comment éviter les litiges avec une prestataire si je ne suis pas satisfait ?",
+      "answer": "Par un contrat écrit qui précise le périmètre des tâches, le volume convenu, le délai de traitement, les accès, la confidentialité et le préavis. Le préavis prévu au contrat encadre la fin de la collaboration."
     },
     {
-      "question": "Une indépendante est-elle aussi digne de confiance qu'une salariée sur les données sensibles ?",
-      "answer": "Oui, d'une manière différente. Un contrat de confidentialité écrit vous protège tout autant qu'un contrat de travail. Elle sait qu'elle peut perdre sa réputation et ses autres clients si elle bavarde. Et c'est souvent plus sûr : une salariée peut discuter avec ses collègues ; une indépendante n'a pas cette tentation sociale."
+      "question": "Une prestataire indépendante est-elle aussi fiable qu'une salariée pour les données sensibles ?",
+      "answer": "La confiance s'organise autrement. Une clause de confidentialité écrite, des accès limités à ce qui est utile à la mission et des outils conformes au RGPD protègent les données. CelAssistPro applique ce cadre à chaque mission."
+    },
+    {
+      "question": "Faut-il une prestataire spécialisée en pré-comptabilité ?",
+      "answer": "Si les tâches touchent aux pièces comptables, il est prudent de vérifier l'expérience dans ce domaine. Une prestataire prépare et transmet les pièces à l'expert-comptable, sans le remplacer : elle le complète."
     }
+  ],
+  "sources": [
+    {
+      "label": "Urssaf : simulateur mon-entreprise, pour chiffrer le coût d'un salarié",
+      "url": "https://mon-entreprise.urssaf.fr"
+    }
+  ],
+  "related": [
+    "telesecretariat-charente",
+    "assistante-administrative-saintes",
+    "externalisation-administrative-charente-guide-dirigeant"
   ]
 };

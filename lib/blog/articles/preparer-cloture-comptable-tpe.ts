@@ -2,62 +2,75 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "preparer-cloture-comptable-tpe",
-  "title": "Clôture comptable sereine : la checklist de fin d'exercice",
-  "description": "Une clôture sereine se prépare avant la dernière minute : pièces, factures, règlements, stocks et justificatifs.",
+  "title": "Clôture comptable sereine : la liste de contrôle de fin d'exercice",
+  "seoTitle": "Clôture comptable : liste de contrôle de fin d'exercice",
+  "description": "Préparer sa clôture comptable en quatre semaines : pièces, factures de fin d'exercice, règlements et justificatifs, pour un dossier complet.",
   "category": "Pré-comptabilité",
-  "keyword": "préparer clôture comptable TPE",
+  "keyword": "clôture comptable",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/preparer-cloture-comptable-tpe.jpg",
     "alt": "Calculatrice et documents financiers avec graphiques sur un bureau",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "La clôture comptable vous panique parce que vous l'attendez jusqu'à la dernière semaine. Mais elle devient légère dès que vous la commencez dès novembre."
+    "Commencez votre clôture comptable quatre semaines avant la date de fin d'exercice : listez les pièces attendues, vérifiez les factures de fin d'année, relancez ce qui manque et transmettez au cabinet un dossier complet. Pour une TPE, cette préparation évite la course de dernière minute.",
+    "Le rassemblement des pièces peut être confié à une [assistante administrative](/assistante-administrative). Les écritures, les comptes annuels et les déclarations restent du ressort de votre expert-comptable."
   ],
   "sections": [
     {
       "heading": "Pourquoi attendre crée une urgence chaque année",
       "paragraphs": [
-        "Chaque année, à la même date, vous la vivez en urgence : panique de dernière minute, fouille d'anciens documents, reconstitution de dépenses de fin d'année, absence de factures qui semblaient pourtant arriver régulièrement. C'est un cycle inefficace que vous avez accepté mais qui n'existe que parce que vous attendez jusqu'à décembre. Si vous commenciez simplement à rassembler les matériaux deux mois plus tôt, tranquillement, sans grande mise en ordre, vous arriveriez à la date limite avec un dossier propre. Ce n'est pas une organisation révolutionnaire : c'est juste du calendrier envisagé à l'avance."
+        "Chaque année, à la même date, la clôture devient une urgence : fouille d'anciens documents, reconstitution de dépenses, factures qui semblaient arriver régulièrement mais qui manquent. Ce cycle n'existe que parce qu'on attend. En rassemblant les pièces quelques semaines plus tôt, sans grande mise en ordre, le dossier arrive propre à la date limite.",
+        "Pour que ce rassemblement ne reste pas une opération ponctuelle, la routine décrite dans [préparer ses pièces au fil de l'eau](/blog/preparer-pieces-comptables-fil-de-leau) se tient toute l'année."
       ]
     },
     {
-      "heading": "Les trois bénéfices cachés d'une clôture préparée",
+      "heading": "Les trois bénéfices d'une clôture préparée",
       "paragraphs": [
-        "D'abord, vous comprenez votre année. Vous voyez vos factures réellement encaissées, vous identifiez celles qui traînent — et qui vous ont peut-être échappé. Vous connaissez vos vraies dépenses, mois par mois. Vous pouvez discuter de la croissance réelle avec votre expert-comptable au lieu de reconstituer les bases en mars.",
-        "Ensuite, vous retrouvez du temps. Les trois nuits passées à chercher des factures en janvier disparaissent. Les allers-retours avec le cabinet jusqu'en avril s'arrêtent.",
-        "Enfin, votre comptable peut aller plus loin. Un cabinet qui reçoit un dossier préparé peut vous donner un avis stratégique : ajustement de trésorerie, planification fiscale, points d'amélioration. Un qui doit d'abord décortiquer le désordre ne peut que faire « l'hygiène »."
+        "D'abord, vous comprenez votre année : vous voyez les factures réellement encaissées, celles qui traînent encore, et vos dépenses mois par mois. Vous discutez de l'activité réelle avec votre expert-comptable au lieu de reconstituer les bases.",
+        "Ensuite, vous retrouvez du temps : les soirées passées à chercher des factures en janvier disparaissent, et les allers-retours avec le cabinet se raccourcissent.",
+        "Enfin, le cabinet peut aller plus loin. Un dossier préparé permet une conversation sur l'année à venir plutôt que sur le tri. Un dossier désorganisé ne permet que l'hygiène de base."
       ]
     },
     {
-      "heading": "Une gestionnaire qui a changé sa routine",
+      "heading": "Un exemple fictif : une petite SARL qui change de routine",
       "paragraphs": [
-        "Une dirigeante de petite SARL vivait chaque clôture comme une épreuve : trois soirées passées à chercher des factures, des allers-retours minables avec son cabinet jusqu'en mars, chaque année la même promesse d'« être organisée à temps ». L'année où elle s'y est mise sérieusement en novembre — lister les pièces manquantes, vérifier ses factures de fin d'année, relancer les fournisseurs en retard de facturation — la transmission au cabinet a pris une matinée. Son bilan est sorti sept semaines plus tôt. La conversation avec son expert-comptable a porté sur l'année à venir plutôt que sur les pièces égarées. Plus jamais elle n'a attendu décembre."
+        "Prenons l'exemple fictif d'une dirigeante de petite SARL. Chaque année, elle passait plusieurs soirées à chercher des factures, et les échanges avec son cabinet couraient jusqu'en mars. Une année, elle s'y est prise en novembre : elle a listé les pièces manquantes, vérifié ses factures de fin d'année et relancé les fournisseurs en retard de facturation. La transmission a pris une matinée, et le bilan a été établi plusieurs semaines plus tôt que d'habitude."
       ]
     },
     {
-      "heading": "Le calendrier qui marche : commencer le 1er novembre",
+      "heading": "Le calendrier : quatre semaines avant la clôture",
       "steps": [
-        "Première semaine : lister les documents attendus avant le 31 décembre (factures clients, factures fournisseurs, notes de frais, relevés bancaires).",
-        "Deuxième à troisième semaine : vérifier que les factures de fin d'année sont en place, relancer les fournisseurs lents, identifier ce qui manque vraiment.",
-        "Quatrième semaine : rendre compte à votre comptable de l'état, convenir ensemble de ce qui reste à faire, transmettre ce qui est prêt."
+        "Semaine 1 : listez les documents attendus pour l'exercice (factures clients et fournisseurs, notes de frais, relevés bancaires).",
+        "Semaines 2 et 3 : vérifiez que les factures de fin d'exercice sont en place, relancez les fournisseurs lents et identifiez ce qui manque vraiment.",
+        "Semaine 4 : faites le point avec votre expert-comptable, convenez de ce qui reste à faire et transmettez ce qui est prêt."
       ]
     },
     {
-      "heading": "Les écueils où s'enlisent la plupart des clôtures",
+      "heading": "Les écueils qui font déraper une clôture",
       "list": [
-        "Attendre la demande officielle du comptable : vous réduisez votre marge de manœuvre à presque zéro pour retrouver les pièces manquantes.",
-        "Oublier de vérifier si toutes les factures de décembre ont été reçues et enregistrées : cela crée des corrections tardives en janvier.",
-        "Mélanger les factures de l'année en cours avec celles de janvier suivant : votre comptable doit retrier et l'année s'éternise."
+        "Attendre la demande officielle du comptable : la marge de manœuvre devient quasi nulle pour retrouver les pièces manquantes.",
+        "Oublier de vérifier que toutes les factures de l'exercice ont été reçues et enregistrées : elles provoquent des corrections tardives.",
+        "Mélanger les pièces de l'exercice avec celles de la période suivante : le cabinet doit retrier, et la clôture s'éternise.",
+        "Calquer le calendrier sur décembre sans vérifier : si votre exercice ne se termine pas le 31 décembre, décalez les dates à votre date de clôture."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Quand vraiment commencer : septembre ou novembre ?",
-      "answer": "Novembre est le point de départ idéal pour la plupart. Septembre c'est trop tôt et vous oubliez. Décembre c'est déjà l'urgence. Novembre vous donne le temps d'identifier ce qui manque et de l'obtenir sans stress."
+      "question": "Quand commencer la clôture comptable ?",
+      "answer": "Quatre semaines avant la date de clôture de votre exercice. Commencer trop tôt fait oublier les factures de fin d'année ; commencer trop tard revient à subir la date limite."
+    },
+    {
+      "question": "Quelles pièces comptables garder pour la clôture ?",
+      "answer": "Les factures clients et fournisseurs de l'exercice, les relevés bancaires, les notes de frais et les justificatifs de paiement. Les durées de conservation dépendent des documents : votre expert-comptable vous indique la liste à jour."
+    },
+    {
+      "question": "Quel lien entre clôture et bilan ?",
+      "answer": "La clôture arrête les comptes de l'exercice à une date donnée. Le bilan est l'un des documents établis à cette date, avec le compte de résultat. C'est pourquoi les pièces doivent être complètes avant la clôture."
     }
-  ]
+  ],
+  "related": ["preparer-pieces-comptables-fil-de-leau", "pre-comptabilite-definition", "reduire-honoraires-expert-comptable"]
 };

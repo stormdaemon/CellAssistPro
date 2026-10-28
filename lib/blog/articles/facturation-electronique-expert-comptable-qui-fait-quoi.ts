@@ -1,66 +1,100 @@
 import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
-  "slug": "facturation-electronique-expert-comptable-qui-fait-quoi",
-  "title": "Facturation électronique et expert-comptable : qui fait quoi ?",
-  "description": "L'expert-comptable conseille et traite la comptabilité ; votre organisation quotidienne reste à préparer dans l'entreprise.",
-  "category": "Facturation électronique",
-  "keyword": "facturation électronique expert-comptable",
-  "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
-  "image": {
-    "src": "/images/blog/facturation-electronique-expert-comptable-qui-fait-quoi.jpg",
-    "alt": "Espace de travail avec calculatrice, billets et ordinateur portable pour la gestion comptable",
-    "credit": "Photo : Pexels"
+  slug: "facturation-electronique-expert-comptable-qui-fait-quoi",
+  title: "Facturation électronique et expert-comptable : qui fait quoi ?",
+  seoTitle: "Facturation électronique expert-comptable : qui fait quoi",
+  description:
+    "L'expert-comptable traite la comptabilité ; la réception par une plateforme agréée et le circuit de vos factures restent à organiser dans votre entreprise.",
+  category: "Facturation électronique",
+  keyword: "facturation électronique expert comptable",
+  datePublished: "2026-06-12",
+  dateModified: "2026-10-28",
+  image: {
+    src: "/images/blog/facturation-electronique-expert-comptable-qui-fait-quoi.jpg",
+    alt: "Espace de travail avec calculatrice, billets et ordinateur portable pour la gestion comptable",
+    credit: "Photo : Pexels",
   },
-  "intro": [
-    "Beaucoup de dirigeants attendent que leur cabinet comptable les appelle pour se dire « nous gérons la facturation électronique pour vous ». C'est une attente fréquente, et souvent déçue. Votre expert-comptable est votre partenaire, pas celui qui vit votre quotidien administratif."
+  intro: [
+    "Votre expert-comptable traite votre comptabilité à partir des factures qu'il reçoit. Sauf mandat précis, il ne crée pas vos factures et ne les réceptionne pas à votre place. Depuis le 1er septembre 2026, c'est votre entreprise qui doit pouvoir recevoir des factures électroniques, par une plateforme agréée qu'elle choisit.",
+    "Clarifier ce partage des rôles avant la première facture évite bien des malentendus. Voici qui fait quoi, ce qu'il faut demander à votre cabinet et comment ouvrir l'échange. Le cadre général est sur la page [facturation électronique](/facturation-electronique).",
   ],
-  "sections": [
+  sections: [
     {
-      "heading": "Ce que vous faites, ce que le cabinet fait",
-      "paragraphs": [
-        "Vous créez vos factures clients. Vous recevez les factures de vos fournisseurs. Vous les classez. Vous les organisez. Le cabinet, lui, traite les informations que vous lui transmettez pour produire votre comptabilité régulière, votre bilan, votre déclaration de TVA. Le cabinet ne crée pas vos factures ni ne les reçoit pour vous. C'est un travail que seul celui qui vit l'entreprise au quotidien peut faire.",
-        "Quand la réforme impose que les factures fournisseurs arrivent en format structuré (Factur-X), ce n'est pas le cabinet qui reçoit ces factures, c'est vous. Le cabinet reçoit ensuite un dossier complet et proprement rangé, et il le traite selon sa méthode habituelle. Si vous attendez que le cabinet s'occupe de la réception des factures, vous serez déçu. Si vous organisez le circuit chez vous et que vous le demandez au cabinet, il pourra valider que votre système fonctionne."
-      ]
+      heading: "Ce que vous faites, ce que le cabinet fait",
+      paragraphs: [
+        "Vous créez vos factures clients, vous choisissez votre plateforme agréée (voir [comment la choisir](/blog/choisir-plateforme-facturation-agreee)), et vous recevez les factures de vos fournisseurs par son intermédiaire. Vous les contrôlez, les classez et transmettez à votre cabinet un dossier complet.",
+        "Le cabinet traite ces éléments selon sa méthode habituelle pour produire la comptabilité, la déclaration de TVA et les comptes annuels. Si votre dossier est bien organisé, il gagne du temps, et vous aussi.",
+      ],
     },
     {
-      "heading": "Le cabinet peut vous aider sur cinq points",
-      "list": [
-        "Clarifier les mentions obligatoires sur vos factures (numéro TVA du client, référence de commande si nécessaire, conditions de paiement, délai de règlement)",
-        "Valider un fichier de facture test pour s'assurer qu'il est conforme avant que vous ne les mettiez en production",
-        "Confirmer le format qu'il attend (Factur-X, par exemple) et comment vous devez lui transmettre vos fichiers",
-        "Identifier les catégories de dépense qui font sens pour votre activité (ce n'est pas purement comptable, c'est aussi du conseil)",
-        "Signaler s'il manque des pièces justificatives régulièrement et pourquoi"
-      ]
+      heading: "Cinq points à clarifier avec votre cabinet",
+      paragraphs: [
+        "Les plateformes agréées figurent sur la [liste officielle d'impots.gouv.fr](https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees). Votre cabinet peut vous indiquer celles avec lesquelles il sait travailler.",
+      ],
+      list: [
+        "Le format qu'il attend pour les factures que vous recevez et pour celles que vous émettez.",
+        "Les mentions obligatoires qu'il vérifie sur vos factures, comme le SIREN de vos clients professionnels.",
+        "Une facture test à valider avant la mise en production.",
+        "La fréquence de transmission des factures, et le point d'arrivée où il les récupère.",
+        "Les pièces justificatives qui manquent régulièrement, et la raison de ces manques.",
+      ],
     },
     {
-      "heading": "Trois confusions à clarifier avant de commencer",
-      "paragraphs": [
-        "Première confusion : penser que le cabinet gère votre facturation. Il ne la gère pas. Il la traite une fois qu'elle arrive chez lui. Vous la créez, vous la transmettez. Clarifiez ce point au démarrage.",
-        "Deuxième confusion : supposer que le cabinet peut tout récupérer tout seul. Il ne peut pas fouiller vos emails, vos dossiers ou vos portails clients. Vous devez lui indiquer clairement où arriveront les factures et à quelle fréquence il les recevra.",
-        "Troisième confusion : mélanger les responsabilités. C'est vous qui devez être intègre sur les factures (que ce que vous transmettez au cabinet soit exact et complet). C'est le cabinet qui doit être intègre sur le traitement comptable. Chacun son rôle."
-      ]
+      heading: "Le mandat : une option à décider en connaissance de cause",
+      paragraphs: [
+        "Un cabinet peut être mandaté pour certaines opérations liées à la facturation électronique. Ce choix a des conséquences sur les responsabilités et sur le coût : demandez-lui le périmètre exact, et ce qu'il prend concrètement en charge.",
+        "Même avec un mandat, il reste utile de savoir qui émet et qui reçoit chaque facture. Un mandat mal compris peut créer exactement les malentendus qu'il devait éviter.",
+      ],
     },
     {
-      "heading": "Comment amorcer la conversation avec votre cabinet",
-      "steps": [
-        "Appelez votre expert-comptable pour lui demander : « Qu'attendez-vous de ma part pour la facturation électronique en 2026 et 2027 ? »",
-        "Écoutez sa réponse (formats, fréquence, détails de contenu). Vous découvrirez peut-être qu'il a déjà une vision claire.",
-        "Proposez de lui envoyer une facture test avant septembre 2026, pour vérifier que votre flux fonctionne avec sa méthode d'importation",
-        "Validez ensemble la fréquence de transmission (hebdomadaire, mensuelle) et le point d'arrivée des factures chez lui",
-        "Documentez ce qui a été convenu et relisez-le ensemble pour éviter les malentendus ultérieurs"
-      ]
-    }
+      heading: "Trois malentendus fréquents",
+      list: [
+        "Penser que le cabinet gère votre facturation. Sauf mandat, il la traite une fois qu'elle lui parvient.",
+        "Supposer qu'il peut tout récupérer seul. Il ne fouille ni vos courriels, ni vos dossiers, ni vos portails clients : indiquez-lui précisément où arrivent les factures.",
+        "Mélanger les responsabilités. Vous répondez de ce que vous transmettez ; le cabinet répond de son traitement comptable.",
+      ],
+    },
+    {
+      heading: "Ouvrir la discussion avec votre cabinet",
+      steps: [
+        "Demander à votre expert-comptable ce qu'il attend de votre part pour la facturation électronique en 2026 et en 2027.",
+        "Proposer dès maintenant une facture test, et vérifier qu'elle s'importe chez lui.",
+        "Convenir de la fréquence de transmission et du point d'arrivée des factures.",
+        "Noter par écrit ce qui a été convenu, pour éviter les malentendus plus tard.",
+      ],
+    },
   ],
-  "faq": [
+  faq: [
     {
-      "question": "Dois-je consulter mon cabinet avant de changer d'outil de facturation ?",
-      "answer": "Oui, absolument. Demandez-lui quel format il peut importer, s'il a des critères de compatibilité et s'il connaît des outils qui jouent bien avec son système. Cela limitera les mauvaises surprises une fois l'outil acheté."
+      question: "Mon expert-comptable va-t-il s'occuper de la facturation électronique à ma place ?",
+      answer:
+        "En général, non : il traite votre comptabilité à partir des factures qu'il reçoit. Un mandat peut toutefois être convenu pour certaines opérations. Demandez-lui le périmètre exact avant de vous engager.",
     },
     {
-      "question": "Si je change d'outil, dois-je prévenir mon cabinet et tester avant de passer en production ?",
-      "answer": "Oui sur les deux points. Signalez-lui le changement, créez une facture test, exportez-la, et testez l'importation chez lui avant de mettre le nouvel outil en usage réel. Une heure de test vaut mieux que trois mois de frictions."
-    }
-  ]
+      question: "Dois-je consulter mon cabinet avant de changer d'outil de facturation ?",
+      answer:
+        "Oui. Demandez-lui le format qu'il peut importer et les outils qui fonctionnent avec son système. Cela limite les mauvaises surprises après l'achat.",
+    },
+    {
+      question: "Si je change d'outil, que dois-je faire avec mon cabinet ?",
+      answer:
+        "Prévenez-le, créez une facture test, exportez-la et vérifiez son importation chez lui avant de passer en usage réel. Un test d'une heure vaut mieux que des semaines de corrections.",
+    },
+  ],
+  sources: [
+    {
+      label: "impots.gouv.fr : facturation électronique et plateformes agréées (liste officielle)",
+      url: "https://www.impots.gouv.fr/facturation-electronique-et-plateformes-agreees",
+    },
+    {
+      label: "impots.gouv.fr : Je découvre la facturation électronique",
+      url: "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+    },
+  ],
+  related: [
+    "choisir-plateforme-facturation-agreee",
+    "gerer-factures-fournisseurs",
+    "facture-electronique-au-quotidien",
+  ],
 };

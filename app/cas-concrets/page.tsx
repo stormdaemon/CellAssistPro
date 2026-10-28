@@ -16,14 +16,10 @@ export default function CasesPage() {
     <main>
       <JsonLd data={breadcrumbJsonLd("Cas concrets", "/cas-concrets")} />
 
-      <PageHero
-        eyebrow="Automatisation IA PME Charente"
-        title="Des résultats, pas des promesses"
-      >
+      <PageHero eyebrow="Cas clients et témoignages" title="Cas concrets : ce qui a changé chez mes clients">
         <p>
-          Voici quelques situations réelles — certaines anonymisées par respect pour mes clients,
-          d'autres racontées par les intéressés eux-mêmes. Si vous vous reconnaissez dans l'une
-          d'elles, les 15 minutes de diagnostic sont faites pour vous.
+          Trois situations réelles, décrites avec leur point de départ, ce qui a été mis en place et le
+          résultat. Les clients ne sont pas nommés dans les cas ; les témoignages, eux, sont signés.
         </p>
       </PageHero>
 
@@ -37,6 +33,10 @@ export default function CasesPage() {
         <div className="container">
           <div className="section-heading section-heading--center">
             <h2>Ils l'ont vécu</h2>
+            <p>
+              Des dirigeants qui m'ont confié leur administratif, parfois depuis longtemps : Raphaël
+              dirige BR16BATIMENT, l'entreprise du bâtiment dont je tiens l'administratif depuis 2017.
+            </p>
           </div>
           <div className="testimonial-grid">
             {testimonials.map((testimonial) => (
@@ -56,20 +56,14 @@ export default function CasesPage() {
           </div>
           <div className="case-cta">
             <p>
-              Votre métier n'est pas dans la liste ? C'est normal : chaque système est construit
-              sur mesure. Et qu'il s'agisse d'une mission d'une heure ou d'un accompagnement au long
-              cours, parlons du vôtre.
+              Votre métier n'est pas dans la liste ? C'est normal : chaque système est construit sur mesure. Et
+              qu'il s'agisse d'une mission d'une heure ou d'un accompagnement au long cours, parlons du vôtre.
             </p>
             <p>
-              Vous êtes du bâtiment ? Le premier cas ci-dessus est le vôtre —{" "}
-              <Link href="/assistante-administrative-btp">
-                voir l'expertise artisans et BTP en détail
-              </Link>
-              . Vous cherchez d'abord à déléguer votre gestion courante ?{" "}
-              <Link href="/assistante-administrative">
-                Découvrir l'assistance administrative
-              </Link>
-              .
+              Vous êtes artisan ou dirigeant du bâtiment ? Le premier cas concerne une entreprise du bâtiment :{" "}
+              <Link href="/assistante-administrative-btp">voir l'expertise artisans et BTP en détail</Link>.
+              Vous cherchez d'abord à déléguer votre gestion courante ?{" "}
+              <Link href="/assistante-administrative">Découvrir l'assistance administrative</Link>.
             </p>
             <a className="button button--gold" href={SITE.calendlyUrl}>
               {CTA.primary}

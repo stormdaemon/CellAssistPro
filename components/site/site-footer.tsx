@@ -9,18 +9,29 @@ export function SiteFooter() {
       <div className="site-footer__inner">
         <div className="site-footer__brand">
           <BrandLogo inverted />
+          {/* Coordonnées identiques partout (site, fiche Google, annuaires). */}
+          <address className="site-footer__address">
+            <strong>{SITE.name}</strong>
+            <span>
+              {SITE.legalName} · SIREN {SITE.siren}
+            </span>
+            <span>
+              {SITE.address.town} ({SITE.address.postalCode}), {SITE.address.department}
+            </span>
+            <span>Sur place en Charente, à distance partout en France</span>
+          </address>
           <a href={`mailto:${SITE.email}`} className="site-footer__contact">
             <Mail aria-hidden="true" />
             {SITE.email}
           </a>
           <a href={SITE.googleBusinessUrl} className="site-footer__contact">
             <MapPin aria-hidden="true" />
-            Google Business Profile
+            Voir la fiche Google
           </a>
         </div>
 
         <nav aria-label="Navigation pied de page">
-          <h2>Navigation</h2>
+          <p className="site-footer__title">Navigation</p>
           {FOOTER_NAVIGATION.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
@@ -29,15 +40,16 @@ export function SiteFooter() {
         </nav>
 
         <nav aria-label="Ressources">
-          <h2>Ressources</h2>
+          <p className="site-footer__title">Ressources</p>
           <Link href="/diagnostic">{CTA.secondary}</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/facturation-electronique">Guide de la facturation électronique</Link>
           <Link href="/mes-offres#faq">FAQ</Link>
           <Link href="/cas-concrets">Résultats clients</Link>
         </nav>
 
         <div className="site-footer__socials">
-          <h2>Suivez-moi</h2>
+          <p className="site-footer__title">Suivez-moi</p>
           <div>
             <a href={SITE.socials.linkedin} aria-label="LinkedIn">
               <Network aria-hidden="true" />

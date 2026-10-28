@@ -3,66 +3,80 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "arreter-paperasse-dimanche-soir",
   "title": "Comment arrêter de faire sa paperasse le dimanche soir",
-  "description": "Le dimanche soir administratif est souvent le signe qu'il manque un créneau, un circuit et une délégation claire.",
+  "seoTitle": "Paperasse entreprise : arrêter le dimanche soir",
+  "description": "Un créneau administratif fixe, une liste préparée la veille et une fin nette : la méthode pour arrêter de faire sa paperasse le dimanche soir.",
   "category": "Organisation TPE",
-  "keyword": "administratif dimanche soir dirigeant",
+  "keyword": "paperasse entreprise",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/arreter-paperasse-dimanche-soir.jpg",
     "alt": "Femme travaillant tard le soir sur son ordinateur portable dans un bureau faiblement éclairé",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Il y a cette habitude : le dimanche arrive, la semaine vous attend déjà, et pourtant vous ouvrez l'ordinateur pour ces deux ou trois petites choses administratives qui traînent depuis jeudi. Vous terminez à 23 h, exténué, sans avoir vraiment réglé quoi que ce soit."
+    "Faire sa paperasse le dimanche soir signale qu'aucun créneau administratif n'est prévu dans la semaine : le travail s'accumule, puis réclame une grosse séance qui empiète sur le repos. La solution tient en trois gestes : bloquer un créneau fixe, le préparer la veille, et s'y tenir.",
+    "La méthode suit. Si la charge reste trop lourde pour une seule personne, la délégation devient une option ; l'organisation d'ensemble est présentée sur [notre page consacrée à l'automatisation et à l'organisation](/bras-droit-automatisation)."
   ],
   "sections": [
     {
-      "heading": "Pourquoi le dimanche soir est un piège",
+      "heading": "Pourquoi le dimanche soir devient le créneau de rattrapage",
       "paragraphs": [
-        "Vous n'êtes pas flemmard. C'est votre système qui n'a pas de place prévue. Quand il n'y a pas de créneau administratif régulier en semaine, le travail s'accumule et réclame une grosse séance. Le dimanche soir, c'est le vide du calendrier professionnel où tout s'engouffre. Vous pensiez ne rester qu'une heure, mais une facture vous entraîne vers les relances, qui vous entraînent vers le classement — et voilà deux heures d'une journée qui aurait dû être de repos.",
-        "Ce cycle a un coût réel : il sape votre repos, vous commencez la semaine déjà fatigué mentalement, vous n'avez jamais vraiment coupé. Et le travail en lui-même ? Vous êtes moins rigoureux à 22 h qu'à 14 h. Les décisions sont plus molles. Vous oubliez des étapes."
+        "Vous n'êtes pas peu rigoureux : votre semaine n'a simplement pas de place prévue pour l'administratif. Une facture entraîne une relance, la relance entraîne un classement, et voilà deux heures d'un dimanche qui devait être un jour de repos.",
+        "Ce cycle a un coût. Il entame le repos, et l'on commence la semaine déjà fatigué. Le travail lui-même souffre : à 22 heures, on est moins attentif qu'à 14 heures, les décisions sont plus molles et des étapes disparaissent. Pour mesurer ce que ce cycle représente, voir [le temps administratif d'un dirigeant de TPE](/blog/temps-administratif-dirigeant-tpe)."
       ]
     },
     {
-      "heading": "Ce qui révèle vraiment le problème",
+      "heading": "Les signes qu'aucun créneau n'existe",
       "list": [
-        "Vous n'avez aucun créneau réservé pour l'administratif : il doit donc s'insérer dans les interstices.",
-        "Votre expert-comptable vous demande des pièces « dès que vous avez un moment » au lieu d'une échéance claire.",
-        "Vous terminez chaque dimanche sans l'impression d'avoir vraiment résolu quoi que ce soit, juste d'avoir traîné la paperasse."
+        "Rien n'est réservé pour l'administratif : il s'insère dans les interstices de la semaine.",
+        "L'expert-comptable demande des pièces « dès que vous avez un moment », au lieu d'une échéance claire.",
+        "Chaque dimanche se termine sans l'impression d'avoir réglé quoi que ce soit."
       ]
     },
     {
-      "heading": "Le chemin pour sortir de ce cycle",
-      "steps": [
-        "Bloquer un créneau fixe en semaine — le même jour et la même heure chaque semaine. Mardi 14 h ou mercredi après-midi, peu importe : la constance, c'est la clé.",
-        "Préparer une liste étalée des tâches pour ce créneau : pas tout en une fois, mais factures telle semaine, relances telle autre, classement la suivante.",
-        "Accepter qu'une fois ce créneau rempli, vous coupez. Fin de l'administratif cette semaine-là. Les urgences du vendredi attendent le créneau du mercredi prochain."
-      ]
-    },
-    {
-      "heading": "Un tournant qui change les dimanches",
+      "heading": "Bloquer un créneau qui tient",
       "paragraphs": [
-        "Une directrice artistique en freelance avait le même problème : dimanche 21 h, elle retrouvait ses notes de projets, ses factures non envoyées, ses relances oubliées. Elle a bloqué chaque jeudi de 15 h à 16 h30 pour cela — juste une heure et demie, une pause café incluse. Pendant trois mois, elle s'est forcée à respecter ce créneau, même quand ça semblait peu utile. Aujourd'hui, ses dimanches lui appartiennent vraiment, et elle commence la semaine sans ce poids en arrière-plan."
+        "Une liste utile tient sur une page : pour chaque tâche, l'échéance réelle et ce qui la bloque éventuellement, comme une pièce manquante ou une réponse attendue. Les tâches bloquées par un tiers se notent à part : elles ne se traitent pas pendant le créneau, elles se relancent."
+      ],
+      "steps": [
+        "Choisissez un jour et une heure fixes, par exemple le mercredi à 9 heures. La régularité compte plus que le choix précis.",
+        "Bloquez le temps nécessaire, une à trois heures selon le volume, comme un rendez-vous client qu'on ne déplace pas.",
+        "Préparez la liste la veille : quelles factures, quelles relances, quels classements.",
+        "Pendant le créneau, ni téléphone ni messagerie : vous traitez la liste, puis vous arrêtez.",
+        "Acceptez que les demandes non urgentes attendent le créneau suivant. Une pièce qui doit partir aujourd'hui se traite tout de suite ; le reste peut attendre."
+      ]
+    },
+    {
+      "heading": "Un exemple fictif : la directrice artistique",
+      "paragraphs": [
+        "Prenons l'exemple fictif d'une directrice artistique en freelance. Un dimanche à 21 heures, elle retrouvait ses notes de projets, des factures non envoyées et des relances oubliées. Elle a bloqué le jeudi de 15 heures à 16 h 30, pause café comprise, et s'est tenue à ce créneau pendant trois mois, même quand il semblait peu utile. Ses dimanches lui appartiennent désormais.",
+        "Le créneau n'a pas besoin d'être parfait : il doit être régulier. Une urgence réelle se traite à part, sans attendre le jeudi."
       ]
     },
     {
       "heading": "Les pièges de la transition",
       "list": [
-        "Garder le dimanche « par sécurité » : vous ne renoncez jamais vraiment au créneau de semaine et vous gardez la mauvaise habitude.",
-        "Bloquer un créneau mais le reporter quand les clients appellent : une fois, vous l'esquivez ; deux fois, c'est devenu normal ; et vous êtes revenu au dimanche soir.",
-        "Penser que vous pouvez gérer tout seul à moins d'avoir un second créneau : si une heure par semaine ne suffit pas, c'est qu'il faut déléguer, pas repousser."
+        "Garder le dimanche « par sécurité » : on ne renonce jamais vraiment à la mauvaise habitude.",
+        "Déplacer le créneau dès que les clients appellent : une fois, c'est une exception ; deux fois, c'est redevenu la règle.",
+        "Choisir une heure trop tardive, comme le jeudi à 17 heures, quand l'esprit est déjà ailleurs.",
+        "Ne pas voir que le créneau déborde chaque semaine. Si une heure ou deux ne suffisent plus, c'est le volume qu'il faut traiter, en confiant une partie des tâches à une aide extérieure."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Et si mon métier m'impose des urgences le jeudi ou le vendredi ?",
-      "answer": "Alors votre créneau administratif n'est pas assez tôt. Poussez-le en début de semaine (lundi ou mardi) et gardez les fins de semaine pour les vraies urgences. Ou acceptez que le mercredi soit le jour où vous gérez aussi les imprévus, mais pas le dimanche."
+      "question": "Comment s'organiser administrativement ?",
+      "answer": "En bloquant un créneau fixe, en tenant une liste unique des tâches en attente, et en traitant chaque famille de tâches au même moment : factures, relances, classement. La constance compte plus que la durée."
     },
     {
-      "question": "Et si une heure ne suffit vraiment pas ?",
-      "answer": "Alors vous avez trop d'administratif pour une personne. Passez à une heure et demie, puis envisagez la délégation : une assistante deux jours par mois, par exemple. Le dimanche soir n'est jamais la solution, c'est l'aveu que le système est débordé."
+      "question": "Comment font les autres dirigeants de TPE pour sortir de la paperasse du dimanche ?",
+      "answer": "Ceux qui y parviennent bloquent un créneau fixe en semaine, préparent leur liste la veille et délèguent ce qui ne demande pas de décision. Le dimanche redevient alors un jour de repos, parce que le travail a déjà sa place."
+    },
+    {
+      "question": "Un planning hebdomadaire pour gérer l'administratif en deux heures par semaine : est-ce possible ?",
+      "answer": "Oui, à condition de réserver ce créneau aux tâches les plus urgentes et de traiter le reste au fil de l'eau. Deux heures peuvent suffire si la liste est préparée et si le volume reste maîtrisé. Au-delà, c'est le volume qu'il faut réduire, pas la durée du créneau."
     }
-  ]
+  ],
+  "related": ["temps-administratif-dirigeant-tpe", "charge-mentale-dirigeant-administratif", "reorganiser-gestion-administrative-entreprise"]
 };

@@ -1,27 +1,56 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { JsonLd } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
-import { blogArticles, blogCategories, formatArticleDate, readingMinutes } from "@/lib/blog";
+import {
+  blogArticles,
+  blogCategories,
+  formatArticleDate,
+  getBlogArticle,
+  readingMinutes,
+  type BlogArticle,
+} from "@/lib/blog";
+import { blogJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("blog");
 
 const categoryAnchor = (category: string) => category.toLowerCase().replaceAll(" ", "-").replaceAll("&", "et");
 
+/** Articles piliers mis à la une (repli : les premiers articles si l'un manque). */
+const FEATURED_SLUGS = [
+  "calendrier-facturation-electronique",
+  "tarif-assistante-administrative-independante-facteurs",
+  "relance-facture-impayee",
+];
+
+function featuredArticles(): BlogArticle[] {
+  const picked = FEATURED_SLUGS.map((slug) => getBlogArticle(slug)).filter(
+    (article): article is BlogArticle => article !== undefined,
+  );
+  const fallback = blogArticles.filter((article) => !FEATURED_SLUGS.includes(article.slug));
+
+  return [...picked, ...fallback].slice(0, 3);
+}
+
 export default function BlogPage() {
-  const [headline, ...secondary] = blogArticles.slice(0, 3);
+  const [headline, ...secondary] = featuredArticles();
 
   return (
     <main>
+      <JsonLd data={breadcrumbJsonLd("Blog", "/blog")} />
+      <JsonLd data={blogJsonLd()} />
+
       <PageHero
-        eyebrow="Blog gestion administrative TPE"
-        title="Conseils concrets pour reprendre la main sur votre gestion"
+        eyebrow="Blog de CelAssistPro"
+        title="Gestion administrative des TPE et artisans : conseils pratiques"
       >
         <p>
-          Organisation, pré-comptabilité, facturation électronique, délégation et automatisation :
+          Facturation électronique, relances, pré-comptabilité, délégation et automatisation :
           des repères simples pour dirigeants de TPE qui veulent récupérer du temps sans perdre le
-          contrôle.
+          contrôle. Pour la réforme en cours, commencez par le{" "}
+          <Link href="/facturation-electronique">guide de la facturation électronique</Link>.
         </p>
       </PageHero>
 
@@ -40,20 +69,28 @@ export default function BlogPage() {
               <p className="eyebrow">
                 <Sparkles aria-hidden="true" /> À la une — {headline.category}
               </p>
-              <h2>{headline.title}</h2>
+              <h2>
+                <Link className="bento-tile__link" href={`/blog/${headline.slug}`}>
+                  {headline.title}
+                </Link>
+              </h2>
               <p>{headline.description}</p>
-              <Link href={`/blog/${headline.slug}`}>
-                Lire l'article <ArrowRight aria-hidden="true" />
-              </Link>
+              <span className="bento-tile__more" aria-hidden="true">
+                Lire l'article <ArrowRight />
+              </span>
             </article>
             {secondary.map((article) => (
               <article className="bento-tile bento-tile--cream" key={article.slug}>
                 <p className="eyebrow">{article.category}</p>
-                <h3>{article.title}</h3>
+                <h3>
+                  <Link className="bento-tile__link" href={`/blog/${article.slug}`}>
+                    {article.title}
+                  </Link>
+                </h3>
                 <p>{article.description}</p>
-                <Link href={`/blog/${article.slug}`}>
-                  Lire l'article <ArrowRight aria-hidden="true" />
-                </Link>
+                <span className="bento-tile__more" aria-hidden="true">
+                  Lire l'article <ArrowRight />
+                </span>
               </article>
             ))}
           </div>
@@ -79,11 +116,15 @@ export default function BlogPage() {
                         <p className="eyebrow">
                           {formatArticleDate(article.dateModified)} · {readingMinutes(article)} min
                         </p>
-                        <h3>{article.title}</h3>
+                        <h3>
+                          <Link className="bento-tile__link" href={`/blog/${article.slug}`}>
+                            {article.title}
+                          </Link>
+                        </h3>
                         <p>{article.description}</p>
-                        <Link href={`/blog/${article.slug}`}>
-                          Lire l'article <ArrowRight aria-hidden="true" />
-                        </Link>
+                        <span className="bento-tile__more" aria-hidden="true">
+                          Lire l'article <ArrowRight />
+                        </span>
                       </article>
                     ))}
                   </div>

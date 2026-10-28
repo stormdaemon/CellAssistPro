@@ -24,20 +24,43 @@ export const SITE = {
   name: "CelAssistPro",
   tagline: "Votre bras droit stratégique",
   founder: "Céline Bardan",
+  /** Forme juridique : entrepreneur individuel (mention « EI » obligatoire). */
+  legalName: "Céline Bardan EI",
   siren: "999 130 982",
+  /** Date d'immatriculation au répertoire SIRENE. */
+  foundingDate: "2026-01-01",
   legalAddress: "3 Les Vignes de Chez Rullier, 16250 Champagne-Vigny",
+  address: {
+    street: "3 Les Vignes de Chez Rullier",
+    postalCode: "16250",
+    town: "Champagne-Vigny",
+    department: "Charente",
+    region: "Nouvelle-Aquitaine",
+  },
   baseUrl: "https://celassistpro.fr",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@celassistpro.fr",
   calendlyUrl: "https://calendly.com/celassistpro/15min",
   googleBusinessUrl:
     process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL ??
     "https://maps.app.goo.gl/31UW2GBGLZLqhagu6",
+  /** URL stable de la fiche Google (identifiant CID), pour les données structurées. */
+  googleMapsCidUrl: "https://www.google.com/maps?cid=14434061801042988841",
   socials: {
+    /** Profil personnel de Céline Bardan. */
     linkedin: "https://www.linkedin.com/in/c%C3%A9line-bardan-39897515b/",
+    /** Page entreprise CelAssistPro. */
+    linkedinCompany: "https://www.linkedin.com/company/celassistpro",
     facebook: "https://www.facebook.com/people/CelassistPro/61585664695001/",
-    instagram: "https://www.instagram.com/celassistpro_?igsh=dW9paGtzM3Yza2oy",
+    instagram: "https://www.instagram.com/celassistpro_/",
   },
 };
+
+/**
+ * Description canonique de l'entreprise, à reprendre telle quelle partout
+ * (site, llms.txt, données structurées, profils tiers).
+ */
+export const CANONICAL_DESCRIPTION =
+  "CelAssistPro est l'activité d'assistance administrative indépendante de Céline Bardan, basée à Champagne-Vigny (Charente) : délégation, structuration et automatisation de la gestion des TPE, artisans et indépendants, sur place en Charente et à distance partout en France.";
 
 /**
  * Libellés de CTA uniques sur tout le site : deux parcours, deux formulations.
@@ -66,7 +89,10 @@ export const NAVIGATION: NavItem[] = [
     label: "Services",
     children: [
       { href: "/assistante-administrative", label: "Assistance administrative" },
+      { href: "/secretaire-independante", label: "Secrétariat externalisé" },
       { href: "/bras-droit-automatisation", label: "Bras droit & automatisation" },
+      { href: "/facturation-electronique", label: "Facturation électronique" },
+      { href: "/assistante-administrative-charente", label: "En Charente" },
       { href: "/mes-offres", label: "Mes offres" },
     ],
   },
@@ -82,77 +108,116 @@ export const FOOTER_NAVIGATION = NAVIGATION.flatMap((item) =>
   item.children ? item.children : [item],
 );
 
+/**
+ * Métadonnées des pages fixes. `title` : 60 caractères au plus (au-delà, Google tronque) ;
+ * `description` : 120 à 155 caractères ; `lastModified` : date de la dernière évolution réelle
+ * du contenu, reprise par le sitemap.
+ */
 export const SEO = {
   home: {
     path: "/",
-    title: "Assistante administrative & bras droit en Charente | CelAssistPro",
+    title: "Assistante administrative indépendante en Charente",
     description:
-      "Assistante administrative indépendante en Charente et à distance partout en France. Gestion, pré-compta, automatisation et expertise BTP pour TPE et artisans.",
+      "Devis, factures, relances, pré-comptabilité : Céline Bardan prend en charge votre administratif, sur place autour d'Angoulême ou à distance.",
+    lastModified: "2026-10-28",
   },
   assistance: {
     path: "/assistante-administrative",
-    title: "Assistante administrative indépendante | Charente & France | CelAssistPro",
+    title: "Assistante administrative à distance pour TPE | CelAssistPro",
     description:
-      "Déléguez devis, facturation, relances, pré-comptabilité et suivi administratif à une assistante indépendante en Charente ou à distance partout en France.",
+      "Devis, facturation, relances, pièces comptables, boîte mail : déléguez tout ou partie de votre gestion, à la mission ou au mois, partout en France.",
+    lastModified: "2026-10-28",
+  },
+  secretaire: {
+    path: "/secretaire-independante",
+    title: "Secrétaire indépendante : secrétariat externalisé pour TPE",
+    description:
+      "Secrétariat externalisé pour TPE, artisans et indépendants : boîte mail, devis, factures, relances, classement, suivi. En Charente ou à distance.",
+    lastModified: "2026-10-28",
   },
   btp: {
     path: "/assistante-administrative-btp",
-    title: "Assistante administrative BTP & artisans | CelAssistPro",
+    title: "Assistante administrative BTP indépendante | CelAssistPro",
     description:
-      "Gestion administrative BTP : devis, relances, facturation, acomptes, pré-compta et organisation. Expertise terrain depuis 2017, en Charente et à distance.",
+      "Devis, acomptes, situations, relances, pièces pour le comptable : l'administratif de vos chantiers tenu par une assistante du bâtiment depuis 2017.",
+    lastModified: "2026-10-28",
   },
   premium: {
     path: "/bras-droit-automatisation",
-    title: "Bras droit externalisé & automatisation TPE | CelAssistPro",
+    title: "Bras droit administratif et automatisation pour TPE",
     description:
-      "Structurez, simplifiez et automatisez la gestion de votre TPE avec un bras droit externalisé : processus, outils, IA, pilotage et suivi.",
+      "Circuits clairs, outils adaptés, relances et classements automatisés, assistants IA : votre TPE dépend moins de vous. Sans engagement, devis sous 48 h.",
+    lastModified: "2026-10-28",
+  },
+  invoicing: {
+    path: "/facturation-electronique",
+    title: "Facturation électronique 2026-2027 : guide TPE et artisans",
+    description:
+      "Réception obligatoire depuis septembre 2026, émission en 2027 pour les TPE : calendrier, plateforme agréée, sanctions et accompagnement pour être en règle.",
+    lastModified: "2026-10-28",
+  },
+  charente: {
+    path: "/assistante-administrative-charente",
+    title: "Assistante administrative à Angoulême et en Charente",
+    description:
+      "Assistante administrative indépendante basée à Champagne-Vigny : déplacements à Angoulême, Cognac, Barbezieux, Jarnac et dans toute la Charente.",
+    lastModified: "2026-10-28",
   },
   offers: {
     path: "/mes-offres",
-    title: "Gestion administrative TPE Angoulême & Charente — Offres CelAssistPro",
+    title: "Formules d'accompagnement administratif | CelAssistPro",
     description:
-      "Structuration, restructuration et pilotage automatisé : des offres souples pour libérer les dirigeants de TPE. Devis gratuit sous 48 h.",
+      "Structuration, restructuration ou pilotage automatisé : mission ponctuelle ou suivi mensuel pour TPE et PME, sans engagement, devis personnalisé sous 48 h.",
+    lastModified: "2026-10-28",
   },
   about: {
     path: "/a-propos",
-    title: "Céline Bardan — Directrice des opérations externalisée en Charente",
+    title: "Céline Bardan, assistante administrative en Charente",
     description:
-      "30 ans d'expertise administrative et pré-comptable, formée à l'IA et à l'automatisation. Votre bras droit stratégique, en Charente et partout en France.",
+      "BTS Assistant de gestion PME-PMI, 30 ans d'administratif et de pré-comptabilité, formée à l'IA : le parcours et la méthode de Céline Bardan.",
+    lastModified: "2026-10-28",
   },
   cases: {
     path: "/cas-concrets",
-    title: "Automatisation IA pour PME en Charente : résultats clients CelAssistPro",
+    title: "Cas clients et témoignages : TPE et artisans | CelAssistPro",
     description:
-      "Devis envoyés sous 24 h, présentations divisées par 5, facturation électronique en 1 h : des cas réels d'automatisation et d'organisation en TPE.",
+      "Devis envoyés sous 24 h dans le bâtiment, présentations préparées en 30 min au lieu de 2 h 30, facturation électronique maîtrisée en 1 h : les détails.",
+    lastModified: "2026-10-28",
   },
   resources: {
     path: "/diagnostic",
-    title: "Auto-diagnostic gratuit : combien d'heures perd votre TPE chaque semaine ?",
+    title: "Test : combien d'heures perdez-vous en administratif ?",
     description:
-      "10 questions, 5 minutes : mesurez le temps que votre administratif vous vole et recevez vos 3 premières actions pour le récupérer. Gratuit.",
+      "10 questions, 5 minutes, résultat immédiat, aucune donnée collectée : estimez votre temps perdu en administratif et recevez 3 actions concrètes.",
+    lastModified: "2026-10-28",
   },
   blog: {
     path: "/blog",
-    title: "Blog gestion administrative TPE | CelAssistPro",
+    title: "Blog : gestion administrative des TPE et artisans",
     description:
-      "Conseils concrets pour alléger l'administratif, organiser une TPE, préparer la facturation électronique et déléguer sans recruter.",
+      "Facturation électronique, relances, pré-comptabilité, délégation, automatisation : des méthodes concrètes, testées en entreprise, pour gagner du temps.",
+    lastModified: "2026-10-28",
   },
   contact: {
     path: "/contact",
-    title: "Contact — Assistante administrative indépendante Charente | CelAssistPro",
+    title: "Contact | CelAssistPro, Céline Bardan",
     description:
-      "Réservez 15 minutes gratuites ou écrivez-moi : mission ponctuelle, récurrente ou très courte, parlons de votre temps. Réponse sous 24 h ouvrées.",
+      "Réservez un diagnostic gratuit de 15 minutes ou écrivez-moi : mission ponctuelle ou suivi régulier, en Charente ou à distance. Réponse sous 24 h ouvrées.",
+    lastModified: "2026-10-28",
   },
   legal: {
     path: "/mentions-legales",
     title: "Mentions légales | CelAssistPro",
-    description: "Mentions légales du site CelAssistPro.",
+    description:
+      "Mentions légales de CelAssistPro (Céline Bardan, entrepreneur individuel) : éditrice, SIREN, adresse, directrice de la publication, hébergeur.",
+    lastModified: "2026-10-28",
   },
   privacy: {
     path: "/politique-confidentialite",
     title: "Politique de confidentialité | CelAssistPro",
     description:
-      "Traitement des données personnelles, formulaires, Calendly, droits RGPD et contact CelAssistPro.",
+      "Quelles données CelAssistPro collecte (formulaire, prise de rendez-vous), pourquoi, combien de temps elles sont conservées et comment exercer vos droits.",
+    lastModified: "2026-10-28",
   },
 } as const;
 
@@ -205,7 +270,7 @@ export const homeResults = [
 export const beforeAfter = [
   { before: "Informations dispersées", after: "Un circuit défini" },
   { before: "Relances à retenir", after: "Relances suivies ou automatisées" },
-  { before: "Devis en attente", after: "Pipeline suivi" },
+  { before: "Devis en attente", after: "Devis suivis jusqu'à la signature" },
   {
     before: "Justificatifs recherchés en urgence",
     after: "Documents organisés au fil de l'eau",
@@ -354,10 +419,10 @@ export const offers = [
     shortName: "Pilotage automatisé",
     short: "Votre système est posé ? On le fait tourner tout seul.",
     audience: "Votre gestion est structurée — par moi ou par vous — et vous voulez maintenant qu'elle tourne toute seule : que les tâches répétitives disparaissent de votre semaine.",
-    what: "J'automatise l'ensemble de votre gestion, brique par brique : tri et réponses de boîte mail, relances de factures, devis récurrents, pré-comptabilité, prise de rendez-vous, reporting, assistants IA personnalisés à votre activité. Chaque automatisation est testée, documentée, et maintenue.",
-    result: "Jusqu'à 10 heures récupérées par semaine, et une gestion qui tourne pendant que vous êtes sur votre cœur de métier.",
+    what: "J'automatise l'ensemble de votre gestion, brique par brique : tri et réponses de boîte mail, relances de factures, devis récurrents, pré-comptabilité, prise de rendez-vous, tableaux de suivi, assistants IA personnalisés à votre activité. Chaque automatisation est testée et documentée.",
+    result: "Des heures récupérées chaque semaine, et une gestion qui tourne pendant que vous êtes sur votre cœur de métier.",
     promise:
-      "Et voici ma promesse à contre-courant : chaque automatisation installée réduit le coût de votre pilotage mensuel. Plus votre système travaille, moins vous payez. Mon objectif n'est pas de vous facturer des heures — c'est de les faire disparaître.",
+      "Et voici ma promesse à contre-courant : chaque automatisation installée réduit le coût de votre pilotage mensuel. Plus votre système travaille, moins vous payez. Mon objectif : que les heures de tâches répétitives disparaissent de votre semaine.",
   },
 ];
 
@@ -365,7 +430,7 @@ export const offerFaqs = [
   {
     question: "Pourquoi pas de tarifs affichés ?",
     answer:
-      "Parce que deux entreprises n'ont jamais le même volume ni les mêmes outils. Le diagnostic gratuit me permet de chiffrer juste — ni trop, ni trop peu. Vous recevez un devis clair sous 48 h, sans surprise ensuite.",
+      "Parce que deux entreprises n'ont jamais le même volume ni les mêmes outils. Le diagnostic gratuit me permet de chiffrer juste — ni trop, ni trop peu. Vous recevez un devis clair sous 48 h, sans surprise ensuite. Pour vous faire une idée des prix pratiqués, j'ai rassemblé les [repères tarifaires publiés sur le marché](/blog/tarif-assistante-administrative-independante-facteurs).",
   },
   {
     question: "Comment travaillez-vous : sur place ou à distance ?",
@@ -399,31 +464,31 @@ export const caseStudies = [
     metric: "24 h",
     title: "Du carnet de commandes plein… au pilotage serein",
     context:
-      "Une entreprise du bâtiment en pleine activité : des chantiers qui s'enchaînent, mais des devis rédigés le soir, des relances oubliées, des échéances découvertes au dernier moment. Le dirigeant excellait sur ses chantiers — et s'épuisait au bureau.",
+      "Chez un client de CelAssistPro, une entreprise du bâtiment en pleine activité : des chantiers qui s'enchaînent, mais des devis rédigés le soir, des relances oubliées, des échéances découvertes au dernier moment. Le dirigeant excellait sur ses chantiers, mais son administratif passait après.",
     work:
       "Structuration complète du quotidien administratif : circuit devis → envoi → relance → facture, suivi des règlements, anticipation des échéances, coordination avec le cabinet comptable. Puis automatisation des relances et du classement des pièces.",
     result:
-      "Devis envoyés sous 24 h, plus aucune relance oubliée, échéances anticipées au lieu d'être subies. Le dirigeant a retrouvé ses soirées — et la visibilité sur sa trésorerie.",
+      "Devis envoyés sous 24 h, plus aucune relance oubliée, échéances anticipées au lieu d'être subies.",
   },
   {
     metric: "÷5",
     title: "De 2 h 30 à 30 minutes par présentation client",
     context:
-      "Chaque rendez-vous client exigeait une présentation personnalisée : 2 à 3 heures de préparation et de mise en forme, à chaque fois. Un temps invisible qui rognait les soirées et limitait le nombre de rendez-vous possibles.",
+      "Chez un client de CelAssistPro, chaque rendez-vous exigeait une présentation personnalisée : environ 2 h 30 de préparation et de mise en forme, à chaque fois. Un temps invisible qui rognait les soirées et limitait le nombre de rendez-vous possibles.",
     work:
-      "Un assistant IA sur mesure qui génère ses présentations à partir de ses notes de rendez-vous, directement dans sa charte graphique — avec une documentation simple pour qu'il soit 100 % autonome.",
+      "Un assistant IA sur mesure qui génère ses présentations à partir de ses notes de rendez-vous, directement dans sa charte graphique, avec une documentation simple pour qu'il puisse le faire seul.",
     result:
-      "30 minutes par présentation au lieu de 2 h 30, une qualité constante, et la capacité d'accepter plus de rendez-vous sans travailler plus tard.",
+      "30 minutes par présentation au lieu de 2 h 30, une qualité constante, et la possibilité d'accepter davantage de rendez-vous sans travailler plus tard.",
   },
   {
     metric: "1 h",
     title: "Conforme à la facturation électronique — et autonome — en une heure",
     context:
-      "La réforme de la facturation électronique approchait, et avec elle l'angoisse : quel outil choisir, quelles mentions obligatoires, comment faire concrètement ? Le risque : la non-conformité, ou des heures perdues à chercher seule.",
+      "Chez un client de CelAssistPro, la réforme de la facturation électronique approchait : quel outil choisir, quelles mentions obligatoires, comment faire concrètement ? Le risque : la non-conformité, ou des heures perdues à chercher sans méthode.",
     work:
       "Choix et paramétrage de l'outil de facturation adapté à son activité, guide pas-à-pas personnalisé, puis une séance de formation d'une heure : première vraie facture émise en direct, réception fournisseur configurée, checklist de contrôle remise.",
     result:
-      "Conforme, équipée, autonome — en une heure de formation. Et l'esprit tranquille pour l'échéance réglementaire.",
+      "Conforme, équipé et autonome au terme d'une heure de formation.",
   },
 ];
 

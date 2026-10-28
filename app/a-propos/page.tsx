@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CalendarCheck } from "lucide-react";
+import { CalendarCheck, Info } from "lucide-react";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { pageMetadata } from "@/lib/metadata";
 import { CTA, SITE, values } from "@/lib/site-data";
-import { breadcrumbJsonLd, personJsonLd } from "@/lib/structured-data";
+import { breadcrumbJsonLd, profilePageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = pageMetadata("about");
 
@@ -13,13 +13,16 @@ export default function AboutPage() {
   return (
     <main>
       <JsonLd data={breadcrumbJsonLd("À propos", "/a-propos")} />
-      <JsonLd data={personJsonLd()} />
+      <JsonLd data={profilePageJsonLd()} />
 
       <section className="about-hero">
         <div className="container about-hero__grid">
           <div>
             <p className="eyebrow">Céline Bardan</p>
-            <h1>30 ans dans les coulisses des entreprises. Et une conviction : votre temps vaut mieux que ça.</h1>
+            <h1>
+              Céline Bardan : 30 ans d'administratif, et depuis 2017 au cœur d'une entreprise du
+              bâtiment en Charente
+            </h1>
             <ul className="about-hero__chips" aria-label="En bref">
               <li>30 ans d'expertise</li>
               <li>BTS Assistant de gestion PME-PMI</li>
@@ -38,42 +41,72 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section section--white" aria-labelledby="qui-title">
+        <div className="container narrow">
+          <div className="highlight-panel">
+            <div className="highlight-panel__icon">
+              <Info aria-hidden="true" />
+            </div>
+            <h2 id="qui-title">Qui est Céline Bardan ?</h2>
+            <p>
+              Céline Bardan est la fondatrice de CelAssistPro, activité d'assistance administrative et de
+              direction des opérations externalisée basée en Charente. Titulaire d'un BTS Assistant de
+              gestion PME-PMI, elle travaille depuis trente ans dans l'administratif, l'organisation et la
+              pré-comptabilité des entreprises. Elle s'est formée à l'assistanat virtuel, puis à
+              l'automatisation et à l'intelligence artificielle avec l'organisme L'Forme, et à la gestion du
+              temps avec le GRETA CFA Aquitaine. Depuis 2017, elle tient l'administratif d'une entreprise du
+              bâtiment en Charente, BR16BATIMENT. Elle se déplace chez ses clients dans tout le département et
+              intervient à distance partout en France. Elle est adhérente de la CPME, membre du réseau BNI
+              Charente Grand Sud et conseillère municipale de sa commune.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section section--white">
         <div className="container story-layout">
           <article className="story">
+            <h2>Trente ans d'administratif et de pré-comptabilité</h2>
             <p>
-              Je m'appelle Céline Bardan. Formée à la gestion des PME-PMI (BTS Assistant de
-              gestion), j'ai passé 30 ans là où les entreprises gagnent ou perdent leur sérénité :
-              l'administratif, l'organisation, le pré-comptable. J'ai vu des dirigeants brillants
-              s'épuiser sur des tâches qui ne créaient aucune valeur — des soirées sur les factures,
-              des week-ends sur les relances, une charge mentale permanente.
+              Je m'appelle Céline Bardan. Formée à la gestion des PME-PMI (BTS Assistant de gestion), j'ai
+              passé 30 ans là où les entreprises gagnent ou perdent leur sérénité : l'administratif,
+              l'organisation, le pré-comptable. J'ai vu des dirigeants brillants s'épuiser sur des tâches qui
+              ne créaient aucune valeur — des soirées sur les factures, des week-ends sur les relances, une
+              charge mentale permanente.
             </p>
+
+            <h2>Se former à l'IA sans suivre la mode</h2>
             <p>
-              Quand l'intelligence artificielle et l'automatisation sont devenues accessibles, j'ai
-              compris que tout changeait. Je me suis formée sérieusement — assistanat virtuel, puis
-              automatisations et IA avec l'organisme L'Forme, gestion du temps avec le GRETA CFA
-              Aquitaine. Pas pour suivre une mode : pour offrir aux TPE et indépendants ce qui était
-              réservé aux grandes structures avec leur service administratif dédié.
+              Quand l'intelligence artificielle et l'automatisation sont devenues accessibles, j'ai compris que
+              tout changeait. Je me suis formée sérieusement — assistanat virtuel, puis automatisations et IA
+              avec l'organisme L'Forme, gestion du temps avec le GRETA CFA Aquitaine. Pas pour suivre une mode :
+              pour offrir aux TPE et indépendants ce qui était réservé aux grandes structures avec leur service
+              administratif dédié.
             </p>
+
+            <h2>Une TPE vécue de l'intérieur</h2>
             <p>
-              Je ne parle pas de la vie d'une TPE en théorie : je la vis. Associée d'une entreprise
-              du bâtiment en Charente, j'en assure l'organisation et la structuration du quotidien —
-              suivi administratif, coordination, anticipation des échéances. Quand je vous propose
-              une méthode, c'est parce qu'elle tourne déjà, tous les jours, dans une vraie
-              entreprise.
+              Je ne parle pas de la vie d'une TPE en théorie : je la vis. Associée d'une entreprise du
+              bâtiment en Charente, j'en assure l'organisation et la structuration du quotidien — suivi
+              administratif, coordination, anticipation des échéances. Quand je vous propose une méthode,
+              c'est parce qu'elle tourne déjà, tous les jours, dans une vraie entreprise.
             </p>
+
+            <h2>Structurer, automatiser, piloter</h2>
             <p>
-              CelAssistPro, c'est la rencontre de ces deux mondes : la rigueur de 30 ans de métier,
-              et la puissance des outils d'aujourd'hui. Mon rôle n'est pas d'exécuter des tâches —
-              c'est d'être votre directrice des opérations externalisée : je structure, j'automatise,
-              je pilote. Vous dirigez, je gère.
+              CelAssistPro, c'est la rencontre de ces deux mondes : la rigueur de 30 ans de métier, et la
+              puissance des outils d'aujourd'hui. Mon rôle n'est pas d'exécuter des tâches — c'est d'être votre
+              directrice des opérations externalisée : je structure, j'automatise, je pilote. Vous dirigez, je
+              gère.
             </p>
+
+            <h2>Sur place en Charente, à distance ailleurs</h2>
             <p>
-              Je suis basée en Charente, et c'est une force : je me déplace chez mes clients dans
-              tout le département — rien ne remplace une rencontre autour de vos vrais dossiers.
-              Au-delà, j'interviens à distance partout en France, avec la même rigueur. Engagée
-              localement — adhérente CPME, membre du réseau BNI Charente Grand Sud, conseillère
-              municipale de ma commune — je crois aux relations de confiance qui durent.
+              Je suis basée en Charente, et c'est une force : je me déplace chez mes clients dans tout le
+              département — rien ne remplace une rencontre autour de vos vrais dossiers. Au-delà, j'interviens à
+              distance partout en France, avec la même rigueur. Engagée localement — adhérente CPME, membre du
+              réseau BNI Charente Grand Sud, conseillère municipale de ma commune — je crois aux relations de
+              confiance qui durent.
             </p>
           </article>
 

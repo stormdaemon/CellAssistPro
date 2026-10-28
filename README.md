@@ -50,8 +50,25 @@ sections à structure libre (`paragraphs`, `list`, `steps`), FAQ optionnelle, da
 Le temps de lecture est calculé automatiquement. Pour ajouter un article : créer le fichier,
 puis l'importer dans `lib/blog/index.ts`.
 
+Champs SEO :
+- `seoTitle` : balise `<title>`, 60 caractères au plus (la marque n'est ajoutée que si elle tient) ;
+- `description` : 120 à 155 caractères ;
+- `keyword` : une requête réellement tapée (suggestions Google ou Bing), pas une formulation inventée ;
+- `sources` : liens vers les textes officiels dès qu'un article parle de réglementation ou cite un chiffre ;
+- `related` : slugs proposés dans « À lire aussi » (sinon rotation automatique dans la catégorie).
+
+Liens dans le texte : écrire `[ancre descriptive](/chemin)` (ou une URL complète pour une source
+externe) dans un paragraphe, une liste, une étape, l'introduction ou une réponse de FAQ ; le
+composant `RichText` les rend. Chaque article renvoie vers sa page pilier (service ou guide).
+
+Un article supprimé ou fusionné reçoit une redirection 301 dans `next.config.ts` (`MERGED_ARTICLES`).
+
 Règles éditoriales : français irréprochable, pas d'anglicismes, pas de statistiques inventées,
 jamais de référence au handicap en métaphore, structures de sections variées d'un article à l'autre.
+Pas de tarif propre à CelAssistPro (devis personnalisé après diagnostic) : seuls des repères de
+marché datés et sourcés sont publiés. Ne jamais détailler les outils, prompts ou automatisations
+internes. Pas de numéro de téléphone. Le premier paragraphe d'un article ou d'une page répond
+directement à la question posée et nomme son sujet, pour pouvoir être cité tel quel.
 
 ## Formulaire de contact
 
@@ -70,8 +87,21 @@ il faut aussi l'ajouter dans `public/__forms.html`.
 
 ## Sécurité
 
-Les en-têtes (CSP, HSTS, etc.) sont définis une seule fois dans `netlify.toml` et
-s'appliquent au niveau du CDN. Si un service tiers est ajouté (script, iframe),
-mettre à jour la CSP en conséquence.
+Les en-têtes (CSP, HSTS, etc.) sont définis deux fois, avec les mêmes valeurs : dans
+`netlify.toml` pour les fichiers statiques et dans `next.config.ts` (`headers()`) pour les
+réponses produites par Next.js (pages, sitemap, robots, llms.txt), que les en-têtes de
+`netlify.toml` n'atteignent pas. Si un service tiers est ajouté (script, iframe), mettre à
+jour la CSP aux deux endroits.
+
+## SEO et recherche IA
+
+- Données structurées (`lib/structured-data.ts`) : un graphe global (WebSite, LocalBusiness,
+  Person) avec des `@id` stables, réutilisés par les pages (Service, BlogPosting, Blog,
+  ContactPage, ProfilePage, fil d'Ariane).
+- `llms.txt` (`app/llms.txt/route.ts`) suit le format llmstxt.org (`- [Titre](url): description`).
+- IndexNow : la clé est publiée à la racine (`public/<clé>.txt`) ; après un déploiement, envoyer
+  les URL modifiées à `https://api.indexnow.org/indexnow` (Bing, et donc Copilot et en partie
+  ChatGPT, les découvrent alors en quelques minutes).
+- `celassistpro.netlify.app` redirige en 301 vers le domaine (`netlify.toml`).
 
 © 2026 CelAssistPro. Tous droits réservés.

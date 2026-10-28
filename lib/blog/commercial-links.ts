@@ -35,16 +35,28 @@ const LINKS = {
     href: "/diagnostic",
     label: "évaluer votre temps perdu en 5 minutes",
   },
+  invoicing: {
+    href: "/facturation-electronique",
+    label: "le guide complet de la facturation électronique et l'accompagnement proposé",
+  },
+  charente: {
+    href: "/assistante-administrative-charente",
+    label: "une assistante administrative qui se déplace en Charente",
+  },
+  secretary: {
+    href: "/secretaire-independante",
+    label: "confier votre secrétariat à une secrétaire indépendante",
+  },
 } as const satisfies Record<string, CommercialLink>;
 
 const BY_CATEGORY: Record<string, CommercialLink[]> = {
-  Délégation: [LINKS.assistance, LINKS.offers, LINKS.diagnostic],
+  Délégation: [LINKS.assistance, LINKS.secretary, LINKS.offers],
   Métiers: [LINKS.assistance, LINKS.cases, LINKS.diagnostic],
   "Pré-comptabilité": [LINKS.assistance, LINKS.premium, LINKS.cases],
   "Organisation TPE": [LINKS.premium, LINKS.assistance, LINKS.diagnostic],
-  "Facturation électronique": [LINKS.assistance, LINKS.premium, LINKS.cases],
+  "Facturation électronique": [LINKS.invoicing, LINKS.assistance, LINKS.cases],
   "Automatisation & IA": [LINKS.premium, LINKS.cases, LINKS.diagnostic],
-  "En Charente": [LINKS.assistance, LINKS.cases, LINKS.diagnostic],
+  "En Charente": [LINKS.charente, LINKS.assistance, LINKS.cases],
 };
 
 const FALLBACK = [LINKS.assistance, LINKS.premium, LINKS.diagnostic];

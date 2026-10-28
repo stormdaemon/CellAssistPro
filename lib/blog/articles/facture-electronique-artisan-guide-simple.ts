@@ -1,65 +1,116 @@
 import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
-  "slug": "facture-electronique-artisan-guide-simple",
-  "title": "Facture électronique pour les artisans : le guide simple, sans jargon",
-  "description": "Un artisan doit surtout savoir créer, recevoir, classer et suivre ses factures sans perdre de temps.",
-  "category": "Facturation électronique",
-  "keyword": "facture électronique artisan",
-  "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
-  "image": {
-    "src": "/images/blog/facture-electronique-artisan-guide-simple.jpg",
-    "alt": "Ouvrière du bâtiment avec casque de chantier consultant une tablette numérique",
-    "credit": "Photo : Pexels"
+  slug: "facture-electronique-artisan-guide-simple",
+  title:
+    "Facture électronique pour les artisans : le guide simple, avec les acomptes et la sous-traitance du BTP",
+  seoTitle: "Facture électronique artisan : guide, acomptes et BTP",
+  description:
+    "Artisans du bâtiment : réception obligatoire depuis septembre 2026, émission au plus tard en 2027, acomptes, situations et sous-traitance BTP.",
+  category: "Facturation électronique",
+  keyword: "facture électronique artisan",
+  datePublished: "2026-06-12",
+  dateModified: "2026-10-28",
+  image: {
+    src: "/images/blog/facture-electronique-artisan-guide-simple.jpg",
+    alt: "Ouvrière du bâtiment avec casque de chantier consultant une tablette numérique",
+    credit: "Photo : Pexels",
   },
-  "intro": [
-    "Pour un artisan du bâtiment, de la mécanique ou de l'électricité, la facture est le pont entre le travail effectué et l'argent reçu. La facturation électronique n'est pas une complication de plus : c'est une occasion de clarifier ce pont avant que la réforme ne vous l'impose."
+  intro: [
+    "Depuis le 1er septembre 2026, un artisan doit pouvoir recevoir des factures électroniques par l'intermédiaire d'une plateforme agréée. Il devra émettre ses propres factures au format électronique au plus tard le 1er septembre 2027. Chaque facture entre dans ce dispositif, y compris les factures d'acompte et les situations de travaux.",
+    "Ce guide présente le circuit d'un artisan, ce qu'il émet et ce qu'il reçoit, puis les particularités du bâtiment. Pour l'ensemble du sujet, voir la page [facturation électronique](/facturation-electronique).",
   ],
-  "sections": [
+  sections: [
     {
-      "heading": "Le circuit artisanal classique : il faut l'améliorer",
-      "paragraphs": [
-        "Vous finissez une intervention en fin de journée. Vous écrivez une facture sur place, parfois sur papier, parfois vous vous promettez de le faire le soir. Le client veut un email, donc vous créez une version PDF. Vous la rangez quelque part sur votre ordinateur. Trois jours plus tard, votre expert-comptable demande où est cette facture. Vous la cherchez, vous la retrouvez ou pas. Parallèlement, vous recevez des factures de vos fournisseurs (matériaux, fournitures) par email, par courrier, parfois en main propre à la livraison. Trois canaux différents, trois habitudes différentes. Ce circuit marche, mais c'est usant.",
-        "La facturation électronique impose une légère amélioration. Au lieu de gérer plusieurs formats et plusieurs emplacements, vous aurez un système unique d'émission (créer la facture) et un point central de réception (où arrivent les factures fournisseurs). C'est plus léger, plus traçable."
-      ]
+      heading: "Le circuit d'une facture d'artisan",
+      paragraphs: [
+        "Une facture d'artisan part souvent d'un devis accepté ou d'une intervention, passe au paiement, et donne parfois lieu à une relance si le règlement tarde. Avec la réforme, deux flux sont à surveiller : les factures que vous émettez, et les factures de vos fournisseurs (matériaux, location de matériel, sous-traitants), qui arrivent par une plateforme agréée.",
+        "Ce double circuit reste simple : un outil qui émet au bon format, et un point d'arrivée unique pour les factures reçues. Le [calendrier de la facturation électronique](/blog/calendrier-facturation-electronique) indique à quelle date chaque flux devient obligatoire.",
+      ],
     },
     {
-      "heading": "Deux tâches à maîtriser",
-      "paragraphs": [
-        "Tâche 1 : Créer et envoyer une facture client. Elle doit contenir vos coordonnées, celles du client, la date, la description du travail, le prix HT et TTC, votre numéro de TVA (si applicable). Vous faites cela probablement déjà, mais peut-être pas toujours au même format. À partir de septembre 2027, pour vos clients professionnels français, vous devrez utiliser un format standard (Factur-X, UBL ou CII) transmis via une plateforme de dématérialisation partenaire agréée.",
-        "Tâche 2 : Recevoir et ranger une facture fournisseur. Elle arrive par email, par courrier, ou parfois vous la notez sur papier quand le livreur se présente. Vous devez la classer et la transmettre à votre comptable. Avant septembre 2026, c'est souvent du PDF classique. À partir de cette date, beaucoup d'entre elles arriveront au format électronique structuré, que vous pourrez importer automatiquement."
-      ]
+      heading: "Émettre : ce que vos factures doivent contenir",
+      paragraphs: [
+        "Les mentions classiques restent obligatoires, et la réforme en ajoute. Pour vos clients professionnels, il faut notamment faire figurer leur SIREN, la nature de l'opération (biens, services ou les deux) et, si elle diffère, l'adresse de livraison. Pour un particulier, la facture ne suit pas le circuit entre entreprises : les données de la vente relèvent de l'e-reporting, expliqué dans [l'article dédié](/blog/e-reporting-definition-calendrier).",
+      ],
     },
     {
-      "heading": "Trois confusions à clarifier",
-      "list": [
-        "Facture et devis : ce ne sont pas la même chose. Le devis est une proposition, la facture est une demande de paiement. Ne pas les mélanger dans votre système de classement.",
-        "Facture papier et facture électronique : l'électronique, c'est un fichier structuré qui peut être lu par les ordinateurs. Un PDF simple ressemble à une image, moins riche techniquement, mais encore accepté à titre transitoire. Le format Factur-X, lui, se présente comme un PDF à l'écran tout en contenant des données exploitables par les logiciels.",
-        "Votre responsabilité et celle du comptable : vous devez émettre une facture propre, complète, légale. Le comptable doit la traiter correctement. Vous n'êtes pas comptable, vous n'avez pas à connaître les codes comptables. Vous devez juste être soigneux dans ce que vous transmettez."
-      ]
+      heading: "Acomptes et situations de travaux : une facture comme une autre",
+      paragraphs: [
+        "Un acompte est une facture. Une situation de travaux l'est aussi : c'est une facture intermédiaire, établie selon l'avancement prévu au marché. Elle récapitule le montant du marché, le pourcentage réalisé, les situations déjà facturées, la retenue de garantie éventuelle et la TVA. Depuis la réforme, elle suit le calendrier de la facturation électronique, comme n'importe quelle autre facture.",
+        "Dans les marchés privés, la retenue de garantie ne peut dépasser 5 % du montant des acomptes. Elle garantit la levée des réserves faites à la réception, et elle est libérée un an après la réception, sauf opposition motivée du maître d'ouvrage notifiée par lettre recommandée. Ces règles découlent de la [loi n° 71-584 du 16 juillet 1971](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000687670).",
+      ],
     },
     {
-      "heading": "Votre action concrète aujourd'hui",
-      "paragraphs": [
-        "Premier geste : prenez une facture que vous avez créée récemment. Vérifiez qu'elle contient tous les éléments légaux (date, numéro de facture unique, SIRET ou numéro TVA du client, montants HT/TTC). Demandez à votre comptable de la valider en deux minutes. C'est rapide et vous indique si votre modèle est bon.",
-        "Deuxième geste : définissez où vous rangez actuellement les factures fournisseurs. Un dossier sur le bureau ? Un email sans structure ? Proposez à votre comptable ou assistante un point d'arrivée clair : un dossier numérisé « Factures Fournisseurs 2026 », avec des sous-dossiers par mois, par exemple.",
-        "Troisième geste : testez un outil de facturation adapté aux artisans — il en existe de gratuits ou peu coûteux — pour émettre votre prochaine facture au bon format. Regardez le résultat. Si cela vous convient et que le client ne voit pas de différence, vous êtes prêt pour la transition."
-      ]
-    }
+      heading: "Sous-traitance : l'autoliquidation de la TVA",
+      paragraphs: [
+        "Dans le bâtiment, lorsqu'un artisan fait appel à un sous-traitant, celui-ci facture hors taxe, sans TVA, avec la mention « Autoliquidation ». L'entreprise principale déclare et paie la TVA. Si le sous-traitant est en franchise en base, la mention à porter est « TVA non applicable, art. 293 B du CGI ». Ce mécanisme existe dans le BTP depuis le 1er janvier 2014 (article 283, 2 nonies, du code général des impôts).",
+        "Les règles administratives sont publiées au [BOFiP](https://bofip.impots.gouv.fr/bofip/3218-PGP.html/identifiant=BOI-TVA-DECLA-10-10-20-20200311). Le cas de votre chantier se vérifie avec votre expert-comptable avant la première facture de sous-traitance.",
+      ],
+    },
+    {
+      heading: "Votre action concrète aujourd'hui",
+      steps: [
+        "Relire une facture récente avec la liste des mentions obligatoires, puis la faire valider une fois par votre expert-comptable.",
+        "Définir un point d'arrivée unique pour les factures fournisseurs, par exemple un dossier numérique par mois.",
+        "Choisir une plateforme agréée dans la liste officielle, puis vérifier votre inscription à l'annuaire.",
+        "Tester un outil qui émet en Factur-X, en UBL ou en CII, sur une facture de test, avant de passer en production.",
+      ],
+    },
+    {
+      heading: "Votre administratif de chantier",
+      paragraphs: [
+        "Pour l'administratif de vos chantiers, qu'il s'agisse des devis, des acomptes, des situations ou des pièces à transmettre au comptable, l'[expertise artisans et BTP de CelAssistPro](/assistante-administrative-btp) détaille la méthode.",
+      ],
+    },
   ],
-  "faq": [
+  faq: [
     {
-      "question": "Passer à la facturation électronique va me faire perdre du temps ?",
-      "answer": "Non, l'inverse à long terme. Certes, le changement d'outil prend un jour ou deux de mise en place. Mais une fois habitué, vous gagnez du temps : pas de reformatage, pas de recherche du bon fichier, les factures fournisseurs importées automatiquement. À un mois d'utilisation, vous récupérez de la fluidité."
+      question: "Passer à la facturation électronique va-t-il me faire perdre du temps ?",
+      answer:
+        "Le changement demande un ou deux jours de mise en place. Ensuite, les factures fournisseurs importées directement font gagner du temps, à condition que le circuit soit bien paramétré dès le départ.",
     },
     {
-      "question": "Mes clients vont-ils refuser de recevoir une facture au nouveau format ?",
-      "answer": "Non, quasiment jamais. Pour eux, une facture au format Factur-X s'affiche comme un PDF normal. Ils ne voient pas de différence. C'est votre outil, via la plateforme de dématérialisation partenaire choisie, qui travaille en arrière-plan. Les dirigeants et petites entreprises reçoivent de plus en plus de factures structurées sans même le remarquer."
+      question: "Mes clients professionnels vont-ils refuser une facture électronique ?",
+      answer:
+        "Une facture au format Factur-X s'affiche comme un PDF classique pour votre client. Le traitement technique se fait entre votre outil et la plateforme agréée.",
     },
     {
-      "question": "Dois-je absolument numériser les factures papier que je reçois ?",
-      "answer": "Non, pas si vous pouvez les ranger physiquement de manière organisée (par mois, par exemple) et les transmettre à votre comptable à la demande. Mais numériser (scanner + classement numérique) rend les choses plus rapides et plus traçables."
-    }
-  ]
+      question: "Un particulier doit-il recevoir une facture électronique ?",
+      answer:
+        "La facturation électronique concerne les échanges entre entreprises assujetties à la TVA. Les ventes à des particuliers relèvent de l'e-reporting : voir [l'article dédié à l'e-reporting](/blog/e-reporting-definition-calendrier).",
+    },
+    {
+      question: "Dois-je numériser les factures papier que je reçois ?",
+      answer:
+        "Pas forcément. Un classement physique par mois suffit si le volume est faible. La numérisation facilite en revanche la transmission au comptable et la recherche d'une facture.",
+    },
+  ],
+  sources: [
+    {
+      label: "impots.gouv.fr : Je découvre la facturation électronique",
+      url: "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+    },
+    {
+      label: "Service-Public Entreprendre : mentions obligatoires d'une facture",
+      url: "https://entreprendre.service-public.gouv.fr/vosdroits/F31808",
+    },
+    {
+      label: "BOFiP : autoliquidation de la TVA dans le BTP (BOI-TVA-DECLA-10-10-20-20200311)",
+      url: "https://bofip.impots.gouv.fr/bofip/3218-PGP.html/identifiant=BOI-TVA-DECLA-10-10-20-20200311",
+    },
+    {
+      label: "impots.gouv.fr : FAQ sur l'autoliquidation dans les travaux de construction (PDF)",
+      url: "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/210_declarer_payer/autoliquidation_travaux_construction.pdf",
+    },
+    {
+      label: "Légifrance : loi n° 71-584 du 16 juillet 1971 (retenue de garantie)",
+      url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000687670",
+    },
+  ],
+  related: [
+    "calendrier-facturation-electronique",
+    "pdf-email-facture-electronique",
+    "facturation-electronique-micro-entrepreneur",
+  ],
 };

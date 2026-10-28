@@ -2,61 +2,79 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "telesecretariat-charente",
-  "title": "Télésecrétariat en Charente : une alternative à l'embauche pour les TPE",
-  "description": "Le télésecrétariat en Charente permet aux TPE de déléguer leur gestion administrative sans embaucher, sur place ou à distance.",
+  "title": "Secrétariat à distance ou télésecrétariat : quelle différence ?",
+  "seoTitle": "Secrétariat à distance ou télésecrétariat : la différence",
+  "description": "Télésecrétariat ou secrétariat à distance : ce que recouvre chaque terme, ce qui n'est pas proposé (accueil téléphonique) et ce que fait CelAssistPro.",
   "category": "En Charente",
-  "keyword": "télésecrétariat Charente",
+  "keyword": "secrétariat à distance",
   "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/telesecretariat-charente.jpg",
     "alt": "Femme portant un casque avec micro, assise devant un ordinateur portable dans un bureau lumineux",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Le télésecrétariat en Charente séduit de plus en plus de dirigeants de TPE qui n'ont ni le temps ni le budget pour embaucher une assistante à temps plein. Avant d'aller plus loin, une précision utile : ce dont il est question ici n'est pas une permanence téléphonique, mais un accompagnement administratif à distance, avec la possibilité d'un suivi sur place pour les entreprises du département."
+    "Le secrétariat à distance consiste à confier à distance la gestion administrative courante d'une entreprise : facturation, relances, classement, pièces comptables. Le télésecrétariat désigne souvent, lui, un service d'accueil téléphonique. CelAssistPro, l'activité de Céline Bardan, propose le premier, pas le second.",
+    "Pour les formats de collaboration en Charente, sur place et à distance, voir la [page dédiée à l'assistance administrative en Charente](/assistante-administrative-charente)."
   ],
   "sections": [
     {
-      "heading": "Ce que recouvre réellement le télésecrétariat",
+      "heading": "Deux mots, deux réalités",
       "paragraphs": [
-        "Le terme prête parfois à confusion. Le télésecrétariat, dans le cadre d'un accompagnement administratif indépendant, désigne la gestion à distance des tâches courantes : facturation, suivi des paiements, classement, relances, préparation des pièces pour le comptable, organisation générale. Ce n'est pas une prise d'appels en continu pour le compte de l'entreprise. Cette distinction compte, car beaucoup de dirigeants cherchent en réalité une aide sur leur gestion de fond, pas un standard téléphonique."
+        "Dans les moteurs de recherche, « télésecrétariat » renvoie le plus souvent à l'accueil téléphonique : permanence, prise de rendez-vous, standard externalisé. Le « secrétariat à distance » désigne plutôt une prestation de gestion : des tâches de fond, réalisées à distance pour le compte d'une entreprise.",
+        "Les deux ne se confondent pas. Avant de choisir, demandez-vous si vous avez besoin que quelqu'un décroche le téléphone à votre place, ou que votre gestion avance. Pour le secrétariat indépendant destiné aux TPE et aux artisans, voir la page [secrétariat indépendant](/secretaire-independante)."
       ]
     },
     {
-      "heading": "Pourquoi c'est une alternative crédible à l'embauche",
+      "heading": "Ce que CelAssistPro prend en charge",
       "list": [
-        "Pas de charges patronales ni de formalités d'embauche à gérer.",
-        "Une intervention ajustée au volume réel de travail, sans temps mort payé.",
-        "Une flexibilité pour augmenter ou réduire le suivi selon les périodes de l'année.",
-        "Un accompagnement qui peut évoluer vers plus d'autonomie pour l'entreprise, grâce à l'organisation mise en place."
+        "Devis et facturation, suivi des règlements.",
+        "Relances clients et suivi des impayés, selon un calendrier défini à l'avance.",
+        "Préparation et transmission des pièces comptables à l'expert-comptable.",
+        "Classement et organisation documentaire.",
+        "Gestion de la boîte mail administrative : tri, réponses types, suivi des demandes.",
+        "Tableaux de suivi et aide à la mise en place d'outils simples."
       ]
     },
     {
-      "heading": "Sur place en Charente, à distance partout ailleurs",
+      "heading": "Ce que CelAssistPro ne fait pas",
       "paragraphs": [
-        "Je suis basée à Champagne-Vigny, en Charente : pour les entreprises du département, l'accompagnement peut donc se faire directement sur place — rencontre initiale, points réguliers, immersion dans les habitudes de l'entreprise si besoin. Pour les TPE situées ailleurs en France, tout se déroule à distance, avec les mêmes outils et la même rigueur de suivi. La proximité géographique en Charente n'est donc pas une condition, mais un plus pour celles et ceux qui préfèrent un contact de visu au démarrage."
+        "Il n'y a pas de permanence téléphonique, ni de prise d'appels en continu pour le compte de l'entreprise. Il n'y a pas non plus de gestion de paie, et aucun conseil juridique ou fiscal. L'accompagnement ne remplace pas l'expert-comptable : il le complète.",
+        "Ces limites sont annoncées dès le départ, pour que le besoin réel soit clair avant tout engagement."
       ]
     },
     {
-      "heading": "Pour quelles TPE charentaises c'est pertinent",
+      "heading": "Sur place en Charente, à distance ailleurs",
       "paragraphs": [
-        "Les artisans, commerçants et indépendants du département qui passent leurs soirées à rattraper la facturation ou le classement trouvent dans le télésecrétariat une solution intermédiaire entre le tout-fait-soi-même et l'embauche à temps plein. C'est particulièrement adapté quand le volume administratif ne justifie pas un poste salarié, mais dépasse largement ce qu'une seule personne peut absorber sereinement en plus de son métier."
+        "Basée à Champagne-Vigny, Céline Bardan se déplace dans la Charente, pour le diagnostic, la mise en place et des points réguliers. Partout ailleurs en France, la collaboration se fait à distance, avec des outils simples et sécurisés. Le format complet est présenté sur la page [assistance administrative à distance](/assistante-administrative)."
+      ]
+    },
+    {
+      "heading": "Quand le secrétariat à distance a du sens",
+      "paragraphs": [
+        "Il convient aux dirigeants qui passent leurs soirées sur le classement ou les relances, et qui n'ont pas assez de volume pour un poste à temps plein. Il ne convient pas à un besoin d'accueil téléphonique : celui-ci relève d'un service dédié à la réception des appels.",
+        "Pour un comparatif avec une embauche, l'article [secrétaire à Angoulême](/blog/secretaire-independante-angouleme-ou-recrutement) détaille les différences."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Le télésecrétariat inclut-il la prise d'appels ?",
-      "answer": "Non, il ne s'agit pas d'une permanence téléphonique. L'accompagnement porte sur la gestion administrative de fond : facturation, suivi, organisation, relances, préparation comptable."
+      "question": "Le secrétariat à distance inclut-il la prise d'appels ?",
+      "answer": "Non. Il s'agit d'une gestion administrative de fond : facturation, suivi, relances, classement, pièces comptables. CelAssistPro ne prend pas d'appels pour le compte de l'entreprise."
     },
     {
       "question": "Faut-il être en Charente pour bénéficier de cet accompagnement ?",
-      "answer": "Non. Les entreprises du département 16 peuvent bénéficier d'un suivi sur place, mais l'accompagnement à distance fonctionne tout aussi bien pour les TPE situées partout en France."
+      "answer": "Non. Les entreprises du département peuvent bénéficier d'un suivi sur place, mais le suivi à distance fonctionne pour les TPE situées partout en France."
     },
     {
       "question": "Comment démarrer ?",
-      "answer": "Un diagnostic gratuit de 15 minutes permet de faire le point sur vos besoins et de voir si un accompagnement à distance ou sur place est le plus adapté à votre situation."
+      "answer": "Par un diagnostic gratuit de 15 minutes, réservable depuis la [page de contact](/contact). Il permet de voir si le secrétariat à distance correspond à votre besoin ; un devis personnalisé est envoyé sous 48 heures."
     }
+  ],
+  "related": [
+    "secretaire-independante-angouleme-ou-recrutement",
+    "assistante-virtuelle-charente-tpe",
+    "assistante-administrative-saintes"
   ]
 };

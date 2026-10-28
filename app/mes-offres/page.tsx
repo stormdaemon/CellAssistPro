@@ -19,13 +19,13 @@ export default function OffersPage() {
       <JsonLd data={faqJsonLd()} />
 
       <PageHero
-        eyebrow="Gestion administrative TPE Angoulême & Charente"
-        title="Des offres construites autour d'une seule question : de combien de temps avez-vous besoin ?"
+        eyebrow="Gestion administrative TPE et PME · Charente et à distance"
+        title="Trois formules pour structurer, remettre à plat ou automatiser votre gestion"
       >
         <p>
-          Pas de catalogue de tâches imposées, pas de minimum d'heures. Trois formules claires, du
-          coup de main ponctuel à la délégation complète. Toutes commencent par un diagnostic
-          gratuit de 15 minutes, toutes font l'objet d'un devis personnalisé.
+          Pas de catalogue de tâches imposées, pas de minimum d'heures. Trois formules claires pour
+          les TPE et les PME, du coup de main ponctuel à la délégation complète. Toutes commencent
+          par un diagnostic gratuit de 15 minutes, toutes font l'objet d'un devis personnalisé.
         </p>
         <p>
           Ces formules décrivent <strong>comment</strong> nous travaillons ensemble. Pour savoir{" "}
@@ -92,15 +92,15 @@ export default function OffersPage() {
 
                   <div className="offer-detail-panel__grid">
                     <div>
-                      <h3>Pour qui</h3>
+                      <h3>{offer.name} : pour qui ?</h3>
                       <p>{offer.audience}</p>
                     </div>
                     <div>
-                      <h3>Ce que c'est</h3>
+                      <h3>{offer.name} : ce que c'est</h3>
                       <p>{offer.what}</p>
                     </div>
                     <div className="offer-detail-panel__result">
-                      <h3>Le résultat</h3>
+                      <h3>{offer.name} : le résultat</h3>
                       <p>{offer.result}</p>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ export default function OffersPage() {
                   {offer.promise ? <p className="gold-note">{offer.promise}</p> : null}
 
                   <a className="button button--gold" href={SITE.calendlyUrl}>
-                    Demander mon devis
+                    {CTA.primary}
                   </a>
                 </article>
               );
@@ -120,11 +120,10 @@ export default function OffersPage() {
             <div>
               <h2>Le fil rouge — le pilotage mensuel</h2>
               <p>
-                Après la structuration ou la restructuration, je peux assurer votre pilotage au mois
-                : gestion courante, suivi des impayés, pré-compta, reporting — du simple coup de
-                main à la délégation complète. Et au fur et à mesure que nous automatisons, ce
-                forfait s'allège. Votre gestion coûte de moins en moins cher, en tournant de mieux
-                en mieux.
+                Après la structuration ou la restructuration, je peux assurer votre pilotage au mois :
+                gestion courante, suivi des impayés, pré-compta, tableaux de suivi — du simple coup de
+                main à la délégation complète. Et au fur et à mesure que nous automatisons, ce forfait
+                s'allège. Votre gestion coûte de moins en moins cher, en tournant de mieux en mieux.
               </p>
             </div>
             <a className="button button--gold" href={SITE.calendlyUrl}>
@@ -134,7 +133,41 @@ export default function OffersPage() {
         </div>
       </section>
 
-      <section className="section section--white" id="faq">
+      <section className="section section--white" aria-labelledby="price-title">
+        <div className="container narrow">
+          <div className="section-heading">
+            <h2 id="price-title">Comment est fixé le prix ?</h2>
+            <p>Un devis personnalisé, après un diagnostic gratuit, pour les TPE et les PME.</p>
+          </div>
+          <div className="story">
+            <p>
+              CelAssistPro ne publie pas de grille tarifaire : chaque mission est chiffrée sur devis
+              personnalisé, envoyé sous 48 heures après le diagnostic gratuit de 15 minutes, parce que
+              deux entreprises n'ont jamais le même volume de travail ni les mêmes outils.
+            </p>
+            <p>
+              Le devis tient compte de ce qui fait varier le coût : le volume, la complexité des
+              tâches (une tâche bornée, une restructuration ou un pilotage continu), l'urgence, l'état
+              de départ de votre organisation, la sensibilité des données, les déplacements et la durée
+              de la mission.
+            </p>
+            <p>
+              Une mission ponctuelle se chiffre à sa taille. Un pilotage mensuel se chiffre en forfait,
+              qui s'allège à mesure que les automatisations sont installées. Les accompagnements sont
+              sans engagement au-delà du préavis prévu au contrat.
+            </p>
+            <p>
+              Pour situer ces montants par rapport au marché, lisez notre{" "}
+              <Link href="/blog/tarif-assistante-administrative-independante-facteurs">
+                article sur les tarifs de l'assistance administrative indépendante
+              </Link>{" "}
+              : il présente des repères sourcés et datés, qui ne valent pas tarif de CelAssistPro.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--cream" id="faq">
         <div className="container narrow">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">FAQ</p>

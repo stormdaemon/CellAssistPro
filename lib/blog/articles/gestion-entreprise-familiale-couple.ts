@@ -2,58 +2,72 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "gestion-entreprise-familiale-couple",
-  "title": "Entreprise familiale : séparer les rôles pour protéger le couple et la boîte",
-  "description": "Une entreprise familiale fonctionne mieux quand les rôles, les décisions et les tâches administratives sont clairement posés.",
+  "title": "Entreprise à deux : séparer les rôles pour protéger le couple et l'activité",
+  "seoTitle": "Gestion administrative à deux : séparer les rôles",
+  "description": "Quand un couple gère l'entreprise, clarifier qui fait quoi, qui décide et qui valide évite les frictions. Trois questions à poser et un rythme fixe.",
   "category": "Organisation TPE",
-  "keyword": "gestion entreprise familiale couple",
+  "keyword": "gestion administrative petite entreprise",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/gestion-entreprise-familiale-couple.jpg",
     "alt": "Un homme et une femme penchés ensemble sur un document de travail",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Gérer une entreprise à deux, c'est mélanger vie familiale et vie professionnelle. Ce mélange, quand il est flou, forge des malentendus durables. Vous discutez gestion le dimanche matin, puis tard le soir, sans jamais vraiment avoir mis les choses à plat. Les responsabilités s'arrangent au fil de l'eau, chacun suppose ce que l'autre fait, et les frustrations s'accumulent en silence. La clarté n'est pas sèche ou froide : elle libère."
+    "Gérer une entreprise à deux, en couple, mêle vie familiale et gestion. Quand les responsabilités administratives ne sont pas écrites, elles se répartissent au fil de l'eau : chacun suppose que l'autre s'en occupe, et les frustrations s'accumulent sans être dites.",
+    "Trois décisions suffisent en général : qui fait quoi, qui exécute, qui valide, et à quel moment on en parle. Si la répartition reste bancale, une aide extérieure peut porter une partie des tâches, comme le présente [notre page sur la délégation administrative](/assistante-administrative)."
   ],
   "sections": [
     {
       "heading": "Où la vie de couple et la gestion se heurtent",
       "paragraphs": [
-        "C'est presque un classique : l'administratif de l'entreprise familiale grossit sans être nommé, donc sans être vraiment accepté. L'un de vous finit par « s'en occuper » parce que l'autre était concentré sur le métier, ou par défaut de négociation. Des mois passent. Puis la personne qui porte tout commence à sentir que c'est injuste, mais elle ne l'a pas dit clairement. Des frictions naissent du non-dit. Et quand on en parle enfin, ça devient une dispute au lieu d'une discussion.",
-        "Quand les responsabilités sont implicites, chacun a sa vision : « Moi, je pense que tu dois… » au lieu de « On a convenu que tu… ». C'est le terreau des ressentiments."
+        "L'administratif d'une entreprise familiale grossit sans être nommé, donc sans être vraiment accepté. L'un des deux finit par s'en occuper, parce que l'autre est concentré sur le métier. Des mois passent. La personne qui porte tout sent que c'est injuste, mais elle ne le dit pas clairement. Les frictions naissent du non-dit, et quand on en parle enfin, la discussion se transforme en dispute.",
+        "Quand les responsabilités restent implicites, chacun a sa version : « tu devrais relancer… » au lieu de « on a convenu que tu relances ». C'est là que s'installent les ressentiments. La [charge qui en résulte](/blog/charge-mentale-dirigeant-administratif) se ressent d'abord chez celui qui porte tout."
       ]
     },
     {
-      "heading": "Trois conversations à avoir avant la crise",
+      "heading": "Première question : qui fait quoi ?",
       "paragraphs": [
-        "Première : qui fait quoi ? Listez l'ensemble de l'administratif sans jugement, puis décidez qui prend quoi. Non pas « le plus équitable », mais « le plus acceptable pour chacun ». Peut-être que l'un de vous supporte mieux les relances et les tâches répétitives ; l'autre vaut mieux pour les décisions stratégiques. Exploitez ces différences."
+        "Listez l'ensemble de l'administratif, sans jugement : factures, relances, pièces comptables, paiements, classement, rendez-vous. Puis décidez qui prend quoi, non pas selon ce qui serait « le plus équitable », mais selon ce qui est acceptable pour chacun. L'un supporte peut-être mieux les tâches répétitives, l'autre les décisions stratégiques. Ces différences sont une ressource, à condition de les assumer."
       ]
     },
     {
-      "heading": "Deuxième : qui décide, qui exécute, qui valide ?",
+      "heading": "Deuxième question : qui exécute, qui décide, qui valide ?",
       "list": [
-        "Certaines tâches (factures, impayés, échéances) doivent être exécutées par une personne mais validées par l'autre pour éviter les biais ou les pertes.",
-        "D'autres tâches (signature de contrats, appels commerciaux, prises de décision importantes) restent partagées.",
-        "Clarifiez chacun des rôles : directeur, exécutant, valideur. Quand c'est flou, tout le monde est valideur de tout, et rien n'avance."
+        "Certaines tâches, comme les factures, les impayés et les échéances, sont exécutées par l'un et validées par l'autre, pour éviter les oublis et les erreurs.",
+        "Les décisions importantes, comme la signature d'un contrat, un engagement commercial ou une dépense notable, restent partagées.",
+        "Clarifiez les rôles : décideur, exécutant, valideur. Quand ce n'est pas clair, tout le monde valide tout, et plus rien n'avance."
       ]
     },
     {
-      "heading": "Troisième : quand et où en parlez-vous ?",
+      "heading": "Troisième question : quand en parle-t-on ?",
       "paragraphs": [
-        "Mettez un rendez-vous administratif récurrent : le jeudi 19 h, la première lundi du mois, peu importe. Vingt à trente minutes. C'est pendant ce temps-là que vous discutez des impayés, des relances, des décisions en attente. Pas le dimanche en prenant le café, pas en allant au lit.",
-        "En dehors de ce créneau, c'est interdit de parler gestion. Cela demande une discipline au début, mais c'est une libération : le reste du temps, vous êtes un couple qui mène une vie ensemble, pas deux associés qui se disputent."
+        "Fixez un rendez-vous administratif récurrent, par exemple le premier lundi du mois à 19 heures, pendant vingt à trente minutes. C'est là qu'on parle des impayés, des relances et des décisions en attente. Pas au petit-déjeuner, pas au moment de se coucher.",
+        "En dehors de ce créneau, on ne parle pas gestion. Cette discipline demande un effort au début, mais elle libère : le reste du temps, vous êtes un couple qui vit ensemble, et non deux associés qui se disputent."
+      ]
+    },
+    {
+      "heading": "Un exemple fictif de répartition",
+      "paragraphs": [
+        "Prenons un exemple fictif : l'un des deux prend en charge les relances et les tâches répétitives, qui lui conviennent, et l'autre valide les engagements et les dépenses. Chacun sait ce qu'il porte, et les dossiers ne reviennent plus sans cesse dans la conversation. Si le volume dépasse ce que les deux peuvent assumer, il reste possible de confier une partie des tâches à une aide extérieure, sans que ce soit un aveu d'échec.",
+        "Pour distinguer les tâches qui peuvent être déléguées de celles qui relèvent du dirigeant, lisez [quelles tâches déléguer](/blog/quelles-taches-deleguer-dirigeant)."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Comment partager les tâches si l'un de nous en supporte visiblement plus que l'autre ?",
-      "answer": "Honnêtement : reconnaissez-le, nommez-le, et ajustez. Peut-être que l'un de vous passe 8 heures sur l'administratif et l'autre 2 heures. Ce n'est pas une faillite s'il en est ainsi. Dites-le, acceptez-le, et échangez autre chose (vie personnelle, horaires, rôles métier) pour rééquilibrer."
+      "question": "Ma femme faisait les papiers et a repris un travail : comment s'organiser pour les devis, les factures et les relances ?",
+      "answer": "Commencez par lister ce qu'elle faisait, décider qui reprend chaque tâche, et fixer un rythme commun pour les devis, les factures et les relances. Si la charge dépasse ce que vous pouvez porter, un circuit simple et une aide ciblée sur les relances peuvent suffire, sans recruter."
     },
     {
       "question": "Et si on ne parvient pas à s'entendre sur la répartition ?",
-      "answer": "Peut-être que vous avez besoin d'une tierce personne pour vous aider à organiser, ou une assistante administrative pour porter une partie. Ce n'est pas un échec. C'est reconnaître que l'administratif n'est pas votre force commune, et c'est sain."
+      "answer": "Une tierce personne peut aider à poser les rôles par écrit. Une aide administrative extérieure peut aussi porter une partie des tâches. Ce n'est pas un échec : c'est reconnaître que l'administratif ne relève de la force particulière de personne."
+    },
+    {
+      "question": "Comment partager les tâches si l'un de nous en supporte plus que l'autre ?",
+      "answer": "Reconnaissez-le, nommez-le, puis ajustez. Une répartition inégale peut être compensée autrement : horaires, rôles dans le métier, tâches de la vie quotidienne. L'essentiel est que l'écart soit dit et accepté par les deux, et non qu'il disparaisse."
     }
-  ]
+  ],
+  "related": ["quand-deleguer-administratif", "charge-mentale-dirigeant-administratif", "reorganiser-gestion-administrative-entreprise"]
 };

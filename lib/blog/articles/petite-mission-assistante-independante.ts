@@ -3,67 +3,90 @@ import type { BlogArticle } from "../types";
 export const article: BlogArticle = {
   "slug": "petite-mission-assistante-independante",
   "title": "Peut-on confier une mission d'une heure à une assistante indépendante ?",
-  "description": "Oui : une mission courte peut débloquer une formation, une remise en ordre, une mise en conformité ou une décision.",
+  "seoTitle": "Assistante ponctuelle : confier une mission d'une heure",
+  "description": "Oui : une mission courte peut débloquer une formation, une remise en ordre ou une décision. Objectif écrit, livrable concret, devis personnalisé.",
   "category": "Délégation",
-  "keyword": "petite mission assistante indépendante",
+  "keyword": "assistante ponctuelle",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-07-01",
+  "dateModified": "2026-10-28",
   "image": {
     "src": "/images/blog/petite-mission-assistante-independante.jpg",
     "alt": "Professionnelle prenant des notes sur un bloc-notes lors d'une réunion courte",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Souvent, nous pensons qu'il faut beaucoup de travail à confier pour justifier un appel à une assistante indépendante. C'est une erreur. Deux heures concentrées sur un vrai blocage peuvent transformer votre mois, voire votre année."
+    "Oui : une assistante indépendante peut intervenir sur une mission courte, d'une heure ou d'une demi-journée, pour débloquer un point précis. Une formation à votre outil de facturation, une remise en ordre d'un classement, une vérification de conformité repoussée depuis longtemps en sont des exemples. Pour que la mission vaille son coût, elle doit avoir un objectif écrit et un livrable repris à la fin de la séance.",
+    "Une mission ponctuelle relève de la même offre que les accompagnements plus longs, présentée sur la page [assistante administrative](/assistante-administrative). Le prix se fixe après un devis personnalisé, à partir de repères de marché rappelés plus bas."
   ],
   "sections": [
     {
       "heading": "Quand deux heures peuvent changer beaucoup",
       "paragraphs": [
-        "Une mission mineure peut avoir un impact démesurément positif si elle cible le bon problème. Une formation express sur votre outil de facturation, une remise en ordre d'un classement qui vous ralentit chaque semaine, une vérification de conformité que vous repoussez depuis un an — ces deux heures transforment souvent les six mois qui suivent. Le trait caractéristique d'une petite mission réussie, c'est qu'elle débouche sur une méthode applicable, pas sur un conseil flou. Vous en repartez avec un système qui marche pour votre situation précise, que vous pouvez continuer seul ou que vous pouvez conserver.",
-        "Ne pas confondre la micro-mission avec du conseil informel distribué par email. Une assistante indépendante véhicule un savoir-faire structuré et livrable. L'engagement porte sur un résultat concret : un diagnostic posé, un classement mis en place avec vous, une procédure documentée. Cela suppose que vous ayez préparé les matériaux à l'avance et que vous quittiez la séance avec quelque chose d'exploitable dès le jour même."
+        "Une mission mineure peut peser lourd si elle vise le bon problème. Une formation express sur un logiciel, une remise en ordre qui vous fait perdre du temps chaque semaine, une vérification de conformité que vous repoussez depuis un an : ces heures transforment souvent les mois qui suivent. La réussite se mesure à la méthode repartie avec vous, non à un conseil flou.",
+        "Exemple fictif : un dirigeant confie à une assistante le tri de son classement informel, papiers, dossiers mal nommés, courriels importants dispersés. Elle propose une logique simple, qui reprend l'existant sans révolution, et ils la mettent en place ensemble. Trois mois plus tard, il retrouve un document en quinze secondes, contre une demi-heure de recherche auparavant.",
+        "Ne confondez pas la micro-mission avec un conseil informel envoyé par courriel. Une assistante livre un savoir-faire structuré : un diagnostic posé, un classement mis en place avec vous, une procédure documentée."
       ]
     },
     {
-      "heading": "Deux heures qui se remboursent immédiatement",
-      "paragraphs": [
-        "Imaginez un dirigeant qui confie à une assistante le tri complet de son classement informel : papier, dossiers mal nommés, emails importants éparpillés partout. Il décrit le désordre, elle propose une logique simple qui reprend ce qui existe déjà sans révolution. Ils mettent le système en place ensemble. Résultat : trois mois plus tard, il retrouve un document en quinze secondes au lieu de fouiller pendant une demi-heure. Le temps retrouvé dès les premières semaines a largement compensé le coût de cette intervention. C'est à la portée de toute TPE ou indépendant."
-      ]
-    },
-    {
-      "heading": "Les situations qui justifient une micro-mission",
+      "heading": "Les situations qui justifient une mission courte",
       "list": [
-        "Débloquer une question précise sans accompagnement continu.",
-        "Vous faire gagner du temps sur une tâche qui vous coûte plus en énergie qu'en heures réelles.",
-        "Repousser régulièrement la même petite tâche parce qu'elle vous semble fastidieuse.",
-        "Avoir besoin d'une expertise extérieure ponctuelle plutôt que d'une aide permanente."
+        "Débloquer une question précise, sans accompagnement continu.",
+        "Gagner du temps sur une tâche qui coûte plus d'énergie que de temps réel.",
+        "Sortir d'une petite tâche que vous repoussez chaque semaine parce qu'elle semble fastidieuse.",
+        "Obtenir une expertise extérieure ponctuelle, plutôt qu'une aide permanente."
       ]
     },
     {
-      "heading": "Le cadre d'une mission rapide qui fonctionne",
+      "heading": "Le cadre d'une mission courte qui fonctionne",
       "steps": [
-        "Formuler en une phrase ce que vous attendez en sortie.",
-        "Rassembler tout le nécessaire avant la séance : documents, accès, informations contextuelles.",
-        "Repartir avec quelque chose de concret et de réutilisable : un modèle, un processus, une liste."
+        "Formuler en une phrase ce que vous attendez en sortie, par exemple « une procédure de relance écrite » ou « un classement en place ».",
+        "Rassembler tout le nécessaire avant la séance : documents, accès, informations de contexte.",
+        "Repartir avec un livrable réutilisable : un modèle, une procédure, une liste de contrôle."
       ]
     },
     {
-      "heading": "Les pièges à éviter",
+      "heading": "Combien coûte une heure d'assistance indépendante ?",
+      "paragraphs": [
+        "Le taux horaire relevé par Plateya le 28 octobre 2026 se situe, pour la majorité des taux, entre 25 et 55 € HT de l'heure. Copeps indique généralement 20 à 50 € de l'heure. Sur la seule base de ces relevés, une heure d'intervention se situe donc entre 25 et 55 € HT, à titre d'ordre de grandeur. Ces fourchettes ne valent pas tarif de CelAssistPro : une mission courte fait l'objet d'un devis personnalisé. Les facteurs de prix sont détaillés dans [l'article sur le tarif d'une assistante indépendante](/blog/tarif-assistante-administrative-independante-facteurs)."
+      ]
+    },
+    {
+      "heading": "Ce qui fait échouer une mission courte",
       "list": [
-        "Transformer une micro-mission en discussion à bâtons rompus : fixez un objectif clair avant, même pour deux heures.",
-        "Reporter indéfiniment « pour quand vous aurez du temps » : ces petits blocages détruisent discrètement votre flux de travail.",
-        "Laisser filer sans conclure : notez immédiatement ce qui a changé, testez-le pendant la semaine et mesurez ce que vous avez gagné — sinon l'investissement s'évapore."
+        "Transformer la mission en discussion sans fin : fixez un objectif clair avant, même pour deux heures.",
+        "Reporter « pour quand vous aurez le temps » : ces petits blocages usent votre flux de travail.",
+        "Repartir sans conclure : notez ce qui change, testez-le pendant la semaine et mesurez le gain. Sans cela, l'investissement s'évapore.",
+        "Attendre d'une mission courte ce qu'elle ne couvre pas : elle ne comprend ni la paie, ni le conseil juridique ou fiscal, ni l'accueil téléphonique."
       ]
     }
   ],
   "faq": [
     {
-      "question": "Est-ce rentable, deux heures à ce prix ?",
-      "answer": "Oui, si ces deux heures libèrent quelque chose qui vous bloque depuis longtemps. Une micro-mission n'est pas du remplissage : c'est de l'expertise concentrée sur un point précis. Demander un devis fait gagner de la clarté et c'est gratuit — c'est un bon premier pas."
+      "question": "Est-ce rentable pour deux heures de travail ?",
+      "answer": "Oui, si ces heures libèrent quelque chose qui vous bloque depuis longtemps. Comparez le coût de la mission au temps que la tâche vous fait perdre chaque semaine. Le diagnostic de 15 minutes est gratuit et permet déjà de clarifier le besoin."
     },
     {
-      "question": "Peut-on regrouper plusieurs petites missions en une seule séance ?",
-      "answer": "Oui, si elles relèvent de la même logique : « Remettre en ordre mon classement ET mettre en place un suivi des factures client » peut tenir en une demi-journée cohérente sans diluer l'attention."
+      "question": "Peut-on regrouper plusieurs petites missions ?",
+      "answer": "Oui, si elles relèvent de la même logique : « remettre en ordre mon classement et mettre en place un suivi des factures clients » peut tenir en une demi-journée cohérente, sans diluer l'attention."
+    },
+    {
+      "question": "Faut-il préparer quelque chose avant la mission ?",
+      "answer": "Oui : rassemblez les documents et les accès nécessaires, et écrivez en une phrase le résultat attendu. Une séance sans objectif écrit tourne vite à la discussion générale."
     }
+  ],
+  "sources": [
+    {
+      "label": "Plateya, « Tarif taux horaire assistante administrative freelance en 2026 » (mis à jour le 5 octobre 2026, relevé le 28 octobre 2026)",
+      "url": "https://www.plateya.fr/blog/detail/tarif-taux-horaire-assistante-administrative-freelance-en-2026"
+    },
+    {
+      "label": "Copeps, guide sur le secrétariat freelance (page non datée, relevée le 28 octobre 2026)",
+      "url": "https://copeps.fr/actualites/forfait-semaine-secretaire-freelance/"
+    }
+  ],
+  "related": [
+    "quelles-taches-deleguer-dirigeant",
+    "quand-deleguer-administratif",
+    "tarif-assistante-administrative-independante-facteurs"
   ]
 };

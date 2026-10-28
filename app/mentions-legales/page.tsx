@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site-data";
@@ -10,8 +11,8 @@ export default function LegalPage() {
     <main>
       <PageHero eyebrow="Informations légales" title="Mentions légales">
         <p>
-          Cette page rassemble les informations relatives à l'édition, l'hébergement et l'usage du
-          site CelAssistPro.
+          Cette page rassemble les informations relatives à l'édition, l'hébergement et l'usage du site
+          CelAssistPro.
         </p>
       </PageHero>
 
@@ -19,28 +20,40 @@ export default function LegalPage() {
         <div className="container legal-content">
           <h2>Éditrice du site</h2>
           <p>
-            CelAssistPro, nom commercial de Céline Bardan, entrepreneur individuel immatriculé sous
-            le SIREN {SITE.siren}. Adresse : {SITE.legalAddress}. Contact :{" "}
-            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+            CelAssistPro, nom commercial de Céline Bardan, entrepreneur individuel (EI), immatriculé au
+            répertoire SIRENE le 1er janvier 2026 sous le SIREN {SITE.siren}.
           </p>
+          <p>Adresse : {SITE.legalAddress}.</p>
+          <p>
+            Contact : <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, ou le{" "}
+            <Link href="/contact">formulaire de la page contact</Link>.
+          </p>
+
+          <h2>Directrice de la publication</h2>
+          <p>Céline Bardan.</p>
 
           <h2>Hébergement</h2>
           <p>
-            Le site est hébergé par Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco,
-            CA 94104, États-Unis.
+            Le site est hébergé par Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104,
+            États-Unis.
+          </p>
+
+          <h2>Données personnelles</h2>
+          <p>
+            Les traitements de données liés au formulaire de contact et à la prise de rendez-vous sont décrits
+            dans la <Link href="/politique-confidentialite">politique de confidentialité</Link>.
           </p>
 
           <h2>Propriété intellectuelle</h2>
           <p>
-            Les textes, visuels, photographies, éléments graphiques et structure du site sont
-            protégés. Toute reproduction ou réutilisation sans autorisation écrite préalable est
-            interdite.
+            Les textes, visuels, photographies, éléments graphiques et structure du site sont protégés. Toute
+            reproduction ou réutilisation sans autorisation écrite préalable est interdite.
           </p>
 
           <h2>Responsabilité</h2>
           <p>
-            CelAssistPro veille à l'exactitude des informations publiées, mais celles-ci ne
-            remplacent pas un conseil comptable, juridique ou fiscal adapté à votre situation.
+            CelAssistPro veille à l'exactitude des informations publiées, mais celles-ci ne remplacent pas un
+            conseil comptable, juridique ou fiscal adapté à votre situation.
           </p>
         </div>
       </section>
