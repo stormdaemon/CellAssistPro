@@ -781,7 +781,7 @@ main > .section .eyebrow {
 
 /* Les papiers tombent sur le bureau au chargement. */
 .bureau__objet > * {
-  animation: tombe 0.85s var(--ressort) calc(0.25s + var(--ordre) * 75ms) both;
+  animation: tombe 0.75s var(--ressort) calc(0.2s + var(--ordre) * 55ms) both;
 }
 @keyframes tombe {
   from {
@@ -1133,6 +1133,7 @@ main > .section .eyebrow {
   transition: opacity 0.3s;
 }
 .fleche-main { width: 3.2em; height: auto; rotate: -146deg; }
+.home-hero[data-arrivee] .bureau__indice,
 .home-hero[data-joue] .bureau__indice,
 .home-hero[data-etat="range"] .bureau__indice { opacity: 0; }
 
@@ -1165,8 +1166,11 @@ main > .section .eyebrow {
   font-size: 0.88rem;
   font-weight: 700;
   white-space: nowrap;
-  transition: transform 0.35s var(--ressort), box-shadow 0.25s;
+  transition: opacity 0.3s, transform 0.35s var(--ressort), box-shadow 0.25s;
 }
+/* À l'arrivée, le bureau se range seul : le bouton attend la fin, avec le « Voilà ». */
+.home-hero[data-arrivee] .bureau__bouton:not(:focus-visible) { opacity: 0; pointer-events: none; }
+.home-hero[data-etat="range"] .bureau__bouton { transition: opacity 0.5s 2.6s, transform 0.35s var(--ressort), box-shadow 0.25s; }
 .bureau__bouton:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: var(--ombre-souleve); }
 .bureau__bouton:active { transform: scale(0.95); }
 
@@ -1477,7 +1481,6 @@ main > .section .eyebrow {
   display: flex;
   min-height: 430px;
   transform: rotateY(calc(var(--ix, 0) * 6deg)) rotateX(calc(var(--iy, 0) * -5deg));
-  transform-style: preserve-3d;
   transition: transform 0.6s var(--pose);
 }
 .chemise__dos {
@@ -1528,10 +1531,12 @@ main > .section .eyebrow {
   background-image: var(--grain);
   border-radius: 12px;
   box-shadow: 0 -2px 8px rgba(36, 19, 92, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  /* Perspective propre, sans preserve-3d : au retour, le ressort dépasse 0° et la face passerait derrière le dos. */
+  transform: perspective(1400px) rotateX(0deg);
   transform-origin: 50% 100%;
   transition: transform 0.6s var(--ressort);
 }
-.chemise:hover .chemise__face { transform: rotateX(-13deg); }
+.chemise:hover .chemise__face { transform: perspective(1400px) rotateX(-13deg); }
 .chemise__face h3 { font-size: clamp(1.45rem, 2vw, 1.85rem); font-weight: 800; }
 .chemise__face p { flex: 1; }
 .chemise__face a {

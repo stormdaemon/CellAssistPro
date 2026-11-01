@@ -194,8 +194,8 @@ const CHEMISE: CSSProperties = {
 } as CSSProperties;
 
 const LARGEUR_ETROITE = "(max-width: 980px)";
-const DELAI_RANGEMENT_AUTOMATIQUE = 7000;
-const DELAI_RANGEMENT_ETROIT = 2400;
+const DELAI_RANGEMENT_AUTOMATIQUE = 1800;
+const DELAI_RANGEMENT_ETROIT = 1400;
 const SEUIL_DEFILEMENT = 90;
 
 type BureauProps = {
@@ -205,12 +205,14 @@ type BureauProps = {
 export function Bureau({ children }: BureauProps) {
   const [etat, setEtat] = useState<Etat>("bazar");
   const [aJoue, setAJoue] = useState(false);
+  const [arrivee, setArrivee] = useState(true);
   const heros = useRef<HTMLElement>(null);
   const scene = useRef<HTMLDivElement>(null);
   const aTouche = useRef(false);
 
   function basculer() {
     aTouche.current = true;
+    setArrivee(false);
     scene.current?.querySelectorAll<HTMLElement>("[data-objet]").forEach(reposer);
     setEtat((courant) => (courant === "bazar" ? "range" : "bazar"));
   }
@@ -221,20 +223,26 @@ export function Bureau({ children }: BureauProps) {
     if (objet && scene.current && saisir(event.nativeEvent, objet, scene.current)) {
       aTouche.current = true;
       setAJoue(true);
+      setArrivee(false);
     }
   }
 
   // Le bureau se range tout seul si le visiteur le laisse faire : l'administratif avance sans lui.
+  // Le bazar ne dure que le temps d'être vu : ce qu'on vient chercher ici, c'est le calme.
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
     function rangerSeul() {
       if (!aTouche.current) {
         aTouche.current = true;
+        setArrivee(false);
         setEtat("range");
       }
+    }
+
+    // Sans mouvement, rien ne tombe : le bureau est rangé d'emblée.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const minuteur = window.setTimeout(rangerSeul, 0);
+
+      return () => window.clearTimeout(minuteur);
     }
 
     // Sur un petit écran, le bureau est sous le texte : on attend qu'il ait été vu.
@@ -328,6 +336,7 @@ export function Bureau({ children }: BureauProps) {
   return (
     <section
       className="home-hero"
+      data-arrivee={arrivee ? "oui" : undefined}
       data-chemise="lilas"
       data-etat={etat}
       data-joue={aJoue ? "oui" : undefined}
