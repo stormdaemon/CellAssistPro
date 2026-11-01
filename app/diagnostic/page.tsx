@@ -1,27 +1,30 @@
 import type { Metadata } from "next";
-import { Clock3, ListChecks, MailCheck, ShieldCheck, TimerReset } from "lucide-react";
+import { Coche, Mots } from "@/components/papeterie/objets";
+import { SceneFormulaire } from "@/components/papeterie/scenes";
 import { DiagnosticQuiz } from "@/components/site/diagnostic-quiz";
 import { JsonLd } from "@/components/site/json-ld";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { CTA, quizProfiles, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("resources");
 
 export default function DiagnosticPage() {
   return (
-    <main>
+    <main data-chemise="or">
       <JsonLd data={breadcrumbJsonLd("Diagnostic", "/diagnostic")} />
 
       <PageHero
+        objet={<SceneFormulaire />}
         eyebrow="Évaluer mon temps perdu — 5 min"
         title="Combien d'heures l'administratif vous coûte-t-il chaque semaine ?"
       >
         <p>
-          Répondez à 10 questions sur votre quotidien de dirigeant. Votre score s'affiche
-          immédiatement, avec votre profil et les 3 premières actions pour récupérer du temps dès
-          cette semaine. Gratuit et sans engagement : aucune donnée n'est collectée, le calcul se fait
+          Répondez à 10&nbsp;questions sur votre quotidien de dirigeant. Votre score s’affiche
+          immédiatement, avec votre profil et les 3&nbsp;premières actions pour récupérer du temps dès
+          cette semaine. Gratuit et sans engagement&nbsp;: aucune donnée n’est collectée, le calcul se fait
           dans votre navigateur, sans compte ni e-mail.
         </p>
       </PageHero>
@@ -32,18 +35,17 @@ export default function DiagnosticPage() {
             <h2>Répondez selon votre réalité</h2>
             <p>
               Pour chaque question, répondez selon votre réalité des dernières semaines — pas celle
-              que vous aimeriez avoir. Le résultat n'en sera que plus utile.
+              que vous aimeriez avoir. Le résultat n’en sera que plus utile.
             </p>
             <ul className="diagnostic-side__points">
               <li>
-                <ListChecks aria-hidden="true" /> 10 questions, 4 réponses possibles
+                <Coche /> 10&nbsp;questions, 4&nbsp;réponses possibles
               </li>
               <li>
-                <Clock3 aria-hidden="true" /> 5 minutes, résultat immédiat
+                <Coche /> 5&nbsp;minutes, résultat immédiat
               </li>
               <li>
-                <ShieldCheck aria-hidden="true" /> Aucune donnée collectée : tout se passe dans
-                votre navigateur
+                <Coche /> Aucune donnée collectée&nbsp;: tout se passe dans votre navigateur
               </li>
             </ul>
           </div>
@@ -55,33 +57,32 @@ export default function DiagnosticPage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Votre résultat vous classe dans l'un de ces profils</h2>
+            <h2>
+              <Mots>Votre résultat vous classe dans l'un de ces profils</Mots>
+            </h2>
           </div>
           <div className="cards-grid cards-grid--three">
             {quizProfiles.map((profile) => (
               <article className="profile-card" key={profile.score}>
-                <Clock3 aria-hidden="true" />
-                <p className="eyebrow">{profile.score}</p>
-                <h3>{profile.title}</h3>
-                <p>{profile.text}</p>
+                <p className="profile-card__score">{fr(profile.score)}</p>
+                <h3>{fr(profile.title)}</h3>
+                <p>{fr(profile.text)}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="resource-cta">
+      <section className="section section--cream resource-cta" data-chemise="lilas">
         <div className="container resource-cta__grid">
           <div>
-            <TimerReset aria-hidden="true" />
-            <h2>Vous avez votre score ?</h2>
+            <h2>Vous avez votre score&nbsp;?</h2>
             <p>
-              En 15 minutes, on regarde où votre temps se perd et par quel levier commencer pour le
+              En 15&nbsp;minutes, on regarde où votre temps se perd et par quel levier commencer pour le
               récupérer.
             </p>
           </div>
           <a className="button button--gold" href={SITE.calendlyUrl}>
-            <MailCheck aria-hidden="true" />
             {CTA.primary}
           </a>
         </div>

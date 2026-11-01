@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SceneClasse } from "@/components/papeterie/scenes";
 import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { SITE } from "@/lib/site-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("legal");
 
 export default function LegalPage() {
   return (
-    <main>
-      <PageHero eyebrow="Informations légales" title="Mentions légales">
+    <main data-chemise="gris">
+      <PageHero objet={<SceneClasse />} eyebrow="Informations légales" title="Mentions légales">
         <p>
-          Cette page rassemble les informations relatives à l'édition, l'hébergement et l'usage du site
+          Cette page rassemble les informations relatives à l’édition, l’hébergement et l’usage du site
           CelAssistPro.
         </p>
       </PageHero>
@@ -21,11 +23,11 @@ export default function LegalPage() {
           <h2>Éditrice du site</h2>
           <p>
             CelAssistPro, nom commercial de Céline Bardan, entrepreneur individuel (EI), immatriculé au
-            répertoire SIRENE le 1er janvier 2026 sous le SIREN {SITE.siren}.
+            répertoire SIRENE le 1er janvier 2026&nbsp;sous le SIREN&nbsp;{fr(SITE.siren)}.
           </p>
-          <p>Adresse : {SITE.legalAddress}.</p>
+          <p>Adresse&nbsp;: {SITE.legalAddress}.</p>
           <p>
-            Contact : <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, ou le{" "}
+            Contact&nbsp;: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>, ou le{" "}
             <Link href="/contact">formulaire de la page contact</Link>.
           </p>
 
@@ -52,7 +54,7 @@ export default function LegalPage() {
 
           <h2>Responsabilité</h2>
           <p>
-            CelAssistPro veille à l'exactitude des informations publiées, mais celles-ci ne remplacent pas un
+            CelAssistPro veille à l’exactitude des informations publiées, mais celles-ci ne remplacent pas un
             conseil comptable, juridique ou fiscal adapté à votre situation.
           </p>
         </div>

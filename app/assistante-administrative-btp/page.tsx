@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, HardHat, Info } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Mots, Tampon } from "@/components/papeterie/objets";
+import { SceneChantier } from "@/components/papeterie/scenes";
+import { TamponLibre } from "@/components/papeterie/tampon-libre";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -8,6 +11,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { btpTrades, btpWorkflow, CTA, SITE, testimonials } from "@/lib/site-data";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("btp");
 
@@ -43,7 +47,7 @@ export default function AssistanteAdministrativeBtpPage() {
   const raphael = testimonials.find((testimonial) => testimonial.name === "Raphaël");
 
   return (
-    <main>
+    <main data-chemise="kraft">
       <JsonLd data={breadcrumbJsonLd("Expertise BTP", "/assistante-administrative-btp")} />
       <JsonLd
         data={serviceJsonLd({
@@ -57,13 +61,14 @@ export default function AssistanteAdministrativeBtpPage() {
       />
 
       <PageHero
+        objet={<SceneChantier />}
         eyebrow="Expertise BTP et artisans"
         title="Assistante administrative indépendante pour les artisans et entreprises du BTP"
       >
         <p>
-          CelAssistPro est l'activité d'assistance administrative indépendante de Céline Bardan,
-          basée à Champagne-Vigny (Charente). Depuis 2017, elle tient l'administratif de BR16BATIMENT,
-          une entreprise du bâtiment en Charente : devis, acomptes, relances, facturation et pièces
+          CelAssistPro est l’activité d’assistance administrative indépendante de Céline Bardan,
+          basée à Champagne-Vigny (Charente). Depuis 2017, elle tient l’administratif de BR16BATIMENT,
+          une entreprise du bâtiment en Charente&nbsp;: devis, acomptes, relances, facturation et pièces
           pour le comptable.
         </p>
         <p>
@@ -83,25 +88,22 @@ export default function AssistanteAdministrativeBtpPage() {
       <section className="section section--white">
         <div className="container narrow">
           <div className="highlight-panel">
-            <div className="highlight-panel__icon">
-              <HardHat aria-hidden="true" />
-            </div>
-            <h2>Secrétaire du bâtiment, secrétariat pour artisans : de quoi parle-t-on ?</h2>
+            <h2>Secrétaire du bâtiment, secrétariat pour artisans&nbsp;: de quoi parle-t-on&nbsp;?</h2>
             <p>
-              On cherche parfois une « secrétaire du bâtiment », un « secrétariat pour artisans » ou
-              une « gestion administrative artisan ». Ces formules désignent le même besoin : une
-              personne extérieure à l'entreprise tient l'administratif du bureau et des chantiers,
+              On cherche parfois une «&nbsp;secrétaire du bâtiment&nbsp;», un «&nbsp;secrétariat pour artisans&nbsp;» ou
+              une «&nbsp;gestion administrative artisan&nbsp;». Ces formules désignent le même besoin&nbsp;: une
+              personne extérieure à l’entreprise tient l’administratif du bureau et des chantiers,
               sans contrat de travail ni poste à temps plein, et sans se substituer au comptable.
             </p>
             <p>
-              Je ne travaille pas exclusivement avec le BTP. Mais c'est un secteur que je connais de
-              l'intérieur : le vocabulaire, le rythme des chantiers, la saisonnalité, les acomptes, la
-              retenue de garantie, les pièces que réclame le comptable. Vous n'avez rien à m'expliquer
+              Je ne travaille pas exclusivement avec le BTP. Mais c’est un secteur que je connais de
+              l’intérieur&nbsp;: le vocabulaire, le rythme des chantiers, la saisonnalité, les acomptes, la
+              retenue de garantie, les pièces que réclame le comptable. Vous n’avez rien à m’expliquer
               avant de commencer.
             </p>
             <ul className="trade-chips" aria-label="Corps de métier que je connais">
               {btpTrades.map((trade) => (
-                <li key={trade}>{trade}</li>
+                <li key={trade}>{fr(trade)}</li>
               ))}
             </ul>
           </div>
@@ -111,13 +113,15 @@ export default function AssistanteAdministrativeBtpPage() {
       <section className="section section--cream" aria-labelledby="workflow-title">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <p className="eyebrow">Le circuit administratif d'un chantier</p>
-            <h2 id="workflow-title">De la demande client à l'encaissement, un seul circuit</h2>
+            <p className="eyebrow">Le circuit administratif d’un chantier</p>
+            <h2 id="workflow-title">
+              <Mots>De la demande client à l'encaissement, un seul circuit</Mots>
+            </h2>
           </div>
           <div className="container narrow">
             <p>
-              Derrière les mots « gestion administrative », il y a des réalités très concrètes : les
-              mesures envoyées depuis un chantier, le devis qui doit partir vite, l'acompte à suivre,
+              Derrière les mots «&nbsp;gestion administrative&nbsp;», il y a des réalités très concrètes&nbsp;: les
+              mesures envoyées depuis un chantier, le devis qui doit partir vite, l’acompte à suivre,
               les photos dans WhatsApp, les justificatifs à récupérer, la facture à envoyer et le
               comptable qui attend ses pièces. Chaque étape ci-dessous laisse une trace administrative.
             </p>
@@ -125,16 +129,18 @@ export default function AssistanteAdministrativeBtpPage() {
           <ol className="workflow">
             {btpWorkflow.map((step, index) => (
               <li key={step}>
-                <span className="workflow__number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
+                <span className="workflow__etiquette">
+                  <span className="workflow__number" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="workflow__label">{fr(step)}</span>
                 </span>
-                <span className="workflow__label">{step}</span>
               </li>
             ))}
           </ol>
           <p className="transition-line">
             Je peux prendre en charge ce circuit, le structurer et automatiser les étapes répétitives
-            qui n'ont pas besoin de rester manuelles.
+            qui n’ont pas besoin de rester manuelles.
           </p>
         </div>
       </section>
@@ -142,37 +148,36 @@ export default function AssistanteAdministrativeBtpPage() {
       <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Ce que ça change concrètement</h2>
+            <h2>
+              <Mots>Ce que ça change concrètement</Mots>
+            </h2>
           </div>
           <div className="cards-grid cards-grid--three">
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>Les devis partent vite.</strong> Une fois les cotes prises, le devis est
                 préparé et envoyé, et la relance est programmée. Dans une entreprise du bâtiment
-                accompagnée, les devis partent sous 24 h.
+                accompagnée, les devis partent sous 24&nbsp;h.
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>Les acomptes et les factures sont suivis.</strong> Vous savez qui a payé, qui
                 doit encore payer et ce qui reste à facturer sur chaque chantier.
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>Le comptable a ses pièces.</strong> Achats, notes de frais, justificatifs de
-                chantier : classés au fil de l'eau, plus dans la boîte à gants.
+                chantier&nbsp;: classés au fil de l’eau, plus dans la boîte à gants.
               </p>
             </article>
           </div>
           <p className="transition-line">
-            Vous cherchez d'abord à déléguer votre gestion courante ? Voyez ce que couvre
-            l'<Link href="/assistante-administrative">assistance administrative</Link>. Vous voulez
-            aller plus loin et faire disparaître une partie de ce travail ? C'est le rôle du{" "}
-            <Link href="/bras-droit-automatisation">bras droit stratégique et de l'automatisation</Link>.
+            Vous cherchez d’abord à déléguer votre gestion courante&nbsp;? Voyez ce que couvre
+            l’<Link href="/assistante-administrative">assistance administrative</Link>. Vous voulez
+            aller plus loin et faire disparaître une partie de ce travail&nbsp;? C’est le rôle du{" "}
+            <Link href="/bras-droit-automatisation">bras droit stratégique et de l’automatisation</Link>.
           </p>
         </div>
       </section>
@@ -181,7 +186,9 @@ export default function AssistanteAdministrativeBtpPage() {
         <div className="container">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">Dossiers propres au BTP</p>
-            <h2 id="btp-dossiers-title">Les règles du bâtiment qui reviennent dans vos dossiers</h2>
+            <h2 id="btp-dossiers-title">
+              <Mots>Les règles du bâtiment qui reviennent dans vos dossiers</Mots>
+            </h2>
           </div>
           <div className="container narrow">
             <p>
@@ -192,17 +199,15 @@ export default function AssistanteAdministrativeBtpPage() {
           </div>
           <div className="cards-grid cards-grid--four">
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>
                   <Link href="/blog/situation-de-travaux-exemple">Situation de travaux</Link>
                 </strong>{" "}
-                La facture d'avancement, avec un exemple chiffré fictif : montant, pourcentage réalisé,
+                La facture d’avancement, avec un exemple chiffré fictif&nbsp;: montant, pourcentage réalisé,
                 retenue et TVA.
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>
                   <Link href="/blog/retenue-de-garantie-caution-bancaire">
@@ -213,36 +218,34 @@ export default function AssistanteAdministrativeBtpPage() {
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>
                   <Link href="/blog/autoliquidation-tva-sous-traitance-btp">
                     Autoliquidation de la TVA
                   </Link>
                 </strong>{" "}
-                En sous-traitance BTP : qui facture, qui déclare la TVA et quelles mentions porter.
+                En sous-traitance BTP&nbsp;: qui facture, qui déclare la TVA et quelles mentions porter.
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>
-                  <Link href="/blog/devis-artisan-mentions-obligatoires">Devis d'artisan</Link>
+                  <Link href="/blog/devis-artisan-mentions-obligatoires">Devis d’artisan</Link>
                 </strong>{" "}
-                Les mentions obligatoires chez un particulier, et ce qui s'ajoute avec l'assurance
+                Les mentions obligatoires chez un particulier, et ce qui s’ajoute avec l’assurance
                 décennale.
               </p>
             </article>
           </div>
           <p className="transition-line">
-            Pour les factures, la réforme s'applique aussi aux entreprises du bâtiment. Le point complet
+            Pour les factures, la réforme s’applique aussi aux entreprises du bâtiment. Le point complet
             est sur la page <Link href="/facturation-electronique">facturation électronique</Link>. Pour
             aller plus loin, lisez{" "}
             <Link href="/blog/gestion-administrative-artisan-batiment">
-              la gestion administrative d'un artisan du bâtiment
+              la gestion administrative d’un artisan du bâtiment
             </Link>{" "}
             et{" "}
-            <Link href="/blog/relancer-devis-artisan">la relance d'un devis envoyé</Link>.
+            <Link href="/blog/relancer-devis-artisan">la relance d’un devis envoyé</Link>.
           </p>
         </div>
       </section>
@@ -251,26 +254,28 @@ export default function AssistanteAdministrativeBtpPage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Cas réel</p>
-            <h2 id="btp-cas-title">Chez un client de CelAssistPro, une entreprise du bâtiment</h2>
+            <h2 id="btp-cas-title">
+              <Mots>Chez un client de CelAssistPro, une entreprise du bâtiment</Mots>
+            </h2>
           </div>
           <p>
-            Une entreprise du bâtiment en pleine activité avait des chantiers qui s'enchaînaient, mais
+            Une entreprise du bâtiment en pleine activité avait des chantiers qui s’enchaînaient, mais
             des devis rédigés le soir et des relances oubliées. Le circuit devis, envoi, relance, facture
-            a d'abord été structuré. Ensuite, les relances et le classement des pièces ont été
-            automatisés. Résultat : des devis envoyés sous 24 h et plus aucune relance oubliée.
+            a d’abord été structuré. Ensuite, les relances et le classement des pièces ont été
+            automatisés. Résultat&nbsp;: des devis envoyés sous 24&nbsp;h et plus aucune relance oubliée.
           </p>
           {raphael ? (
-            <article className="testimonial-card">
-              <blockquote>“{raphael.quote}”</blockquote>
+            <article className="testimonial-card" data-attrapable="">
+              <blockquote>“{fr(raphael.quote)}”</blockquote>
               <p>
-                <strong>{raphael.name}</strong>
-                <span>{raphael.role}</span>
+                <strong>{fr(raphael.name)}</strong>
+                <span>{fr(raphael.role)}</span>
               </p>
             </article>
           ) : null}
           <p>
-            Raphaël dirige BR16BATIMENT, l'entreprise du bâtiment dont je tiens l'administratif depuis
-            2017 : son témoignage porte sur près de dix ans de collaboration quotidienne. Les trois cas
+            Raphaël dirige BR16BATIMENT, l’entreprise du bâtiment dont je tiens l’administratif depuis
+            2017&nbsp;: son témoignage porte sur près de dix ans de collaboration quotidienne. Les trois cas
             sont détaillés sur la page <Link href="/cas-concrets">cas concrets</Link>.
           </p>
         </div>
@@ -280,17 +285,19 @@ export default function AssistanteAdministrativeBtpPage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Sur place et à distance</p>
-            <h2 id="btp-local-title">Sur place en Charente, à distance ailleurs</h2>
+            <h2 id="btp-local-title">
+              <Mots>Sur place en Charente, à distance ailleurs</Mots>
+            </h2>
           </div>
           <p>
-            Je suis basée à Champagne-Vigny, à environ 18 km d'Angoulême à vol d'oiseau. En Charente, je
-            me déplace chez mes clients quand c'est utile. Ailleurs en France, je travaille à distance
+            Je suis basée à Champagne-Vigny, à environ 18&nbsp;km d’Angoulême à vol d’oiseau. En Charente, je
+            me déplace chez mes clients quand c’est utile. Ailleurs en France, je travaille à distance
             avec des outils simples et sécurisés.
           </p>
           <p>
             La page{" "}
             <Link href="/assistante-administrative-charente">assistante administrative à Angoulême et en Charente</Link>{" "}
-            indique les communes où j'interviens sur place et les distances depuis mon lieu d'activité.
+            indique les communes où j’interviens sur place et les distances depuis mon lieu d’activité.
           </p>
         </div>
       </section>
@@ -298,24 +305,23 @@ export default function AssistanteAdministrativeBtpPage() {
       <section className="section section--white" aria-labelledby="btp-limits-title">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2 id="btp-limits-title">Ce que je ne fais pas</h2>
+            <h2 id="btp-limits-title">
+              <Mots>Ce que je ne fais pas</Mots>
+            </h2>
           </div>
           <div className="cards-grid cards-grid--three">
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
-                <strong>Pas de permanence téléphonique.</strong> Je ne prends pas d'appels à votre place.
+                <strong>Pas de permanence téléphonique.</strong> Je ne prends pas d’appels à votre place.
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
-                <strong>Pas de remplacement de l'expert-comptable.</strong> Je prépare les pièces et les
-                suivis ; il établit vos comptes.
+                <strong>Pas de remplacement de l’expert-comptable.</strong> Je prépare les pièces et les
+                suivis&nbsp;; il établit vos comptes.
               </p>
             </article>
             <article className="mini-card">
-              <Info aria-hidden="true" />
               <p>
                 <strong>Pas de paie, pas de conseil juridique ou fiscal.</strong> Pour ces sujets, adressez-vous
                 à votre expert-comptable ou à un professionnel du droit.
@@ -329,28 +335,36 @@ export default function AssistanteAdministrativeBtpPage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Questions fréquentes</p>
-            <h2 id="btp-faq-title">L'administratif du bâtiment, en questions</h2>
+            <h2 id="btp-faq-title">
+              <Mots>L'administratif du bâtiment, en questions</Mots>
+            </h2>
           </div>
           <FaqAccordion faqs={btpFaqs} />
         </div>
       </section>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
 
-      <section className="final-cta">
+      <TamponLibre chemise="or" className="section final-cta">
         <div className="container">
-          <h2>Vos soirées valent mieux que vos devis en retard.</h2>
+          <h2>
+            <Mots>Vos soirées valent mieux que vos devis en retard.</Mots>
+          </h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>
           <p className="final-cta__note">
-            Vous préférez mesurer avant d'en parler ?{" "}
+            Vous préférez mesurer avant d’en parler&nbsp;?{" "}
             <Link href="/diagnostic">{CTA.secondary}</Link>
           </p>
+          <p aria-hidden="true" className="final-cta__invite">
+            Le tampon est à vous&nbsp;: cliquez n’importe où.
+          </p>
         </div>
-      </section>
+        <span aria-hidden="true" className="final-cta__tampon">
+          <Tampon>Classé</Tampon>
+        </span>
+      </TamponLibre>
     </main>
   );
 }

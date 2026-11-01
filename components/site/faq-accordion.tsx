@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, ChevronDown } from "lucide-react";
 import { RichText } from "@/components/site/rich-text";
+import { fr } from "@/lib/typo";
 
 type FaqAccordionProps = {
   faqs: Array<{
@@ -12,6 +12,7 @@ type FaqAccordionProps = {
   }>;
 };
 
+/** Les questions fréquentes : des fiches empilées, celle qu'on ouvre sort de la pile. */
 export function FaqAccordion({ faqs }: FaqAccordionProps) {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -32,15 +33,16 @@ export function FaqAccordion({ faqs }: FaqAccordionProps) {
                 aria-controls={`faq-answer-${index}`}
                 onClick={() => setOpenIndex(isOpen ? -1 : index)}
               >
-                <CheckCircle2 aria-hidden="true" />
-                <span>{faq.question}</span>
-                <ChevronDown aria-hidden="true" />
+                <span>{fr(faq.question)}</span>
+                <span aria-hidden="true" className="faq-item__signe" />
               </button>
             </h3>
             <div className="faq-item__answer" id={`faq-answer-${index}`} inert={!isOpen}>
-              <p>
-                <RichText text={faq.answer} />
-              </p>
+              <div>
+                <p>
+                  <RichText text={faq.answer} />
+                </p>
+              </div>
             </div>
           </article>
         );

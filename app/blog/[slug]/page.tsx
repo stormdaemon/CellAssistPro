@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, CalendarCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Coche, Mots, Stylo } from "@/components/papeterie/objets";
 import { LeadMagnet } from "@/components/site/lead-magnet";
 import { JsonLd } from "@/components/site/json-ld";
 import { RichText } from "@/components/site/rich-text";
@@ -16,6 +17,7 @@ import {
 import { commercialLinksFor } from "@/lib/blog/commercial-links";
 import { CTA, SITE } from "@/lib/site-data";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 type BlogArticlePageProps = {
   params: Promise<{
@@ -106,8 +108,6 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
   };
 }
 
-const tileVariants = ["", " article-tile--cream", "", " article-tile--violet", ""];
-
 export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
   const { slug } = await params;
   const article = getBlogArticle(slug);
@@ -121,7 +121,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
   const wasUpdated = article.dateModified !== article.datePublished;
 
   return (
-    <main>
+    <main data-chemise="ciel">
       <JsonLd
         data={breadcrumbJsonLd(article.title, `/blog/${article.slug}`, {
           label: "Blog",
@@ -141,12 +141,14 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 <li>
                   <Link href="/blog">Blog</Link>
                 </li>
-                <li aria-current="page">{article.title}</li>
+                <li aria-current="page">{fr(article.title)}</li>
               </ol>
             </nav>
-            <p className="eyebrow">{article.category}</p>
-            <h1>{article.title}</h1>
-            <p>{article.description}</p>
+            <p className="eyebrow">{fr(article.category)}</p>
+            <h1>
+              <Mots>{article.title}</Mots>
+            </h1>
+            <p>{fr(article.description)}</p>
             <div className="blog-article__meta">
               <span>Publié le {formatArticleDate(article.datePublished)}</span>
               {wasUpdated ? <span>Mis à jour le {formatArticleDate(article.dateModified)}</span> : null}
@@ -168,25 +170,25 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                   alt={article.image.alt}
                   fill
                   priority
-                  sizes="(min-width: 1160px) 1120px, 100vw"
+                  sizes="(min-width: 1020px) 980px, 100vw"
                 />
               </div>
-              {article.image.credit ? <figcaption>{article.image.credit}</figcaption> : null}
+              {article.image.credit ? <figcaption>{fr(article.image.credit)}</figcaption> : null}
             </figure>
           </div>
         ) : null}
 
         <div className="container blog-article__layout">
-          <aside className="article-aside">
-            <CalendarCheck aria-hidden="true" />
-            <p>Besoin de faire le point sur votre propre situation ?</p>
+          <aside className="article-aside" data-attrapable="">
+            <p>Besoin de faire le point sur votre propre situation&nbsp;?</p>
             <a className="button button--gold" href={SITE.calendlyUrl}>
               {CTA.primary}
             </a>
           </aside>
 
-          <div className="article-body">
-            <section className="article-tile article-tile--wide article-lead">
+          <div className="article-body" data-defile="traverse">
+            <Stylo className="article-stylo" />
+            <section className="article-tile article-lead">
               <h2>À retenir</h2>
               {article.intro.map((paragraph) => (
                 <p key={paragraph}>
@@ -195,12 +197,9 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
               ))}
             </section>
 
-            {article.sections.map((section, index) => (
-              <section
-                className={`article-tile${tileVariants[index % tileVariants.length]}`}
-                key={section.heading}
-              >
-                <h2>{section.heading}</h2>
+            {article.sections.map((section) => (
+              <section className="article-tile" key={section.heading}>
+                <h2>{fr(section.heading)}</h2>
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph}>
                     <RichText text={paragraph} />
@@ -210,7 +209,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                   <ul>
                     {section.list.map((item) => (
                       <li key={item}>
-                        <CheckCircle2 aria-hidden="true" />
+                        <Coche />
                         <span>
                           <RichText text={item} />
                         </span>
@@ -236,7 +235,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 <div className="article-faq">
                   {article.faq.map((item) => (
                     <details key={item.question}>
-                      <summary>{item.question}</summary>
+                      <summary>{fr(item.question)}</summary>
                       <p>
                         <RichText text={item.answer} />
                       </p>
@@ -247,13 +246,13 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             ) : null}
 
             {article.sources && article.sources.length > 0 ? (
-              <section className="article-tile article-tile--wide">
+              <section className="article-tile">
                 <h2>Sources</h2>
                 <ul className="article-sources">
                   {article.sources.map((source) => (
                     <li key={source.url}>
                       <a href={source.url} rel="noopener" target="_blank">
-                        {source.label}
+                        {fr(source.label)}
                       </a>
                     </li>
                   ))}
@@ -261,42 +260,57 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
               </section>
             ) : null}
 
-            <section className="article-tile article-tile--wide article-author">
-              <h2>Qui écrit ?</h2>
-              <p>
-                <Link href="/a-propos">{SITE.founder}</Link>, assistante administrative indépendante
-                basée à Champagne-Vigny, en Charente, fondatrice de CelAssistPro. Trente ans
-                d'administratif et de pré-comptabilité, et depuis 2017 la gestion administrative
-                d'une entreprise du bâtiment : les méthodes décrites ici sont celles qu'elle applique
-                chaque semaine.
-              </p>
+            <section className="article-tile article-author">
+              <h2>Qui écrit&nbsp;?</h2>
+              <div className="article-author__ligne">
+                <Image
+                  alt=""
+                  className="article-author__photo"
+                  height={148}
+                  sizes="74px"
+                  src="/images/celine/02-celine-avatar-google-linkedin.jpg"
+                  width={148}
+                />
+                <div>
+                  <p>
+                    <Link href="/a-propos">{SITE.founder}</Link>, assistante administrative indépendante
+                    basée à Champagne-Vigny, en Charente, fondatrice de CelAssistPro. Trente ans
+                    d’administratif et de pré-comptabilité, et depuis 2017&nbsp;la gestion administrative
+                    d’une entreprise du bâtiment&nbsp;: les méthodes décrites ici sont celles qu’elle applique
+                    chaque semaine.
+                  </p>
+                  <span aria-hidden="true" className="article-author__signature">
+                    Céline
+                  </span>
+                </div>
+              </div>
             </section>
 
-            <section className="article-tile article-tile--wide article-tile--accent">
-              <h2>Et pour votre entreprise ?</h2>
+            <section className="article-tile article-tile--accent">
+              <h2>Et pour votre entreprise&nbsp;?</h2>
               <p>
-                Selon l'endroit où vous en êtes, la suite logique n'est pas la même. Voici les
-                pistes les plus utiles pour aller plus loin :
+                Selon l’endroit où vous en êtes, la suite logique n’est pas la même. Voici les
+                pistes les plus utiles pour aller plus loin&nbsp;:
               </p>
               <ul>
                 {commercialLinks.map((link) => (
                   <li key={link.href}>
-                    <CheckCircle2 aria-hidden="true" />
+                    <Coche />
                     <span>
-                      <Link href={link.href}>{link.label}</Link>
+                      <Link href={link.href}>{fr(link.label)}</Link>
                     </span>
                   </li>
                 ))}
               </ul>
             </section>
 
-            <section className="article-tile article-tile--wide">
+            <section className="article-tile">
               <h2>À lire aussi</h2>
               <ul className="article-related">
                 {relatedArticles.map((related) => (
                   <li key={related.slug}>
                     <Link href={`/blog/${related.slug}`}>
-                      {related.title} <ArrowRight aria-hidden="true" />
+                      {fr(related.title)} <ArrowRight aria-hidden="true" />
                     </Link>
                   </li>
                 ))}
@@ -306,9 +320,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         </div>
       </article>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
     </main>
   );
 }

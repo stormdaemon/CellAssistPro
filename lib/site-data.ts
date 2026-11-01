@@ -1,25 +1,3 @@
-import {
-  Bot,
-  CalendarCheck,
-  ClipboardList,
-  Eye,
-  FileWarning,
-  FolderClock,
-  Gauge,
-  HardHat,
-  Home,
-  Layers3,
-  LockKeyhole,
-  MailWarning,
-  MapPin,
-  Ruler,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-  Workflow,
-  type LucideIcon,
-} from "lucide-react";
-
 export const SITE = {
   name: "CelAssistPro",
   tagline: "Votre bras droit stratégique",
@@ -69,39 +47,89 @@ export const CANONICAL_DESCRIPTION =
  */
 export const CTA = {
   /** Rendez-vous Calendly de 15 minutes. */
-  primary: "Réserver mon diagnostic stratégique — 15 min",
+  primary: "Réserver mon diagnostic stratégique — 15\u00a0min",
   /** Version courte du CTA principal, pour la barre de navigation. */
-  primaryShort: "Diagnostic — 15 min",
+  primaryShort: "Diagnostic — 15\u00a0min",
   /** Auto-diagnostic en ligne (/diagnostic). */
-  secondary: "Évaluer mon temps perdu — 5 min",
+  secondary: "Évaluer mon temps perdu — 5\u00a0min",
 } as const;
+
+/** Le site est classé comme un vrai dossier : chaque rubrique a sa couleur de chemise. */
+export type Chemise = "lilas" | "or" | "saumon" | "sauge" | "ciel" | "kraft" | "rose" | "gris";
 
 export type NavItem = {
   href: string;
   label: string;
-  children?: { href: string; label: string }[];
+  chemise: Chemise;
+  children?: { href: string; label: string; chemise: Chemise }[];
 };
 
 export const NAVIGATION: NavItem[] = [
-  { href: "/", label: "Accueil" },
+  { href: "/", label: "Accueil", chemise: "lilas" },
   {
     href: "/assistante-administrative",
     label: "Services",
+    chemise: "or",
     children: [
-      { href: "/assistante-administrative", label: "Assistance administrative" },
-      { href: "/secretaire-independante", label: "Secrétariat externalisé" },
-      { href: "/bras-droit-automatisation", label: "Bras droit & automatisation" },
-      { href: "/facturation-electronique", label: "Facturation électronique" },
-      { href: "/assistante-administrative-charente", label: "En Charente" },
-      { href: "/mes-offres", label: "Mes offres" },
+      { href: "/assistante-administrative", label: "Assistance administrative", chemise: "or" },
+      { href: "/secretaire-independante", label: "Secrétariat externalisé", chemise: "ciel" },
+      { href: "/bras-droit-automatisation", label: "Bras droit & automatisation", chemise: "lilas" },
+      { href: "/facturation-electronique", label: "Facturation électronique", chemise: "saumon" },
+      { href: "/assistante-administrative-charente", label: "En Charente", chemise: "sauge" },
+      { href: "/mes-offres", label: "Mes offres", chemise: "or" },
     ],
   },
-  { href: "/assistante-administrative-btp", label: "Expertise BTP" },
-  { href: "/cas-concrets", label: "Cas concrets" },
-  { href: "/a-propos", label: "À propos" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: "/assistante-administrative-btp", label: "Expertise BTP", chemise: "kraft" },
+  { href: "/cas-concrets", label: "Cas concrets", chemise: "saumon" },
+  { href: "/a-propos", label: "À propos", chemise: "sauge" },
+  { href: "/blog", label: "Blog", chemise: "ciel" },
+  { href: "/contact", label: "Contact", chemise: "rose" },
 ];
+
+const CHEMISES_DES_AUTRES_PAGES: Record<string, Chemise> = {
+  "/diagnostic": "or",
+  "/mentions-legales": "gris",
+  "/politique-confidentialite": "gris",
+};
+
+/** Couleur de la chemise d'une page : sert à la page, à son onglet et à la transition. */
+export function chemiseDe(chemin: string): Chemise {
+  const page = chemin.split(/[?#]/)[0];
+
+  if (page.startsWith("/blog")) {
+    return "ciel";
+  }
+
+  for (const item of NAVIGATION) {
+    const trouve = [item, ...(item.children ?? [])].reverse().find((lien) => lien.href === page);
+    if (trouve) {
+      return trouve.chemise;
+    }
+  }
+
+  return CHEMISES_DES_AUTRES_PAGES[page] ?? "gris";
+}
+
+/** Intitulé de l'onglet affiché pendant la transition vers une page. */
+export function intituleDe(chemin: string): string {
+  const page = chemin.split(/[?#]/)[0];
+
+  if (page.startsWith("/blog")) {
+    return "Blog";
+  }
+  if (page === "/diagnostic") {
+    return "Diagnostic";
+  }
+
+  for (const item of NAVIGATION) {
+    const trouve = [item, ...(item.children ?? [])].reverse().find((lien) => lien.href === page);
+    if (trouve) {
+      return trouve.label;
+    }
+  }
+
+  return "CelAssistPro";
+}
 
 /** Navigation aplatie (sous-menus dépliés), pour le pied de page. */
 export const FOOTER_NAVIGATION = NAVIGATION.flatMap((item) =>
@@ -225,10 +253,10 @@ export type SeoKey = keyof typeof SEO;
 
 /** Preuves affichées directement sous le titre de la page d'accueil. */
 export const heroProofs = [
-  { icon: CalendarCheck, text: "30 ans d'expertise administrative" },
-  { icon: HardHat, text: "Depuis 2017 au cœur d'une entreprise du bâtiment" },
-  { icon: Bot, text: "IA & automatisation" },
-  { icon: MapPin, text: "Charente · à distance partout en France" },
+  { text: "30 ans d'expertise administrative" },
+  { text: "Depuis 2017 au cœur d'une entreprise du bâtiment" },
+  { text: "IA & automatisation" },
+  { text: "Charente · à distance partout en France" },
 ];
 
 /**
@@ -237,21 +265,18 @@ export const heroProofs = [
  */
 export const entryPoints = [
   {
-    icon: ClipboardList,
     title: "Déléguer mon administratif",
     text: "Devis, facturation, relances, pré-comptabilité, classement, suivi des règlements et gestion courante.",
     linkLabel: "Découvrir l'assistance administrative",
     href: "/assistante-administrative",
   },
   {
-    icon: HardHat,
     title: "Je suis artisan ou dirigeant dans le BTP",
     text: "Une gestion adaptée aux réalités du terrain : devis, acomptes, relances, chantiers, facturation, justificatifs et pré-comptabilité.",
     linkLabel: "Découvrir l'expertise BTP",
     href: "/assistante-administrative-btp",
   },
   {
-    icon: Workflow,
     title: "Structurer et automatiser mon entreprise",
     text: "Organisation, processus, outils, IA, automatisations et pilotage pour réduire la dépendance au dirigeant.",
     linkLabel: "Découvrir l'accompagnement stratégique",
@@ -296,7 +321,7 @@ export const delegableTasks = [
   "Missions ponctuelles ou récurrentes",
 ];
 
-/** Corps de métier du bâtiment déjà accompagnés. */
+/** Corps de métier que Céline connaît déjà. */
 export const btpTrades = [
   "Charpente",
   "Couverture",
@@ -305,6 +330,11 @@ export const btpTrades = [
   "Placo",
   "Isolation",
   "Démoussage",
+  "Plomberie",
+  "Climatisation",
+  "Électricité",
+  "Travaux d'intérieur",
+  "Paysagiste",
 ];
 
 /** Le circuit administratif complet d'une entreprise du bâtiment. */
@@ -326,56 +356,46 @@ export const btpWorkflow = [
 /** Les trois piliers de la page /bras-droit-automatisation. */
 export const premiumPillars = [
   {
-    icon: Layers3,
     title: "Structurer",
     text: "Mettre de l'ordre dans les circuits et définir qui fait quoi, quand et avec quel outil.",
   },
   {
-    icon: Bot,
     title: "Automatiser",
     text: "Supprimer les manipulations inutiles : relances, classements, formulaires, documents, assistants IA et transmissions.",
   },
   {
-    icon: Gauge,
     title: "Piloter",
     text: "Suivre les échéances, contrôler le fonctionnement du système et l'ajuster quand l'entreprise évolue.",
   },
 ];
 
 export type PainPoint = {
-  icon: LucideIcon;
   text: string;
 };
 
 export const painPoints: PainPoint[] = [
   {
-    icon: MailWarning,
     text: "Vos devis et factures partent en retard — et vos relances aussi.",
   },
   {
-    icon: Home,
     text: "Votre dimanche soir est consacré à l'administratif au lieu de votre famille.",
   },
   {
-    icon: FileWarning,
     text: "Votre expert-comptable vous relance pour des pièces manquantes.",
   },
   {
-    icon: FolderClock,
     text: "Vous savez que vous perdez du temps et de l'argent, mais vous n'avez personne à qui déléguer.",
   },
 ];
 
 export const methodSteps = [
   {
-    icon: Search,
     title: "Le diagnostic",
     paragraphs: [
       "En 15 minutes, nous identifions ensemble les 3 points de friction qui vous coûtent le plus de temps. C'est gratuit et sans engagement.",
     ],
   },
   {
-    icon: Gauge,
     title: "Le système",
     paragraphs: [
       "D'abord les fondations, ensuite la vitesse.",
@@ -385,7 +405,6 @@ export const methodSteps = [
     ],
   },
   {
-    icon: TrendingUp,
     title: "Le pilotage",
     paragraphs: [
       "Je veille, j'ajuste, je vous rends compte. Vous gardez la vision, je tiens la barre administrative. Votre structure est pilotée avec rigueur — vous le savez, vous dormez tranquille.",
@@ -395,7 +414,6 @@ export const methodSteps = [
 
 export const offers = [
   {
-    icon: Layers3,
     name: "La Structuration",
     shortName: "Structuration",
     short: "Votre entreprise se crée ? Elle naît organisée.",
@@ -404,7 +422,6 @@ export const offers = [
     result: "Une gestion saine dès le premier jour, et les bons réflexes pour qu'elle le reste.",
   },
   {
-    icon: ShieldCheck,
     name: "La Restructuration",
     shortName: "Restructuration",
     short: "Votre gestion s'est empilée ? On remet tout au cordeau.",
@@ -414,7 +431,6 @@ export const offers = [
     result: "Une gestion remise au cordeau, des heures retrouvées chaque semaine, et la visibilité sur votre trésorerie.",
   },
   {
-    icon: Bot,
     name: "Le Pilotage automatisé",
     shortName: "Pilotage automatisé",
     short: "Votre système est posé ? On le fait tourner tout seul.",
@@ -583,17 +599,14 @@ export const quizProfiles = [
 
 export const values = [
   {
-    icon: Ruler,
     title: "Rigueur",
     text: "Votre gestion est tenue au cordeau, sans approximation.",
   },
   {
-    icon: LockKeyhole,
     title: "Discrétion",
     text: "Vos données et vos chiffres restent entre nous, contractuellement.",
   },
   {
-    icon: Eye,
     title: "Clarté",
     text: "Vous savez toujours où vous en êtes, sans jargon.",
   },

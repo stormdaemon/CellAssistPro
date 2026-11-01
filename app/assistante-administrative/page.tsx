@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle2,
-  ClipboardCheck,
-  ClipboardList,
-  Clock3,
-  Mail,
-  MapPin,
-  Repeat,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { CartePostale } from "@/components/papeterie/carte-postale";
+import { Tickets } from "@/components/papeterie/tickets";
+import { Griffonnage } from "@/components/papeterie/griffonnage";
+import { Coche, Mots, Tampon } from "@/components/papeterie/objets";
+import { ScenePile } from "@/components/papeterie/scenes";
+import { TamponLibre } from "@/components/papeterie/tampon-libre";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -20,27 +14,24 @@ import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { CTA, delegableTasks, homeResults, SITE, testimonials } from "@/lib/site-data";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("assistance");
 
 const formats = [
   {
-    icon: Clock3,
     title: "Ponctuel",
     text: "une remise en ordre, un retard à rattraper, une heure de formation sur un outil. Vous payez le besoin, rien de plus.",
   },
   {
-    icon: Repeat,
     title: "Récurrent",
     text: "je tiens votre gestion courante au rythme convenu : facturation, relances, pièces comptables, suivi.",
   },
   {
-    icon: MapPin,
     title: "Sur place",
     text: "je me déplace en Charente quand c'est utile. Champagne-Vigny est à environ 18 km d'Angoulême, 15 km de Barbezieux-Saint-Hilaire et 36 km de Cognac.",
   },
   {
-    icon: Mail,
     title: "À distance",
     text: "partout en France, avec des outils simples et sécurisés. Si vous savez envoyer un e-mail, vous savez travailler avec moi.",
   },
@@ -48,22 +39,18 @@ const formats = [
 
 const steps = [
   {
-    icon: Search,
     title: "Le diagnostic gratuit",
     text: "En 15 minutes, nous repérons ensemble les tâches qui vous prennent le plus de temps. Gratuit et sans engagement.",
   },
   {
-    icon: ClipboardList,
     title: "Le devis personnalisé",
     text: "Sous 48 heures, un devis clair : le périmètre, le format choisi (ponctuel ou récurrent) et ce qui fait varier le prix.",
   },
   {
-    icon: ShieldCheck,
     title: "La mise en place",
     text: "Nous convenons des accès et des outils à utiliser. Une clause de confidentialité figure dans chaque contrat, et les outils sont conformes au RGPD.",
   },
   {
-    icon: TrendingUp,
     title: "Le suivi",
     text: "Je tiens la gestion convenue et je fais le point régulièrement sur vos dossiers. Sans engagement au-delà du préavis prévu au contrat.",
   },
@@ -137,7 +124,7 @@ export default function AssistanceAdministrativePage() {
   const testimonial = testimonials.find((item) => item.name === "Magali");
 
   return (
-    <main>
+    <main data-chemise="or">
       <JsonLd data={breadcrumbJsonLd("Assistance administrative", "/assistante-administrative")} />
       <JsonLd
         data={serviceJsonLd({
@@ -152,11 +139,12 @@ export default function AssistanceAdministrativePage() {
       />
 
       <PageHero
+        objet={<ScenePile />}
         eyebrow="Assistante administrative indépendante"
         title="Une assistante administrative à distance ou sur place, sans embaucher"
       >
         <p>
-          Vous n'avez pas nécessairement besoin de recruter. Vous avez besoin que les choses soient
+          Vous n’avez pas nécessairement besoin de recruter. Vous avez besoin que les choses soient
           faites, suivies et relancées.
         </p>
         <p>
@@ -178,28 +166,28 @@ export default function AssistanceAdministrativePage() {
         <div className="container">
           <div className="article-body">
             <section className="article-tile article-tile--wide article-lead">
-              <h2>En bref : qu'est-ce qu'une assistante administrative indépendante ?</h2>
+              <h2>En bref&nbsp;: qu’est-ce qu’une assistante administrative indépendante&nbsp;?</h2>
               <p>
                 Une assistante administrative indépendante prend en charge, ponctuellement ou dans la
-                durée, tout ou partie de la gestion administrative d'une petite entreprise, sans
+                durée, tout ou partie de la gestion administrative d’une petite entreprise, sans
                 contrat de travail ni recrutement. Chez CelAssistPro, Céline Bardan assure cette aide
-                administrative aux entreprises : devis et facturation, relances clients, suivi des
+                administrative aux entreprises&nbsp;: devis et facturation, relances clients, suivi des
                 règlements, pièces comptables, classement, boîte mail et tableaux de suivi.
               </p>
               <p>
-                Le rythme se choisit : une mission ponctuelle, un accompagnement récurrent, ou les
-                deux. Je me déplace en Charente lorsque c'est utile et j'interviens ailleurs en France
-                à distance. Il n'y a pas de minimum d'heures, et les accompagnements sont sans
+                Le rythme se choisit&nbsp;: une mission ponctuelle, un accompagnement récurrent, ou les
+                deux. Je me déplace en Charente lorsque c’est utile et j’interviens ailleurs en France
+                à distance. Il n’y a pas de minimum d’heures, et les accompagnements sont sans
                 engagement au-delà du préavis prévu au contrat.
               </p>
             </section>
 
             <section className="article-tile">
-              <h2>Aide administrative, assistante de gestion, assistante en ligne : les mots pour s'y retrouver</h2>
+              <h2>Aide administrative, assistante de gestion, assistante en ligne&nbsp;: les mots pour s’y retrouver</h2>
               <p>
                 Ces expressions désignent des missions proches, et un même besoin peut être décrit de
                 plusieurs façons. Une aide administrative intervient souvent sur des tâches précises.
-                Une assistante de gestion tient la gestion courante d'une entreprise. Une assistante
+                Une assistante de gestion tient la gestion courante d’une entreprise. Une assistante
                 administrative en ligne ou freelance travaille à distance, à la mission ou au mois.
               </p>
               <p>
@@ -210,16 +198,16 @@ export default function AssistanceAdministrativePage() {
             </section>
 
             <section className="article-tile">
-              <h2>Pour quelles entreprises ?</h2>
+              <h2>Pour quelles entreprises&nbsp;?</h2>
               <p>
-                Ce service s'adresse aux TPE, aux artisans, aux indépendants et aux PME qui n'ont pas
-                besoin d'un poste administratif à temps plein. Le besoin est souvent le même : que les
+                Ce service s’adresse aux TPE, aux artisans, aux indépendants et aux PME qui n’ont pas
+                besoin d’un poste administratif à temps plein. Le besoin est souvent le même&nbsp;: que les
                 devis partent, que les factures soient payées et que les pièces arrivent chez le
                 comptable.
               </p>
               <p>
-                Pour les entreprises du bâtiment, le circuit administratif a ses étapes propres :{" "}
-                <Link href="/assistante-administrative-btp">voyez l'expertise artisans et BTP</Link>.
+                Pour les entreprises du bâtiment, le circuit administratif a ses étapes propres&nbsp;:{" "}
+                <Link href="/assistante-administrative-btp">voyez l’expertise artisans et BTP</Link>.
               </p>
             </section>
           </div>
@@ -229,19 +217,21 @@ export default function AssistanceAdministrativePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Ce que vous pouvez me déléguer</h2>
+            <h2>
+              <Mots>Ce que vous pouvez me déléguer</Mots>
+            </h2>
             <p>Tout, une partie, ou juste ce qui vous pèse le plus.</p>
           </div>
           <ul className="task-list">
             {delegableTasks.map((task) => (
               <li key={task}>
-                <CheckCircle2 aria-hidden="true" />
-                <span>{task}</span>
+                <Coche />
+                <span>{fr(task)}</span>
               </li>
             ))}
           </ul>
           <p className="transition-line">
-            Ce que je ne fais pas : ni permanence téléphonique, ni paie, ni conseil juridique ou
+            Ce que je ne fais pas&nbsp;: ni permanence téléphonique, ni paie, ni conseil juridique ou
             fiscal. Je complète votre expert-comptable, je ne le remplace pas.
           </p>
         </div>
@@ -250,15 +240,16 @@ export default function AssistanceAdministrativePage() {
       <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Ponctuel, récurrent, sur place ou à distance</h2>
+            <h2>
+              <Mots>Ponctuel, récurrent, sur place ou à distance</Mots>
+            </h2>
             <p>Les formats se combinent selon le besoin.</p>
           </div>
           <div className="cards-grid cards-grid--four">
             {formats.map((format) => (
               <article className="mini-card" key={format.title}>
-                <format.icon aria-hidden="true" />
                 <p>
-                  <strong>{format.title}</strong> : {format.text}
+                  <strong>{fr(format.title)}</strong>&nbsp;: {fr(format.text)}
                 </p>
               </article>
             ))}
@@ -269,88 +260,68 @@ export default function AssistanceAdministrativePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Comment se déroule une mission</h2>
+            <h2>
+              <Mots>Comment se déroule une mission</Mots>
+            </h2>
             <p>Quatre étapes, du premier échange au suivi.</p>
           </div>
-          <ol className="method-timeline">
-            {steps.map((step, index) => (
-              <li className="method-step" key={step.title}>
-                <div className="method-step__marker" aria-hidden="true">
-                  <span>{index + 1}</span>
-                </div>
-                <article className="method-step__card">
-                  <header>
-                    <step.icon aria-hidden="true" />
-                    <h3>{step.title}</h3>
-                  </header>
-                  <p>{step.text}</p>
-                </article>
-              </li>
-            ))}
-          </ol>
+          <div className="cahier" data-defile="traverse">
+            <ol className="method-timeline">
+              {steps.map((step, index) => (
+                <li className="method-step" key={step.title}>
+                  <div className="method-step__marker" aria-hidden="true">
+                    <span>{index + 1}</span>
+                  </div>
+                  <article className="method-step__card">
+                    <header>
+                      <h3>{fr(step.title)}</h3>
+                    </header>
+                    <p>{fr(step.text)}</p>
+                  </article>
+                </li>
+              ))}
+            </ol>
+            <Griffonnage />
+          </div>
         </div>
       </section>
 
       {testimonial ? (
-        <section className="testimonial-band">
-          <div className="container">
-            <blockquote>“{testimonial.quote}”</blockquote>
-            <p>
-              — {testimonial.name}, {testimonial.role}
-            </p>
-            <Link href="/cas-concrets">Voir tous les retours clients →</Link>
-          </div>
-        </section>
+        <CartePostale
+          citation={testimonial.quote}
+          signature={`${testimonial.name}, ${testimonial.role}`}
+        />
       ) : null}
 
-      <section className="results-strip" aria-labelledby="proof-title">
-        <div className="container">
-          <h2 id="proof-title">Trois résultats obtenus chez mes clients</h2>
-          <div className="results-strip__grid">
-            {homeResults.map((result) => (
-              <article key={result.value}>
-                <strong>{result.value}</strong>
-                <p>{result.label}</p>
-              </article>
-            ))}
-          </div>
-          <Link className="results-strip__link" href="/cas-concrets">
-            Voir les cas concrets <ArrowRight aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+      <Tickets id="proof-title" titre="Trois résultats obtenus chez mes clients" resultats={homeResults} />
 
       <section className="section section--white">
         <div className="container narrow">
           <div className="highlight-panel">
-            <div className="highlight-panel__icon">
-              <ClipboardCheck aria-hidden="true" />
-            </div>
-            <h2>Comment est fixé le prix ?</h2>
+            <h2>Comment est fixé le prix&nbsp;?</h2>
             <p>
-              Il n'existe pas de grille publique. Chaque mission est chiffrée sur devis personnalisé,
-              envoyé sous 48 heures après le diagnostic gratuit de 15 minutes : deux entreprises
-              n'ont jamais le même volume de travail ni les mêmes outils.
+              Il n’existe pas de grille publique. Chaque mission est chiffrée sur devis personnalisé,
+              envoyé sous 48&nbsp;heures après le diagnostic gratuit de 15&nbsp;minutes&nbsp;: deux entreprises
+              n’ont jamais le même volume de travail ni les mêmes outils.
             </p>
             <p>
               Le prix dépend notamment du volume, de la complexité des tâches (une tâche bornée, une
-              remise en ordre ou un suivi continu), de l'urgence, de l'état de départ de votre
+              remise en ordre ou un suivi continu), de l’urgence, de l’état de départ de votre
               organisation, des déplacements et de la durée de la mission. Un suivi mensuel se chiffre
-              en forfait ; une mission ponctuelle se chiffre à sa taille.
+              en forfait&nbsp;; une mission ponctuelle se chiffre à sa taille.
             </p>
             <p>
               Pour situer ces montants par rapport au marché, lisez notre{" "}
               <Link href="/blog/tarif-assistante-administrative-independante-facteurs">
                 article sur les tarifs
-              </Link>{" "}
-              : il présente des repères sourcés et datés, qui ne valent pas tarif de CelAssistPro.
+              </Link>&nbsp;: il présente des repères sourcés et datés, qui ne valent pas tarif de CelAssistPro.
               Les formules sont détaillées dans <Link href="/mes-offres">mes offres</Link>.
             </p>
           </div>
           <p className="transition-line">
-            Et si le problème ne venait pas seulement du manque de temps ? Certaines tâches se
-            délèguent, d'autres se suppriment ou s'automatisent :{" "}
-            <Link href="/bras-droit-automatisation">découvrir le bras droit et l'automatisation</Link>.
+            Et si le problème ne venait pas seulement du manque de temps&nbsp;? Certaines tâches se
+            délèguent, d’autres se suppriment ou s’automatisent&nbsp;:{" "}
+            <Link href="/bras-droit-automatisation">découvrir le bras droit et l’automatisation</Link>.
           </p>
         </div>
       </section>
@@ -359,7 +330,9 @@ export default function AssistanceAdministrativePage() {
         <div className="container narrow">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">Questions fréquentes</p>
-            <h2>Ce que l'on me demande le plus souvent</h2>
+            <h2>
+              <Mots>Ce que l'on me demande le plus souvent</Mots>
+            </h2>
           </div>
           <FaqAccordion faqs={faqs} />
         </div>
@@ -374,7 +347,7 @@ export default function AssistanceAdministrativePage() {
                 {related.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href}>
-                      {item.label} <ArrowRight aria-hidden="true" />
+                      {fr(item.label)} <ArrowRight aria-hidden="true" />
                     </Link>
                   </li>
                 ))}
@@ -384,18 +357,24 @@ export default function AssistanceAdministrativePage() {
         </div>
       </section>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
 
-      <section className="final-cta">
+      <TamponLibre chemise="or" className="section final-cta">
         <div className="container">
-          <h2>Dites-moi ce qui vous pèse. Je vous dis ce que je peux prendre.</h2>
+          <h2>
+            <Mots>Dites-moi ce qui vous pèse. Je vous dis ce que je peux prendre.</Mots>
+          </h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>
+          <p aria-hidden="true" className="final-cta__invite">
+            Le tampon est à vous&nbsp;: cliquez n’importe où.
+          </p>
         </div>
-      </section>
+        <span aria-hidden="true" className="final-cta__tampon">
+          <Tampon>Classé</Tampon>
+        </span>
+      </TamponLibre>
     </main>
   );
 }

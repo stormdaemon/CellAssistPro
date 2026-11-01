@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, TriangleAlert } from "lucide-react";
+import { TriangleAlert } from "lucide-react";
+import { Tampon } from "@/components/papeterie/objets";
 import { SITE } from "@/lib/site-data";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
@@ -36,9 +37,15 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="contact-form__status contact-form__status--success" role="status">
-        <CheckCircle2 aria-hidden="true" />
+        {/* La lettre se plie, l'enveloppe se ferme, le cachet tombe. */}
+        <div aria-hidden="true" className="lettre-envoyee">
+          <span className="lettre-envoyee__feuille" />
+          <span className="lettre-envoyee__corps" />
+          <span className="lettre-envoyee__rabat" />
+          <Tampon className="lettre-envoyee__cachet">Envoyé</Tampon>
+        </div>
         <p>
-          <strong>Message bien reçu.</strong> Je vous réponds sous 24 h ouvrées — surveillez votre
+          <strong>Message bien reçu.</strong> Je vous réponds sous 24&nbsp;h ouvrées — surveillez votre
           boîte mail (et vos indésirables, on ne sait jamais).
         </p>
       </div>
@@ -58,7 +65,7 @@ export function ContactForm() {
       <input type="hidden" name="form-name" value="contact" />
       <p className="sr-only" aria-hidden="true">
         <label>
-          Ne pas remplir ce champ : <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          Ne pas remplir ce champ&nbsp;: <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
       <div className="field-row">
@@ -77,7 +84,7 @@ export function ContactForm() {
           name="telephone"
           type="tel"
           autoComplete="tel"
-          placeholder="si vous préférez que je vous rappelle"
+          placeholder="si vous préférez un rappel"
         />
       </label>
       <label>
@@ -115,11 +122,11 @@ export function ContactForm() {
         </select>
       </label>
       <label>
-        Qu'est-ce qui vous prend le plus de temps aujourd'hui ?
+        Qu’est-ce qui vous prend le plus de temps aujourd’hui&nbsp;?
         <textarea name="message" rows={5} required />
       </label>
       <label>
-        Comment m'avez-vous connue ?
+        Comment m’avez-vous connue&nbsp;?
         <select name="origine" defaultValue="">
           <option value="" disabled>
             Choisir
@@ -133,12 +140,15 @@ export function ContactForm() {
         </select>
       </label>
       <button className="button button--gold" type="submit" disabled={status === "sending"}>
-        {status === "sending" ? "Envoi en cours…" : "Envoyer — réponse sous 24 h ouvrées"}
+        {status === "sending" ? "Envoi en cours…" : "Envoyer — réponse sous 24\u00a0h ouvrées"}
       </button>
       {status === "error" ? (
         <p className="contact-form__status contact-form__status--error" role="alert">
-          <TriangleAlert aria-hidden="true" /> L'envoi a échoué. Réessayez, ou écrivez-moi
-          directement à <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+          <TriangleAlert aria-hidden="true" />
+          <span>
+            L’envoi a échoué. Réessayez, ou écrivez-moi directement à{" "}
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+          </span>
         </p>
       ) : null}
       <small>Vos informations servent uniquement à vous répondre. Jamais cédées, jamais de spam.</small>

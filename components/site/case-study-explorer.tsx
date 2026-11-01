@@ -1,7 +1,8 @@
 "use client";
 
 import { Fragment, useState } from "react";
-import { ArrowDown, Building2, ChartNoAxesColumnIncreasing, ChevronDown, Clock3 } from "lucide-react";
+import { FlecheMain, Tampon } from "@/components/papeterie/objets";
+import { fr } from "@/lib/typo";
 
 type CaseStudy = {
   metric: string;
@@ -15,15 +16,15 @@ type CaseStudyExplorerProps = {
   caseStudies: CaseStudy[];
 };
 
-const icons = [Building2, ChartNoAxesColumnIncreasing, Clock3];
+const TAMPONS = ["Réglé", "À jour", "Classé"];
 
+/** Trois dossiers à onglets : celui qu'on choisit sort de la pile et s'ouvre. */
 export function CaseStudyExplorer({ caseStudies }: CaseStudyExplorerProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
     <div className="case-explorer">
       {caseStudies.map((item, index) => {
-        const Icon = icons[index] ?? Building2;
         const isActive = activeIndex === index;
 
         return (
@@ -36,10 +37,8 @@ export function CaseStudyExplorer({ caseStudies }: CaseStudyExplorerProps) {
               type="button"
               onClick={() => setActiveIndex(isActive ? null : index)}
             >
-              <span className="case-card__metric">{item.metric}</span>
-              <Icon aria-hidden="true" />
-              <span>{item.title}</span>
-              <ChevronDown aria-hidden="true" className="case-explorer__chevron" />
+              <span className="case-card__metric">{fr(item.metric)}</span>
+              <span>{fr(item.title)}</span>
             </button>
 
             <article
@@ -49,23 +48,25 @@ export function CaseStudyExplorer({ caseStudies }: CaseStudyExplorerProps) {
               id={`case-panel-${index}`}
             >
               <div className="case-explorer__heading">
-                <span className="case-card__metric">{item.metric}</span>
-                <h2>{item.title}</h2>
+                <span className="case-card__metric">{fr(item.metric)}</span>
+                <h2>{fr(item.title)}</h2>
               </div>
 
               <div className="case-explorer__story">
                 <div>
                   <h3>La situation</h3>
-                  <p>{item.context}</p>
+                  <p>{fr(item.context)}</p>
                 </div>
-                <ArrowDown aria-hidden="true" className="case-card__arrow" />
+                <FlecheMain className="case-card__arrow" />
                 <div>
                   <h3>Ce qui a été mis en place</h3>
-                  <p>{item.work}</p>
+                  <p>{fr(item.work)}</p>
                 </div>
-                <div>
+                <FlecheMain className="case-card__arrow" />
+                <div className="case-explorer__resultat">
                   <h3>Le résultat</h3>
-                  <p>{item.result}</p>
+                  <p>{fr(item.result)}</p>
+                  <Tampon className="case-explorer__tampon">{fr(TAMPONS[index % TAMPONS.length])}</Tampon>
                 </div>
               </div>
             </article>

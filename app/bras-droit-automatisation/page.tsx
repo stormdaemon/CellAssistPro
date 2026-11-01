@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Bot,
-  CalendarCheck,
-  Gauge,
-  Handshake,
-  Layers3,
-  Search,
-  Workflow,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Griffonnage } from "@/components/papeterie/griffonnage";
+import { Mots, Tampon } from "@/components/papeterie/objets";
+import { SceneTampons } from "@/components/papeterie/scenes";
+import { TamponLibre } from "@/components/papeterie/tampon-libre";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -17,22 +12,20 @@ import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { CTA, premiumPillars, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("premium");
 
 const positions = [
   {
-    icon: Workflow,
     title: "Bras droit administratif",
     text: "une intervention qui part de l'organisation : structurer les circuits, automatiser ce qui se répète, piloter la gestion dans la durée. C'est l'offre décrite sur cette page.",
   },
   {
-    icon: CalendarCheck,
     title: "Office manager à temps partagé",
     text: "un rôle de coordination du fonctionnement quotidien d'une structure, souvent confié à temps partagé. Je peux en reprendre la part administrative et organisationnelle, sous forme de mission récurrente.",
   },
   {
-    icon: Handshake,
     title: "Assistante de direction externalisée",
     text: "elle accompagne le dirigeant dans la gestion de ses dossiers et de son temps. Chez CelAssistPro, elle se fait à distance ou sur place en Charente, selon le besoin.",
   },
@@ -40,22 +33,18 @@ const positions = [
 
 const method = [
   {
-    icon: Search,
     title: "Le diagnostic",
     text: "En 15 minutes, nous repérons ensemble les circuits qui fuient : devis, relances, pièces comptables, échéances. Gratuit et sans engagement.",
   },
   {
-    icon: Layers3,
     title: "La structuration",
     text: "Nous définissons qui fait quoi, quand et avec quel outil. Une entreprise en création pose ses bases dès le départ ; une entreprise installée garde ce qui fonctionne et répare le reste.",
   },
   {
-    icon: Bot,
     title: "L'automatisation",
     text: "Relances, classements, formulaires, transmissions, assistants IA : chaque automatisation est testée et documentée, et elle ne vient qu'après le circuit qu'elle sert.",
   },
   {
-    icon: Gauge,
     title: "Le pilotage",
     text: "Je suis les échéances, je contrôle le fonctionnement et j'ajuste le système quand l'entreprise évolue. Le forfait mensuel s'allège à mesure que les automatisations sont installées.",
   },
@@ -126,7 +115,7 @@ const related = [
 
 export default function BrasDroitAutomatisationPage() {
   return (
-    <main>
+    <main data-chemise="lilas">
       <JsonLd
         data={breadcrumbJsonLd("Bras droit & automatisation", "/bras-droit-automatisation")}
       />
@@ -143,12 +132,13 @@ export default function BrasDroitAutomatisationPage() {
       />
 
       <PageHero
+        objet={<SceneTampons />}
         eyebrow="Bras droit administratif & automatisation"
         title="Votre bras droit administratif : structurer, automatiser et piloter votre gestion"
       >
         <p>
-          Quand tout passe encore par le dirigeant, le problème n'est plus seulement le volume de
-          travail : c'est l'organisation.
+          Quand tout passe encore par le dirigeant, le problème n’est plus seulement le volume de
+          travail&nbsp;: c’est l’organisation.
         </p>
         <p>
           Je structure les processus, clarifie les circuits, mets en place les outils adaptés et
@@ -168,21 +158,23 @@ export default function BrasDroitAutomatisationPage() {
       <section className="section section--white" aria-labelledby="what-title">
         <div className="container narrow">
           <div className="section-heading">
-            <h2 id="what-title">Qu'est-ce qu'un bras droit administratif ?</h2>
+            <h2 id="what-title">
+              <Mots>Qu'est-ce qu'un bras droit administratif ?</Mots>
+            </h2>
           </div>
           <div className="story">
             <p>
-              Un bras droit administratif structure, automatise et pilote la gestion d'une petite
-              entreprise pour qu'elle dépende moins de son dirigeant.
+              Un bras droit administratif structure, automatise et pilote la gestion d’une petite
+              entreprise pour qu’elle dépende moins de son dirigeant.
             </p>
             <p>
               Chez CelAssistPro, Céline Bardan, directrice des opérations externalisée basée en
-              Charente, intervient toujours dans le même ordre. D'abord structurer : définir qui fait
-              quoi, quand et avec quel outil. Ensuite automatiser : relances, classements,
-              formulaires, documents, transmissions et assistants d'intelligence artificielle. Enfin
-              piloter : suivre les échéances et ajuster le système quand l'entreprise évolue.
+              Charente, intervient toujours dans le même ordre. D’abord structurer&nbsp;: définir qui fait
+              quoi, quand et avec quel outil. Ensuite automatiser&nbsp;: relances, classements,
+              formulaires, documents, transmissions et assistants d’intelligence artificielle. Enfin
+              piloter&nbsp;: suivre les échéances et ajuster le système quand l’entreprise évolue.
             </p>
-            <p>Cet ordre est volontaire : automatiser le désordre ne fait qu'accélérer le désordre.</p>
+            <p>Cet ordre est volontaire&nbsp;: automatiser le désordre ne fait qu’accélérer le désordre.</p>
           </div>
         </div>
       </section>
@@ -190,23 +182,24 @@ export default function BrasDroitAutomatisationPage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Bras droit, office manager, assistante de direction : ce qui les distingue</h2>
+            <h2>
+              <Mots>Bras droit, office manager, assistante de direction : ce qui les distingue</Mots>
+            </h2>
             <p>Trois appellations voisines, trois façons de travailler.</p>
           </div>
           <div className="cards-grid cards-grid--three">
             {positions.map((item) => (
               <article className="mini-card" key={item.title}>
-                <item.icon aria-hidden="true" />
                 <p>
-                  <strong>{item.title}</strong> : {item.text}
+                  <strong>{fr(item.title)}</strong>&nbsp;: {fr(item.text)}
                 </p>
               </article>
             ))}
           </div>
           <p className="transition-line">
-            Mon rôle ne se limite pas à exécuter : je structure, j'automatise et je pilote pour que
-            l'entreprise dépende moins de vous. Pour commencer par déléguer, voyez{" "}
-            <Link href="/assistante-administrative">l'assistance administrative</Link>.
+            Mon rôle ne se limite pas à exécuter&nbsp;: je structure, j’automatise et je pilote pour que
+            l’entreprise dépende moins de vous. Pour commencer par déléguer, voyez{" "}
+            <Link href="/assistante-administrative">l’assistance administrative</Link>.
           </p>
         </div>
       </section>
@@ -214,15 +207,16 @@ export default function BrasDroitAutomatisationPage() {
       <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Structurer, automatiser, piloter</h2>
+            <h2>
+              <Mots>Structurer, automatiser, piloter</Mots>
+            </h2>
             <p>Trois piliers, un ordre à respecter.</p>
           </div>
           <div className="cards-grid cards-grid--three">
             {premiumPillars.map((pillar) => (
               <article className="offer-preview" key={pillar.title}>
-                <pillar.icon aria-hidden="true" />
-                <h3>{pillar.title}</h3>
-                <p>{pillar.text}</p>
+                <h3>{fr(pillar.title)}</h3>
+                <p>{fr(pillar.text)}</p>
               </article>
             ))}
           </div>
@@ -232,55 +226,61 @@ export default function BrasDroitAutomatisationPage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Ma méthode, étape par étape</h2>
+            <h2>
+              <Mots>Ma méthode, étape par étape</Mots>
+            </h2>
             <p>Une intervention commence par le diagnostic, jamais par un outil.</p>
           </div>
-          <ol className="method-timeline">
-            {method.map((step, index) => (
-              <li className="method-step" key={step.title}>
-                <div className="method-step__marker" aria-hidden="true">
-                  <span>{index + 1}</span>
-                </div>
-                <article className="method-step__card">
-                  <header>
-                    <step.icon aria-hidden="true" />
-                    <h3>{step.title}</h3>
-                  </header>
-                  <p>{step.text}</p>
-                </article>
-              </li>
-            ))}
-          </ol>
+          <div className="cahier" data-defile="traverse">
+            <ol className="method-timeline">
+              {method.map((step, index) => (
+                <li className="method-step" key={step.title}>
+                  <div className="method-step__marker" aria-hidden="true">
+                    <span>{index + 1}</span>
+                  </div>
+                  <article className="method-step__card">
+                    <header>
+                      <h3>{fr(step.title)}</h3>
+                    </header>
+                    <p>{fr(step.text)}</p>
+                  </article>
+                </li>
+              ))}
+            </ol>
+            <Griffonnage />
+          </div>
         </div>
       </section>
 
       <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Des systèmes qui tournent déjà</h2>
+            <h2>
+              <Mots>Des systèmes qui tournent déjà</Mots>
+            </h2>
             <p>Deux exemples de clients, avec les résultats obtenus.</p>
           </div>
           <div className="article-body">
             <section className="article-tile">
               <h2>Une entreprise du bâtiment</h2>
               <p>
-                Le circuit devis, envoi, relance et facture a d'abord été structuré. Ensuite, les
+                Le circuit devis, envoi, relance et facture a d’abord été structuré. Ensuite, les
                 relances et le classement des pièces ont été automatisés.
               </p>
               <p>
-                <strong>Résultat :</strong> devis envoyés sous 24 heures et plus aucune relance
+                <strong>Résultat&nbsp;:</strong> devis envoyés sous 24&nbsp;heures et plus aucune relance
                 oubliée.
               </p>
             </section>
             <section className="article-tile">
-              <h2>Des présentations clients préparées en 30 minutes</h2>
+              <h2>Des présentations clients préparées en 30&nbsp;minutes</h2>
               <p>
                 Chaque rendez-vous exigeait une présentation personnalisée. Un assistant IA sur mesure
                 la génère à partir des notes de rendez-vous, dans la charte graphique du client, avec
-                une documentation simple pour qu'il reste autonome.
+                une documentation simple pour qu’il reste autonome.
               </p>
               <p>
-                <strong>Résultat :</strong> 30 minutes par présentation, au lieu de 2 h 30.
+                <strong>Résultat&nbsp;:</strong> 30&nbsp;minutes par présentation, au lieu de 2&nbsp;h 30.
               </p>
             </section>
           </div>
@@ -298,12 +298,12 @@ export default function BrasDroitAutomatisationPage() {
             <h2>Ma promesse à contre-courant</h2>
             <p>
               Chaque automatisation installée réduit le coût de votre pilotage mensuel. Plus votre
-              système travaille, moins vous payez. Mon objectif : que les heures de tâches répétitives
+              système travaille, moins vous payez. Mon objectif&nbsp;: que les heures de tâches répétitives
               disparaissent de votre semaine.
             </p>
             <p>
-              Chaque intervention fait l'objet d'un devis personnalisé après le diagnostic gratuit de
-              15 minutes. Les formules et leur fonctionnement sont détaillés dans{" "}
+              Chaque intervention fait l’objet d’un devis personnalisé après le diagnostic gratuit de
+              15&nbsp;minutes. Les formules et leur fonctionnement sont détaillés dans{" "}
               <Link href="/mes-offres">mes offres</Link>.
             </p>
             <Link className="button button--purple" href="/mes-offres">
@@ -311,10 +311,10 @@ export default function BrasDroitAutomatisationPage() {
             </Link>
           </div>
           <p className="transition-line">
-            Avant de structurer, il faut souvent commencer par déléguer :{" "}
-            <Link href="/assistante-administrative">découvrir l'assistance administrative</Link>. Et
-            si vous êtes dans le bâtiment, le circuit à structurer est déjà connu :{" "}
-            <Link href="/assistante-administrative-btp">voir l'expertise artisans et BTP</Link>.
+            Avant de structurer, il faut souvent commencer par déléguer&nbsp;:{" "}
+            <Link href="/assistante-administrative">découvrir l’assistance administrative</Link>. Et
+            si vous êtes dans le bâtiment, le circuit à structurer est déjà connu&nbsp;:{" "}
+            <Link href="/assistante-administrative-btp">voir l’expertise artisans et BTP</Link>.
           </p>
         </div>
       </section>
@@ -323,7 +323,9 @@ export default function BrasDroitAutomatisationPage() {
         <div className="container narrow">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">Questions fréquentes</p>
-            <h2>Ce que l'on me demande sur le bras droit</h2>
+            <h2>
+              <Mots>Ce que l'on me demande sur le bras droit</Mots>
+            </h2>
           </div>
           <FaqAccordion faqs={faqs} />
         </div>
@@ -338,7 +340,7 @@ export default function BrasDroitAutomatisationPage() {
                 {related.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href}>
-                      {item.label} <ArrowRight aria-hidden="true" />
+                      {fr(item.label)} <ArrowRight aria-hidden="true" />
                     </Link>
                   </li>
                 ))}
@@ -348,18 +350,24 @@ export default function BrasDroitAutomatisationPage() {
         </div>
       </section>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
 
-      <section className="final-cta">
+      <TamponLibre chemise="or" className="section final-cta">
         <div className="container">
-          <h2>Une entreprise qui tourne moins grâce à vous, et mieux sans vous.</h2>
+          <h2>
+            <Mots>Une entreprise qui tourne moins grâce à vous, et mieux sans vous.</Mots>
+          </h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>
+          <p aria-hidden="true" className="final-cta__invite">
+            Le tampon est à vous&nbsp;: cliquez n’importe où.
+          </p>
         </div>
-      </section>
+        <span aria-hidden="true" className="final-cta__tampon">
+          <Tampon>Classé</Tampon>
+        </span>
+      </TamponLibre>
     </main>
   );
 }

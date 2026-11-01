@@ -1,26 +1,40 @@
 import type { Metadata } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { Besley, Courier_Prime, Libre_Franklin, Playwrite_FR_Moderne } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/site/json-ld";
-import { RevealOnScroll } from "@/components/site/reveal-on-scroll";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { Feuilleter } from "@/components/papeterie/feuilleter";
+import { Mouvement } from "@/components/papeterie/mouvement";
+import { TransitionChemise } from "@/components/papeterie/transition-chemise";
 import { siteGraphJsonLd } from "@/lib/structured-data";
 import { SITE } from "@/lib/site-data";
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
 
-const jakarta = Plus_Jakarta_Sans({
+const franklin = Libre_Franklin({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const besley = Besley({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz"],
+});
+
+const courier = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-machine",
+  display: "swap",
+});
+
+/** La cursive des cahiers français : réservée aux annotations, jamais au texte courant. */
+const cursive = Playwrite_FR_Moderne({
+  variable: "--font-main",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -69,8 +83,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${jakarta.variable} ${fraunces.variable}`}>
+    <html lang="fr" data-scroll-behavior="smooth">
+      <body
+        className={`${franklin.variable} ${besley.variable} ${courier.variable} ${cursive.variable}`}
+      >
         {plausibleDomain ? (
           <script
             defer
@@ -79,9 +95,44 @@ export default function RootLayout({
           />
         ) : null}
         <JsonLd data={siteGraphJsonLd()} />
+        {/* Filtre partagé : donne aux tampons le grain irrégulier de l'encre sur le papier. */}
+        <svg className="filtres" aria-hidden="true" focusable="false" width="0" height="0">
+          <filter id="encre-tampon" x="-6%" y="-10%" width="112%" height="120%">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.04 0.07"
+              numOctaves="2"
+              seed="4"
+              result="bave"
+            />
+            <feDisplacementMap in="SourceGraphic" in2="bave" scale="1.8" result="trace" />
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              seed="11"
+              result="grain"
+            />
+            <feColorMatrix
+              in="grain"
+              type="matrix"
+              values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3.1 2.15"
+              result="manques"
+            />
+            <feComposite in="trace" in2="manques" operator="in" />
+          </filter>
+        </svg>
+        <noscript>
+          <style>{".post-it__feuille,.ticket,.trade-chips li,.workflow__etiquette{opacity:1!important;clip-path:none!important;transform:none!important}.caisse__sortie{clip-path:none!important}.mot{animation:none!important;opacity:1!important}.task-list .coche path{stroke-dashoffset:0!important}"}</style>
+        </noscript>
+        <a className="lien-evitement" href="#contenu">
+          Aller au contenu
+        </a>
         <SiteHeader />
-        <RevealOnScroll />
-        {children}
+        <Mouvement />
+        <Feuilleter />
+        <TransitionChemise />
+        <div id="contenu">{children}</div>
         <SiteFooter />
       </body>
     </html>

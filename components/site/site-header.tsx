@@ -2,16 +2,18 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { BrandLogo } from "@/components/site/brand-logo";
-import { CTA, NAVIGATION, SITE } from "@/lib/site-data";
+import { chemiseDe, CTA, NAVIGATION, SITE } from "@/lib/site-data";
+import { fr } from "@/lib/typo";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const chemisePage = chemiseDe(pathname);
 
   useEffect(() => {
     if (!isOpen && !openGroup) {
@@ -52,23 +54,25 @@ export function SiteHeader() {
   };
 
   return (
-    <header className="site-header" ref={headerRef}>
+    <header className="site-header" data-chemise={chemisePage} ref={headerRef}>
       <div className="site-header__inner">
-        <BrandLogo inverted />
+        <BrandLogo />
 
+        {/* Les intercalaires d'un classeur : l'onglet actif prend la couleur de la page qu'il ouvre. */}
         <nav className="site-nav site-nav--desktop" aria-label="Navigation principale">
           {NAVIGATION.map((item) => {
             if (!item.children) {
+              const actif = isActive(item.href);
+
               return (
                 <Link
-                  aria-current={isActive(item.href) ? "page" : undefined}
-                  className={
-                    isActive(item.href) ? "site-nav__link site-nav__link--active" : "site-nav__link"
-                  }
+                  aria-current={actif ? "page" : undefined}
+                  className={actif ? "site-nav__link site-nav__link--active" : "site-nav__link"}
+                  data-chemise={actif ? chemisePage : item.chemise}
                   key={item.href}
                   href={item.href}
                 >
-                  {item.label}
+                  <span>{fr(item.label)}</span>
                 </Link>
               );
             }
@@ -88,13 +92,16 @@ export function SiteHeader() {
                   className={
                     groupIsActive ? "site-nav__link site-nav__link--active" : "site-nav__link"
                   }
+                  data-chemise={groupIsActive ? chemisePage : item.chemise}
                   onClick={() =>
                     setOpenGroup((current) => (current === item.label ? null : item.label))
                   }
                   type="button"
                 >
-                  {item.label}
-                  <ChevronDown aria-hidden="true" />
+                  <span>
+                    {fr(item.label)}
+                    <ChevronDown aria-hidden="true" />
+                  </span>
                 </button>
                 <div
                   className={
@@ -103,15 +110,17 @@ export function SiteHeader() {
                       : "site-nav__submenu"
                   }
                 >
-                  {item.children.map((child) => (
+                  {item.children.map((child, index) => (
                     <Link
                       aria-current={isActive(child.href) ? "page" : undefined}
+                      data-chemise={child.chemise}
                       key={child.href}
                       href={child.href}
                       onClick={closeAll}
+                      style={{ "--i": index } as CSSProperties}
                       tabIndex={openGroup === item.label ? 0 : -1}
                     >
-                      {child.label}
+                      {fr(child.label)}
                     </Link>
                   ))}
                 </div>
@@ -136,24 +145,32 @@ export function SiteHeader() {
             {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
           <nav aria-hidden={!isOpen} aria-label="Navigation mobile" id="mobile-menu">
-            {NAVIGATION.flatMap((item) => (item.children ? item.children : [item])).map((item) => (
-              <Link
-                aria-current={isActive(item.href) ? "page" : undefined}
-                className={
-                  isActive(item.href) ? "mobile-nav__link mobile-nav__link--active" : "mobile-nav__link"
-                }
-                key={item.href}
-                href={item.href}
-                onClick={closeAll}
-                tabIndex={isOpen ? 0 : -1}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAVIGATION.flatMap((item) => (item.children ? item.children : [item])).map(
+              (item, index) => (
+                <Link
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={
+                    isActive(item.href)
+                      ? "mobile-nav__link mobile-nav__link--active"
+                      : "mobile-nav__link"
+                  }
+                  data-chemise={item.chemise}
+                  key={item.href}
+                  href={item.href}
+                  onClick={closeAll}
+                  style={{ "--i": index } as CSSProperties}
+                  tabIndex={isOpen ? 0 : -1}
+                >
+                  {fr(item.label)}
+                </Link>
+              ),
+            )}
             <Link
               className="mobile-nav__link"
+              data-chemise="or"
               href="/diagnostic"
               onClick={closeAll}
+              style={{ "--i": 11 } as CSSProperties}
               tabIndex={isOpen ? 0 : -1}
             >
               {CTA.secondary}

@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle2,
-  ClipboardCheck,
-  ClipboardList,
-  Info,
-  Layers3,
-  Network,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Griffonnage } from "@/components/papeterie/griffonnage";
+import { Coche, Mots, Tampon } from "@/components/papeterie/objets";
+import { SceneCarnet } from "@/components/papeterie/scenes";
+import { TamponLibre } from "@/components/papeterie/tampon-libre";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -19,6 +12,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { CTA, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("secretaire");
 
@@ -36,22 +30,18 @@ const tasks = [
 
 const differences = [
   {
-    icon: ClipboardList,
     title: "Secrétaire indépendante",
     text: "elle prend en charge le secrétariat d'une entreprise en prestation : documents, classement, suivi et boîte mail. Pas de contrat de travail.",
   },
   {
-    icon: Layers3,
     title: "Assistante administrative",
     text: "son périmètre est plus large : gestion administrative, commerciale et pré-comptable, avec un volet d'organisation.",
   },
   {
-    icon: Network,
     title: "Assistante virtuelle",
     text: "terme général pour une assistance à distance. Son contenu varie beaucoup d'un prestataire à l'autre : vérifiez le détail des tâches avant de vous engager.",
   },
   {
-    icon: Info,
     title: "Télésecrétariat",
     text: "dans l'usage courant, il désigne surtout l'accueil et la prise d'appels à distance. CelAssistPro ne le fait pas : ici, le secrétariat à distance est le travail administratif réalisé à distance.",
   },
@@ -59,22 +49,18 @@ const differences = [
 
 const steps = [
   {
-    icon: Search,
     title: "Un diagnostic de 15 minutes",
     text: "Nous regardons ensemble les tâches de secrétariat qui vous pèsent : devis, relances, classement, boîte mail. Gratuit et sans engagement.",
   },
   {
-    icon: ClipboardCheck,
     title: "Un devis personnalisé",
     text: "Sous 48 heures : le périmètre, le rythme (mission ponctuelle ou suivi mensuel) et les conditions.",
   },
   {
-    icon: ShieldCheck,
     title: "Une mise en place simple",
     text: "Accès et outils convenus ensemble, clause de confidentialité dans le contrat, outils conformes au RGPD.",
   },
   {
-    icon: TrendingUp,
     title: "Un suivi régulier",
     text: "Je tiens le secrétariat convenu et je fais le point sur vos dossiers. Sans engagement au-delà du préavis prévu au contrat.",
   },
@@ -142,7 +128,7 @@ const related = [
 
 export default function SecretaireIndependantePage() {
   return (
-    <main>
+    <main data-chemise="ciel">
       <JsonLd data={breadcrumbJsonLd("Secrétariat externalisé", "/secretaire-independante")} />
       <JsonLd
         data={serviceJsonLd({
@@ -157,16 +143,17 @@ export default function SecretaireIndependantePage() {
       />
 
       <PageHero
+        objet={<SceneCarnet />}
         eyebrow="Secrétaire indépendante"
         title="Secrétaire indépendante : secrétariat externalisé pour TPE, artisans et indépendants"
       >
         <p>
-          Un secrétariat externalisé confie les tâches de secrétariat d'une petite entreprise à une
+          Un secrétariat externalisé confie les tâches de secrétariat d’une petite entreprise à une
           professionnelle indépendante, sans contrat de travail ni recrutement, en mission ponctuelle
           ou dans la durée.
         </p>
         <p>
-          Je suis Céline Bardan, basée à Champagne-Vigny, en Charente. J'interviens sur place en
+          Je suis Céline Bardan, basée à Champagne-Vigny, en Charente. J’interviens sur place en
           Charente et à distance partout en France.
         </p>
         <div className="actions">
@@ -182,18 +169,20 @@ export default function SecretaireIndependantePage() {
       <section className="section section--white" aria-labelledby="what-title">
         <div className="container narrow">
           <div className="section-heading">
-            <h2 id="what-title">Qu'est-ce qu'une secrétaire indépendante ?</h2>
+            <h2 id="what-title">
+              <Mots>Qu'est-ce qu'une secrétaire indépendante ?</Mots>
+            </h2>
           </div>
           <div className="story">
             <p>
               Une secrétaire indépendante est une prestataire qui assure une partie du secrétariat
-              d'une entreprise, en mission ponctuelle ou dans la durée, sans contrat de travail. Elle
+              d’une entreprise, en mission ponctuelle ou dans la durée, sans contrat de travail. Elle
               décharge le dirigeant des tâches de bureau qui lui prennent du temps.
             </p>
             <p>
               Chez CelAssistPro, ce secrétariat externalisé couvre les devis et la facturation, les
               relances clients, la préparation des pièces comptables, le classement, la gestion de la
-              boîte mail et le suivi administratif. Il s'adresse aux TPE, aux artisans et aux
+              boîte mail et le suivi administratif. Il s’adresse aux TPE, aux artisans et aux
               indépendants.
             </p>
           </div>
@@ -203,14 +192,16 @@ export default function SecretaireIndependantePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Ce que fait une secrétaire indépendante pour une TPE</h2>
+            <h2>
+              <Mots>Ce que fait une secrétaire indépendante pour une TPE</Mots>
+            </h2>
             <p>Les tâches listées ici sont celles que je prends réellement en charge.</p>
           </div>
           <ul className="task-list">
             {tasks.map((task) => (
               <li key={task}>
-                <CheckCircle2 aria-hidden="true" />
-                <span>{task}</span>
+                <Coche />
+                <span>{fr(task)}</span>
               </li>
             ))}
           </ul>
@@ -220,18 +211,15 @@ export default function SecretaireIndependantePage() {
       <section className="section section--white">
         <div className="container narrow">
           <div className="highlight-panel">
-            <div className="highlight-panel__icon">
-              <Info aria-hidden="true" />
-            </div>
-            <h2>Ce qui n'est pas inclus</h2>
+            <h2>Ce qui n’est pas inclus</h2>
             <p>
-              Pas de permanence téléphonique : je ne réponds pas au téléphone à votre place et ne
-              prends pas d'appels en continu. Si vous cherchez un accueil téléphonique, cette offre
+              Pas de permanence téléphonique&nbsp;: je ne réponds pas au téléphone à votre place et ne
+              prends pas d’appels en continu. Si vous cherchez un accueil téléphonique, cette offre
               ne répond pas à votre besoin.
             </p>
             <p>
               Pas de paie, pas de conseil juridique ou fiscal. Je ne remplace pas votre
-              expert-comptable : je le complète, en préparant les pièces et les tableaux dont il a
+              expert-comptable&nbsp;: je le complète, en préparant les pièces et les tableaux dont il a
               besoin.
             </p>
           </div>
@@ -241,15 +229,16 @@ export default function SecretaireIndependantePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Quelles différences entre ces appellations ?</h2>
-            <p>Secrétaire, assistante, assistante virtuelle, télésecrétariat : des termes proches.</p>
+            <h2>
+              <Mots>Quelles différences entre ces appellations ?</Mots>
+            </h2>
+            <p>Secrétaire, assistante, assistante virtuelle, télésecrétariat&nbsp;: des termes proches.</p>
           </div>
           <div className="cards-grid cards-grid--four">
             {differences.map((item) => (
               <article className="mini-card" key={item.title}>
-                <item.icon aria-hidden="true" />
                 <p>
-                  <strong>{item.title}</strong> : {item.text}
+                  <strong>{fr(item.title)}</strong>&nbsp;: {fr(item.text)}
                 </p>
               </article>
             ))}
@@ -261,22 +250,22 @@ export default function SecretaireIndependantePage() {
         <div className="container">
           <div className="article-body">
             <section className="article-tile">
-              <h2>Pour qui ?</h2>
+              <h2>Pour qui&nbsp;?</h2>
               <p>
                 Pour les dirigeants de TPE, les artisans et les indépendants qui veulent faire tenir
-                leur secrétariat sans recruter. Pour cette fonction, vous n'avez ni contrat de travail,
+                leur secrétariat sans recruter. Pour cette fonction, vous n’avez ni contrat de travail,
                 ni paie, ni charges à gérer.
               </p>
               <p>
                 Chez une entreprise du bâtiment, la structuration du circuit devis, envoi, relance et
-                facture a permis d'envoyer les devis sous 24 heures et de ne plus oublier de relance.
+                facture a permis d’envoyer les devis sous 24&nbsp;heures et de ne plus oublier de relance.
               </p>
             </section>
             <section className="article-tile">
               <h2>Sur place ou à distance</h2>
               <p>
-                Champagne-Vigny est à environ 18 km d'Angoulême, 15 km de Barbezieux-Saint-Hilaire et
-                36 km de Cognac. Je me déplace dans toute la Charente.
+                Champagne-Vigny est à environ 18&nbsp;km d’Angoulême, 15&nbsp;km de Barbezieux-Saint-Hilaire et
+                36&nbsp;km de Cognac. Je me déplace dans toute la Charente.
               </p>
               <p>
                 Ailleurs en France, à Saintes, Royan, Limoges ou plus loin, le secrétariat se fait à
@@ -292,45 +281,50 @@ export default function SecretaireIndependantePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Comment on travaille ensemble</h2>
+            <h2>
+              <Mots>Comment on travaille ensemble</Mots>
+            </h2>
             <p>Quatre étapes, de la prise de contact au suivi.</p>
           </div>
-          <ol className="method-timeline">
-            {steps.map((step, index) => (
-              <li className="method-step" key={step.title}>
-                <div className="method-step__marker" aria-hidden="true">
-                  <span>{index + 1}</span>
-                </div>
-                <article className="method-step__card">
-                  <header>
-                    <step.icon aria-hidden="true" />
-                    <h3>{step.title}</h3>
-                  </header>
-                  <p>{step.text}</p>
-                </article>
-              </li>
-            ))}
-          </ol>
+          <div className="cahier" data-defile="traverse">
+            <ol className="method-timeline">
+              {steps.map((step, index) => (
+                <li className="method-step" key={step.title}>
+                  <div className="method-step__marker" aria-hidden="true">
+                    <span>{index + 1}</span>
+                  </div>
+                  <article className="method-step__card">
+                    <header>
+                      <h3>{fr(step.title)}</h3>
+                    </header>
+                    <p>{fr(step.text)}</p>
+                  </article>
+                </li>
+              ))}
+            </ol>
+            <Griffonnage />
+          </div>
         </div>
       </section>
 
       <section className="section section--white">
         <div className="container narrow">
           <div className="section-heading">
-            <h2>Tarif : un devis personnalisé</h2>
+            <h2>
+              <Mots>Tarif : un devis personnalisé</Mots>
+            </h2>
           </div>
           <div className="story">
             <p>
-              Il n'existe pas de grille publique. Après le diagnostic gratuit de 15 minutes, je vous
-              envoie un devis personnalisé sous 48 heures.
+              Il n’existe pas de grille publique. Après le diagnostic gratuit de 15&nbsp;minutes, je vous
+              envoie un devis personnalisé sous 48&nbsp;heures.
             </p>
             <p>
-              Une mission ponctuelle se chiffre à sa taille ; un secrétariat mensuel se chiffre en
+              Une mission ponctuelle se chiffre à sa taille&nbsp;; un secrétariat mensuel se chiffre en
               forfait. Pour situer les montants par rapport au marché, lisez notre{" "}
               <Link href="/blog/tarif-assistante-administrative-independante-facteurs">
-                article sur les tarifs de l'assistante administrative indépendante
-              </Link>{" "}
-              : il présente des repères sourcés et datés, qui ne valent pas tarif de CelAssistPro.
+                article sur les tarifs de l’assistante administrative indépendante
+              </Link>&nbsp;: il présente des repères sourcés et datés, qui ne valent pas tarif de CelAssistPro.
             </p>
           </div>
         </div>
@@ -340,7 +334,9 @@ export default function SecretaireIndependantePage() {
         <div className="container narrow">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">Questions fréquentes</p>
-            <h2>Ce que l'on me demande sur le secrétariat</h2>
+            <h2>
+              <Mots>Ce que l'on me demande sur le secrétariat</Mots>
+            </h2>
           </div>
           <FaqAccordion faqs={faqs} />
         </div>
@@ -355,7 +351,7 @@ export default function SecretaireIndependantePage() {
                 {related.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href}>
-                      {item.label} <ArrowRight aria-hidden="true" />
+                      {fr(item.label)} <ArrowRight aria-hidden="true" />
                     </Link>
                   </li>
                 ))}
@@ -365,18 +361,24 @@ export default function SecretaireIndependantePage() {
         </div>
       </section>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
 
-      <section className="final-cta">
+      <TamponLibre chemise="or" className="section final-cta">
         <div className="container">
-          <h2>Un secrétariat qui avance, sans recrutement : parlons-en en 15 minutes.</h2>
+          <h2>
+            <Mots>Un secrétariat qui avance, sans recrutement : parlons-en en 15 minutes.</Mots>
+          </h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>
+          <p aria-hidden="true" className="final-cta__invite">
+            Le tampon est à vous&nbsp;: cliquez n’importe où.
+          </p>
         </div>
-      </section>
+        <span aria-hidden="true" className="final-cta__tampon">
+          <Tampon>Classé</Tampon>
+        </span>
+      </TamponLibre>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { fr } from "@/lib/typo";
 
 const LINK_PATTERN = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
@@ -20,17 +21,17 @@ export function RichText({ text }: RichTextProps) {
     const start = match.index;
 
     if (start > cursor) {
-      parts.push(text.slice(cursor, start));
+      parts.push(fr(text.slice(cursor, start)));
     }
 
     parts.push(
       href.startsWith("/") ? (
         <Link href={href} key={start}>
-          {label}
+          {fr(label)}
         </Link>
       ) : (
         <a href={href} key={start} rel="noopener" target="_blank">
-          {label}
+          {fr(label)}
         </a>
       ),
     );
@@ -38,7 +39,7 @@ export function RichText({ text }: RichTextProps) {
   }
 
   if (cursor < text.length) {
-    parts.push(text.slice(cursor));
+    parts.push(fr(text.slice(cursor)));
   }
 
   return <>{parts}</>;

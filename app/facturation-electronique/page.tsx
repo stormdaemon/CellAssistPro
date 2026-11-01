@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarCheck, CalendarDays, CheckCircle2, ClipboardCheck, Network, ShieldCheck, TriangleAlert } from "lucide-react";
+import { ListeACocher } from "@/components/papeterie/liste-a-cocher";
+import { Griffonnage } from "@/components/papeterie/griffonnage";
+import { Coche, Mots, Tampon } from "@/components/papeterie/objets";
+import { SceneEcheance } from "@/components/papeterie/scenes";
+import { TamponLibre } from "@/components/papeterie/tampon-libre";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -8,6 +12,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { CTA, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("invoicing");
 
@@ -138,7 +143,7 @@ const sources = [
 
 export default function FacturationElectroniquePage() {
   return (
-    <main>
+    <main data-chemise="saumon">
       <JsonLd data={breadcrumbJsonLd("Facturation électronique", "/facturation-electronique")} />
       <JsonLd
         data={serviceJsonLd({
@@ -153,19 +158,20 @@ export default function FacturationElectroniquePage() {
       />
 
       <PageHero
+        objet={<SceneEcheance />}
         eyebrow="Facturation électronique · TPE, artisans et micro-entrepreneurs"
         title="Facturation électronique 2026-2027 : ce que les TPE et artisans doivent faire"
       >
         <p>
           Depuis le 1er septembre 2026, toute entreprise assujettie à la TVA établie en France doit
-          pouvoir recevoir des factures électroniques par l'intermédiaire d'une plateforme agréée,
+          pouvoir recevoir des factures électroniques par l’intermédiaire d’une plateforme agréée,
           micro-entrepreneurs en franchise de TVA compris. Les grandes entreprises et les ETI émettent
           aussi en électronique depuis cette date. Les PME, les TPE et les micro-entreprises ont
-          jusqu'au 1er septembre 2027 pour émettre. Situation vérifiée le 28 octobre 2026.
+          jusqu’au 1er septembre 2027&nbsp;pour émettre. Situation vérifiée le 28&nbsp;octobre 2026.
         </p>
         <p>
-          Ce qu'il faut faire, dans l'ordre : choisir une plateforme agréée, vérifier votre inscription
-          à l'annuaire de l'administration, puis préparer vos factures au format électronique avant
+          Ce qu’il faut faire, dans l’ordre&nbsp;: choisir une plateforme agréée, vérifier votre inscription
+          à l’annuaire de l’administration, puis préparer vos factures au format électronique avant
           septembre 2027. Chaque étape est détaillée ci-dessous.
         </p>
       </PageHero>
@@ -173,45 +179,48 @@ export default function FacturationElectroniquePage() {
       <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Qui doit faire quoi, et quand</h2>
-            <p>Une seule obligation vaut pour toutes les entreprises : recevoir. L'émission dépend de la taille.</p>
+            <h2>
+              <Mots>Qui doit faire quoi, et quand</Mots>
+            </h2>
+            <p>Une seule obligation vaut pour toutes les entreprises&nbsp;: recevoir. L’émission dépend de la taille.</p>
           </div>
-          <ol className="method-timeline">
-            <li className="method-step">
-              <div className="method-step__marker" aria-hidden="true">
-                <span>1</span>
-              </div>
-              <article className="method-step__card">
-                <header>
-                  <CalendarCheck aria-hidden="true" />
-                  <h3>1er septembre 2026 : recevoir (en vigueur)</h3>
-                </header>
-                <p>
-                  Toutes les entreprises assujetties à la TVA doivent pouvoir recevoir des factures
-                  électroniques par une plateforme agréée, quelle que soit leur taille. Les
-                  micro-entrepreneurs en franchise de TVA sont concernés.
-                </p>
-                <p>Les grandes entreprises et les ETI émettent aussi en électronique depuis cette date.</p>
-              </article>
-            </li>
-            <li className="method-step">
-              <div className="method-step__marker" aria-hidden="true">
-                <span>2</span>
-              </div>
-              <article className="method-step__card">
-                <header>
-                  <CalendarDays aria-hidden="true" />
-                  <h3>1er septembre 2027 au plus tard : émettre</h3>
-                </header>
-                <p>
-                  Les PME, les TPE et les micro-entreprises émettent leurs factures au format électronique,
-                  et transmettent leur e-reporting, au plus tard à cette date. Une PME peut anticiper.
-                </p>
-              </article>
-            </li>
-          </ol>
+          <div className="cahier" data-defile="traverse">
+            <ol className="method-timeline">
+              <li className="method-step">
+                <div className="method-step__marker" aria-hidden="true">
+                  <span>1</span>
+                </div>
+                <article className="method-step__card">
+                  <header>
+                    <h3>1er septembre 2026&nbsp;: recevoir (en vigueur)</h3>
+                  </header>
+                  <p>
+                    Toutes les entreprises assujetties à la TVA doivent pouvoir recevoir des factures
+                    électroniques par une plateforme agréée, quelle que soit leur taille. Les
+                    micro-entrepreneurs en franchise de TVA sont concernés.
+                  </p>
+                  <p>Les grandes entreprises et les ETI émettent aussi en électronique depuis cette date.</p>
+                </article>
+              </li>
+              <li className="method-step">
+                <div className="method-step__marker" aria-hidden="true">
+                  <span>2</span>
+                </div>
+                <article className="method-step__card">
+                  <header>
+                    <h3>1er septembre 2027&nbsp;au plus tard&nbsp;: émettre</h3>
+                  </header>
+                  <p>
+                    Les PME, les TPE et les micro-entreprises émettent leurs factures au format électronique,
+                    et transmettent leur e-reporting, au plus tard à cette date. Une PME peut anticiper.
+                  </p>
+                </article>
+              </li>
+            </ol>
+            <Griffonnage />
+          </div>
           <p className="transition-line">
-            Dates détaillées : lire le{" "}
+            Dates détaillées&nbsp;: lire le{" "}
             <Link href="/blog/calendrier-facturation-electronique">calendrier de la facturation électronique</Link>,
             puis{" "}
             <Link href="/blog/facturation-electronique-qui-est-concerne">
@@ -225,35 +234,34 @@ export default function FacturationElectroniquePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Plateforme agréée, annuaire et formats</h2>
+            <h2>
+              <Mots>Plateforme agréée, annuaire et formats</Mots>
+            </h2>
             <p>Trois notions à distinguer, pour ne pas confondre les démarches.</p>
           </div>
           <div className="cards-grid cards-grid--three">
             <article className="mini-card">
-              <ShieldCheck aria-hidden="true" />
               <p>
-                Une plateforme agréée, choisie librement : un opérateur immatriculé par l'administration pour
+                Une plateforme agréée, choisie librement&nbsp;: un opérateur immatriculé par l’administration pour
                 trois ans, renouvelable. Vous pouvez en retenir plusieurs et en changer à tout moment.
               </p>
             </article>
             <article className="mini-card">
-              <Network aria-hidden="true" />
               <p>
-                L'annuaire de l'administration : votre entreprise y figure par l'intermédiaire de sa
+                L’annuaire de l’administration&nbsp;: votre entreprise y figure par l’intermédiaire de sa
                 plateforme.
               </p>
             </article>
             <article className="mini-card">
-              <ClipboardCheck aria-hidden="true" />
               <p>
-                Des formats structurés : UBL, CII, ou un format mixte comme Factur-X. Un PDF simple ne suffit
+                Des formats structurés&nbsp;: UBL, CII, ou un format mixte comme Factur-X. Un PDF simple ne suffit
                 plus entre entreprises assujetties.
               </p>
             </article>
           </div>
           <p className="transition-line">
-            Un logiciel « compatible » n'est pas une plateforme agréée : il doit s'y connecter. Le portail public
-            Chorus Pro ne sert qu'aux factures adressées au secteur public. Pour choisir, lire{" "}
+            Un logiciel «&nbsp;compatible&nbsp;» n’est pas une plateforme agréée&nbsp;: il doit s’y connecter. Le portail public
+            Chorus Pro ne sert qu’aux factures adressées au secteur public. Pour choisir, lire{" "}
             <Link href="/blog/choisir-plateforme-facturation-agreee">comment choisir sa plateforme agréée</Link>.
           </p>
         </div>
@@ -262,29 +270,31 @@ export default function FacturationElectroniquePage() {
       <section className="section section--white">
         <div className="container narrow">
           <div className="section-heading section-heading--center">
-            <h2>E-reporting : ce qui ne passe pas par la facture</h2>
+            <h2>
+              <Mots>E-reporting : ce qui ne passe pas par la facture</Mots>
+            </h2>
             <p>
-              L'e-reporting transmet à l'administration les données des opérations que la facture électronique
-              entre entreprises ne couvre pas :
+              L’e-reporting transmet à l’administration les données des opérations que la facture électronique
+              entre entreprises ne couvre pas&nbsp;:
             </p>
           </div>
           <ul className="task-list">
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Les ventes à des particuliers</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Les opérations internationales : exportations et échanges intracommunautaires de biens</span>
+              <Coche />
+              <span>Les opérations internationales&nbsp;: exportations et échanges intracommunautaires de biens</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Les données de paiement des prestations de services dont la TVA est exigible à l'encaissement</span>
+              <Coche />
+              <span>Les données de paiement des prestations de services dont la TVA est exigible à l’encaissement</span>
             </li>
           </ul>
           <p className="transition-line">
-            Le calendrier de l'e-reporting suit celui de l'émission. Le détail figure dans{" "}
-            <Link href="/blog/e-reporting-definition-calendrier">l'article sur l'e-reporting</Link>.
+            Le calendrier de l’e-reporting suit celui de l’émission. Le détail figure dans{" "}
+            <Link href="/blog/e-reporting-definition-calendrier">l’article sur l’e-reporting</Link>.
           </p>
         </div>
       </section>
@@ -292,32 +302,34 @@ export default function FacturationElectroniquePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Les mentions nouvelles sur vos factures</h2>
+            <h2>
+              <Mots>Les mentions nouvelles sur vos factures</Mots>
+            </h2>
             <p>
-              Elles suivent le calendrier d'émission : grandes entreprises et ETI depuis septembre 2026, PME, TPE
+              Elles suivent le calendrier d’émission&nbsp;: grandes entreprises et ETI depuis septembre 2026, PME, TPE
               et micro-entreprises à partir de septembre 2027.
             </p>
           </div>
           <ul className="task-list">
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Le SIREN de votre client</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>La nature des opérations : livraison de biens, prestation de services, ou les deux</span>
+              <Coche />
+              <span>La nature des opérations&nbsp;: livraison de biens, prestation de services, ou les deux</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>L'adresse de livraison, si elle diffère de celle de votre client</span>
+              <Coche />
+              <span>L’adresse de livraison, si elle diffère de celle de votre client</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>La mention « Option pour le paiement de la taxe d'après les débits », le cas échéant</span>
+              <Coche />
+              <span>La mention «&nbsp;Option pour le paiement de la taxe d’après les débits&nbsp;», le cas échéant</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>En franchise en base de TVA : « TVA non applicable, art. 293 B du code général des impôts »</span>
+              <Coche />
+              <span>En franchise en base de TVA&nbsp;: «&nbsp;TVA non applicable, art. 293 B du code général des impôts&nbsp;»</span>
             </li>
           </ul>
         </div>
@@ -326,35 +338,34 @@ export default function FacturationElectroniquePage() {
       <section className="section section--white">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Sanctions : les montants à connaître</h2>
+            <h2>
+              <Mots>Sanctions : les montants à connaître</Mots>
+            </h2>
             <p>Fixés par la loi de finances pour 2026.</p>
           </div>
           <div className="cards-grid cards-grid--three">
             <article className="mini-card">
-              <TriangleAlert aria-hidden="true" />
               <p>
-                50 € par facture non émise électroniquement (au lieu de 15 €), plafonnés à 15 000 € par année
+                50&nbsp;€ par facture non émise électroniquement (au lieu de 15&nbsp;€), plafonnés à 15 000&nbsp;€ par année
                 civile.
               </p>
             </article>
             <article className="mini-card">
-              <TriangleAlert aria-hidden="true" />
               <p>
-                500 € par transmission d'e-reporting manquante (au lieu de 250 €), dans la limite de 15 000 € par an.
+                500&nbsp;€ par transmission d’e-reporting manquante (au lieu de 250&nbsp;€), dans la limite de 15 000&nbsp;€ par an.
               </p>
             </article>
             <article className="mini-card">
-              <TriangleAlert aria-hidden="true" />
               <p>
-                Sans plateforme agréée pour recevoir : une mise en demeure de trois mois, puis 500 €, puis 1 000 €,
-                et 1 000 € tous les trois mois si le manquement persiste.
+                Sans plateforme agréée pour recevoir&nbsp;: une mise en demeure de trois mois, puis 500&nbsp;€, puis 1 000&nbsp;€,
+                et 1 000&nbsp;€ tous les trois mois si le manquement persiste.
               </p>
             </article>
           </div>
           <p className="transition-line">
-            Pas d'amende pour une première infraction régularisée spontanément ou dans les 30 jours suivant la première
-            demande de l'administration. Le détail est dans{" "}
-            <Link href="/blog/risques-si-pas-pret-facturation-electronique">l'article sur les sanctions</Link>.
+            Pas d’amende pour une première infraction régularisée spontanément ou dans les 30&nbsp;jours suivant la première
+            demande de l’administration. Le détail est dans{" "}
+            <Link href="/blog/risques-si-pas-pret-facturation-electronique">l’article sur les sanctions</Link>.
           </p>
         </div>
       </section>
@@ -362,66 +373,52 @@ export default function FacturationElectroniquePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Votre liste pour septembre 2027</h2>
-            <p>Ces points se traitent au fil de l'année, sans bouleverser tout votre fonctionnement d'un coup.</p>
+            <h2>
+              <Mots>Votre liste pour septembre 2027</Mots>
+            </h2>
+            <p>Ces points se traitent au fil de l’année, sans bouleverser tout votre fonctionnement d’un coup.</p>
           </div>
-          <ul className="task-list">
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Choisir votre plateforme agréée dans la liste officielle, et vérifier votre inscription à l'annuaire</span>
-            </li>
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Vérifier que votre outil émet en Factur-X, UBL ou CII et qu'il se connecte à une plateforme agréée</span>
-            </li>
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Mettre à jour votre modèle de facture avec les nouvelles mentions</span>
-            </li>
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Tester une facture électronique avec votre expert-comptable avant la bascule</span>
-            </li>
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Vérifier le circuit de réception des factures de vos fournisseurs</span>
-            </li>
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Repérer les opérations concernées par l'e-reporting : ventes à des particuliers, opérations internationales, prestations encaissées</span>
-            </li>
-            <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Demander à vos clients et fournisseurs professionnels leur calendrier de passage à l'électronique</span>
-            </li>
-          </ul>
+          <ListeACocher
+            items={[
+              "Choisir votre plateforme agréée dans la liste officielle, et vérifier votre inscription à l'annuaire",
+              "Vérifier que votre outil émet en Factur-X, UBL ou CII et qu'il se connecte à une plateforme agréée",
+              "Mettre à jour votre modèle de facture avec les nouvelles mentions",
+              "Tester une facture électronique avec votre expert-comptable avant la bascule",
+              "Vérifier le circuit de réception des factures de vos fournisseurs",
+              "Repérer les opérations concernées par l'e-reporting : ventes à des particuliers, opérations internationales, prestations encaissées",
+              "Demander à vos clients et fournisseurs professionnels leur calendrier de passage à l'électronique",
+            ]}
+            tampon="Prêt pour 2027"
+          />
         </div>
       </section>
 
       <section className="section section--white">
         <div className="container narrow">
           <div className="section-heading section-heading--center">
-            <h2>Trois situations types, en exemples fictifs</h2>
-            <p>Pour situer votre cas. Ces exemples sont fictifs : ils ne remplacent pas l'avis de votre expert-comptable.</p>
+            <h2>
+              <Mots>Trois situations types, en exemples fictifs</Mots>
+            </h2>
+            <p>Pour situer votre cas. Ces exemples sont fictifs&nbsp;: ils ne remplacent pas l’avis de votre expert-comptable.</p>
           </div>
           <h3>Une micro-entrepreneure en franchise de TVA, sans salarié</h3>
           <p>
             Elle reçoit quelques factures de fournisseurs professionnels et émet une dizaine de factures par mois à des
             entreprises. Elle doit pouvoir recevoir des factures électroniques par une plateforme agréée depuis le 1er
-            septembre 2026, et émettre au format électronique au plus tard le 1er septembre 2027, avec la mention « TVA
-            non applicable, art. 293 B du code général des impôts ».
+            septembre 2026, et émettre au format électronique au plus tard le 1er septembre 2027, avec la mention «&nbsp;TVA
+            non applicable, art. 293 B du code général des impôts&nbsp;».
           </p>
           <h3>Un artisan du bâtiment qui fait appel à des sous-traitants</h3>
           <p>
             Il reçoit des factures de matériaux et de sous-traitants, et facture des acomptes à ses propres clients.
-            Lorsqu'un sous-traitant facture hors taxe avec la mention « Autoliquidation », c'est l'entreprise principale
-            qui déclare et paie la TVA. Chaque chantier se vérifie avec l'expert-comptable.
+            Lorsqu’un sous-traitant facture hors taxe avec la mention «&nbsp;Autoliquidation&nbsp;», c’est l’entreprise principale
+            qui déclare et paie la TVA. Chaque chantier se vérifie avec l’expert-comptable.
           </p>
           <h3>Une TPE de services qui vend aussi à des particuliers</h3>
           <p>
-            Une partie de ses ventes va à des entreprises, l'autre à des particuliers. Les factures adressées aux
-            entreprises suivent le calendrier de l'émission ; les ventes aux particuliers relèvent de l'e-reporting. Elle
-            demande à son expert-comptable quel régime de TVA s'applique à ses paiements.
+            Une partie de ses ventes va à des entreprises, l’autre à des particuliers. Les factures adressées aux
+            entreprises suivent le calendrier de l’émission&nbsp;; les ventes aux particuliers relèvent de l’e-reporting. Elle
+            demande à son expert-comptable quel régime de TVA s’applique à ses paiements.
           </p>
         </div>
       </section>
@@ -429,43 +426,45 @@ export default function FacturationElectroniquePage() {
       <section className="section section--cream">
         <div className="container narrow">
           <div className="section-heading section-heading--center">
-            <h2>Comment je vous accompagne</h2>
-            <p>Je vous aide à choisir votre outil, à le paramétrer, puis à l'utiliser en autonomie.</p>
+            <h2>
+              <Mots>Comment je vous accompagne</Mots>
+            </h2>
+            <p>Je vous aide à choisir votre outil, à le paramétrer, puis à l’utiliser en autonomie.</p>
           </div>
           <p>
-            Un cas concret : un client a fait appel à moi pour sa facturation électronique. J'ai réalisé le choix et le
+            Un cas concret&nbsp;: un client a fait appel à moi pour sa facturation électronique. J’ai réalisé le choix et le
             paramétrage de son outil de facturation, rédigé un guide pas à pas personnalisé, puis animé une séance de
-            formation d'une heure. Résultat : autonome et conforme en une heure.
+            formation d’une heure. Résultat&nbsp;: autonome et conforme en une heure.
           </p>
           <ul className="task-list">
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Un diagnostic gratuit de 15 minutes pour faire le point sur votre situation</span>
+              <Coche />
+              <span>Un diagnostic gratuit de 15&nbsp;minutes pour faire le point sur votre situation</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Un devis personnalisé sous 48 h après ce diagnostic</span>
+              <Coche />
+              <span>Un devis personnalisé sous 48&nbsp;h après ce diagnostic</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Le choix et le paramétrage de votre outil de facturation</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Un guide pas à pas adapté à votre activité</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>Une séance de formation d'une heure</span>
+              <Coche />
+              <span>Une séance de formation d’une heure</span>
             </li>
           </ul>
           <p className="transition-line">
             En Charente, je me déplace chez vous. Ailleurs en France, nous travaillons à distance, avec des outils simples
-            et sécurisés. Lire d'autres <Link href="/cas-concrets">cas concrets de mes clients</Link>.
+            et sécurisés. Lire d’autres <Link href="/cas-concrets">cas concrets de mes clients</Link>.
           </p>
           <p>
-            Ce que je ne fais pas : je ne remplace pas votre expert-comptable, je le complète. Je ne fais pas de paie, je ne
-            donne pas de conseil juridique ou fiscal, et je ne prends pas d'appels téléphoniques à votre place.
+            Ce que je ne fais pas&nbsp;: je ne remplace pas votre expert-comptable, je le complète. Je ne fais pas de paie, je ne
+            donne pas de conseil juridique ou fiscal, et je ne prends pas d’appels téléphoniques à votre place.
           </p>
           <div className="center-action">
             <a className="button button--gold" href={SITE.calendlyUrl}>
@@ -482,7 +481,9 @@ export default function FacturationElectroniquePage() {
         <div className="container narrow">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">FAQ</p>
-            <h2>Questions fréquentes sur la facturation électronique</h2>
+            <h2>
+              <Mots>Questions fréquentes sur la facturation électronique</Mots>
+            </h2>
           </div>
           <FaqAccordion faqs={faqs} />
         </div>
@@ -491,15 +492,17 @@ export default function FacturationElectroniquePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <h2>Tous les articles sur la facturation électronique</h2>
-            <p>Treize articles répondent à chaque question : dates, statuts, formats, sanctions et cas particuliers.</p>
+            <h2>
+              <Mots>Tous les articles sur la facturation électronique</Mots>
+            </h2>
+            <p>Treize articles répondent à chaque question&nbsp;: dates, statuts, formats, sanctions et cas particuliers.</p>
           </div>
           <ul className="task-list">
             {articles.map((item) => (
               <li key={item.href}>
-                <CheckCircle2 aria-hidden="true" />
+                <Coche />
                 <span>
-                  <Link href={item.href}>{item.title}</Link> : {item.summary}
+                  <Link href={item.href}>{fr(item.title)}</Link>&nbsp;: {fr(item.summary)}
                 </span>
               </li>
             ))}
@@ -510,16 +513,18 @@ export default function FacturationElectroniquePage() {
       <section className="section section--white">
         <div className="container narrow">
           <div className="section-heading section-heading--center">
-            <h2>Sources officielles</h2>
-            <p>Informations vérifiées le 28 octobre 2026.</p>
+            <h2>
+              <Mots>Sources officielles</Mots>
+            </h2>
+            <p>Informations vérifiées le 28&nbsp;octobre 2026.</p>
           </div>
           <ul className="task-list">
             {sources.map((source) => (
               <li key={source.url}>
-                <CheckCircle2 aria-hidden="true" />
+                <Coche />
                 <span>
                   <a href={source.url} rel="noopener noreferrer" target="_blank">
-                    {source.label}
+                    {fr(source.label)}
                   </a>
                 </span>
               </li>
@@ -528,18 +533,24 @@ export default function FacturationElectroniquePage() {
         </div>
       </section>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
 
-      <section className="final-cta">
+      <TamponLibre chemise="or" className="section final-cta">
         <div className="container">
-          <h2>Dites-moi où vous en êtes. Je vous dis ce qui reste à faire.</h2>
+          <h2>
+            <Mots>Dites-moi où vous en êtes. Je vous dis ce qui reste à faire.</Mots>
+          </h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>
+          <p aria-hidden="true" className="final-cta__invite">
+            Le tampon est à vous&nbsp;: cliquez n’importe où.
+          </p>
         </div>
-      </section>
+        <span aria-hidden="true" className="final-cta__tampon">
+          <Tampon>Classé</Tampon>
+        </span>
+      </TamponLibre>
     </main>
   );
 }

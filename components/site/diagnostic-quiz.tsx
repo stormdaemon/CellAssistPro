@@ -1,8 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowLeft, CalendarCheck, CheckCircle2, RotateCcw } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, CalendarCheck, RotateCcw } from "lucide-react";
+import { Coche } from "@/components/papeterie/objets";
 import { quizAnswerOptions, quizProfiles, quizQuestions, SITE } from "@/lib/site-data";
+import { fr } from "@/lib/typo";
+
+/** Le temps de voir le crochet se tracer avant de tourner la page. */
+const DELAI_DU_CROCHET = 380;
 
 export function DiagnosticQuiz() {
   const [answers, setAnswers] = useState<(number | null)[]>(
@@ -10,6 +15,15 @@ export function DiagnosticQuiz() {
   );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDone, setIsDone] = useState(false);
+  const minuteur = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (minuteur.current !== null) {
+        window.clearTimeout(minuteur.current);
+      }
+    };
+  }, []);
 
   const score = answers.reduce<number>((total, points) => total + (points ?? 0), 0);
   const profile =
@@ -17,15 +31,23 @@ export function DiagnosticQuiz() {
     quizProfiles[quizProfiles.length - 1];
 
   function selectAnswer(points: number) {
+    if (minuteur.current !== null) {
+      return;
+    }
+
     const nextAnswers = [...answers];
     nextAnswers[currentIndex] = points;
     setAnswers(nextAnswers);
 
-    if (currentIndex < quizQuestions.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setIsDone(true);
-    }
+    minuteur.current = window.setTimeout(() => {
+      minuteur.current = null;
+
+      if (currentIndex < quizQuestions.length - 1) {
+        setCurrentIndex(currentIndex + 1);
+      } else {
+        setIsDone(true);
+      }
+    }, DELAI_DU_CROCHET);
   }
 
   function goBack() {
@@ -48,6 +70,10 @@ export function DiagnosticQuiz() {
 
   return (
     <div className="quiz" id="auto-diagnostic">
+      <div aria-hidden="true" className="quiz__entete">
+        <strong>Formulaire de temps perdu</strong>
+        <span>À remplir sans réfléchir trop longtemps</span>
+      </div>
       <div
         className="quiz__progress"
         role="progressbar"
@@ -67,10 +93,11 @@ export function DiagnosticQuiz() {
 
           {quizQuestions.map((question, index) => (
             <fieldset className="quiz__question" hidden={index !== currentIndex} key={question}>
-              <legend>{question}</legend>
+              <legend>{fr(question)}</legend>
               <div className="quiz__options">
                 {quizAnswerOptions.map((option) => (
                   <button
+                    aria-pressed={answers[index] === option.points}
                     className={
                       answers[index] === option.points
                         ? "quiz__option quiz__option--selected"
@@ -80,7 +107,10 @@ export function DiagnosticQuiz() {
                     type="button"
                     onClick={() => selectAnswer(option.points)}
                   >
-                    {option.label}
+                    <span aria-hidden="true" className="case-a-cocher">
+                      <Coche />
+                    </span>
+                    {fr(option.label)}
                   </button>
                 ))}
               </div>
@@ -95,21 +125,21 @@ export function DiagnosticQuiz() {
         </div>
       ) : (
         <div className="quiz__result" role="status">
-          <p className="eyebrow">Votre résultat</p>
+          <p className="quiz__etiquette">Votre résultat</p>
           <p className="quiz__score">
-            <strong>{score}</strong> / 30 points
+            <strong>{score}</strong> / 30&nbsp;points
           </p>
-          <h3>{profile.title}</h3>
-          <p className="quiz__estimate">{profile.estimate}</p>
-          <p>{profile.text}</p>
+          <h3>{fr(profile.title)}</h3>
+          <p className="quiz__estimate">{fr(profile.estimate)}</p>
+          <p>{fr(profile.text)}</p>
 
           <div className="quiz__actions-block">
-            <p>Vos 3 premières actions :</p>
+            <p>Vos 3&nbsp;premières actions&nbsp;:</p>
             <ul>
               {profile.actions.map((action) => (
                 <li key={action}>
-                  <CheckCircle2 aria-hidden="true" />
-                  <span>{action}</span>
+                  <Coche />
+                  <span>{fr(action)}</span>
                 </li>
               ))}
             </ul>
@@ -118,7 +148,7 @@ export function DiagnosticQuiz() {
           <div className="quiz__result-cta">
             <a className="button button--gold" href={SITE.calendlyUrl}>
               <CalendarCheck aria-hidden="true" />
-              On en parle ? 15 minutes offertes
+              On en parle&nbsp;? 15&nbsp;minutes offertes
             </a>
             <button className="quiz__back" type="button" onClick={restart}>
               <RotateCcw aria-hidden="true" /> Refaire le test

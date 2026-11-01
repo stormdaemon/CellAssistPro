@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ClipboardCheck, Mail, MapPin, Repeat, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Coche, Mots, Tampon } from "@/components/papeterie/objets";
+import { SceneCarte } from "@/components/papeterie/scenes";
+import { TamponLibre } from "@/components/papeterie/tampon-libre";
 import { FaqAccordion } from "@/components/site/faq-accordion";
 import { JsonLd } from "@/components/site/json-ld";
 import { LeadMagnet } from "@/components/site/lead-magnet";
@@ -8,6 +11,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { pageMetadata } from "@/lib/metadata";
 import { CANONICAL_DESCRIPTION, CTA, SITE } from "@/lib/site-data";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/structured-data";
+import { fr } from "@/lib/typo";
 
 export const metadata: Metadata = pageMetadata("charente");
 
@@ -62,7 +66,7 @@ const charenteFaqs = [
 
 export default function AssistanteAdministrativeCharentePage() {
   return (
-    <main>
+    <main data-chemise="sauge">
       <JsonLd data={breadcrumbJsonLd("En Charente", "/assistante-administrative-charente")} />
       <JsonLd
         data={serviceJsonLd({
@@ -76,8 +80,8 @@ export default function AssistanteAdministrativeCharentePage() {
         })}
       />
 
-      <PageHero eyebrow="En Charente" title="Assistante administrative à Angoulême et en Charente">
-        <p>{CANONICAL_DESCRIPTION}</p>
+      <PageHero objet={<SceneCarte />} eyebrow="En Charente" title="Assistante administrative à Angoulême et en Charente">
+        <p>{fr(CANONICAL_DESCRIPTION)}</p>
         <p>
           Je me déplace chez mes clients dans toute la Charente, notamment à Angoulême, à Cognac, à
           Barbezieux-Saint-Hilaire et à Jarnac. Le reste du temps, et partout ailleurs en France, le
@@ -96,43 +100,42 @@ export default function AssistanteAdministrativeCharentePage() {
       <section className="section section--white" aria-labelledby="communes-title">
         <div className="container">
           <div className="section-heading section-heading--center">
-            <p className="eyebrow">Zone d'intervention sur place</p>
-            <h2 id="communes-title">Les communes où j'interviens sur place</h2>
+            <p className="eyebrow">Zone d’intervention sur place</p>
+            <h2 id="communes-title">
+              <Mots>Les communes où j'interviens sur place</Mots>
+            </h2>
           </div>
           <div className="container narrow">
             <p>
               Depuis Champagne-Vigny, je me déplace dans toute la Charente. Voici les communes de la
-              zone d'intervention sur place.
+              zone d’intervention sur place.
             </p>
           </div>
           <ul className="trade-chips" aria-label="Communes desservies sur place">
             {communesSurPlace.map((commune) => (
-              <li key={commune}>{commune}</li>
+              <li key={commune}>{fr(commune)}</li>
             ))}
           </ul>
           <div className="cards-grid cards-grid--three">
             <article className="mini-card">
-              <MapPin aria-hidden="true" />
               <p>
-                <strong>Angoulême</strong> environ 18 km de Champagne-Vigny, à vol d'oiseau.
+                <strong>Angoulême</strong> environ 18&nbsp;km de Champagne-Vigny, à vol d’oiseau.
               </p>
             </article>
             <article className="mini-card">
-              <MapPin aria-hidden="true" />
               <p>
-                <strong>Barbezieux-Saint-Hilaire</strong> environ 15 km, à vol d'oiseau.
+                <strong>Barbezieux-Saint-Hilaire</strong> environ 15&nbsp;km, à vol d’oiseau.
               </p>
             </article>
             <article className="mini-card">
-              <MapPin aria-hidden="true" />
               <p>
-                <strong>Cognac</strong> environ 36 km, à vol d'oiseau.
+                <strong>Cognac</strong> environ 36&nbsp;km, à vol d’oiseau.
               </p>
             </article>
           </div>
           <p className="transition-line">
-            Les distances sont mesurées à vol d'oiseau depuis Champagne-Vigny. Par la route, les trajets
-            sont plus longs. Une commune absente de cette liste ? Écrivez-moi : je vous indique si je
+            Les distances sont mesurées à vol d’oiseau depuis Champagne-Vigny. Par la route, les trajets
+            sont plus longs. Une commune absente de cette liste&nbsp;? Écrivez-moi&nbsp;: je vous indique si je
             peux venir sur place.
           </p>
         </div>
@@ -142,26 +145,25 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">Sur place ou à distance</p>
-            <h2 id="formats-title">Ce qui se fait sur place, ce qui se fait à distance</h2>
+            <h2 id="formats-title">
+              <Mots>Ce qui se fait sur place, ce qui se fait à distance</Mots>
+            </h2>
           </div>
           <div className="cards-grid cards-grid--three">
             <article className="mini-card">
-              <MapPin aria-hidden="true" />
               <p>
-                <strong>Sur place en Charente.</strong> Je me déplace chez vous quand c'est utile : pour le
-                diagnostic, pour la mise en place d'un circuit ou d'un outil, ou pour un point régulier
+                <strong>Sur place en Charente.</strong> Je me déplace chez vous quand c’est utile&nbsp;: pour le
+                diagnostic, pour la mise en place d’un circuit ou d’un outil, ou pour un point régulier
                 autour de vos vrais dossiers.
               </p>
             </article>
             <article className="mini-card">
-              <Repeat aria-hidden="true" />
               <p>
                 <strong>À distance, partout en France.</strong> Le suivi courant se fait à distance, avec
                 des outils simples et sécurisés que je mets en place avec vous.
               </p>
             </article>
             <article className="mini-card">
-              <Sparkles aria-hidden="true" />
               <p>
                 <strong>Le principe.</strong> Si vous savez envoyer un courriel, vous savez travailler avec
                 moi. Les outils sont choisis avec vous et conformes au RGPD.
@@ -179,32 +181,30 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container">
           <div className="section-heading section-heading--center">
             <p className="eyebrow">Démarrer une mission</p>
-            <h2 id="start-title">Comment démarre une mission en Charente</h2>
+            <h2 id="start-title">
+              <Mots>Comment démarre une mission en Charente</Mots>
+            </h2>
           </div>
           <div className="cards-grid cards-grid--four">
             <article className="mini-card">
-              <ClipboardCheck aria-hidden="true" />
               <p>
-                <strong>1. Diagnostic de 15 minutes.</strong> Gratuit et sans engagement, il permet d'identifier
+                <strong>1. Diagnostic de 15&nbsp;minutes.</strong> Gratuit et sans engagement, il permet d’identifier
                 les trois points qui vous prennent le plus de temps.
               </p>
             </article>
             <article className="mini-card">
-              <CheckCircle2 aria-hidden="true" />
               <p>
-                <strong>2. Devis personnalisé.</strong> Il est envoyé sous 48 h, avec le périmètre, le format
+                <strong>2. Devis personnalisé.</strong> Il est envoyé sous 48&nbsp;h, avec le périmètre, le format
                 et le prix de la mission.
               </p>
             </article>
             <article className="mini-card">
-              <Sparkles aria-hidden="true" />
               <p>
-                <strong>3. Mise en place.</strong> Circuits, outils et relances : sur place si c'est utile,
+                <strong>3. Mise en place.</strong> Circuits, outils et relances&nbsp;: sur place si c’est utile,
                 à distance sinon.
               </p>
             </article>
             <article className="mini-card">
-              <Repeat aria-hidden="true" />
               <p>
                 <strong>4. Suivi.</strong> Une mission ponctuelle, ou un accompagnement mensuel sans
                 engagement au-delà du préavis prévu au contrat.
@@ -212,7 +212,7 @@ export default function AssistanteAdministrativeCharentePage() {
             </article>
           </div>
           <p className="transition-line">
-            Vous pouvez réserver le diagnostic directement dans l'agenda en ligne, ou passer par le
+            Vous pouvez réserver le diagnostic directement dans l’agenda en ligne, ou passer par le
             formulaire de la page <Link href="/contact">contact</Link>.
           </p>
         </div>
@@ -222,34 +222,36 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Preuves locales</p>
-            <h2 id="proofs-title">Une présence locale, des repères vérifiables</h2>
+            <h2 id="proofs-title">
+              <Mots>Une présence locale, des repères vérifiables</Mots>
+            </h2>
           </div>
           <ul className="task-list">
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
-                Administratif d'une entreprise du bâtiment en Charente, BR16BATIMENT, tenu depuis 2017.
+                Administratif d’une entreprise du bâtiment en Charente, BR16BATIMENT, tenu depuis 2017.
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Adhérente de la CPME.</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Membre du réseau BNI Charente Grand Sud.</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>Conseillère municipale de sa commune.</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>30 ans d'expérience en administratif, en organisation et en pré-comptabilité.</span>
+              <Coche />
+              <span>30&nbsp;ans d’expérience en administratif, en organisation et en pré-comptabilité.</span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
-              <span>BTS Assistant de gestion PME-PMI, puis formations à l'assistanat virtuel, à l'automatisation et à l'IA.</span>
+              <Coche />
+              <span>BTS Assistant de gestion PME-PMI, puis formations à l’assistanat virtuel, à l’automatisation et à l’IA.</span>
             </li>
           </ul>
           <p className="transition-line">
@@ -263,16 +265,18 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">À distance</p>
-            <h2 id="remote-title">À distance aussi, hors de la Charente</h2>
+            <h2 id="remote-title">
+              <Mots>À distance aussi, hors de la Charente</Mots>
+            </h2>
           </div>
           <p>
             Vous êtes en Charente-Maritime, en Deux-Sèvres, dans la Vienne, en Haute-Vienne, en Dordogne ou
-            en Gironde ? Pour ces départements, le travail se fait à distance, avec les mêmes outils simples
+            en Gironde&nbsp;? Pour ces départements, le travail se fait à distance, avec les mêmes outils simples
             et sécurisés.
           </p>
           <p>
-            À Saintes et à Royan, en Charente-Maritime, j'accompagne les TPE à distance. Les articles dédiés
-            expliquent comment cela fonctionne :{" "}
+            À Saintes et à Royan, en Charente-Maritime, j’accompagne les TPE à distance. Les articles dédiés
+            expliquent comment cela fonctionne&nbsp;:{" "}
             <Link href="/blog/assistante-administrative-saintes">assistante administrative à Saintes</Link>{" "}
             et{" "}
             <Link href="/blog/secretaire-independante-royan">secrétaire indépendante à Royan</Link>.
@@ -288,43 +292,45 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Lire aussi</p>
-            <h2 id="articles-title">Articles sur la gestion administrative en Charente</h2>
+            <h2 id="articles-title">
+              <Mots>Articles sur la gestion administrative en Charente</Mots>
+            </h2>
           </div>
           <ul className="task-list">
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/assistante-virtuelle-charente-tpe">
-                  Assistante virtuelle en Charente : ce qu'elle peut prendre en charge dans votre TPE
+                  Assistante virtuelle en Charente&nbsp;: ce qu’elle peut prendre en charge dans votre TPE
                 </Link>
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/secretaire-independante-angouleme-ou-recrutement">
-                  Secrétaire indépendante à Angoulême ou recrutement : le comparatif honnête
+                  Secrétaire indépendante à Angoulême ou recrutement&nbsp;: le comparatif honnête
                 </Link>
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/externalisation-administrative-charente-guide-dirigeant">
-                  Externalisation administrative en Charente : le guide du dirigeant de TPE
+                  Externalisation administrative en Charente&nbsp;: le guide du dirigeant de TPE
                 </Link>
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/gestion-administrative-tpe-angouleme-erreurs">
-                  Gestion administrative d'une TPE à Angoulême : les erreurs les plus fréquentes
+                  Gestion administrative d’une TPE à Angoulême&nbsp;: les erreurs les plus fréquentes
                 </Link>
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/telesecretariat-charente">
                   Télésecrétariat et secrétariat à distance en Charente
@@ -332,7 +338,7 @@ export default function AssistanteAdministrativeCharentePage() {
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/aide-administrative-artisan-cognac">
                   Aide administrative pour les artisans autour de Cognac
@@ -340,10 +346,10 @@ export default function AssistanteAdministrativeCharentePage() {
               </span>
             </li>
             <li>
-              <CheckCircle2 aria-hidden="true" />
+              <Coche />
               <span>
                 <Link href="/blog/automatisation-ia-pme-charente-par-ou-commencer">
-                  Automatisation et IA pour les PME de Charente : par où commencer ?
+                  Automatisation et IA pour les PME de Charente&nbsp;: par où commencer&nbsp;?
                 </Link>
               </span>
             </li>
@@ -355,7 +361,9 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Services</p>
-            <h2 id="services-title">Si votre besoin est plus précis</h2>
+            <h2 id="services-title">
+              <Mots>Si votre besoin est plus précis</Mots>
+            </h2>
           </div>
           <ul className="trade-chips">
             <li>
@@ -374,7 +382,7 @@ export default function AssistanteAdministrativeCharentePage() {
               <Link href="/facturation-electronique">Facturation électronique</Link>
             </li>
             <li>
-              <Link href="/mes-offres">Formules d'accompagnement</Link>
+              <Link href="/mes-offres">Formules d’accompagnement</Link>
             </li>
             <li>
               <Link href="/cas-concrets">Cas concrets</Link>
@@ -387,19 +395,18 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Où me trouver</p>
-            <h2 id="where-title">Coordonnées et fiche Google</h2>
+            <h2 id="where-title">
+              <Mots>Coordonnées et fiche Google</Mots>
+            </h2>
           </div>
           <ul className="contact-list">
             <li>
-              <Mail aria-hidden="true" />
               <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </li>
             <li>
-              <MapPin aria-hidden="true" />
               <span>CelAssistPro · Céline Bardan EI · Champagne-Vigny (16250), Charente</span>
             </li>
             <li>
-              <MapPin aria-hidden="true" />
               <a href={SITE.googleBusinessUrl}>Voir la fiche Google</a>
             </li>
           </ul>
@@ -410,27 +417,35 @@ export default function AssistanteAdministrativeCharentePage() {
         <div className="container narrow">
           <div className="section-heading">
             <p className="eyebrow">Questions fréquentes</p>
-            <h2 id="charente-faq-title">Questions fréquentes sur l'accompagnement en Charente</h2>
+            <h2 id="charente-faq-title">
+              <Mots>Questions fréquentes sur l'accompagnement en Charente</Mots>
+            </h2>
           </div>
           <FaqAccordion faqs={charenteFaqs} />
         </div>
       </section>
 
-      <div className="container">
-        <LeadMagnet />
-      </div>
+      <LeadMagnet />
 
-      <section className="final-cta">
+      <TamponLibre chemise="or" className="section final-cta">
         <div className="container">
-          <h2>Parlons de votre administratif, en Charente ou à distance.</h2>
+          <h2>
+            <Mots>Parlons de votre administratif, en Charente ou à distance.</Mots>
+          </h2>
           <a className="button button--gold" href={SITE.calendlyUrl}>
             {CTA.primary}
           </a>
           <p className="final-cta__note">
-            Vous préférez mesurer avant d'en parler ? <Link href="/diagnostic">{CTA.secondary}</Link>
+            Vous préférez mesurer avant d’en parler&nbsp;? <Link href="/diagnostic">{CTA.secondary}</Link>
+          </p>
+          <p aria-hidden="true" className="final-cta__invite">
+            Le tampon est à vous&nbsp;: cliquez n’importe où.
           </p>
         </div>
-      </section>
+        <span aria-hidden="true" className="final-cta__tampon">
+          <Tampon>Classé</Tampon>
+        </span>
+      </TamponLibre>
     </main>
   );
 }

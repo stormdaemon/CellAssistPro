@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ScenePerdu } from "@/components/papeterie/scenes";
 import { PageHero } from "@/components/site/page-hero";
 
 export const metadata: Metadata = {
@@ -10,18 +11,18 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <main>
-      <PageHero eyebrow="Erreur 404" title="Cette page n'existe pas (ou plus)">
+    <main data-chemise="gris">
+      <PageHero objet={<ScenePerdu />} eyebrow="Erreur 404" title="Cette page n'existe pas (ou plus)">
         <p>
-          Le lien que vous avez suivi est peut-être ancien, ou l'article a été regroupé avec un
-          autre. Voici les pages les plus utiles pour reprendre votre lecture :
+          Le lien que vous avez suivi est peut-être ancien, ou l’article a été regroupé avec un
+          autre. Voici les pages les plus utiles pour reprendre votre lecture&nbsp;:
         </p>
         <ul>
           <li>
-            <Link href="/assistante-administrative">L'assistance administrative pour TPE</Link>
+            <Link href="/assistante-administrative">L’assistance administrative pour TPE</Link>
           </li>
           <li>
-            <Link href="/assistante-administrative-btp">L'expertise artisans et BTP</Link>
+            <Link href="/assistante-administrative-btp">L’expertise artisans et BTP</Link>
           </li>
           <li>
             <Link href="/facturation-electronique">Le guide de la facturation électronique</Link>
