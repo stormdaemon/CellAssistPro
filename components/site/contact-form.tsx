@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TriangleAlert } from "lucide-react";
 import { Tampon } from "@/components/papeterie/objets";
 import { SITE } from "@/lib/site-data";
@@ -9,6 +9,17 @@ type FormStatus = "idle" | "sending" | "success" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const confirmation = useRef<HTMLDivElement>(null);
+
+  // La lettre est bien moins haute que le formulaire : sans ça, elle se plie au-dessus de l'écran.
+  useEffect(() => {
+    if (status === "success") {
+      confirmation.current?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "center",
+      });
+    }
+  }, [status]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -36,7 +47,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="contact-form__status contact-form__status--success" role="status">
+      <div className="contact-form__status contact-form__status--success" ref={confirmation} role="status">
         {/* La lettre se plie, l'enveloppe se ferme, le cachet tombe. */}
         <div aria-hidden="true" className="lettre-envoyee">
           <span className="lettre-envoyee__feuille" />
