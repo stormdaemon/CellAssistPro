@@ -3913,16 +3913,83 @@ main li > span a:not([class]):hover,
 }
 .contact-card h2 { margin-bottom: 0.7rem; font-size: clamp(1.5rem, 2.5vw, 2.1rem); }
 .contact-card--agenda {
+  --bord-page: clamp(0.9rem, 2vw, 1.4rem);
+  --bandeau: 15rem;
+  container-type: inline-size;
   position: relative;
   grid-column: 1;
   grid-row: 1;
-  padding: 2.4rem clamp(0.9rem, 2vw, 1.4rem) 1.2rem;
+  padding: 2.4rem var(--bord-page) 0;
   background: #fffdf5;
   border-radius: 8px;
-  box-shadow: var(--ombre-souleve);
+  box-shadow: var(--ombre-souleve), 0.3em 0.3em 0 #f1ecdd, 0.55em 0.55em 0 #e7e1cf;
   font-size: 1rem;
 }
-.contact-card--agenda iframe { display: block; width: 100%; height: 700px; margin-top: 1rem; background: #fff; border: 0; }
+
+/*
+  L'agenda Calendly, imprimé sur la page du carnet. Le cadre vient d'ailleurs : rien ne se règle
+  dedans, seulement la façon dont il se pose sur le papier. Avec multiply, son blanc laisse passer
+  le papier et ses lignes ; le filtre passe son bleu à l'encre violette, sans toucher au blanc.
+  Son bandeau de cookies reste, et --bandeau lui garde une place sous le calendrier pour qu'il n'y
+  couvre aucune date. Plus la page est étroite, plus ce bandeau est haut (mesuré de 202 à 386 px).
+  La signature se tient sous le cadre : avec multiply, elle se lirait à travers le bandeau.
+*/
+/* Une requête de conteneur pour lire la largeur de la page ; sans elle, --bandeau garde sa valeur de repli. */
+@container (min-width: 0) {
+  .agenda-calendly { --bandeau: clamp(8rem, 437px - 48.75cqw, 22rem); }
+}
+.agenda-calendly {
+  --signature: 3.8rem;
+  position: relative;
+  isolation: isolate;
+  height: calc(var(--hauteur, 620px) + var(--bandeau) + var(--signature));
+  margin: 0.6rem calc(var(--bord-page) * -1) 0;
+  overflow: clip;
+  background: #fffdf5 repeating-linear-gradient(to bottom, transparent 0 31px, rgba(90, 80, 190, 0.11) 31px 32px);
+  border-radius: 0 0 8px 8px;
+  transition: height 0.45s var(--trait);
+}
+.agenda-calendly iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: calc(var(--hauteur, 620px) + var(--bandeau));
+  border: 0;
+  opacity: 0;
+  filter: hue-rotate(35deg) saturate(0.9) brightness(0.98) contrast(1.05);
+  mix-blend-mode: multiply;
+  transition: opacity 0.6s;
+}
+.agenda-calendly[data-ouvert] iframe { opacity: 1; }
+.agenda-calendly__attente,
+.agenda-calendly__signature {
+  position: absolute;
+  color: var(--encre-vive);
+  font-family: var(--font-main), cursive;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+.agenda-calendly__attente { top: 3.4rem; left: 0; right: 0; text-align: center; transition: opacity 0.3s; }
+.agenda-calendly[data-ouvert] .agenda-calendly__attente { opacity: 0; }
+.agenda-calendly__signature { right: 1.6rem; bottom: 0.9rem; rotate: -2deg; }
+.agenda-calendly__secours { position: absolute; top: 3rem; left: 0; right: 0; z-index: 1; display: flex; justify-content: center; padding-inline: 1rem; }
+.agenda-calendly__tampon {
+  --r: -9deg;
+  position: absolute;
+  top: 1.1rem;
+  left: 1.3rem;
+  z-index: 1;
+  color: var(--rouge);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  pointer-events: none;
+  animation: coup-de-tampon 0.42s cubic-bezier(0.5, 0, 0.8, 0.6) both;
+}
+
+/* En contraste forcé, le système repeint tout : multiply noircirait l'agenda sur un fond noir. */
+@media (forced-colors: active) {
+  .agenda-calendly iframe { filter: none; mix-blend-mode: normal; }
+}
+
 .contact-card--lettre {
   --pose-r: 0.4deg;
   position: relative;
@@ -4580,7 +4647,6 @@ main li > span a:not([class]):hover,
   .article-cover::after { width: 80px; height: 20px; }
   .scene__objet { left: calc(var(--x-petit, var(--x)) * 1%); }
   .cachet-16 { top: auto; right: 0.5rem; bottom: 0.5rem; width: 64px; height: 64px; font-size: 1.05rem; }
-  .contact-card--agenda iframe { height: 620px; }
   .blog-list__heading .tiroir__poignee { display: none; }
 }
 

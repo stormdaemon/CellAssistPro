@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AgendaCalendly } from "@/components/papeterie/agenda-calendly";
 import { Mots, Tampon } from "@/components/papeterie/objets";
 import { SceneContact } from "@/components/papeterie/scenes";
 import { ContactForm } from "@/components/site/contact-form";
@@ -52,11 +53,7 @@ export default function ContactPage() {
               Réservez directement 15&nbsp;minutes dans mon agenda. Pas de formulaire, pas d’attente, pas
               d’engagement.
             </p>
-            <iframe
-              title="Agenda Calendly CelAssistPro"
-              src="https://calendly.com/celassistpro/15min"
-              loading="lazy"
-            />
+            <AgendaCalendly />
           </article>
 
           <article className="contact-card contact-card--lettre">
