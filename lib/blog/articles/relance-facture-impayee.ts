@@ -2,20 +2,20 @@ import type { BlogArticle } from "../types";
 
 export const article: BlogArticle = {
   "slug": "relance-facture-impayee",
-  "title": "Relancer une facture impayée : quand, comment, avec quels mots",
-  "seoTitle": "Relance facture impayée : calendrier, modèles et délais",
-  "description": "Calendrier de relance en trois étapes, modèles de courriel prêts à copier et repères légaux : pénalités de retard et indemnité de 40 €.",
+  "title": "Relance de facture impayée : 3 modèles de mail, de la 1re relance au dernier rappel",
+  "seoTitle": "Relance facture impayée : 3 modèles de mail (1re à 3e)",
+  "description": "Mail de 1re relance, 2e relance et dernier rappel avant mise en demeure : modèles à copier, délais entre chaque relance et pénalités de retard.",
   "category": "Pré-comptabilité",
   "keyword": "relance facture impayée",
   "datePublished": "2026-06-12",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-08",
   "image": {
     "src": "/images/blog/relance-facture-impayee.jpg",
     "alt": "Femme au téléphone devant son ordinateur portable dans un bureau",
     "credit": "Photo : Pexels"
   },
   "intro": [
-    "Pour relancer une facture impayée, envoyez un premier rappel par courriel dix jours après la date d'échéance (J+10), puis deux relances écrites à J+25 et J+40. Cette démarche reste calme et factuelle : c'est une gestion normale de votre trésorerie, pas un conflit avec le client.",
+    "Pour relancer une facture impayée, envoyez un premier mail de relance dix jours après la date d'échéance (J+10), une 2e relance à J+25, puis un dernier rappel avant mise en demeure à J+40. Les trois modèles de mail ci-dessous se copient tels quels. La démarche reste calme et factuelle : c'est une gestion normale de votre trésorerie, pas un conflit avec le client.",
     "Le retard vient souvent de l'hésitation : on repousse la relance semaine après semaine, et la trésorerie s'use sans bruit. Un calendrier fixé à l'avance, des messages prêts à l'emploi et une trace écrite de chaque échange règlent le problème. Si ce suivi vous prend trop de temps, une [assistante administrative](/assistante-administrative) peut le tenir à votre place : relances, suivi des règlements et archivage."
   ],
   "sections": [
@@ -27,15 +27,21 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Le calendrier de relance en trois étapes",
+      "heading": "Le calendrier de relance : délais entre chaque relance",
       "paragraphs": [
-        "« J » désigne la date d'échéance figurant sur la facture. Ce calendrier est une méthode de travail, pas une obligation légale : il donne un rythme constant, et des étapes que le client connaît dès la première relance."
+        "« J » désigne la date d'échéance figurant sur la facture. Ce calendrier est une méthode de travail, pas une obligation légale : il donne un rythme constant, et des étapes que le client connaît dès la première relance. Comptez environ quinze jours entre deux relances : assez pour laisser le temps de payer, pas assez pour que la facture soit oubliée."
       ],
       "steps": [
-        "J+10 : premier rappel par courriel, court et factuel. Indiquez le numéro de la facture, le montant et la date d'échéance, puis demandez la date prévue du paiement (modèle 1).",
-        "J+25 : deuxième relance, plus ferme. Vous demandez une date de règlement précise et proposez un court échange téléphonique (modèle 2).",
-        "J+40 : dernière relance amiable, par écrit. Vous rappelez les pénalités de retard et l'indemnité de 40 € prévues par la loi, et vous annoncez une mise en demeure à défaut de règlement (modèle 3).",
+        "J+10 : 1re relance par mail, courte et factuelle. Indiquez le numéro de la facture, le montant et la date d'échéance, puis demandez la date prévue du paiement (modèle 1).",
+        "J+25 : 2e relance, plus ferme. Vous demandez une date de règlement précise et proposez un court échange téléphonique (modèle 2).",
+        "J+40 : 3e relance, le dernier rappel avant mise en demeure, par écrit. Vous rappelez les pénalités de retard et l'indemnité de 40 € prévues par la loi, et vous annoncez une mise en demeure à défaut de règlement (modèle 3).",
         "Sans réponse après J+40 : la mise en demeure, envoyée par lettre recommandée avec accusé de réception. Les étapes qui suivent sont détaillées dans [l'article sur la facture impayée entre professionnels](/blog/relance-impayes-tpe-amiable)."
+      ]
+    },
+    {
+      "heading": "Avant l'échéance : le rappel préventif",
+      "paragraphs": [
+        "Pour une facture importante ou un nouveau client, un message envoyé quatre ou cinq jours avant l'échéance évite bien des retards. Ce n'est pas une relance : vous rappelez la date, le montant et vos coordonnées bancaires, et vous joignez la facture. Le client qui l'avait égarée la retrouve à temps, et celui qui attendait un bon de commande interne vous le dit avant que le retard commence."
       ]
     },
     {
@@ -47,13 +53,19 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Trois modèles de courriel, à copier et adapter",
+      "heading": "Client particulier : ce qui change",
       "paragraphs": [
-        "Ces modèles visent un client professionnel : la mention des pénalités et de l'indemnité de 40 € ne s'applique que dans ce cas. Remplacez les éléments entre crochets avant l'envoi."
+        "Face à un particulier, le calendrier et le ton restent les mêmes, mais les repères légaux changent. L'indemnité forfaitaire de 40 € ne s'applique qu'entre professionnels : ne la mentionnez pas. Les intérêts de retard courent au taux d'intérêt légal, et seulement à partir de la mise en demeure (code civil, article 1231-6). Dans le modèle 3, remplacez donc la phrase sur les pénalités par l'annonce de la mise en demeure."
       ]
     },
     {
-      "heading": "Modèle 1 : le premier rappel, à J+10",
+      "heading": "Trois modèles de mail de relance, à copier et adapter",
+      "paragraphs": [
+        "Ces modèles visent un client professionnel : la mention des pénalités et de l'indemnité de 40 € ne s'applique que dans ce cas. Remplacez les éléments entre crochets avant l'envoi, et joignez la facture à chaque mail : le client n'a rien à chercher. Un objet qui commence par le numéro de facture permet de retrouver tout l'échange d'un coup d'œil."
+      ]
+    },
+    {
+      "heading": "Modèle 1 : mail de 1re relance, à J+10",
       "paragraphs": [
         "Objet : Facture n° [numéro] du [date] : rappel de paiement",
         "Bonjour [prénom],",
@@ -65,7 +77,7 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Modèle 2 : la deuxième relance, à J+25",
+      "heading": "Modèle 2 : mail de 2e relance, à J+25",
       "paragraphs": [
         "Objet : Facture n° [numéro] : deuxième relance",
         "Bonjour [prénom],",
@@ -76,7 +88,7 @@ export const article: BlogArticle = {
       ]
     },
     {
-      "heading": "Modèle 3 : la dernière relance, à J+40",
+      "heading": "Modèle 3 : 3e relance, dernier rappel avant mise en demeure, à J+40",
       "paragraphs": [
         "Objet : Facture n° [numéro] : dernier rappel avant mise en demeure",
         "Bonjour [prénom],",
@@ -85,6 +97,18 @@ export const article: BlogArticle = {
         "Sans règlement à cette date, je serai contraint de vous adresser une mise en demeure par lettre recommandée avec accusé de réception.",
         "Cordialement,",
         "[Prénom Nom]"
+      ]
+    },
+    {
+      "heading": "La relance par téléphone, en complément",
+      "paragraphs": [
+        "Un appel débloque souvent ce qu'un mail laisse en suspens, surtout après la 2e relance. Il ne remplace pas l'écrit : il le complète."
+      ],
+      "steps": [
+        "Préparez le numéro de la facture, le montant, la date d'échéance et les dates de vos relances.",
+        "Demandez si la facture a bien été reçue et si quelque chose bloque le paiement : une erreur, un bon de commande manquant, une difficulté passagère.",
+        "Obtenez une date de règlement précise, ou un échéancier si le client ne peut pas tout payer d'un coup.",
+        "Confirmez par mail le jour même ce qui a été convenu : sans cette trace, l'engagement n'existe que dans votre mémoire."
       ]
     },
     {
@@ -99,7 +123,7 @@ export const article: BlogArticle = {
     {
       "heading": "Quand le silence persiste",
       "paragraphs": [
-        "Si la dernière relance reste sans réponse, la question n'est plus seulement une question de ton : elle devient procédurale. La mise en demeure est l'étape formelle suivante. Elle n'est pas obligatoire dans tous les cas, mais elle fixe un délai et laisse une trace.",
+        "Si la dernière relance reste sans réponse, la question n'est plus seulement une question de ton : elle devient procédurale. La mise en demeure est l'étape formelle suivante, envoyée par lettre recommandée avec accusé de réception. Elle n'est pas obligatoire dans tous les cas, mais elle fixe un délai et laisse une trace. Un [modèle de mise en demeure](/blog/relance-impayes-tpe-amiable) est proposé dans l'article sur la procédure.",
         "Pour ne pas oublier les relances, vous pouvez aussi programmer les rappels, comme le décrit [l'article sur l'automatisation des relances de factures](/blog/automatiser-relances-factures). Le calendrier écrit à l'avance en est la base."
       ]
     }
@@ -118,8 +142,20 @@ export const article: BlogArticle = {
       "answer": "Attendez la date d'échéance figurant sur la facture, puis dix jours pour le premier rappel. Cette échéance dépend du délai convenu : 30 jours à défaut d'accord, 60 jours maximum à compter de l'émission de la facture, ou 45 jours fin de mois si le contrat le prévoit."
     },
     {
-      "question": "Comment rédiger un courriel de relance ?",
-      "answer": "Restez factuel : numéro de facture, montant, date d'échéance, demande d'une date de paiement. Les trois modèles ci-dessus se copient tels quels, une fois les éléments entre crochets remplacés."
+      "question": "Comment rédiger un mail de relance pour une facture impayée ?",
+      "answer": "Restez factuel : numéro de facture, montant, date d'échéance, demande d'une date de paiement, facture en pièce jointe. Les trois modèles ci-dessus se copient tels quels, une fois les éléments entre crochets remplacés."
+    },
+    {
+      "question": "Combien de relances avant une mise en demeure ?",
+      "answer": "Trois relances écrites suffisent en général : la 1re à J+10, la 2e à J+25, et un dernier rappel à J+40 qui annonce la mise en demeure. Aucun nombre minimum n'est imposé par la loi."
+    },
+    {
+      "question": "Que mettre dans l'objet d'un mail de relance ?",
+      "answer": "Le numéro de la facture, puis l'étape : « Facture n° 2026-041 : rappel de paiement », « deuxième relance », puis « dernier rappel avant mise en demeure ». Le client voit tout de suite de quoi il s'agit, et vous retrouvez l'échange facilement."
+    },
+    {
+      "question": "Quelle différence entre une relance et une mise en demeure ?",
+      "answer": "La relance est un rappel amiable, souvent par mail. La mise en demeure est une demande formelle de payer dans un délai précis, envoyée de préférence par lettre recommandée avec accusé de réception. Elle ouvre la voie à l'injonction de payer et, face à un particulier, fait courir les intérêts de retard."
     }
   ],
   "sources": [
