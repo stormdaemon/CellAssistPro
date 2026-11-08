@@ -4,6 +4,7 @@ import "./globals.css";
 import { JsonLd } from "@/components/site/json-ld";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { SuiviParcours } from "@/components/site/parcours";
 import { Feuilleter } from "@/components/papeterie/feuilleter";
 import { Mouvement } from "@/components/papeterie/mouvement";
 import { TransitionChemise } from "@/components/papeterie/transition-chemise";
@@ -94,6 +95,7 @@ export default function RootLayout({
             src="https://plausible.io/js/script.js"
           />
         ) : null}
+        <SuiviParcours />
         <JsonLd data={siteGraphJsonLd()} />
         {/* Filtre partagé : donne aux tampons le grain irrégulier de l'encre sur le papier. */}
         <svg className="filtres" aria-hidden="true" focusable="false" width="0" height="0">

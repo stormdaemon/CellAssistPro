@@ -30,7 +30,9 @@ export default function PrivacyPage() {
           <p>
             <strong>Formulaire de contact</strong> (page contact)&nbsp;: nom, courriel, téléphone (facultatif, si vous
             souhaitez être rappelé), secteur d’activité, ancienneté de l’entreprise, besoin exprimé, origine du
-            contact et message libre. Merci de ne pas indiquer de données bancaires ni de numéros d’identité dans
+            contact et message libre. S’y ajoutent, sans cookie, le site d’où vous êtes arrivé (par exemple un
+            moteur de recherche), la première page consultée et celle lue juste avant la page contact&nbsp;; ces trois
+            indications accompagnent aussi la prise de rendez-vous. Merci de ne pas indiquer de données bancaires ni de numéros d’identité dans
             le message.
           </p>
           <p>
@@ -94,7 +96,7 @@ export default function PrivacyPage() {
           </p>
 
           <h2>Mise à jour</h2>
-          <p>Dernière mise à jour&nbsp;: 28&nbsp;octobre 2026.</p>
+          <p>Dernière mise à jour&nbsp;: 8&nbsp;novembre 2026.</p>
         </div>
       </section>
     </main>

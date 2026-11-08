@@ -245,7 +245,7 @@ export const SEO = {
     title: "Politique de confidentialité | CelAssistPro",
     description:
       "Quelles données CelAssistPro collecte (formulaire, prise de rendez-vous), pourquoi, combien de temps elles sont conservées et comment exercer vos droits.",
-    lastModified: "2026-10-28",
+    lastModified: "2026-11-08",
   },
 } as const;
 

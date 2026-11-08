@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { Tampon } from "@/components/papeterie/objets";
+import { lireParcours } from "@/components/site/parcours";
 import { CTA, SITE } from "@/lib/site-data";
 
 const ORIGINE_CALENDLY = "https://calendly.com";
@@ -11,6 +12,20 @@ const ORIGINE_CALENDLY = "https://calendly.com";
  * et Segment sans attendre le consentement du visiteur. Le bandeau reste (voir --bandeau dans le CSS).
  */
 const AGENDA = `${SITE.calendlyUrl}?embed_domain=${new URL(SITE.baseUrl).host}&embed_type=Inline&hide_event_type_details=1`;
+
+/**
+ * Calendly range les paramètres UTM avec chaque rendez-vous : Céline voit d'où venait la personne
+ * (utm_source), la première page qu'elle a lue (utm_content) et celle d'avant la page contact (utm_term).
+ */
+function avecParcours(adresse: string) {
+  const { provenance, arrivee, precedente } = lireParcours();
+  const url = new URL(adresse);
+  url.searchParams.set("utm_medium", "site");
+  if (provenance) url.searchParams.set("utm_source", provenance);
+  if (arrivee) url.searchParams.set("utm_content", arrivee);
+  if (precedente) url.searchParams.set("utm_term", precedente);
+  return url.toString();
+}
 
 /** Si Calendly ne donne pas sa hauteur, le cadre s'affiche quand même et le bouton habituel prend le relais. */
 const PATIENCE_MS = 6000;
@@ -58,7 +73,7 @@ export function AgendaCalendly() {
 
     // L'adresse n'arrive qu'ici : le premier message de Calendly ne peut pas tomber avant l'écoute.
     if (cadre.current) {
-      cadre.current.src = AGENDA;
+      cadre.current.src = avecParcours(AGENDA);
     }
 
     return () => window.removeEventListener("message", ecouter);

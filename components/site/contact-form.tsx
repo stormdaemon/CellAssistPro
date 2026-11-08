@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { TriangleAlert } from "lucide-react";
 import { Tampon } from "@/components/papeterie/objets";
+import { lireParcours } from "@/components/site/parcours";
 import { SITE } from "@/lib/site-data";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
@@ -28,6 +29,11 @@ export function ContactForm() {
 
     try {
       const formData = new FormData(form);
+      // Pour Céline : par où la personne est arrivée sur le site avant de lui écrire.
+      const parcours = lireParcours();
+      formData.set("provenance", parcours.provenance);
+      formData.set("page_arrivee", parcours.arrivee);
+      formData.set("page_precedente", parcours.precedente);
       const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
